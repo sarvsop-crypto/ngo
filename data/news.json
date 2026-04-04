@@ -1,0 +1,38 @@
+[
+  {
+    "id": "news-003",
+    "date": "2026-03-24",
+    "category": "E'LON",
+    "title": "Nodavlat notijorat tashkilotlari vakillari uchun malaka oshirish kursiga tinglovchilarni qabul qilish bo'yicha e'lon",
+    "excerpt": "Biznes va tadbirkorlik oliy maktabida (Vazirlar Mahkamasi huzurida) 2026-yil aprel–may oylarida o'tkaziladigan malaka oshirish kursiga ariza qabul qilinmoqda. Kurs narxi: 2 300 000 so'm. Ariza topshirish muddati: 18 aprel 2026.",
+    "body": "Biznes va tadbirkorlik oliy maktabida (Vazirlar Mahkamasi huzurida) 2026-yil aprel–may oylarida o'tkaziladigan malaka oshirish kursiga ariza qabul qilinmoqda. Kurs narxi: 2 300 000 so'm. Ariza topshirish muddati: 18 aprel 2026.",
+    "featured": true
+  },
+  {
+    "id": "news-002",
+    "date": "2026-03-13",
+    "category": "HAMKORLIK",
+    "title": "Shartli ozod qilingan fuqarolarni qayta tarbiyalashda davlat va NNT hamkorligi taklif etilmoqda",
+    "excerpt": "Davlat–jamoat sherikligini rivojlantirish bo'yicha yangi taklif muhokamaga qo'yildi.",
+    "body": "Davlat–jamoat sherikligini rivojlantirish bo'yicha yangi taklif muhokamaga qo'yildi.",
+    "featured": false
+  },
+  {
+    "id": "news-001",
+    "date": "2026-02-27",
+    "category": "BAYRAM",
+    "title": "27-fevral — Butunjahon nodavlat notijorat tashkilotlari kuni munosabati bilan NNTlar taqdirlandi",
+    "excerpt": "Xalqaro NNT kuni munosabati bilan faol tashkilotlar va ularning rahbarlari alqovlandi.",
+    "body": "Xalqaro NNT kuni munosabati bilan faol tashkilotlar va ularning rahbarlari alqovlandi.",
+    "featured": false
+  },
+  {
+    "id": "news-000",
+    "date": "2026-02-18",
+    "category": "HUQUQIY HIMOYA",
+    "title": "NNTlar uchun bepul huquqiy maslahat xizmati yo'lga qo'yildi",
+    "excerpt": "O'zNNTMA nodavlat tashkilotlarga bepul huquqiy yordam ko'rsatish bo'yicha yangi xizmatni ishga tushirdi.",
+    "body": "O'zNNTMA nodavlat tashkilotlarga bepul huquqiy yordam ko'rsatish bo'yicha yangi xizmatni ishga tushirdi.",
+    "featured": false
+  }
+]

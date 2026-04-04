@@ -1,0 +1,57 @@
+[
+  {
+    "id": "event-004",
+    "status": "upcoming",
+    "date": "2026-04-18",
+    "dateLabel": "Aprel–May 2026",
+    "title": "NNT vakillari uchun malaka oshirish kursi",
+    "description": "Biznes va tadbirkorlik oliy maktabi (Vazirlar Mahkamasi huzurida) tomonidan tashkil etilgan malaka oshirish kursi. Kurs narxi: 2 300 000 so'm.",
+    "location": "Biznes va tadbirkorlik oliy maktabi, Toshkent",
+    "participants": null,
+    "deadline": "18.04.2026"
+  },
+  {
+    "id": "event-003",
+    "status": "upcoming",
+    "date": "2026-05-01",
+    "dateLabel": "Rejalashtirilmoqda",
+    "title": "Yangi konsepsiya loyihasi jamoatchilik muhokamasi",
+    "description": "O'zNNTMA tomonidan tayyorlangan yangi konsepsiya loyihasi bo'yicha jamoatchilik muhokamasi.",
+    "location": "Toshkent shahri",
+    "participants": null,
+    "deadline": null
+  },
+  {
+    "id": "event-002",
+    "status": "past",
+    "date": "2026-03-13",
+    "dateLabel": "13.03.2026",
+    "title": "Professional muloqot: NNTlar uchun seminar-trening",
+    "description": "NNTlar rahbarlari va xodimlari uchun professional muloqot ko'nikmalarini rivojlantirish bo'yicha seminar-trening.",
+    "location": "Toshkent shahri",
+    "participants": null,
+    "deadline": null
+  },
+  {
+    "id": "event-001",
+    "status": "past",
+    "date": "2026-02-23",
+    "dateLabel": "23.02.2026",
+    "title": "«Zakovat» intellektual klubi bilan hamkorlik seminari",
+    "description": "O'zNNTMA va «Zakovat» intellektual klubi o'rtasida hamkorlik imkoniyatlarini muhokama qilish seminari.",
+    "location": "Toshkent shahri",
+    "participants": null,
+    "deadline": null
+  },
+  {
+    "id": "event-000",
+    "status": "past",
+    "date": "2026-01-13",
+    "dateLabel": "13.01.2026",
+    "title": "«Siz hisobotlarni topshirdingizmi?» — NNT hisoboti seminari",
+    "description": "NNTlarning yillik hisobotlarini topshirish tartibi va muddatlari bo'yicha seminar.",
+    "location": "Toshkent shahri",
+    "participants": "400+",
+    "deadline": null
+  }
+]
