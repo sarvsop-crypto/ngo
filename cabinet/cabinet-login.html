@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kirish — O'zNNTMA Boshqaruv Tizimi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'DM Sans',system-ui,sans-serif;background:#040c1a;color:#fff;min-height:100vh;display:flex;flex-direction:column;}
+    a{text-decoration:none;color:inherit}
+
+    .login-wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 16px;
+      background:
+        radial-gradient(900px 500px at 80% 0%,rgba(0,180,216,.12),transparent 65%),
+        radial-gradient(600px 400px at 0% 100%,rgba(26,106,255,.08),transparent 70%),
+        #040c1a;
+    }
+    .login-box{width:100%;max-width:420px;background:rgba(13,34,64,.85);border:1px solid rgba(0,180,216,.22);box-shadow:0 24px 60px rgba(0,0,0,.5);padding:40px 36px;backdrop-filter:blur(12px);}
+    .login-brand{display:flex;align-items:center;gap:12px;margin-bottom:32px;}
+    .login-brand-dot{width:40px;height:40px;border-radius:50%;background:#00b4d8;color:#050f1e;display:grid;place-items:center;font-weight:700;font-size:14px;flex-shrink:0;}
+    .login-brand-text{font-size:13px;color:rgba(180,220,255,.7);line-height:1.5;}
+    .login-brand-text strong{display:block;font-size:15px;color:#fff;}
+    h1{font-size:28px;margin-bottom:6px;}
+    .login-sub{color:rgba(180,220,255,.65);font-size:15px;margin-bottom:28px;line-height:1.5;}
+    label{display:block;font-size:13px;font-weight:600;color:rgba(200,230,255,.75);margin-bottom:6px;letter-spacing:.03em;}
+    .form-group{margin-bottom:18px;}
+    input{width:100%;padding:12px 14px;background:rgba(0,180,216,.07);border:1px solid rgba(0,180,216,.25);color:#fff;font:inherit;font-size:15px;outline:none;transition:border-color .2s;}
+    input:focus{border-color:#00b4d8;background:rgba(0,180,216,.12);}
+    input::placeholder{color:rgba(180,220,255,.35);}
+    .login-btn{width:100%;padding:13px;background:#00b4d8;color:#050f1e;font:inherit;font-size:16px;font-weight:700;border:0;cursor:pointer;margin-top:8px;transition:background .18s;}
+    .login-btn:hover{background:#00d4ff;}
+    .login-footer{margin-top:24px;text-align:center;font-size:13px;color:rgba(180,220,255,.5);}
+    .login-footer a{color:rgba(0,180,216,.8);}
+    .login-footer a:hover{color:#00d4ff;}
+    .back-link{display:block;text-align:center;margin-top:20px;font-size:14px;color:rgba(180,220,255,.55);}
+    .back-link:hover{color:#00d4ff;}
+
+    .login-page-footer{padding:16px;text-align:center;font-size:12px;color:rgba(180,220,255,.3);border-top:1px solid rgba(0,180,216,.08);}
+  </style>
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login-box">
+      <div class="login-brand">
+        <div class="login-brand-dot">NGO</div>
+        <div class="login-brand-text">
+          <strong>O'zNNTMA Tizimi</strong>
+          Boshqaruv va monitoring platformasi
+        </div>
+      </div>
+
+      <h1>Tizimga kirish</h1>
+      <p class="login-sub">Boshqaruv kabinetiga kirish uchun login va parolingizni kiriting.</p>
+
+      <div class="form-group">
+        <label for="login-email">Email manzil</label>
+        <input id="login-email" type="email" placeholder="admin@ngo.uz" autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="login-password">Parol</label>
+        <input id="login-password" type="password" placeholder="••••••••" autocomplete="current-password">
+      </div>
+
+      <button class="login-btn" type="button" onclick="location.href='cabinet-dashboard.html'">Kirish</button>
+
+      <a href="#" class="back-link">Parolni unutdingizmi?</a>
+
+      <div class="login-footer">
+        Muammo bo'lsa: <a href="tel:+998555030512">(+998 55) 503-05-12</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="login-page-footer">
+    © 2019–2026 O'zNNTMA · <a href="../index.html" style="color:rgba(0,180,216,.5)">Asosiy saytga qaytish</a>
+  </div>
+</body>
+</html>

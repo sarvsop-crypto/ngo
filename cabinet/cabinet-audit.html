@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cabinet Audit Log</title>
+  <link rel="stylesheet" href="css/cabinet.css" />
+</head>
+<body>
+  <header class="cab-top"><div class="wrap"><div class="brand"><span>NNT</span>Cabinet</div><div class="top-actions"><span class="pill">Audit nazorati</span></div></div></header>
+  <main class="cab-main wrap">
+    <div class="shell">
+      <aside class="side">
+        <h3>Kabinet</h3>
+                                        <nav>
+          <a data-page="cabinet-dashboard.html" href="cabinet-dashboard.html">Dashboard</a>
+          <a data-page="cabinet-organization.html" href="cabinet-organization.html">My Organization</a>
+          <a data-page="cabinet-applications.html" href="cabinet-applications.html">Applications</a>
+          <a data-page="cabinet-reports.html" href="cabinet-reports.html">Reports</a>
+          <a data-page="cabinet-notifications.html" href="cabinet-notifications.html">Notifications</a>
+          <a data-page="cabinet-documents.html" href="cabinet-documents.html">Documents</a>
+          <a data-page="cabinet-events.html" href="cabinet-events.html">Member Events</a>
+          <a data-page="cabinet-support.html" href="cabinet-support.html">Support Tickets</a>
+          <a data-page="cabinet-settings.html" href="cabinet-settings.html">Settings</a>
+          <a data-page="cabinet-esignature.html" href="cabinet-esignature.html">E-signature</a>
+          <a data-page="cabinet-subscription.html" href="cabinet-subscription.html">Subscription</a>
+          <a data-page="cabinet-audit.html" href="cabinet-audit.html">Audit Log</a>
+          <a data-page="cabinet-api.html" href="cabinet-api.html">Mobile API</a>
+          <a data-page="cabinet-privacy.html" href="cabinet-privacy.html">Privacy & Consent</a>
+          <a data-page="cabinet-language.html" href="cabinet-language.html">Language Center</a>
+          <a data-page="cabinet-approvals.html" href="cabinet-approvals.html">Approvals</a>
+          <a data-page="cabinet-knowledge.html" href="cabinet-knowledge.html">Knowledge Base</a>
+          <a data-page="cabinet-calendar.html" href="cabinet-calendar.html">Calendar Planner</a>
+          <a data-page="cabinet-feedback.html" href="cabinet-feedback.html">Feedback</a>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <h1>Audit Log</h1>
+        <p class="sub">Muhim amallar bo'yicha shaffof tarix: kim, qachon, nimani o'zgartirdi.</p>
+
+        <div class="toolbar">
+          <div class="filters filters-3-compact">
+            <select class="select"><option>Amal turi</option><option>Login</option><option>Hujjat yuklash</option><option>ERI imzo</option><option>Profil o'zgarishi</option></select>
+            <select class="select"><option>Foydalanuvchi</option><option>A.Xasanov</option><option>M.Tursunov</option></select>
+            <input class="input" placeholder="Sana oralig'i: 01.04 - 30.04" />
+          </div>
+          <button class="btn" type="button">CSV eksport</button>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Vaqt</th><th>Foydalanuvchi</th><th>Amal</th><th>Obyekt</th><th>Natija</th><th>IP</th></tr></thead>
+            <tbody>
+              <tr><td>02.04.2026 12:08</td><td><strong>A.Xasanov</strong></td><td>ERI imzolash</td><td>Hisobot-2026Q1.pdf</td><td><span class="badge ok">Muvaffaqiyat</span></td><td>195.158.5.22</td></tr>
+              <tr><td>02.04.2026 11:40</td><td><strong>A.Xasanov</strong></td><td>Hujjat yuklash</td><td>Guvohnoma-v3.pdf</td><td><span class="badge ok">Muvaffaqiyat</span></td><td>195.158.5.22</td></tr>
+              <tr><td>02.04.2026 10:51</td><td><strong>M.Tursunov</strong></td><td>Kirish urinish</td><td>cabinet-login</td><td><span class="badge bad">Rad etildi</span></td><td>178.218.200.11</td></tr>
+              <tr><td>01.04.2026 19:16</td><td><strong>A.Xasanov</strong></td><td>Profil tahriri</td><td>Telefon raqami</td><td><span class="badge warn">Qayta tekshiruv</span></td><td>195.158.5.22</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="js/cabinet.js"></script>
+</body>
+</html>
+
+
+
+
+
