@@ -1,13 +1,79 @@
 [
   {
-    "id": "grant-001",
+    "id": "grant-play4nature-2025",
     "status": "active",
-    "title": "NNT vakillari uchun malaka oshirish kursi — 2026",
-    "description": "Biznes va tadbirkorlik oliy maktabida (Vazirlar Mahkamasi huzurida) o'tkaziladigan malaka oshirish kursiga ariza topshirish.",
-    "amount": "2 300 000 so'm",
-    "deadline": "2026-04-18",
-    "deadlineLabel": "18 aprel 2026",
-    "category": "Ta'lim",
-    "organizer": "O'zNNTMA / Biznes va tadbirkorlik oliy maktabi"
+    "title": "PLAY FOR NATURE 2025",
+    "description": "Biologik xilma-xillikni muhofaza qilish bo'yicha faoliyat yurituvchi tashkilotlarga moliyaviy yordam dasturi. Atrof-muhitni muhofaza qilish sohasida ishlayotgan NNTlar arizalarini topshirishlari mumkin.",
+    "amount": null,
+    "deadline": null,
+    "deadlineLabel": "Arizalar qabul qilinmoqda",
+    "category": "Ekologiya",
+    "organizer": "Xalqaro ekologiya tashkiloti"
+  },
+  {
+    "id": "grant-state-democracy-2020",
+    "status": "closed",
+    "title": "Demokratik institutlar va qonun ustuvorligini qo'llab-quvvatlash bo'yicha davlat granti",
+    "description": "Parlament fondi tomonidan demokratik institutlarni rivojlantirish va qonun ustuvorligini mustahkamlash bo'yicha loyihalar uchun grant.",
+    "amount": null,
+    "deadline": null,
+    "deadlineLabel": "Yopilgan",
+    "category": "Demokratiya va huquq",
+    "organizer": "O'zbekiston Respublikasi Oliy Majlisi fondi"
+  },
+  {
+    "id": "grant-state-youth-2020",
+    "status": "closed",
+    "title": "Yoshlar ta'limi va milliy sadoqat bo'yicha davlat granti",
+    "description": "Yoshlarni vatanparvarlik ruhida tarbiyalash va ta'lim sifatini yaxshilashga qaratilgan loyihalar uchun grant.",
+    "amount": null,
+    "deadline": null,
+    "deadlineLabel": "Yopilgan",
+    "category": "Yoshlar",
+    "organizer": "O'zbekiston Respublikasi Oliy Majlisi fondi"
+  },
+  {
+    "id": "grant-state-civil-2020",
+    "status": "closed",
+    "title": "Fuqarolik jamiyatini rivojlantirish bo'yicha davlat granti",
+    "description": "Fuqarolik jamiyatini rivojlantirish va ijtimoiy-ma'naviy salomatlikni mustahkamlashga qaratilgan NNT loyihalari uchun grant.",
+    "amount": null,
+    "deadline": null,
+    "deadlineLabel": "Yopilgan",
+    "category": "Fuqarolik jamiyati",
+    "organizer": "O'zbekiston Respublikasi Oliy Majlisi fondi"
+  },
+  {
+    "id": "grant-young-leaders-2021",
+    "status": "closed",
+    "title": "Yosh liderlar dasturi (Young Leaders Program)",
+    "description": "Yoshlar uchun mo'ljallangan liderlik salohiyatini rivojlantirish dasturi. Xalqaro tashkilotlar bilan hamkorlikda amalga oshiriladi.",
+    "amount": null,
+    "deadline": null,
+    "deadlineLabel": "Yopilgan",
+    "category": "Yoshlar rivojlanishi",
+    "organizer": "Xalqaro hamkor tashkilotlar"
+  },
+  {
+    "id": "grant-100-innovative-2017",
+    "status": "closed",
+    "title": "«100 ta eng yaxshi innovatsion loyiha» milliy tanlovi",
+    "description": "Iqtidorli ayollar uchun innovatsion loyihalar bo'yicha milliy tanlov. Ayollar qo'mitasi va Ayollar innovatorlar assotsiatsiyasi tashkil etgan.",
+    "amount": null,
+    "deadline": null,
+    "deadlineLabel": "Yopilgan",
+    "category": "Innovatsiya va ayollar",
+    "organizer": "Ayollar qo'mitasi / Ayollar innovatorlar assotsiatsiyasi"
+  },
+  {
+    "id": "grant-5th-state-2016",
+    "status": "closed",
+    "title": "5-davlat grant tanlovi — Mustaqillikning 25 yilligi",
+    "description": "O'zbekiston Respublikasi mustaqilligining 25 yilligiga bag'ishlangan ijtimoiy loyihalar uchun 5-davlat grant tanlovi.",
+    "amount": null,
+    "deadline": null,
+    "deadlineLabel": "Yopilgan",
+    "category": "Ijtimoiy loyihalar",
+    "organizer": "O'zbekiston Respublikasi Oliy Majlisi fondi"
   }
 ]

@@ -1,38 +1,218 @@
 [
   {
-    "id": "news-003",
+    "id": "news-20260324",
     "date": "2026-03-24",
     "category": "E'LON",
-    "title": "Nodavlat notijorat tashkilotlari vakillari uchun malaka oshirish kursiga tinglovchilarni qabul qilish bo'yicha e'lon",
-    "excerpt": "Biznes va tadbirkorlik oliy maktabida (Vazirlar Mahkamasi huzurida) 2026-yil aprel–may oylarida o'tkaziladigan malaka oshirish kursiga ariza qabul qilinmoqda. Kurs narxi: 2 300 000 so'm. Ariza topshirish muddati: 18 aprel 2026.",
-    "body": "Biznes va tadbirkorlik oliy maktabida (Vazirlar Mahkamasi huzurida) 2026-yil aprel–may oylarida o'tkaziladigan malaka oshirish kursiga ariza qabul qilinmoqda. Kurs narxi: 2 300 000 so'm. Ariza topshirish muddati: 18 aprel 2026.",
+    "title": "Malaka oshirish kursiga tinglovchilarni qabul qilish",
+    "excerpt": "Nodavlat notijorat tashkilotlari vakillari uchun malaka oshirish kursiga qabul boshlanmoqda.",
+    "body": "Nodavlat notijorat tashkilotlari vakillari uchun malaka oshirish kursiga qabul boshlanmoqda.",
     "featured": true
   },
   {
-    "id": "news-002",
+    "id": "news-20260313-seminar",
     "date": "2026-03-13",
-    "category": "HAMKORLIK",
-    "title": "Shartli ozod qilingan fuqarolarni qayta tarbiyalashda davlat va NNT hamkorligi taklif etilmoqda",
-    "excerpt": "Davlat–jamoat sherikligini rivojlantirish bo'yicha yangi taklif muhokamaga qo'yildi.",
-    "body": "Davlat–jamoat sherikligini rivojlantirish bo'yicha yangi taklif muhokamaga qo'yildi.",
+    "category": "SEMINAR",
+    "title": "Professional muloqot seminar-trening",
+    "excerpt": "Andijon viloyatida NNTlar o'rtasida tajriba almashish bo'yicha seminar-trening o'tkazildi.",
+    "body": "Andijon viloyatida NNTlar o'rtasida tajriba almashish bo'yicha seminar-trening o'tkazildi.",
     "featured": false
   },
   {
-    "id": "news-001",
+    "id": "news-20260313-rehab",
+    "date": "2026-03-13",
+    "category": "TAHLIL",
+    "title": "Shartli ozod qilingan fuqarolarni qayta tarbiyalash",
+    "excerpt": "Shartli ozod qilingan fuqarolarni qayta tarbiyalash va davlat-NNT hamkorligi bo'yicha takliflar muhokama qilindi.",
+    "body": "Shartli ozod qilingan fuqarolarni qayta tarbiyalash va davlat-NNT hamkorligi bo'yicha takliflar muhokama qilindi.",
+    "featured": false
+  },
+  {
+    "id": "news-20260227",
     "date": "2026-02-27",
     "category": "BAYRAM",
-    "title": "27-fevral — Butunjahon nodavlat notijorat tashkilotlari kuni munosabati bilan NNTlar taqdirlandi",
-    "excerpt": "Xalqaro NNT kuni munosabati bilan faol tashkilotlar va ularning rahbarlari alqovlandi.",
-    "body": "Xalqaro NNT kuni munosabati bilan faol tashkilotlar va ularning rahbarlari alqovlandi.",
+    "title": "27-fevral – Butunjahon NGO kuni",
+    "excerpt": "Xalqaro NGO kuni munosabati bilan barcha NNTlarga tabriklar yo'llanildi. BMTning 1950-yildagi ta'rifi esga olindi.",
+    "body": "Xalqaro NGO kuni munosabati bilan barcha NNTlarga tabriklar yo'llanildi. BMTning 1950-yildagi ta'rifi esga olindi.",
     "featured": false
   },
   {
-    "id": "news-000",
-    "date": "2026-02-18",
-    "category": "HUQUQIY HIMOYA",
-    "title": "NNTlar uchun bepul huquqiy maslahat xizmati yo'lga qo'yildi",
-    "excerpt": "O'zNNTMA nodavlat tashkilotlarga bepul huquqiy yordam ko'rsatish bo'yicha yangi xizmatni ishga tushirdi.",
-    "body": "O'zNNTMA nodavlat tashkilotlarga bepul huquqiy yordam ko'rsatish bo'yicha yangi xizmatni ishga tushirdi.",
+    "id": "news-20260223-zakovat",
+    "date": "2026-02-23",
+    "category": "HAMKORLIK",
+    "title": "\"Zakovat intellektual klubi\" hamkorligi",
+    "excerpt": "Milliy assotsiatsiya va Zakovat intellektual klubi o'rtasida hamkorlik memorandumi imzolandi.",
+    "body": "Milliy assotsiatsiya va Zakovat intellektual klubi o'rtasida hamkorlik memorandumi imzolandi.",
+    "featured": false
+  },
+  {
+    "id": "news-20260213",
+    "date": "2026-02-13",
+    "category": "TASHKILIY",
+    "title": "O'zNNTMA Kengashi raisining o'rinbosarlari",
+    "excerpt": "Kengash rahbariyatida qayta tuzilish amalga oshirildi.",
+    "body": "Kengash rahbariyatida qayta tuzilish amalga oshirildi.",
+    "featured": false
+  },
+  {
+    "id": "news-20260211",
+    "date": "2026-02-11",
+    "category": "QONUNCHILIK",
+    "title": "NNTlar qonunchilik islohotlarida faoliyati",
+    "excerpt": "Ekspertlar guruhi seminarida NNTlarning qonun ijodkorligi jarayonidagi ishtiroki muhokama qilindi.",
+    "body": "Ekspertlar guruhi seminarida NNTlarning qonun ijodkorligi jarayonidagi ishtiroki muhokama qilindi.",
+    "featured": false
+  },
+  {
+    "id": "news-20260206",
+    "date": "2026-02-06",
+    "category": "KORRUPSIYAGA QARSHI",
+    "title": "\"Halollik oroli\" Qoraqalpog'istonda",
+    "excerpt": "To'rtko'l tumanida korrupsiyaga qarshi metodologiya muvaffaqiyatli tatbiq etilmoqda.",
+    "body": "To'rtko'l tumanida korrupsiyaga qarshi metodologiya muvaffaqiyatli tatbiq etilmoqda.",
+    "featured": false
+  },
+  {
+    "id": "news-20260127-loyiha",
+    "date": "2026-01-27",
+    "category": "LOYIHA",
+    "title": "O'zNNTMA hududlarda yangi loyiha boshladi",
+    "excerpt": "BMT Taraqqiyot Dasturi bilan hamkorlikda yangi hududiy rivojlanish loyihasi ishga tushirildi.",
+    "body": "BMT Taraqqiyot Dasturi bilan hamkorlikda yangi hududiy rivojlanish loyihasi ishga tushirildi.",
+    "featured": false
+  },
+  {
+    "id": "news-20260127-tanlov",
+    "date": "2026-01-27",
+    "category": "E'LON",
+    "title": "Vakant lavozimlarga ochiq tanlov",
+    "excerpt": "O'zNNTMAda bo'sh lavozimlar uchun ochiq tanlov e'lon qilindi.",
+    "body": "O'zNNTMAda bo'sh lavozimlar uchun ochiq tanlov e'lon qilindi.",
+    "featured": false
+  },
+  {
+    "id": "news-20260121",
+    "date": "2026-01-21",
+    "category": "NAZORAT",
+    "title": "Qonun ustuvorligi va davlat ochiqligi",
+    "excerpt": "Jamoatchilik nazoratini mustahkamlash va hukumat shaffofligi masalalari muhokama qilindi.",
+    "body": "Jamoatchilik nazoratini mustahkamlash va hukumat shaffofligi masalalari muhokama qilindi.",
+    "featured": false
+  },
+  {
+    "id": "news-20260120",
+    "date": "2026-01-20",
+    "category": "TRENING",
+    "title": "NNT vakillari uchun hisobdorlik va raqamli ko'nikmalar bo'yicha seminar-trening",
+    "excerpt": "NNT vakillariga hisobdorlik va raqamli ko'nikmalar bo'yicha seminar-trening o'tkazildi.",
+    "body": "NNT vakillariga hisobdorlik va raqamli ko'nikmalar bo'yicha seminar-trening o'tkazildi.",
+    "featured": false
+  },
+  {
+    "id": "news-20260106",
+    "date": "2026-01-06",
+    "category": "TAHLIL",
+    "title": "Davlat, NNT va tijorat sinergiyasi: 2026-yil",
+    "excerpt": "2026-yil «Jamoatchilik rivojlanishi yili» deb e'lon qilingan. Uch tomonlama hamkorlik yangi bosqichga o'tmoqda.",
+    "body": "2026-yil «Jamoatchilik rivojlanishi yili» deb e'lon qilingan. Uch tomonlama hamkorlik yangi bosqichga o'tmoqda.",
+    "featured": false
+  },
+  {
+    "id": "news-20260105",
+    "date": "2026-01-05",
+    "category": "MUHIM",
+    "title": "PREZIDENT MUROJAATNOMASI – KUCHLI FUQAROLIK JAMIYATI",
+    "excerpt": "Prezidentning fuqarolik jamiyatini rivojlantirish bo'yicha murojaatnomasi e'lon qilindi.",
+    "body": "Prezidentning fuqarolik jamiyatini rivojlantirish bo'yicha murojaatnomasi e'lon qilindi.",
+    "featured": false
+  },
+  {
+    "id": "news-20251223",
+    "date": "2025-12-23",
+    "category": "JAMOATCHILIK",
+    "title": "O'zNNTMAda jamoatchilik eshituvi o'tkazildi",
+    "excerpt": "Davlat dasturlarida fuqarolik jamiyatining ishtiroki bo'yicha jamoatchilik eshituvi bo'lib o'tdi.",
+    "body": "Davlat dasturlarida fuqarolik jamiyatining ishtiroki bo'yicha jamoatchilik eshituvi bo'lib o'tdi.",
+    "featured": false
+  },
+  {
+    "id": "news-20251204",
+    "date": "2025-12-04",
+    "category": "FORUM",
+    "title": "Fuqarolik jamiyati haftaligida NNTlar forumi",
+    "excerpt": "Davlat va fuqarolik institutlari hamkorligini mustahkamlashga qaratilgan forum o'tkazildi.",
+    "body": "Davlat va fuqarolik institutlari hamkorligini mustahkamlashga qaratilgan forum o'tkazildi.",
+    "featured": false
+  },
+  {
+    "id": "news-20251118",
+    "date": "2025-11-18",
+    "category": "KONSEPSIYA",
+    "title": "FUQAROLIK JAMIYATINI 2030 YILGACHA RIVOJLANTIRISH KONSEPSIYASI",
+    "excerpt": "2030-yilgacha fuqarolik jamiyatini rivojlantirish konsepsiyasining jamoatchilik muhokamasi boshlandi.",
+    "body": "2030-yilgacha fuqarolik jamiyatini rivojlantirish konsepsiyasining jamoatchilik muhokamasi boshlandi.",
+    "featured": false
+  },
+  {
+    "id": "news-20251029",
+    "date": "2025-10-29",
+    "category": "FUQAROLIK JAMIYATI HAFTALIGI",
+    "title": "Kuchli fuqarolik jamiyati — kuchli davlatning poydevoridir",
+    "excerpt": "Toshkent hokimi «Fuqarolik jamiyati haftaligi» doirasida NNT vakillari bilan uchrashdi.",
+    "body": "Toshkent hokimi «Fuqarolik jamiyati haftaligi» doirasida NNT vakillari bilan uchrashdi.",
+    "featured": false
+  },
+  {
+    "id": "news-20250908",
+    "date": "2025-09-08",
+    "category": "TRENING",
+    "title": "600 dan ortiq NNT rahbari o'qitildi",
+    "excerpt": "Kasbiy rivojlanish kurslari doirasida 600 dan ortiq NNT rahbari o'qitildi.",
+    "body": "Kasbiy rivojlanish kurslari doirasida 600 dan ortiq NNT rahbari o'qitildi.",
+    "featured": false
+  },
+  {
+    "id": "news-20250821",
+    "date": "2025-08-21",
+    "category": "QONUNCHILIK",
+    "title": "NNTlar faoliyati va jamoatchilik nazorati orqali davlat-jamiyat hamkorligi rivojlantiriladi",
+    "excerpt": "21-avgust qonuni NNT erkinligi va jamoatchilik nazoratini kuchaytirishga qaratilgan.",
+    "body": "21-avgust qonuni NNT erkinligi va jamoatchilik nazoratini kuchaytirishga qaratilgan.",
+    "featured": false
+  },
+  {
+    "id": "news-20250813",
+    "date": "2025-08-13",
+    "category": "TRENING",
+    "title": "NNT VAKILLARINING MEDIASAVODXONLIGI OSHIRILMOQDA",
+    "excerpt": "NNT vakillari uchun media savodxonlik treningi o'tkazildi.",
+    "body": "NNT vakillari uchun media savodxonlik treningi o'tkazildi.",
+    "featured": false
+  },
+  {
+    "id": "news-20250806",
+    "date": "2025-08-06",
+    "category": "KORRUPSIYAGA QARSHI",
+    "title": "Korruptsiyaga qarshi kurashda jamoatchilik kuchi",
+    "excerpt": "Davlat va fuqarolik jamiyati o'rtasida korrupsiyaga qarshi hamkorlik kuchaytirilmoqda.",
+    "body": "Davlat va fuqarolik jamiyati o'rtasida korrupsiyaga qarshi hamkorlik kuchaytirilmoqda.",
+    "featured": false
+  },
+  {
+    "id": "news-20250521",
+    "date": "2025-05-21",
+    "category": "GENDER",
+    "title": "O'zbekiston gender tenglik va boshqaruv indeksida",
+    "excerpt": "O'zbekiston gender tenglik indeksida 103-o'rindan 52-o'ringa ko'tarildi.",
+    "body": "O'zbekiston gender tenglik indeksida 103-o'rindan 52-o'ringa ko'tarildi.",
+    "featured": false
+  },
+  {
+    "id": "news-20250414",
+    "date": "2025-04-14",
+    "category": "TRENING",
+    "title": "2025-yilda 250 nafar NNT rahbarlarining malakasi oshiriladi",
+    "excerpt": "250 nafar NNT rahbarini o'qitish dasturi boshlandi.",
+    "body": "250 nafar NNT rahbarini o'qitish dasturi boshlandi.",
     "featured": false
   }
 ]
