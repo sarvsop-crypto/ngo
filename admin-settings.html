@@ -57,12 +57,20 @@
       </div>
 
       <div class="admin-bottom">
-                <article class="admin-card">
+        <article class="admin-card">
           <h3>Huquqiy hujjatlar</h3>
           <div class="list">
             <div class="item"><h4>Maxfiylik siyosati</h4><p>v1.3 · 01.04.2026</p></div>
             <div class="item"><h4>Foydalanish shartlari</h4><p>v1.2 · 20.03.2026</p></div>
             <div class="item"><h4>Rozilik matni</h4><p>Arizalarda majburiy ko'rsatish: Yoqilgan</p></div>
+          </div>
+        </article>
+
+        <article class="admin-card">
+          <h3>Veb-sayt kontent ulanishi</h3>
+          <div class="list">
+            <div class="item"><h4>Sayt ulash kaliti</h4><p>Yangiliklar, tadbirlar va grantlarni veb-saytga chiqarish uchun kerak.</p></div>
+            <div class="item"><input class="admin-input" type="password" id="ghTokenInput" placeholder="Kalit kiriting…" style="width:100%;margin-bottom:8px;" /><a class="btn" href="#" onclick="var v=document.getElementById('ghTokenInput').value.trim();if(v){localStorage.setItem('gh_token',v);document.getElementById('ghTokenInput').value='';alert('Saqlandi');}return false;">Saqlash</a></div>
           </div>
         </article>
       </div>

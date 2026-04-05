@@ -103,17 +103,6 @@
     .status-msg.ok  { background: var(--ok-bg);  color: var(--ok);  border: 1px solid rgba(34,201,122,.25); display: block; }
     .status-msg.err { background: var(--bad-bg); color: var(--bad); border: 1px solid rgba(240,82,82,.25);  display: block; }
 
-    .token-warn {
-      background: var(--warn-bg);
-      border: 1px solid rgba(245,166,35,.3);
-      color: var(--warn);
-      padding: 12px 16px;
-      border-radius: var(--radius-sm);
-      margin-bottom: 16px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .token-warn a { color: var(--warn); text-decoration: underline; }
 
     .list-panel {
       background: var(--navy-card);
@@ -210,12 +199,6 @@
       <h1>Grantlar va <span>loyihalar</span> boshqaruvi</h1>
     </div>
 
-    <div id="tokenWarn" style="display:none">
-      <div class="token-warn">
-        GitHub tokeni topilmadi. Nashr qilish uchun avval
-        <a href="cabinet-settings.html">sozlamalarga</a> kiring va tokenni saqlang.
-      </div>
-    </div>
 
     <div class="two-col">
 
@@ -298,9 +281,6 @@
 <script src="js/github-api.js"></script>
 <script>
 (function () {
-  if (!localStorage.getItem('gh_token')) {
-    document.getElementById('tokenWarn').style.display = 'block';
-  }
 
   var publishBtn = document.getElementById('publishBtn');
   var cancelBtn  = document.getElementById('cancelBtn');

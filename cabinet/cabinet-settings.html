@@ -3,99 +3,92 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sozlamalar — O'zNNTMA Boshqaruv Tizimi</title>
+  <title>Sozlamalar — O'zNNTMA A'zo Kabineti</title>
   <link rel="stylesheet" href="css/cabinet-app.css" />
-  <style>
-    .settings-card { background:var(--navy-card); border:1px solid var(--navy-border); border-radius:var(--radius-lg); padding:28px; max-width:560px; }
-    .settings-card h2 { font-size:16px; font-weight:700; margin:0 0 6px; }
-    .settings-card p  { font-size:13px; color:var(--text-muted); margin:0 0 20px; line-height:1.6; }
-    .field { margin-bottom:18px; }
-    .field label { display:block; font-size:12px; font-weight:700; color:var(--text-muted); letter-spacing:.05em; text-transform:uppercase; margin-bottom:7px; }
-    .field input { width:100%; background:var(--navy-panel); border:1px solid var(--navy-border); border-radius:var(--radius-sm); color:#fff; font:inherit; font-size:14px; padding:10px 13px; outline:none; transition:border-color .15s; }
-    .field input:focus { border-color:var(--accent); }
-    .field input::placeholder { color:var(--text-dim); }
-    .btn-save { background:var(--accent); color:#050f1e; font:inherit; font-size:14px; font-weight:700; border:0; border-radius:var(--radius-sm); padding:10px 22px; cursor:pointer; transition:background .15s; }
-    .btn-save:hover { background:#00d4ff; }
-    .status-msg { display:none; margin-top:14px; font-size:13px; font-weight:600; padding:10px 14px; border-radius:var(--radius-sm); }
-    .status-msg.ok  { background:var(--ok-bg);  color:var(--ok);  border:1px solid rgba(34,201,122,.25); display:block; }
-    .status-msg.err { background:var(--bad-bg); color:var(--bad); border:1px solid rgba(240,82,82,.25);  display:block; }
-    .token-display { font-size:12px; color:var(--text-dim); margin-top:8px; }
-    .divider { border:0; border-top:1px solid var(--navy-border); margin:28px 0; }
-    .danger-btn { background:var(--bad-bg); color:var(--bad); border:1px solid rgba(240,82,82,.3); font:inherit; font-size:13px; font-weight:700; border-radius:var(--radius-sm); padding:8px 16px; cursor:pointer; transition:background .15s; }
-    .danger-btn:hover { background:rgba(240,82,82,.2); }
-    code { background:rgba(0,180,216,.1); border:1px solid rgba(0,180,216,.2); border-radius:4px; padding:1px 6px; font-size:12px; color:var(--accent); }
-  </style>
 </head>
 <body>
 <div class="app">
   <main class="main">
 
     <div class="page-heading">
-      <h1>Tizim <span>sozlamalari</span></h1>
+      <h1>Sozlamalar</h1>
+      <p class="page-sub">Shaxsiy ma'lumotlar va xabarnoma sozlamalari.</p>
     </div>
 
-    <div class="settings-card">
-      <h2>GitHub ulanish sozlamalari</h2>
-      <p>Yangiliklar, tadbirlar va grantlarni veb-saytda chop etish uchun GitHub Personal Access Token (PAT) kerak. Token faqat shu brauzerda saqlanadi.</p>
-      <p>Token olish: <strong>github.com → Settings → Developer settings → Fine-grained tokens</strong> → Repository: <code>sarvsop-crypto/ngo</code> → Permissions → Contents: <code>Read and write</code></p>
+    <div class="cab-layout" style="max-width:720px;">
+      <div style="display:flex;flex-direction:column;gap:20px;">
 
-      <div class="field">
-        <label>Personal Access Token</label>
-        <input type="password" id="tokenInput" placeholder="github_pat_…" autocomplete="off" />
-        <div class="token-display" id="tokenDisplay"></div>
+        <div class="panel">
+          <div class="panel-head">
+            <div class="panel-title">Mas'ul shaxs ma'lumotlari</div>
+          </div>
+          <div style="padding:18px;display:flex;flex-direction:column;gap:14px;">
+            <div>
+              <label class="field-label">F.I.Sh.</label>
+              <input class="input" type="text" placeholder="Familiya Ism Sharif" />
+            </div>
+            <div>
+              <label class="field-label">Telefon</label>
+              <input class="input" type="tel" placeholder="+998 90 000 00 00" />
+            </div>
+            <div>
+              <label class="field-label">Email</label>
+              <input class="input" type="email" placeholder="email@tashkilot.uz" />
+            </div>
+            <div>
+              <button class="btn" type="button">Saqlash</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div class="panel-title">Parolni o'zgartirish</div>
+          </div>
+          <div style="padding:18px;display:flex;flex-direction:column;gap:14px;">
+            <div>
+              <label class="field-label">Joriy parol</label>
+              <input class="input" type="password" placeholder="Joriy parol" />
+            </div>
+            <div>
+              <label class="field-label">Yangi parol</label>
+              <input class="input" type="password" placeholder="Kamida 8 ta belgi" />
+            </div>
+            <div>
+              <label class="field-label">Yangi parolni tasdiqlang</label>
+              <input class="input" type="password" placeholder="Qayta kiriting" />
+            </div>
+            <div>
+              <button class="btn" type="button">Parolni yangilash</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div class="panel-title">Xabarnoma sozlamalari</div>
+          </div>
+          <div style="padding:18px;display:flex;flex-direction:column;gap:12px;">
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:14px;">
+              <input type="checkbox" checked /> Email orqali eslatmalar
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:14px;">
+              <input type="checkbox" checked /> Hisobot muddatlari haqida xabar
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:14px;">
+              <input type="checkbox" /> Yangiliklar va e'lonlar
+            </label>
+            <div style="margin-top:4px;">
+              <button class="btn" type="button">Saqlash</button>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <button class="btn-save" type="button" id="saveBtn">Saqlash va tekshirish</button>
-      <div class="status-msg" id="statusMsg"></div>
-
-      <hr class="divider" />
-      <h2>Tokenni o'chirish</h2>
-      <p>Brauzerdan saqlangan tokenni o'chirib tashlaydi.</p>
-      <button class="danger-btn" type="button" id="clearBtn">Tokenni o'chirish</button>
     </div>
 
   </main>
 </div>
 <script src="js/cabinet-app.js"></script>
-<script src="js/github-api.js"></script>
-<script>
-(function () {
-  var input     = document.getElementById('tokenInput');
-  var saveBtn   = document.getElementById('saveBtn');
-  var clearBtn  = document.getElementById('clearBtn');
-  var statusEl  = document.getElementById('statusMsg');
-  var displayEl = document.getElementById('tokenDisplay');
-
-  function showStored() {
-    var t = localStorage.getItem('gh_token');
-    displayEl.textContent = t ? 'Saqlangan: ' + t.slice(0,14) + '…' : 'Token saqlanmagan.';
-  }
-  showStored();
-
-  saveBtn.addEventListener('click', function () {
-    var val = input.value.trim();
-    if (!val) { showStatus('Token bo\'sh bo\'lishi mumkin emas.', false); return; }
-    localStorage.setItem('gh_token', val);
-    input.value = '';
-    showStatus('Tekshirilmoqda…', null);
-    GH.verifyToken().then(function (ok) {
-      showStatus(ok ? 'Token saqlandi va tasdiqlandi ✓' : 'Token saqlandi, lekin ulanish muvaffaqiyatsiz — tokenni tekshiring.', ok);
-      showStored();
-    });
-  });
-
-  clearBtn.addEventListener('click', function () {
-    localStorage.removeItem('gh_token');
-    showStored();
-    showStatus('Token o\'chirildi.', true);
-  });
-
-  function showStatus(msg, ok) {
-    statusEl.className = 'status-msg' + (ok === true ? ' ok' : ok === false ? ' err' : '');
-    statusEl.textContent = msg;
-    statusEl.style.display = 'block';
-  }
-})();
-</script>
 </body>
 </html>
