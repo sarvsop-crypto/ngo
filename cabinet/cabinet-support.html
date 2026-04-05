@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="uz">
 <head>
   <meta charset="utf-8" />
@@ -10,14 +10,22 @@
 <div class="app">
   <main class="main">
     <div class="page-heading"><h1>Murojaat</h1></div>
-    <p class="page-sub">Murojaat oqimi va javob tezligi bo'yicha diagrammalar.</p>
+    <p class="page-sub">Savol yoki muammo bo'lsa — murojaat yuboring. Ko'p so'raladigan savollarga ham qarang.</p>
 
     <div class="grid-2">
       <article class="card">
         <h3>Yangi murojaat</h3>
         <div class="filters filters-single">
+          <select class="select">
+            <option>Murojaat turini tanlang</option>
+            <option>Hujjatlar bo'yicha savol</option>
+            <option>Ariza holati bo'yicha</option>
+            <option>Shartnoma bo'yicha</option>
+            <option>Texnik muammo</option>
+            <option>Boshqa</option>
+          </select>
           <input class="input" placeholder="Mavzu" />
-          <input class="input" placeholder="Qisqa tavsif" />
+          <textarea class="input" rows="4" placeholder="Muammo yoki savolingizni batafsil yozing..." style="resize:vertical;"></textarea>
           <button class="btn" type="button">Murojaat yuborish</button>
         </div>
       </article>
@@ -26,44 +34,57 @@
         <h3>Mening murojaatlarim</h3>
         <div class="table-wrap">
           <table class="table">
-            <thead><tr><th>ID</th><th>Sana</th><th>Holat</th></tr></thead>
+            <thead><tr><th>ID</th><th>Mavzu</th><th>Sana</th><th>Holat</th></tr></thead>
             <tbody>
-              <tr><td><strong>MUR-2026-0112</strong></td><td>02.04.2026</td><td><span class="badge warn">Jarayonda</span></td></tr>
-              <tr><td><strong>MUR-2026-0099</strong></td><td>29.03.2026</td><td><span class="badge ok">Yakunlandi</span></td></tr>
+              <tr>
+                <td><strong>MUR-2026-0112</strong></td>
+                <td>Ustav yangi tahrir yuklashda xatolik</td>
+                <td>02.04.2026</td>
+                <td><span class="badge warn">Jarayonda</span></td>
+              </tr>
+              <tr>
+                <td><strong>MUR-2026-0099</strong></td>
+                <td>Ariza holati ko'rinmayapti</td>
+                <td>29.03.2026</td>
+                <td><span class="badge ok">Yakunlandi</span></td>
+              </tr>
+              <tr>
+                <td><strong>MUR-2026-0087</strong></td>
+                <td>Shartnoma matni qayerdan topiladi?</td>
+                <td>21.03.2026</td>
+                <td><span class="badge ok">Yakunlandi</span></td>
+              </tr>
             </tbody>
           </table>
         </div>
       </article>
     </div>
 
-    <div class="cab-chart-grid" style="margin-top:12px;">
-      <article class="cab-chart-card">
-        <h3 class="cab-chart-title">Javob vaqti</h3>
-        <p class="cab-chart-sub">Soat bo'yicha o'rtacha qayta aloqa</p>
-        <div class="cab-line-wrap">
-          <svg viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg">
-            <g stroke="#d5e5ef" stroke-width="1"><line x1="20" y1="20" x2="500" y2="20"/><line x1="20" y1="55" x2="500" y2="55"/><line x1="20" y1="90" x2="500" y2="90"/><line x1="20" y1="125" x2="500" y2="125"/><line x1="20" y1="160" x2="500" y2="160"/></g>
-            <polyline fill="none" stroke="#007a94" stroke-width="3" points="20,68 116,76 212,84 308,95 404,108 500,116"/>
-          </svg>
+    <article class="card mt-12">
+      <h3>Ko'p so'raladigan savollar</h3>
+      <div class="faq-list">
+        <div class="faq-list-item">
+          <p class="faq-list-q">A'zolik uchun qanday hujjatlar talab qilinadi?</p>
+          <p class="faq-list-a">NGO ustavi, davlat ro'yxatidan o'tish guvohnomasi, rahbar haqida ma'lumotnoma va soliq organidan ma'lumotnoma talab qilinadi. To'liq ro'yxat "Hujjatlar" bo'limida ko'rsatilgan.</p>
         </div>
-        <div class="cab-axis-labels"><span>Yan</span><span>Fev</span><span>Mar</span><span>Apr</span><span>May</span><span>Iyn</span></div>
-      </article>
-
-      <article class="cab-chart-card">
-        <h3 class="cab-chart-title">Murojaat holati</h3>
-        <p class="cab-chart-sub">Oxirgi 30 kun</p>
-        <div class="cab-donut-box">
-          <div class="cab-donut" style="background:conic-gradient(#24733a 0 58%, #d97706 58% 88%, #dc2626 88% 100%);">
-            <div class="cab-donut-hole"><strong>58%</strong><span>Yopilgan</span></div>
-          </div>
-          <div class="cab-legend">
-            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#24733a"></span><span>Yopilgan</span></div>
-            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#d97706"></span><span>Jarayonda</span></div>
-            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#dc2626"></span><span>Kutilmoqda</span></div>
-          </div>
+        <div class="faq-list-item">
+          <p class="faq-list-q">Hujjatlarni qanday formatda yuklash kerak?</p>
+          <p class="faq-list-a">PDF, DOC yoki DOCX formatlarida yuklash mumkin. Har bir faylning hajmi 10 MB dan oshmasligi kerak.</p>
         </div>
-      </article>
-    </div>
+        <div class="faq-list-item">
+          <p class="faq-list-q">Ariza ko'rib chiqish qancha vaqt oladi?</p>
+          <p class="faq-list-a">Odatda 3–7 ish kuni davomida ko'rib chiqiladi. Hujjatlar to'liq bo'lsa jarayon tezroq yakunlanadi. Holat o'zgarishi haqida email orqali xabar beriladi.</p>
+        </div>
+        <div class="faq-list-item">
+          <p class="faq-list-q">Ariza qaytarilsa nima qilish kerak?</p>
+          <p class="faq-list-a">Admin izohidagi kamchiliklarni bartaraf eting, kerakli hujjatlarni yuklab, qayta topshirish tugmasini bosing. Murojaat orqali savol berishingiz ham mumkin.</p>
+        </div>
+        <div class="faq-list-item">
+          <p class="faq-list-q">Shartnomani qayerdan ko'rish mumkin?</p>
+          <p class="faq-list-a">"Hujjatlar" bo'limida "A'zolik shartnomasi" qatoridagi "Ko'rish" tugmasini bosing. Shartnoma 3-bosqichda imzolash uchun taqdim etiladi.</p>
+        </div>
+      </div>
+    </article>
   </main>
 </div>
 <script src="js/cabinet-app.js"></script>

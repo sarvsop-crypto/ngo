@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="uz">
 <head>
   <meta charset="utf-8" />
@@ -13,7 +13,7 @@
       <h1>Bosh sahifa</h1>
       <div class="date-chip" id="js-date"></div>
     </div>
-    <p class="page-sub">A'zolik shartnomasi bo'yicha joriy holat va tahliliy ko'rinish.</p>
+    <p class="page-sub">A'zolik shartnomasi bo'yicha joriy holat va faoliyat.</p>
 
     <div class="kpis">
       <div class="kpi"><span>Holat</span><strong style="font-size:clamp(14px,1.6vw,20px);color:var(--warn)">Ko'rib chiqilmoqda</strong></div>
@@ -22,45 +22,101 @@
       <div class="kpi"><span>A'zolik</span><strong style="font-size:clamp(14px,1.6vw,20px);color:var(--neutral-400)">Kutilmoqda</strong></div>
     </div>
 
-    <div class="cab-chart-grid">
-      <article class="cab-chart-card">
-        <h3 class="cab-chart-title">Jarayon dinamikasi</h3>
-        <p class="cab-chart-sub">Oxirgi 7 kun ichida bosqichlar o'tishi</p>
-        <div class="cab-line-wrap">
-          <svg viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg">
-            <g stroke="#d5e5ef" stroke-width="1">
-              <line x1="20" y1="20" x2="500" y2="20"/><line x1="20" y1="55" x2="500" y2="55"/><line x1="20" y1="90" x2="500" y2="90"/><line x1="20" y1="125" x2="500" y2="125"/><line x1="20" y1="160" x2="500" y2="160"/>
-            </g>
-            <polyline fill="none" stroke="#007a94" stroke-width="3" points="20,148 98,142 176,128 254,116 332,108 410,90 500,74"/>
-          </svg>
-        </div>
-        <div class="cab-axis-labels"><span>Dush</span><span>Sesh</span><span>Chor</span><span>Pay</span><span>Jum</span><span>Shan</span><span>Yak</span></div>
-      </article>
-
-      <article class="cab-chart-card">
-        <h3 class="cab-chart-title">Hujjat to'liqligi</h3>
-        <p class="cab-chart-sub">Shartnoma paketi</p>
-        <div class="cab-donut-box">
-          <div class="cab-donut" style="background:conic-gradient(#24733a 0 78%, #d97706 78% 100%);">
-            <div class="cab-donut-hole"><strong>78%</strong><span>Tayyor</span></div>
-          </div>
-          <div class="cab-legend">
-            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#24733a"></span><span>Yuklangan: 7</span></div>
-            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#d97706"></span><span>Kutilmoqda: 2</span></div>
-          </div>
-        </div>
-      </article>
-    </div>
-
     <article class="card">
       <h3>Ariza bosqichlari</h3>
       <div class="step-track">
-        <div class="step-item done"><div class="step-dot">OK</div><span class="step-lbl">Ariza topshirildi</span></div>
-        <div class="step-item curr"><div class="step-dot">2</div><span class="step-lbl">Hujjatlar tekshiruvi</span></div>
-        <div class="step-item"><div class="step-dot">3</div><span class="step-lbl">Shartnoma imzosi</span></div>
-        <div class="step-item"><div class="step-dot">4</div><span class="step-lbl">A'zolik tasdiqlandi</span></div>
+        <div class="step-item done"><div class="step-dot">✓</div><span class="step-lbl">Ariza<br>topshirildi</span></div>
+        <div class="step-item curr"><div class="step-dot">2</div><span class="step-lbl">Hujjatlar<br>tekshiruvi</span></div>
+        <div class="step-item"><div class="step-dot">3</div><span class="step-lbl">Shartnoma<br>imzosi</span></div>
+        <div class="step-item"><div class="step-dot">4</div><span class="step-lbl">A'zolik<br>tasdiqlandi</span></div>
       </div>
     </article>
+
+    <div class="lower-grid">
+
+      <article class="card">
+        <h3>So'nggi harakatlar</h3>
+        <div class="cab-stream">
+          <div class="cab-stream-item">
+            <div class="cab-stream-icon">📋</div>
+            <div class="cab-stream-body">
+              <p class="cab-stream-title">Ariza muvaffaqiyatli yuborildi</p>
+              <span class="cab-stream-date">02.04.2026 · ARZ-2026-0418</span>
+            </div>
+          </div>
+          <div class="cab-stream-item">
+            <div class="cab-stream-icon">🔍</div>
+            <div class="cab-stream-body">
+              <p class="cab-stream-title">Hujjatlar tekshiruv bosqichiga o'tdi</p>
+              <span class="cab-stream-date">03.04.2026 · Admin tomonidan</span>
+            </div>
+          </div>
+          <div class="cab-stream-item">
+            <div class="cab-stream-icon">📎</div>
+            <div class="cab-stream-body">
+              <p class="cab-stream-title">Qo'shimcha hujjat so'raldi: Ustav yangi tahrir</p>
+              <span class="cab-stream-date">04.04.2026 · Ijro muddati: 10.04.2026</span>
+            </div>
+          </div>
+          <div class="cab-stream-item">
+            <div class="cab-stream-icon">📄</div>
+            <div class="cab-stream-body">
+              <p class="cab-stream-title">Shartnoma loyihasi tayyorlandi — ko'rib chiqish mumkin</p>
+              <span class="cab-stream-date">05.04.2026</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="right-col">
+
+        <article class="card">
+          <h3>Hujjatlar holati</h3>
+          <div class="doc-req-item">
+            <span class="doc-req-icon">✅</span>
+            <span class="doc-req-name">NGO Ustavi<span class="doc-req-sub">Majburiy</span></span>
+            <span class="doc-req-status ok">Tasdiqlangan</span>
+          </div>
+          <div class="doc-req-item">
+            <span class="doc-req-icon">✅</span>
+            <span class="doc-req-name">Davlat ro'yxati guvohnomasi<span class="doc-req-sub">Majburiy</span></span>
+            <span class="doc-req-status ok">Tasdiqlangan</span>
+          </div>
+          <div class="doc-req-item">
+            <span class="doc-req-icon">⚠️</span>
+            <span class="doc-req-name">Ustav yangi tahrir<span class="doc-req-sub">So'raldi · 10.04.2026 muddati</span></span>
+            <span class="doc-req-status warn">Kutilmoqda</span>
+          </div>
+          <div class="doc-req-item">
+            <span class="doc-req-icon">🕐</span>
+            <span class="doc-req-name">Soliq organidan ma'lumotnoma<span class="doc-req-sub">Majburiy</span></span>
+            <span class="doc-req-status dim">Taqdim etilmagan</span>
+          </div>
+          <a href="cabinet-documents.html" style="display:block;margin-top:10px;font-size:12.5px;font-weight:700;color:var(--accent-strong);">Barcha hujjatlar →</a>
+        </article>
+
+        <article class="card">
+          <h3>Yangiliklar</h3>
+          <div class="news-item">
+            <span class="news-tag">YANGILIK</span>
+            <span class="news-title">O'zNNTMA 2026-yil a'zolik shartlari yangilandi</span>
+            <span class="news-meta">01.04.2026</span>
+          </div>
+          <div class="news-item">
+            <span class="news-tag">TADBIR</span>
+            <span class="news-title">Seminar: NGO faoliyat standartlari · 15.04.2026</span>
+            <span class="news-meta">Toshkent, O'zNNTMA markazi</span>
+          </div>
+          <div class="news-item">
+            <span class="news-tag">MUHIM</span>
+            <span class="news-title">Yangi a'zolik bo'limiga murojaat tartibi haqida</span>
+            <span class="news-meta">20.03.2026</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
   </main>
 </div>
 <script src="js/cabinet-app.js"></script>

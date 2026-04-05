@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="uz">
 <head>
   <meta charset="utf-8" />
@@ -10,55 +10,51 @@
 <div class="app">
   <main class="main">
     <div class="page-heading"><h1>Sozlamalar</h1></div>
-    <p class="page-sub">Profil va xabarnoma sozlamalari bo'yicha ko'rsatkichlar.</p>
+    <p class="page-sub">Mas'ul shaxs ma'lumotlari, xabarnomalar va tashkilot profili.</p>
 
     <div class="grid-2">
       <article class="card">
         <h3>Mas'ul shaxs</h3>
         <div class="filters filters-single">
-          <input class="input" placeholder="F.I.Sh." />
-          <input class="input" placeholder="Telefon" />
-          <input class="input" placeholder="Email" />
+          <input class="input" placeholder="F.I.Sh." value="Kamolov Sanjar Ibrohimovich" />
+          <input class="input" placeholder="Telefon" value="+998 90 123 45 67" />
+          <input class="input" placeholder="Email" value="s.kamolov@yanginafas.uz" />
           <button class="btn" type="button">Saqlash</button>
         </div>
       </article>
 
       <article class="card">
-        <h3>Xabarnoma</h3>
+        <h3>Xabarnoma sozlamalari</h3>
         <div class="filters filters-single">
-          <label><input type="checkbox" checked /> Email orqali xabar olish</label>
-          <label><input type="checkbox" checked /> Ariza holati o'zgarsa xabar berish</label>
+          <label style="display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer;"><input type="checkbox" checked /> Email orqali xabar olish</label>
+          <label style="display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer;"><input type="checkbox" checked /> Ariza holati o'zgarsa xabar berish</label>
+          <label style="display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer;"><input type="checkbox" /> SMS orqali xabar olish</label>
+          <label style="display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer;"><input type="checkbox" checked /> Hujjat so'ralsa xabar berish</label>
           <button class="btn" type="button">Saqlash</button>
         </div>
       </article>
     </div>
 
-    <div class="cab-chart-grid" style="margin-top:12px;">
-      <article class="cab-chart-card">
-        <h3 class="cab-chart-title">Xabar ochilish dinamikasi</h3>
-        <p class="cab-chart-sub">Haftalik ko'rish foizi</p>
-        <div class="cab-line-wrap">
-          <svg viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg">
-            <g stroke="#d5e5ef" stroke-width="1"><line x1="20" y1="20" x2="500" y2="20"/><line x1="20" y1="55" x2="500" y2="55"/><line x1="20" y1="90" x2="500" y2="90"/><line x1="20" y1="125" x2="500" y2="125"/><line x1="20" y1="160" x2="500" y2="160"/></g>
-            <polyline fill="none" stroke="#24733a" stroke-width="3" points="20,120 98,112 176,96 254,84 332,78 410,72 500,64"/>
-          </svg>
-        </div>
-        <div class="cab-axis-labels"><span>1-hafta</span><span>2-hafta</span><span>3-hafta</span><span>4-hafta</span><span>5-hafta</span><span>6-hafta</span><span>7-hafta</span></div>
+    <div class="grid-2 mt-12">
+      <article class="card">
+        <h3>Tashkilot profili</h3>
+        <div class="info-row"><span class="info-label">NGO nomi</span><span class="info-val">Yangi Nafas NNT</span></div>
+        <div class="info-row"><span class="info-label">STIR</span><span class="info-val">302 841 567</span></div>
+        <div class="info-row"><span class="info-label">Viloyat / shahar</span><span class="info-val">Toshkent shahri</span></div>
+        <div class="info-row"><span class="info-label">Manzil</span><span class="info-val">Yunusobod t., Amir Temur ko'ch. 15</span></div>
+        <div class="info-row"><span class="info-label">Davlat ro'yxatidan o'tgan</span><span class="info-val">15.03.2021</span></div>
+        <div class="info-row"><span class="info-label">Faoliyat yo'nalishi</span><span class="info-val">Ijtimoiy yordam</span></div>
+        <a href="#" style="display:block;margin-top:10px;font-size:12.5px;font-weight:700;color:var(--accent-strong);">Ma'lumotlarni yangilash →</a>
       </article>
 
-      <article class="cab-chart-card">
-        <h3 class="cab-chart-title">Kanal taqsimoti</h3>
-        <p class="cab-chart-sub">Faol xabarnoma kanallari</p>
-        <div class="cab-donut-box">
-          <div class="cab-donut" style="background:conic-gradient(#007a94 0 61%, #00b4d8 61% 86%, #94a3b8 86% 100%);">
-            <div class="cab-donut-hole"><strong>61%</strong><span>Email</span></div>
-          </div>
-          <div class="cab-legend">
-            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#007a94"></span><span>Email</span></div>
-            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#00b4d8"></span><span>SMS</span></div>
-            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#94a3b8"></span><span>Ilova ichida</span></div>
-          </div>
-        </div>
+      <article class="card">
+        <h3>Hisob faoliyati</h3>
+        <div class="info-row"><span class="info-label">Oxirgi kirish</span><span class="info-val">05.04.2026 · 09:14</span></div>
+        <div class="info-row"><span class="info-label">Joriy ariza</span><span class="info-val">ARZ-2026-0418</span></div>
+        <div class="info-row"><span class="info-label">Ariza topshirilgan sana</span><span class="info-val">02.04.2026</span></div>
+        <div class="info-row"><span class="info-label">A'zolik holati</span><span class="info-val warn">Ko'rib chiqilmoqda</span></div>
+        <div class="info-row"><span class="info-label">Yuklangan hujjatlar</span><span class="info-val">3 / 5 ta</span></div>
+        <div class="info-row"><span class="info-label">Ochiq murojaatlar</span><span class="info-val">1 ta</span></div>
       </article>
     </div>
   </main>

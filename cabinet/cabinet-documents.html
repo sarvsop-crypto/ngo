@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="uz">
 <head>
   <meta charset="utf-8" />
@@ -10,54 +10,97 @@
 <div class="app">
   <main class="main">
     <div class="page-heading"><h1>Shartnoma hujjatlari</h1></div>
-    <p class="page-sub">Hujjatlar holati va yuklash statistikasi.</p>
+    <p class="page-sub">A'zolik uchun talab qilinadigan hujjatlar ro'yxati va yuklash holati.</p>
 
-    <div class="grid-2">
-      <article class="card">
-        <h3>Yuklash</h3>
-        <div class="filters filters-single">
-          <input class="input" type="file" />
-          <button class="btn" type="button">Yuklash</button>
+    <article class="card" style="margin-bottom:14px;">
+      <h3>Kerakli hujjatlar to'plami</h3>
+
+      <div class="doc-req-item">
+        <span class="doc-req-icon">✅</span>
+        <div style="flex:1;">
+          <span class="doc-req-name">NGO Ustavi</span>
+          <span class="doc-req-sub">Majburiy · Yuklangan: 01.04.2026 · Ustav.pdf</span>
         </div>
-      </article>
+        <span class="doc-req-status ok">Tasdiqlangan</span>
+        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Ko'rish</a>
+      </div>
 
-      <article class="card">
-        <h3>Holat</h3>
-        <ul class="event-list list-reset">
-          <li class="event-item"><h4>Ustav.pdf</h4><p>Tasdiqlangan</p></li>
-          <li class="event-item"><h4>Guvohnoma.pdf</h4><p>Tasdiqlangan</p></li>
-          <li class="event-item"><h4>Shartnoma.pdf</h4><p>Imzo kutilmoqda</p></li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="cab-chart-grid" style="margin-top:12px;">
-      <article class="cab-chart-card">
-        <h3 class="cab-chart-title">Yuklashlar dinamikasi</h3>
-        <p class="cab-chart-sub">Oxirgi 6 kun</p>
-        <div class="cab-line-wrap">
-          <svg viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg">
-            <g stroke="#d5e5ef" stroke-width="1"><line x1="20" y1="20" x2="500" y2="20"/><line x1="20" y1="55" x2="500" y2="55"/><line x1="20" y1="90" x2="500" y2="90"/><line x1="20" y1="125" x2="500" y2="125"/><line x1="20" y1="160" x2="500" y2="160"/></g>
-            <polyline fill="none" stroke="#24733a" stroke-width="3" points="20,145 116,126 212,136 308,96 404,88 500,66"/>
-          </svg>
+      <div class="doc-req-item">
+        <span class="doc-req-icon">✅</span>
+        <div style="flex:1;">
+          <span class="doc-req-name">Davlat ro'yxatidan o'tish guvohnomasi</span>
+          <span class="doc-req-sub">Majburiy · Yuklangan: 01.04.2026 · Guvohnoma.pdf</span>
         </div>
-        <div class="cab-axis-labels"><span>Dush</span><span>Sesh</span><span>Chor</span><span>Pay</span><span>Jum</span><span>Shan</span></div>
-      </article>
+        <span class="doc-req-status ok">Tasdiqlangan</span>
+        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Ko'rish</a>
+      </div>
 
-      <article class="cab-chart-card">
-        <h3 class="cab-chart-title">Paket to'liqligi</h3>
-        <p class="cab-chart-sub">Kerakli fayllar bo'yicha</p>
-        <div class="cab-donut-box">
-          <div class="cab-donut" style="background:conic-gradient(#24733a 0 80%, #d97706 80% 100%);">
-            <div class="cab-donut-hole"><strong>80%</strong><span>Tayyor</span></div>
-          </div>
-          <div class="cab-legend">
-            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#24733a"></span><span>Mavjud: 8</span></div>
-            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#d97706"></span><span>Kutilmoqda: 2</span></div>
-          </div>
+      <div class="doc-req-item">
+        <span class="doc-req-icon">✅</span>
+        <div style="flex:1;">
+          <span class="doc-req-name">Rahbar haqida ma'lumotnoma</span>
+          <span class="doc-req-sub">Majburiy · Yuklangan: 01.04.2026 · Rahbar_malumot.pdf</span>
         </div>
-      </article>
-    </div>
+        <span class="doc-req-status ok">Tasdiqlangan</span>
+        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Ko'rish</a>
+      </div>
+
+      <div class="doc-req-item">
+        <span class="doc-req-icon">⚠️</span>
+        <div style="flex:1;">
+          <span class="doc-req-name">Ustav yangi tahrir (2026-yil)</span>
+          <span class="doc-req-sub">Majburiy · Admin tomonidan so'raldi · Muddati: 10.04.2026</span>
+        </div>
+        <span class="doc-req-status warn">Kutilmoqda</span>
+        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Yuklash</a>
+      </div>
+
+      <div class="doc-req-item">
+        <span class="doc-req-icon">🕐</span>
+        <div style="flex:1;">
+          <span class="doc-req-name">Soliq organidan ma'lumotnoma</span>
+          <span class="doc-req-sub">Majburiy · Hali yuklanmagan</span>
+        </div>
+        <span class="doc-req-status dim">Taqdim etilmagan</span>
+        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Yuklash</a>
+      </div>
+
+      <div class="doc-req-item">
+        <span class="doc-req-icon">📄</span>
+        <div style="flex:1;">
+          <span class="doc-req-name">A'zolik shartnomasi</span>
+          <span class="doc-req-sub">Majburiy · Tayyorlangan — imzo kutilmoqda</span>
+        </div>
+        <span class="doc-req-status warn">Imzo kutilmoqda</span>
+        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Ko'rish</a>
+      </div>
+
+      <div class="doc-req-item">
+        <span class="doc-req-icon">🕐</span>
+        <div style="flex:1;">
+          <span class="doc-req-name">Tashkilot nizomi</span>
+          <span class="doc-req-sub">Ixtiyoriy · Hali yuklanmagan</span>
+        </div>
+        <span class="doc-req-status dim">Ixtiyoriy</span>
+        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Yuklash</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Yangi hujjat yuklash</h3>
+      <p style="font-size:13px;color:var(--neutral-500);margin:0 0 12px;">PDF, DOC yoki DOCX formatidagi fayllarni yuklang. Maksimal hajm: 10 MB.</p>
+      <div class="filters filters-single" style="max-width:480px;">
+        <select class="select">
+          <option>Hujjat turini tanlang</option>
+          <option>Ustav yangi tahrir (2026-yil)</option>
+          <option>Soliq organidan ma'lumotnoma</option>
+          <option>Tashkilot nizomi</option>
+          <option>Boshqa hujjat</option>
+        </select>
+        <input class="input" type="file" accept=".pdf,.doc,.docx" />
+        <button class="btn" type="button">Yuklash</button>
+      </div>
+    </article>
   </main>
 </div>
 <script src="js/cabinet-app.js"></script>

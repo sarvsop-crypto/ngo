@@ -1008,3 +1008,38 @@ body.a11y-grayscale { filter: grayscale(1); }
 @media (max-width:1100px) {
   .adm-chart-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Admin: info rows, doc checklist, versions table, activity log ── */
+.adm-info-row { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid var(--neutral-200); font-size:13px; }
+.adm-info-row:last-child { border-bottom:0; }
+.adm-info-label { color:var(--neutral-500); }
+.adm-info-val { font-weight:600; color:var(--neutral-900); }
+
+.adm-doc-row { display:flex; gap:8px; padding:8px 0; border-bottom:1px solid var(--neutral-200); align-items:center; font-size:12.5px; }
+.adm-doc-row:last-child { border-bottom:0; }
+.adm-doc-icon { width:18px; text-align:center; flex-shrink:0; }
+.adm-doc-name { flex:1; color:var(--neutral-900); font-weight:500; }
+.adm-doc-badge { font-size:11px; font-weight:700; padding:2px 7px; border-radius:3px; flex-shrink:0; }
+.adm-doc-badge.ok { background:#e1f5e6; color:#24733a; }
+.adm-doc-badge.warn { background:#fff5df; color:#996109; }
+.adm-doc-badge.miss { background:#f1f5f9; color:var(--neutral-400); }
+
+.adm-note-area { width:100%; border:1px solid var(--neutral-200); border-radius:4px; padding:9px 11px; font-family:inherit; font-size:13px; color:var(--neutral-900); resize:vertical; min-height:76px; background:#fff; box-sizing:border-box; display:block; margin-bottom:10px; }
+.adm-note-area:focus { outline:none; border-color:var(--green-500); }
+
+.adm-ver-table { width:100%; border-collapse:collapse; font-size:13px; }
+.adm-ver-table th { background:#e8f3f9; color:var(--neutral-500); font-weight:700; font-size:12px; padding:9px 11px; text-align:left; border-bottom:1px solid var(--neutral-200); }
+.adm-ver-table td { padding:9px 11px; border-bottom:1px solid var(--neutral-200); color:var(--neutral-900); vertical-align:middle; }
+.adm-ver-table tr:last-child td { border-bottom:0; }
+.adm-ver-badge { display:inline-block; padding:2px 8px; font-size:11px; font-weight:700; border-radius:3px; }
+.adm-ver-badge.cur { background:#e1f5e6; color:#24733a; }
+.adm-ver-badge.arch { background:#f1f5f9; color:var(--neutral-400); }
+
+.adm-act-row { display:flex; gap:10px; padding:9px 0; border-bottom:1px solid var(--neutral-200); align-items:flex-start; }
+.adm-act-row:last-child { border-bottom:0; }
+.adm-act-dot { width:8px; height:8px; border-radius:50%; background:var(--green-500); flex-shrink:0; margin-top:5px; }
+.adm-act-dot.warn { background:#d97706; }
+.adm-act-dot.bad { background:#dc2626; }
+.adm-act-body { flex:1; }
+.adm-act-title { font-size:13px; font-weight:600; color:var(--neutral-900); }
+.adm-act-meta { font-size:11px; color:var(--neutral-400); margin-top:2px; }
