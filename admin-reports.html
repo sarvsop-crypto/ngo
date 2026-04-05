@@ -113,10 +113,12 @@
           <div class="chart-donut__inner">
             <div class="chart-donut__img-wrap" style="position:relative;width:160px;height:160px;margin:0 auto;">
               <svg width="160" height="160" viewBox="0 0 160 160">
-                <circle cx="80" cy="80" r="60" fill="none" stroke="#dfe1e7" stroke-width="22"/>
-                <circle cx="80" cy="80" r="60" fill="none" stroke="var(--primary-500)" stroke-width="22" stroke-dasharray="143 234" stroke-linecap="round" transform="rotate(-90 80 80)"/>
-                <circle cx="80" cy="80" r="60" fill="none" stroke="var(--secondary-500)" stroke-width="22" stroke-dasharray="91 286" stroke-linecap="round" transform="rotate(129 80 80)"/>
-                <circle cx="80" cy="80" r="60" fill="none" stroke="#dc2626" stroke-width="22" stroke-dasharray="27 350" stroke-linecap="round" transform="rotate(219 80 80)"/>
+                <!-- C=2π×60≈377. 4 gaps×4=16. Available=361. Segs: 94/247×361=137, 61/247×361=89, 18/247×361=26, 74/247×361=109 -->
+                <circle cx="80" cy="80" r="60" fill="none" stroke="#e5e7eb" stroke-width="22"/>
+                <circle cx="80" cy="80" r="60" fill="none" stroke="var(--primary-500)" stroke-width="22" stroke-dasharray="137 240" stroke-linecap="butt" transform="rotate(-90 80 80)"/>
+                <circle cx="80" cy="80" r="60" fill="none" stroke="var(--secondary-500)" stroke-width="22" stroke-dasharray="89 288" stroke-linecap="butt" transform="rotate(45 80 80)"/>
+                <circle cx="80" cy="80" r="60" fill="none" stroke="#dc2626" stroke-width="22" stroke-dasharray="26 351" stroke-linecap="butt" transform="rotate(134 80 80)"/>
+                <circle cx="80" cy="80" r="60" fill="none" stroke="#94a3b8" stroke-width="22" stroke-dasharray="109 268" stroke-linecap="butt" transform="rotate(163 80 80)"/>
               </svg>
               <div class="chart-donut__center" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;">
                 <span class="chart-donut__center-label" style="font-size:11px;color:var(--grey-400);display:block;">Jami</span>
@@ -127,7 +129,7 @@
               <span class="chart-donut__legend-item"><span class="chart-donut__legend-dot u-bg-primary-500"></span> Tasdiqlangan: 94</span>
               <span class="chart-donut__legend-item"><span class="chart-donut__legend-dot u-bg-secondary-500"></span> Ko&rsquo;rib chiqilmoqda: 61</span>
               <span class="chart-donut__legend-item"><span class="chart-donut__legend-dot" style="background:#dc2626;display:inline-block;width:10px;height:10px;border-radius:50%;"></span> Qaytarilgan: 18</span>
-              <span class="chart-donut__legend-item"><span class="chart-donut__legend-dot" style="background:var(--grey-200);display:inline-block;width:10px;height:10px;border-radius:50%;"></span> Yangi: 74</span>
+              <span class="chart-donut__legend-item"><span class="chart-donut__legend-dot" style="background:#94a3b8;display:inline-block;width:10px;height:10px;border-radius:50%;"></span> Yangi: 74</span>
             </div>
           </div>
         </div>
