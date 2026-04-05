@@ -3,57 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>A'zolik Shartnomalari - Admin</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+  <title>A'zolik shartnomalari - O'zNNTMA Admin</title>
+  <link rel="stylesheet" href="css/ds.css" />
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="index.html"><span class="brand-dot">NGO</span>ngo.uz</a>
-    <span class="admin-panel-label">Admin Panel</span>
-    <div class="admin-header-right">
-      <a class="admin-site-link" href="index.html">Asosiy sayt</a>
-      <a class="contact-btn" href="cabinet/cabinet-login.html">Chiqish</a>
-    </div>
-  </div>
-</header>
+<div class="ds-frame">
 
-<section class="grid-bg"><div class="container hero center"><h1>A'zolik shartnomalari</h1><p class="sub">Ariza qabul, ko'rib chiqish va qaror qabul qilish ish ekrani.</p></div></section>
-
-<section class="section admin-section">
-  <div class="container admin-shell">
-    <aside class="admin-nav-panel card">
-      <h3>Boshqaruv bo'limlari</h3>
-      <nav class="admin-menu">
-        <a href="admin-dashboard.html">Boshqaruv</a>
-        <a class="active" href="admin-membership-requests.html">A'zolik shartnomalari</a>
-        <a href="admin-settings.html">Sozlamalar</a>
-      </nav>
-    </aside>
-
+  <aside class="ds-sidebar">
     <div>
-      <div class="admin-filters">
-        <input class="admin-input" placeholder="Ariza ID yoki tashkilot nomi" />
-        <select class="admin-select"><option>Barcha holatlar</option><option>Yangi</option><option>Ko'rib chiqilmoqda</option><option>Tasdiqlangan</option><option>Qaytarilgan</option></select>
-        <select class="admin-select"><option>Barcha viloyatlar</option><option>Toshkent shahri</option><option>Toshkent viloyati</option><option>Samarqand</option><option>Farg'ona</option><option>Andijon</option><option>Namangan</option></select>
-        <select class="admin-select"><option>So'nggi 7 kun</option><option>Bugun</option><option>So'nggi 30 kun</option></select>
+      <a class="ds-logo" href="admin-dashboard.html">O'z<span>NNTMA</span></a>
+      <nav class="ds-nav">
+        <a href="admin-dashboard.html"><span class="ds-nav-icon">◻</span>Boshqaruv</a>
+        <a href="admin-membership-requests.html" class="active"><span class="ds-nav-icon">◎</span>A'zolik shartnomalari</a>
+        <a href="admin-registry.html"><span class="ds-nav-icon">◫</span>Ro'yxat</a>
+        <a href="admin-reports.html"><span class="ds-nav-icon">◈</span>Hisobotlar</a>
+        <a href="admin-users.html"><span class="ds-nav-icon">◉</span>Foydalanuvchilar</a>
+      </nav>
+    </div>
+    <div class="ds-sidebar-bottom">
+      <nav class="ds-nav">
+        <a href="admin-settings.html"><span class="ds-nav-icon">⚙</span>Sozlamalar</a>
+        <a href="#"><span class="ds-nav-icon">?</span>Yordam</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="ds-main">
+
+    <div class="ds-header">
+      <div>
+        <h1>A'zolik shartnomalari</h1>
+        <p class="ds-header-sub">Ariza qabul, ko'rib chiqish va qaror qabul qilish</p>
+      </div>
+      <div class="ds-header-right">
+        <div class="ds-search">🔍 <input placeholder="Ariza ID yoki tashkilot..." /></div>
+        <div class="ds-user">
+          <div class="ds-avatar">A</div>
+          <div><p class="ds-user-name">Admin</p><p class="ds-user-role">Bosh admin</p></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="ds-card">
+
+      <!-- Filter chips -->
+      <div class="ds-chips">
+        <button class="ds-chip active">Barchasi <span class="ds-chip-n">8</span></button>
+        <button class="ds-chip">Yangi <span class="ds-chip-n">2</span></button>
+        <button class="ds-chip">Ko'rib chiqilmoqda <span class="ds-chip-n">2</span></button>
+        <button class="ds-chip">Tasdiqlangan <span class="ds-chip-n">2</span></button>
+        <button class="ds-chip">Qaytarilgan <span class="ds-chip-n">2</span></button>
       </div>
 
-      <div class="adm-chips">
-        <button class="adm-chip active">Barchasi <span class="adm-chip-count">8</span></button>
-        <button class="adm-chip">Yangi <span class="adm-chip-count">2</span></button>
-        <button class="adm-chip">Ko'rib chiqilmoqda <span class="adm-chip-count">2</span></button>
-        <button class="adm-chip">Tasdiqlangan <span class="adm-chip-count">2</span></button>
-        <button class="adm-chip">Qaytarilgan <span class="adm-chip-count">2</span></button>
+      <!-- Toolbar -->
+      <div class="ds-toolbar">
+        <div class="ds-toolbar-left">
+          <div class="ds-search" style="width:200px;">🔍 <input placeholder="Qidirish..." /></div>
+          <select class="ds-input-sm" style="width:150px;">
+            <option>Barcha viloyatlar</option>
+            <option>Toshkent shahri</option>
+            <option>Toshkent viloyati</option>
+            <option>Samarqand</option>
+            <option>Farg'ona</option>
+          </select>
+          <select class="ds-input-sm" style="width:150px;">
+            <option>So'nggi 30 kun</option>
+            <option>Bugun</option>
+            <option>So'nggi 7 kun</option>
+          </select>
+        </div>
+        <div class="ds-toolbar-right">
+          <button class="ds-btn ds-btn-primary">+ Yangi ariza</button>
+          <button class="ds-btn">⬇ Eksport</button>
+        </div>
       </div>
 
-      <div class="admin-table-wrap" style="margin-bottom:12px;">
-        <table class="admin-table">
+      <!-- Table -->
+      <div class="ds-table-wrap">
+        <table class="ds-table">
           <thead>
             <tr>
+              <th style="width:28px;"><input type="checkbox" /></th>
               <th>Ariza</th>
               <th>Tashkilot</th>
               <th>Viloyat</th>
@@ -67,135 +97,218 @@
           </thead>
           <tbody>
             <tr>
+              <td><input type="checkbox" /></td>
               <td><strong>ARZ-2026-0418</strong></td>
               <td>Yangi Nafas NNT</td>
               <td>Toshkent shahri</td>
               <td>Kamolov Sanjar</td>
               <td>02.04.2026</td>
               <td>2 / 4</td>
-              <td><div class="adm-mini-bar-wrap"><div class="adm-mini-bar" style="width:60%"></div><span class="adm-mini-label">3/5</span></div></td>
-              <td><span class="admin-badge warn">Ko'rib chiqilmoqda</span></td>
-              <td><a href="#">Ochish</a></td>
+              <td>
+                <div class="ds-mini-bar-wrap">
+                  <div class="ds-mini-track"><div class="ds-mini-fill" style="width:60%"></div></div>
+                  <span class="ds-mini-label">3/5</span>
+                </div>
+              </td>
+              <td><span class="ds-badge ds-badge-warn">Ko'rib chiqilmoqda</span></td>
+              <td><div class="ds-acts"><span class="ds-act">👁</span><span class="ds-act">✎</span></div></td>
             </tr>
             <tr>
+              <td><input type="checkbox" /></td>
               <td><strong>ARZ-2026-0417</strong></td>
               <td>Mehr jamg'armasi</td>
               <td>Samarqand</td>
               <td>Toshmatova Dilnoza</td>
               <td>02.04.2026</td>
               <td>1 / 4</td>
-              <td><div class="adm-mini-bar-wrap"><div class="adm-mini-bar" style="width:20%"></div><span class="adm-mini-label">1/5</span></div></td>
-              <td><span class="admin-badge warn">Yangi</span></td>
-              <td><a href="#">Ochish</a></td>
+              <td>
+                <div class="ds-mini-bar-wrap">
+                  <div class="ds-mini-track"><div class="ds-mini-fill warn" style="width:20%"></div></div>
+                  <span class="ds-mini-label">1/5</span>
+                </div>
+              </td>
+              <td><span class="ds-badge ds-badge-info">Yangi</span></td>
+              <td><div class="ds-acts"><span class="ds-act">👁</span><span class="ds-act">✎</span></div></td>
             </tr>
             <tr>
+              <td><input type="checkbox" /></td>
               <td><strong>ARZ-2026-0415</strong></td>
               <td>Saxovat Plus NNT</td>
               <td>Farg'ona</td>
               <td>Yusupov Baxtiyor</td>
               <td>01.04.2026</td>
               <td>4 / 4</td>
-              <td><div class="adm-mini-bar-wrap"><div class="adm-mini-bar ok" style="width:100%"></div><span class="adm-mini-label">5/5</span></div></td>
-              <td><span class="admin-badge ok">Tasdiqlangan</span></td>
-              <td><a href="#">Ko'rish</a></td>
+              <td>
+                <div class="ds-mini-bar-wrap">
+                  <div class="ds-mini-track"><div class="ds-mini-fill ok" style="width:100%"></div></div>
+                  <span class="ds-mini-label">5/5</span>
+                </div>
+              </td>
+              <td><span class="ds-badge ds-badge-ok">Tasdiqlangan</span></td>
+              <td><div class="ds-acts"><span class="ds-act">👁</span><span class="ds-act">✎</span></div></td>
             </tr>
             <tr>
+              <td><input type="checkbox" /></td>
               <td><strong>ARZ-2026-0412</strong></td>
               <td>Kelajak Sari NNT</td>
               <td>Andijon</td>
               <td>Mirzayev Ortiq</td>
               <td>31.03.2026</td>
               <td>2 / 4</td>
-              <td><div class="adm-mini-bar-wrap"><div class="adm-mini-bar warn" style="width:40%"></div><span class="adm-mini-label">2/5</span></div></td>
-              <td><span class="admin-badge bad">Qaytarilgan</span></td>
-              <td><a href="#">Izoh</a></td>
+              <td>
+                <div class="ds-mini-bar-wrap">
+                  <div class="ds-mini-track"><div class="ds-mini-fill warn" style="width:40%"></div></div>
+                  <span class="ds-mini-label">2/5</span>
+                </div>
+              </td>
+              <td><span class="ds-badge ds-badge-bad">Qaytarilgan</span></td>
+              <td><div class="ds-acts"><span class="ds-act">👁</span><span class="ds-act">✎</span></div></td>
             </tr>
             <tr>
+              <td><input type="checkbox" /></td>
               <td><strong>ARZ-2026-0410</strong></td>
               <td>Umid Nuri Jamg'arma</td>
               <td>Namangan</td>
               <td>Rahimova Malika</td>
               <td>30.03.2026</td>
               <td>3 / 4</td>
-              <td><div class="adm-mini-bar-wrap"><div class="adm-mini-bar" style="width:80%"></div><span class="adm-mini-label">4/5</span></div></td>
-              <td><span class="admin-badge warn">Ko'rib chiqilmoqda</span></td>
-              <td><a href="#">Ochish</a></td>
+              <td>
+                <div class="ds-mini-bar-wrap">
+                  <div class="ds-mini-track"><div class="ds-mini-fill" style="width:80%"></div></div>
+                  <span class="ds-mini-label">4/5</span>
+                </div>
+              </td>
+              <td><span class="ds-badge ds-badge-warn">Ko'rib chiqilmoqda</span></td>
+              <td><div class="ds-acts"><span class="ds-act">👁</span><span class="ds-act">✎</span></div></td>
             </tr>
             <tr>
+              <td><input type="checkbox" /></td>
               <td><strong>ARZ-2026-0408</strong></td>
               <td>Yoshlar Istiqboli NNT</td>
               <td>Toshkent viloyati</td>
               <td>Xolmatov Davron</td>
               <td>29.03.2026</td>
               <td>4 / 4</td>
-              <td><div class="adm-mini-bar-wrap"><div class="adm-mini-bar ok" style="width:100%"></div><span class="adm-mini-label">5/5</span></div></td>
-              <td><span class="admin-badge ok">Tasdiqlangan</span></td>
-              <td><a href="#">Ko'rish</a></td>
+              <td>
+                <div class="ds-mini-bar-wrap">
+                  <div class="ds-mini-track"><div class="ds-mini-fill ok" style="width:100%"></div></div>
+                  <span class="ds-mini-label">5/5</span>
+                </div>
+              </td>
+              <td><span class="ds-badge ds-badge-ok">Tasdiqlangan</span></td>
+              <td><div class="ds-acts"><span class="ds-act">👁</span><span class="ds-act">✎</span></div></td>
             </tr>
             <tr>
+              <td><input type="checkbox" /></td>
               <td><strong>ARZ-2026-0405</strong></td>
               <td>Baraka Jamiyat NNT</td>
               <td>Qashqadaryo</td>
               <td>Nazarova Zulfiya</td>
               <td>28.03.2026</td>
               <td>1 / 4</td>
-              <td><div class="adm-mini-bar-wrap"><div class="adm-mini-bar warn" style="width:20%"></div><span class="adm-mini-label">1/5</span></div></td>
-              <td><span class="admin-badge warn">Yangi</span></td>
-              <td><a href="#">Ochish</a></td>
+              <td>
+                <div class="ds-mini-bar-wrap">
+                  <div class="ds-mini-track"><div class="ds-mini-fill warn" style="width:20%"></div></div>
+                  <span class="ds-mini-label">1/5</span>
+                </div>
+              </td>
+              <td><span class="ds-badge ds-badge-info">Yangi</span></td>
+              <td><div class="ds-acts"><span class="ds-act">👁</span><span class="ds-act">✎</span></div></td>
             </tr>
             <tr>
+              <td><input type="checkbox" /></td>
               <td><strong>ARZ-2026-0402</strong></td>
               <td>Fidoyi Yigitlar NNT</td>
               <td>Buxoro</td>
               <td>Usmonov Hamid</td>
               <td>27.03.2026</td>
               <td>2 / 4</td>
-              <td><div class="adm-mini-bar-wrap"><div class="adm-mini-bar warn" style="width:40%"></div><span class="adm-mini-label">2/5</span></div></td>
-              <td><span class="admin-badge bad">Qaytarilgan</span></td>
-              <td><a href="#">Izoh</a></td>
+              <td>
+                <div class="ds-mini-bar-wrap">
+                  <div class="ds-mini-track"><div class="ds-mini-fill warn" style="width:40%"></div></div>
+                  <span class="ds-mini-label">2/5</span>
+                </div>
+              </td>
+              <td><span class="ds-badge ds-badge-bad">Qaytarilgan</span></td>
+              <td><div class="ds-acts"><span class="ds-act">👁</span><span class="ds-act">✎</span></div></td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div class="admin-bottom admin-bottom--spaced">
-        <article class="admin-card">
-          <h3>Tanlangan ariza — ARZ-2026-0418</h3>
-
-          <div style="margin-bottom:12px;">
-            <div class="adm-info-row"><span class="adm-info-label">Tashkilot</span><span class="adm-info-val">Yangi Nafas NNT</span></div>
-            <div class="adm-info-row"><span class="adm-info-label">STIR</span><span class="adm-info-val">302 841 567</span></div>
-            <div class="adm-info-row"><span class="adm-info-label">Viloyat</span><span class="adm-info-val">Toshkent shahri</span></div>
-            <div class="adm-info-row"><span class="adm-info-label">Mas'ul shaxs</span><span class="adm-info-val">Kamolov Sanjar</span></div>
-            <div class="adm-info-row"><span class="adm-info-label">Telefon</span><span class="adm-info-val">+998 90 123 45 67</span></div>
-            <div class="adm-info-row"><span class="adm-info-label">Joriy bosqich</span><span class="adm-info-val">Hujjatlar tekshiruvi (2/4)</span></div>
-          </div>
-
-          <p style="font-size:12px;font-weight:700;color:var(--neutral-500);text-transform:uppercase;letter-spacing:.07em;margin:0 0 6px;">Hujjatlar holati</p>
-          <div class="adm-doc-row"><span class="adm-doc-icon">✓</span><span class="adm-doc-name">NGO Ustavi</span><span class="adm-doc-badge ok">Tasdiqlangan</span></div>
-          <div class="adm-doc-row"><span class="adm-doc-icon">✓</span><span class="adm-doc-name">Davlat ro'yxati guvohnomasi</span><span class="adm-doc-badge ok">Tasdiqlangan</span></div>
-          <div class="adm-doc-row"><span class="adm-doc-icon">✓</span><span class="adm-doc-name">Rahbar haqida ma'lumotnoma</span><span class="adm-doc-badge ok">Tasdiqlangan</span></div>
-          <div class="adm-doc-row"><span class="adm-doc-icon">⚠</span><span class="adm-doc-name">Ustav yangi tahrir (so'raldi)</span><span class="adm-doc-badge warn">Kutilmoqda</span></div>
-          <div class="adm-doc-row"><span class="adm-doc-icon">—</span><span class="adm-doc-name">Soliq organidan ma'lumotnoma</span><span class="adm-doc-badge miss">Taqdim etilmagan</span></div>
-        </article>
-
-        <article class="admin-card">
-          <h3>Qaror</h3>
-          <p style="font-size:12px;font-weight:700;color:var(--neutral-500);text-transform:uppercase;letter-spacing:.07em;margin:0 0 6px;">Izoh / Sabab</p>
-          <textarea class="adm-note-area" placeholder="Tasdiqlash yoki qaytarish sababini kiriting (ixtiyoriy)..."></textarea>
-          <div class="split-inline" style="gap:8px;">
-            <a class="btn" href="#" style="flex:1;text-align:center;">Tasdiqlash</a>
-            <a class="btn btn-secondary" href="#" style="flex:1;text-align:center;display:flex;align-items:center;justify-content:center;background:#fde6e6;border-color:#e2b2b2;color:#9c2828;">Qaytarish</a>
-          </div>
-          <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--neutral-200);">
-            <p style="font-size:12px;font-weight:700;color:var(--neutral-500);text-transform:uppercase;letter-spacing:.07em;margin:0 0 6px;">Oldingi izohlar</p>
-            <div class="adm-act-row"><div class="adm-act-dot warn"></div><div class="adm-act-body"><div class="adm-act-title">Ustav yangi tahrir so'raldi</div><div class="adm-act-meta">04.04.2026 · Admin tomonidan</div></div></div>
-            <div class="adm-act-row"><div class="adm-act-dot"></div><div class="adm-act-body"><div class="adm-act-title">Hujjatlar tekshiruv bosqichiga o'tkazildi</div><div class="adm-act-meta">03.04.2026 · Admin tomonidan</div></div></div>
-          </div>
-        </article>
+      <!-- Pagination -->
+      <div class="ds-pagination">
+        <div class="ds-pages">
+          <span class="ds-page">Oldingi</span>
+          <span class="ds-page active">1</span>
+          <span class="ds-page">2</span>
+          <span class="ds-page">...</span>
+          <span class="ds-page">12</span>
+          <span class="ds-page">Keyingi</span>
+        </div>
+        <span class="ds-records">Jami 247 ariza · 1–8 ko'rsatilmoqda</span>
       </div>
+    </article>
+
+    <!-- Detail + Decision -->
+    <div class="ds-grid-2 ds-mt-16">
+      <article class="ds-card">
+        <p style="font-size:12px;font-weight:700;color:#a1a1a1;text-transform:uppercase;letter-spacing:.06em;margin:0 0 14px;">Tanlangan ariza — ARZ-2026-0418</p>
+        <div class="ds-info-row"><span class="ds-info-label">Tashkilot</span><span class="ds-info-val">Yangi Nafas NNT</span></div>
+        <div class="ds-info-row"><span class="ds-info-label">STIR</span><span class="ds-info-val">302 841 567</span></div>
+        <div class="ds-info-row"><span class="ds-info-label">Viloyat</span><span class="ds-info-val">Toshkent shahri</span></div>
+        <div class="ds-info-row"><span class="ds-info-label">Mas'ul shaxs</span><span class="ds-info-val">Kamolov Sanjar</span></div>
+        <div class="ds-info-row"><span class="ds-info-label">Telefon</span><span class="ds-info-val">+998 90 123 45 67</span></div>
+        <div class="ds-info-row"><span class="ds-info-label">Joriy bosqich</span><span class="ds-info-val">Hujjatlar tekshiruvi (2/4)</span></div>
+        <div class="ds-info-row"><span class="ds-info-label">Topshirilgan sana</span><span class="ds-info-val">02.04.2026</span></div>
+
+        <p style="font-size:12px;font-weight:700;color:#a1a1a1;text-transform:uppercase;letter-spacing:.06em;margin:16px 0 10px;">Hujjatlar holati</p>
+        <div class="ds-doc-item"><span class="ds-doc-icon">✓</span><span class="ds-doc-name">NGO Ustavi</span><span class="ds-badge ds-badge-ok">Tasdiqlangan</span></div>
+        <div class="ds-doc-item"><span class="ds-doc-icon">✓</span><span class="ds-doc-name">Davlat ro'yxati guvohnomasi</span><span class="ds-badge ds-badge-ok">Tasdiqlangan</span></div>
+        <div class="ds-doc-item"><span class="ds-doc-icon">✓</span><span class="ds-doc-name">Rahbar haqida ma'lumotnoma</span><span class="ds-badge ds-badge-ok">Tasdiqlangan</span></div>
+        <div class="ds-doc-item"><span class="ds-doc-icon">⚠</span><span class="ds-doc-name">Ustav yangi tahrir (so'raldi)</span><span class="ds-badge ds-badge-warn">Kutilmoqda</span></div>
+        <div class="ds-doc-item"><span class="ds-doc-icon">—</span><span class="ds-doc-name">Soliq organidan ma'lumotnoma</span><span class="ds-badge ds-badge-dim">Taqdim etilmagan</span></div>
+      </article>
+
+      <article class="ds-card">
+        <p style="font-size:12px;font-weight:700;color:#a1a1a1;text-transform:uppercase;letter-spacing:.06em;margin:0 0 14px;">Qaror</p>
+        <div class="ds-field">
+          <label class="ds-label">Izoh / Sabab (ixtiyoriy)</label>
+          <textarea class="ds-textarea" placeholder="Tasdiqlash yoki qaytarish sababini kiriting..."></textarea>
+        </div>
+        <div style="display:flex;gap:10px;">
+          <button class="ds-btn ds-btn-primary" style="flex:1;">✓ Tasdiqlash</button>
+          <button class="ds-btn ds-btn-danger" style="flex:1;">✕ Qaytarish</button>
+        </div>
+
+        <div style="margin-top:18px;padding-top:14px;border-top:1px solid #dfdfdf;">
+          <p style="font-size:12px;font-weight:700;color:#a1a1a1;text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px;">Admin izohlari tarixi</p>
+          <div class="ds-stream-item">
+            <div class="ds-stream-icon" style="background:#fff8e1;">📎</div>
+            <div class="ds-stream-body">
+              <p class="ds-stream-title">Ustav yangi tahrir so'raldi</p>
+              <span class="ds-stream-meta">04.04.2026 · Admin tomonidan · Muddati: 10.04.2026</span>
+            </div>
+          </div>
+          <div class="ds-stream-item">
+            <div class="ds-stream-icon" style="background:#e5f7ea;">🔍</div>
+            <div class="ds-stream-body">
+              <p class="ds-stream-title">Hujjatlar tekshiruv bosqichiga o'tkazildi</p>
+              <span class="ds-stream-meta">03.04.2026 · Admin tomonidan</span>
+            </div>
+          </div>
+          <div class="ds-stream-item">
+            <div class="ds-stream-icon" style="background:#ebf2ff;">✅</div>
+            <div class="ds-stream-body">
+              <p class="ds-stream-title">Ariza qabul qilindi va ro'yxatga olindi</p>
+              <span class="ds-stream-meta">02.04.2026 · Tizim</span>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
-  </div>
-</section>
+
+  </main>
+</div>
 </body>
 </html>

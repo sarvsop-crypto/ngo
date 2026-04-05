@@ -3,140 +3,157 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sozlamalar - Admin</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Sozlamalar - O'zNNTMA Admin</title>
+  <link rel="stylesheet" href="css/ds.css" />
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="index.html"><span class="brand-dot">NGO</span>ngo.uz</a>
-    <span class="admin-panel-label">Admin Panel</span>
-    <div class="admin-header-right">
-      <a class="admin-site-link" href="index.html">Asosiy sayt</a>
-      <a class="contact-btn" href="cabinet/cabinet-login.html">Chiqish</a>
-    </div>
-  </div>
-</header>
+<div class="ds-frame">
 
-<section class="grid-bg"><div class="container hero center"><h1>Sozlamalar</h1><p class="sub">Shartnoma matnlari, bildirishnoma shablonlari va tizim sozlamalari.</p></div></section>
-
-<section class="section admin-section">
-  <div class="container admin-shell">
-    <aside class="admin-nav-panel card">
-      <h3>Boshqaruv bo'limlari</h3>
-      <nav class="admin-menu">
-        <a href="admin-dashboard.html">Boshqaruv</a>
-        <a href="admin-membership-requests.html">A'zolik shartnomalari</a>
-        <a class="active" href="admin-settings.html">Sozlamalar</a>
-      </nav>
-    </aside>
-
+  <aside class="ds-sidebar">
     <div>
-      <div class="admin-main-grid" style="margin-bottom:12px;">
-        <article class="admin-card">
-          <h3>Shartnoma matni</h3>
-          <div class="adm-info-row"><span class="adm-info-label">Amaldagi versiya</span><span class="adm-info-val">v2.1</span></div>
-          <div class="adm-info-row"><span class="adm-info-label">Faollashtirish sanasi</span><span class="adm-info-val">05.04.2026</span></div>
-          <div class="adm-info-row"><span class="adm-info-label">Ushbu versiyada</span><span class="adm-info-val">247 tashkilot</span></div>
-          <div class="adm-info-row"><span class="adm-info-label">Oxirgi tahrir</span><span class="adm-info-val">Admin · 05.04.2026</span></div>
-          <div style="margin-top:12px;">
-            <a class="btn" href="#" style="font-size:13px;padding:9px 16px;margin-right:8px;">Yangi versiya yuklash</a>
-            <a href="#" style="font-size:13px;color:var(--green-800);font-weight:600;">Ko'rish</a>
-          </div>
-        </article>
+      <a class="ds-logo" href="admin-dashboard.html">O'z<span>NNTMA</span></a>
+      <nav class="ds-nav">
+        <a href="admin-dashboard.html"><span class="ds-nav-icon">◻</span>Boshqaruv</a>
+        <a href="admin-membership-requests.html"><span class="ds-nav-icon">◎</span>A'zolik shartnomalari</a>
+        <a href="admin-registry.html"><span class="ds-nav-icon">◫</span>Ro'yxat</a>
+        <a href="admin-reports.html"><span class="ds-nav-icon">◈</span>Hisobotlar</a>
+        <a href="admin-users.html"><span class="ds-nav-icon">◉</span>Foydalanuvchilar</a>
+      </nav>
+    </div>
+    <div class="ds-sidebar-bottom">
+      <nav class="ds-nav">
+        <a href="admin-settings.html" class="active"><span class="ds-nav-icon">⚙</span>Sozlamalar</a>
+        <a href="#"><span class="ds-nav-icon">?</span>Yordam</a>
+      </nav>
+    </div>
+  </aside>
 
-        <article class="admin-card">
-          <h3>Bildirishnoma shablonlari</h3>
-          <div class="adm-info-row"><span class="adm-info-label">Tasdiqlash xabari</span><span class="adm-info-val" style="color:#24733a;">Faol</span></div>
-          <div class="adm-info-row"><span class="adm-info-label">Qaytarish xabari</span><span class="adm-info-val" style="color:#24733a;">Faol</span></div>
-          <div class="adm-info-row"><span class="adm-info-label">Eslatma xabari</span><span class="adm-info-val" style="color:#24733a;">Faol</span></div>
-          <div class="adm-info-row"><span class="adm-info-label">Oxirgi yangilash</span><span class="adm-info-val">01.03.2026</span></div>
-          <div style="margin-top:12px;">
-            <a class="btn" href="#" style="font-size:13px;padding:9px 16px;">Tahrirlash</a>
-          </div>
-        </article>
+  <main class="ds-main">
+
+    <div class="ds-header">
+      <div>
+        <h1>Sozlamalar</h1>
+        <p class="ds-header-sub">Tizim va admin sozlamalari</p>
       </div>
-
-      <article class="admin-card" style="margin-bottom:12px;">
-        <div class="admin-card-top">
-          <h3>Shartnoma versiyalari tarixi</h3>
-          <small>Barcha chiqarilgan versiyalar</small>
+      <div class="ds-header-right">
+        <div class="ds-search">🔍 <input placeholder="Qidirish..." /></div>
+        <div class="ds-user">
+          <div class="ds-avatar">A</div>
+          <div><p class="ds-user-name">Admin</p><p class="ds-user-role">Bosh admin</p></div>
         </div>
-        <div class="admin-table-wrap">
-          <table class="adm-ver-table">
-            <thead>
-              <tr>
-                <th>Versiya</th>
-                <th>Sana</th>
-                <th>Kim yuklagan</th>
-                <th>Asosiy o'zgarish</th>
-                <th>Tashkilotlar soni</th>
-                <th>Holat</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>v2.1</strong></td>
-                <td>05.04.2026</td>
-                <td>Admin</td>
-                <td>4-band yangilandi, imzo tartibi aniqlashtir.</td>
-                <td>247</td>
-                <td><span class="adm-ver-badge cur">Amaldagi</span></td>
-              </tr>
-              <tr>
-                <td><strong>v2.0</strong></td>
-                <td>15.01.2026</td>
-                <td>Admin</td>
-                <td>Yangi a'zolik shartlari kiritildi.</td>
-                <td>0</td>
-                <td><span class="adm-ver-badge arch">Arxiv</span></td>
-              </tr>
-              <tr>
-                <td><strong>v1.5</strong></td>
-                <td>08.09.2025</td>
-                <td>Admin</td>
-                <td>Majburiy hujjatlar ro'yxati kengaytirildi.</td>
-                <td>0</td>
-                <td><span class="adm-ver-badge arch">Arxiv</span></td>
-              </tr>
-              <tr>
-                <td><strong>v1.2</strong></td>
-                <td>20.04.2025</td>
-                <td>Admin</td>
-                <td>Birinchi rasmiy versiya.</td>
-                <td>0</td>
-                <td><span class="adm-ver-badge arch">Arxiv</span></td>
-              </tr>
-            </tbody>
-          </table>
+      </div>
+    </div>
+
+    <!-- Top row -->
+    <div class="ds-grid-2">
+
+      <article class="ds-card">
+        <div class="ds-sec-head">
+          <h2 class="ds-sec-title">Admin ma'lumotlari</h2>
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">F.I.Sh.</label>
+          <input class="ds-input" type="text" value="Admin Abdullayev Bobur" />
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">Email</label>
+          <input class="ds-input" type="email" value="admin@uznntma.uz" />
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">Telefon</label>
+          <input class="ds-input" type="tel" value="+998 71 200 00 01" />
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">Lavozim</label>
+          <input class="ds-input" type="text" value="Bosh admin" />
+        </div>
+        <div style="margin-top:8px;">
+          <button class="ds-btn ds-btn-primary">Saqlash</button>
         </div>
       </article>
 
-      <div class="admin-bottom admin-bottom--spaced">
-        <article class="admin-card">
-          <h3>Tizim faoliyat jurnali</h3>
-          <div class="adm-act-row"><div class="adm-act-dot"></div><div class="adm-act-body"><div class="adm-act-title">ARZ-2026-0415 tasdiqlandi — Saxovat Plus NNT</div><div class="adm-act-meta">04.04.2026 · 15:42 · Admin</div></div></div>
-          <div class="adm-act-row"><div class="adm-act-dot warn"></div><div class="adm-act-body"><div class="adm-act-title">ARZ-2026-0418 — qo'shimcha hujjat so'raldi</div><div class="adm-act-meta">04.04.2026 · 14:10 · Admin</div></div></div>
-          <div class="adm-act-row"><div class="adm-act-dot bad"></div><div class="adm-act-body"><div class="adm-act-title">ARZ-2026-0412 qaytarildi — Kelajak Sari NNT</div><div class="adm-act-meta">03.04.2026 · 11:05 · Admin</div></div></div>
-          <div class="adm-act-row"><div class="adm-act-dot"></div><div class="adm-act-body"><div class="adm-act-title">Shartnoma matni v2.1 yuklandi</div><div class="adm-act-meta">05.04.2026 · 09:30 · Admin</div></div></div>
-          <div class="adm-act-row"><div class="adm-act-dot"></div><div class="adm-act-body"><div class="adm-act-title">ARZ-2026-0408 tasdiqlandi — Yoshlar Istiqboli NNT</div><div class="adm-act-meta">02.04.2026 · 16:20 · Admin</div></div></div>
-        </article>
+      <article class="ds-card">
+        <div class="ds-sec-head">
+          <h2 class="ds-sec-title">Xabarnoma sozlamalari</h2>
+        </div>
+        <label class="ds-check-row">
+          <input type="checkbox" checked /> Email orqali xabar olish
+        </label>
+        <label class="ds-check-row">
+          <input type="checkbox" checked /> Ariza holati o'zgarganda
+        </label>
+        <label class="ds-check-row">
+          <input type="checkbox" checked /> Hujjat so'ralganda
+        </label>
+        <label class="ds-check-row">
+          <input type="checkbox" checked /> Yangi ariza tushganda
+        </label>
+        <label class="ds-check-row">
+          <input type="checkbox" /> SMS orqali xabarnoma
+        </label>
+        <label class="ds-check-row">
+          <input type="checkbox" /> Haftalik hisobot yuborish
+        </label>
+        <div style="margin-top:16px;">
+          <button class="ds-btn ds-btn-primary">Saqlash</button>
+        </div>
+      </article>
 
-        <article class="admin-card">
-          <h3>Tizim ma'lumotlari</h3>
-          <div class="adm-info-row"><span class="adm-info-label">Tizim versiyasi</span><span class="adm-info-val">ngo.uz v3.4.1</span></div>
-          <div class="adm-info-row"><span class="adm-info-label">Oxirgi yangilanish</span><span class="adm-info-val">01.04.2026</span></div>
-          <div class="adm-info-row"><span class="adm-info-label">Faol adminlar</span><span class="adm-info-val">3 ta</span></div>
-          <div class="adm-info-row"><span class="adm-info-label">Jami arizalar (2026)</span><span class="adm-info-val">247 ta</span></div>
-          <div class="adm-info-row"><span class="adm-info-label">O'rtacha ko'rib chiqish</span><span class="adm-info-val">2.4 kun</span></div>
-          <div class="adm-info-row"><span class="adm-info-label">Tasdiqlash foizi</span><span class="adm-info-val" style="color:#24733a;">81%</span></div>
-        </article>
-      </div>
     </div>
-  </div>
-</section>
+
+    <!-- Bottom row -->
+    <div class="ds-grid-2 ds-mt-16">
+
+      <article class="ds-card">
+        <div class="ds-sec-head">
+          <h2 class="ds-sec-title">Tizim sozlamalari</h2>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Tizim versiyasi</span>
+          <span class="ds-info-val">v2.4.1</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Oxirgi yangilanish</span>
+          <span class="ds-info-val">01.04.2026</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Aktiv foydalanuvchilar</span>
+          <span class="ds-info-val">3</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Til</span>
+          <span class="ds-info-val">O'zbek</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Vaqt mintaqasi</span>
+          <span class="ds-info-val">UTC+5</span>
+        </div>
+      </article>
+
+      <article class="ds-card">
+        <div class="ds-sec-head">
+          <h2 class="ds-sec-title">Xavfsizlik</h2>
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">Eski parol</label>
+          <input class="ds-input" type="password" placeholder="Joriy parolni kiriting" />
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">Yangi parol</label>
+          <input class="ds-input" type="password" placeholder="Yangi parol" />
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">Parolni tasdiqlash</label>
+          <input class="ds-input" type="password" placeholder="Yangi parolni qaytaring" />
+        </div>
+        <div style="margin-top:8px;">
+          <button class="ds-btn ds-btn-primary">Parolni o'zgartirish</button>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+</div>
 </body>
 </html>

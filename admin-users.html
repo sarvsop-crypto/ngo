@@ -1,44 +1,210 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="uz">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xodimlar - Soddalashtirilgan</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Foydalanuvchilar - O'zNNTMA Admin</title>
+  <link rel="stylesheet" href="css/ds.css" />
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="index.html"><span class="brand-dot">NGO</span>ngo.uz</a>
-    <span class="admin-panel-label">Admin Panel</span>
-    <div class="admin-header-right">
-      <a class="admin-site-link" href="index.html">Asosiy sayt</a>
-      <a class="contact-btn" href="cabinet/cabinet-login.html">Chiqish</a>
-    </div>
-  </div>
-</header>
+<div class="ds-frame">
 
-<section class="grid-bg"><div class="container hero center"><h1>Xodimlar</h1><p class="sub">Bu bo'lim soddalashtirish doirasida olib tashlandi.</p></div></section>
-
-<section class="section admin-section">
-  <div class="container admin-shell">
-    <aside class="admin-nav-panel card">
-      <h3>Boshqaruv bo'limlari</h3>
-      <nav class="admin-menu">
-        <a href="admin-dashboard.html">Boshqaruv</a>
-        <a href="admin-membership-requests.html">A'zolik shartnomalari</a>
-        <a class="active" href="admin-settings.html">Sozlamalar</a>
+  <aside class="ds-sidebar">
+    <div>
+      <a class="ds-logo" href="admin-dashboard.html">O'z<span>NNTMA</span></a>
+      <nav class="ds-nav">
+        <a href="admin-dashboard.html"><span class="ds-nav-icon">◻</span>Boshqaruv</a>
+        <a href="admin-membership-requests.html"><span class="ds-nav-icon">◎</span>A'zolik shartnomalari</a>
+        <a href="admin-registry.html"><span class="ds-nav-icon">◫</span>Ro'yxat</a>
+        <a href="admin-reports.html"><span class="ds-nav-icon">◈</span>Hisobotlar</a>
+        <a href="admin-users.html" class="active"><span class="ds-nav-icon">◉</span>Foydalanuvchilar</a>
       </nav>
-    </aside>
-    <div class="admin-card">
-      <h3>Faol qolgan jarayon</h3>
-      <p>Hozirda faqat a'zolik arizalari va shartnoma jarayoni qolgan.</p>
-      <div class="flow-wrap mt-12">
-        <a class="btn" href="admin-membership-requests.html">A'zolik shartnomalariga o'tish</a>
-        <a class="btn btn-secondary" href="admin-settings.html">Sozlamalarga o'tish</a>
+    </div>
+    <div class="ds-sidebar-bottom">
+      <nav class="ds-nav">
+        <a href="admin-settings.html"><span class="ds-nav-icon">⚙</span>Sozlamalar</a>
+        <a href="#"><span class="ds-nav-icon">?</span>Yordam</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="ds-main">
+
+    <div class="ds-header">
+      <div>
+        <h1>Foydalanuvchilar</h1>
+        <p class="ds-header-sub">Admin paneli foydalanuvchilari va ruxsatlar</p>
+      </div>
+      <div class="ds-header-right">
+        <div class="ds-search">🔍 <input placeholder="Qidirish..." /></div>
+        <div class="ds-user">
+          <div class="ds-avatar">A</div>
+          <div><p class="ds-user-name">Admin</p><p class="ds-user-role">Bosh admin</p></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+
+    <article class="ds-card">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+        <div class="ds-search" style="width:320px;">🔍 <input placeholder="Ism yoki email bo'yicha qidirish..." /></div>
+        <button class="ds-btn ds-btn-primary">+ Yangi foydalanuvchi</button>
+      </div>
+
+      <div class="ds-table-wrap">
+        <table class="ds-table">
+          <thead>
+            <tr>
+              <th style="width:36px;"><input type="checkbox" /></th>
+              <th>Foydalanuvchi</th>
+              <th>Email</th>
+              <th>Lavozim</th>
+              <th>Oxirgi kirish</th>
+              <th>Holat</th>
+              <th>Amal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <div class="ds-avatar" style="width:32px;height:32px;font-size:13px;background:#c9e8f9;color:#1e40af;">AB</div>
+                  <strong>Admin Abdullayev Bobur</strong>
+                </div>
+              </td>
+              <td style="color:#5a5a5a;font-size:13px;">admin@uznntma.uz</td>
+              <td>Bosh admin</td>
+              <td style="font-size:13px;color:#5a5a5a;">05.04.2026 09:14</td>
+              <td><span class="ds-badge-ok">Faol</span></td>
+              <td>
+                <div style="display:flex;gap:6px;">
+                  <button class="ds-btn" style="font-size:12px;padding:4px 10px;">Tahrir</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <div class="ds-avatar" style="width:32px;height:32px;font-size:13px;background:#caeccc;color:#166534;">QJ</div>
+                  <strong>Qodirov Jasur</strong>
+                </div>
+              </td>
+              <td style="color:#5a5a5a;font-size:13px;">j.qodirov@uznntma.uz</td>
+              <td>Moderator</td>
+              <td style="font-size:13px;color:#5a5a5a;">04.04.2026 16:22</td>
+              <td><span class="ds-badge-ok">Faol</span></td>
+              <td>
+                <div style="display:flex;gap:6px;">
+                  <button class="ds-btn" style="font-size:12px;padding:4px 10px;">Tahrir</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <div class="ds-avatar" style="width:32px;height:32px;font-size:13px;background:#fef9c3;color:#92400e;">NF</div>
+                  <strong>Nazarova Feruza</strong>
+                </div>
+              </td>
+              <td style="color:#5a5a5a;font-size:13px;">f.nazarova@uznntma.uz</td>
+              <td>Inspektor</td>
+              <td style="font-size:13px;color:#5a5a5a;">03.04.2026 11:05</td>
+              <td><span class="ds-badge-ok">Faol</span></td>
+              <td>
+                <div style="display:flex;gap:6px;">
+                  <button class="ds-btn" style="font-size:12px;padding:4px 10px;">Tahrir</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <div class="ds-avatar" style="width:32px;height:32px;font-size:13px;background:#f1f5f9;color:#64748b;">TA</div>
+                  <strong>Toshmatov Anvar</strong>
+                </div>
+              </td>
+              <td style="color:#5a5a5a;font-size:13px;">a.toshmatov@uznntma.uz</td>
+              <td>Moderator</td>
+              <td style="font-size:13px;color:#5a5a5a;">28.03.2026 09:00</td>
+              <td><span class="ds-badge-dim">Nofaol</span></td>
+              <td>
+                <div style="display:flex;gap:6px;">
+                  <button class="ds-btn" style="font-size:12px;padding:4px 10px;">Tahrir</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <div class="ds-avatar" style="width:32px;height:32px;font-size:13px;background:#f1f5f9;color:#64748b;">YSh</div>
+                  <strong>Yusupova Shahnoza</strong>
+                </div>
+              </td>
+              <td style="color:#5a5a5a;font-size:13px;">sh.yusupova@uznntma.uz</td>
+              <td>Inspektor</td>
+              <td style="font-size:13px;color:#5a5a5a;">15.03.2026 14:30</td>
+              <td><span class="ds-badge-dim">Nofaol</span></td>
+              <td>
+                <div style="display:flex;gap:6px;">
+                  <button class="ds-btn" style="font-size:12px;padding:4px 10px;">Tahrir</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </article>
+
+    <!-- Permissions matrix -->
+    <article class="ds-card ds-mt-16">
+      <div class="ds-sec-head">
+        <h2 class="ds-sec-title">Ruxsatlar matritsasi</h2>
+      </div>
+      <div class="ds-table-wrap">
+        <table class="ds-table">
+          <thead>
+            <tr>
+              <th>Lavozim</th>
+              <th style="text-align:center;">Ko'rish</th>
+              <th style="text-align:center;">Tahrirlash</th>
+              <th style="text-align:center;">O'chirish</th>
+              <th style="text-align:center;">Qaror</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Bosh admin</strong></td>
+              <td style="text-align:center;"><span class="ds-badge-ok">✓</span></td>
+              <td style="text-align:center;"><span class="ds-badge-ok">✓</span></td>
+              <td style="text-align:center;"><span class="ds-badge-ok">✓</span></td>
+              <td style="text-align:center;"><span class="ds-badge-ok">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>Moderator</strong></td>
+              <td style="text-align:center;"><span class="ds-badge-ok">✓</span></td>
+              <td style="text-align:center;"><span class="ds-badge-ok">✓</span></td>
+              <td style="text-align:center;"><span class="ds-badge-dim">—</span></td>
+              <td style="text-align:center;"><span class="ds-badge-warn">Cheklangan</span></td>
+            </tr>
+            <tr>
+              <td><strong>Inspektor</strong></td>
+              <td style="text-align:center;"><span class="ds-badge-ok">✓</span></td>
+              <td style="text-align:center;"><span class="ds-badge-dim">—</span></td>
+              <td style="text-align:center;"><span class="ds-badge-dim">—</span></td>
+              <td style="text-align:center;"><span class="ds-badge-dim">—</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+  </main>
+</div>
 </body>
 </html>

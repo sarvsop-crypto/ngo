@@ -3,141 +3,228 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bosh sahifa - O'zNNTMA A'zo kabineti</title>
-  <link rel="stylesheet" href="css/cabinet-app.css" />
+  <title>Bosh sahifa - A'zo Kabinet</title>
+  <link rel="stylesheet" href="../css/ds.css" />
 </head>
 <body>
-<div class="app">
-  <main class="main">
-    <div class="page-heading">
-      <h1>Bosh sahifa</h1>
-      <div class="date-chip" id="js-date"></div>
-    </div>
-    <p class="page-sub">A'zolik shartnomasi bo'yicha joriy holat va faoliyat.</p>
+<div class="ds-frame">
 
-    <div class="kpis">
-      <div class="kpi"><span>Holat</span><strong style="font-size:clamp(14px,1.6vw,20px);color:var(--warn)">Ko'rib chiqilmoqda</strong></div>
-      <div class="kpi"><span>Bosqich</span><strong>2 / 4</strong></div>
-      <div class="kpi"><span>Topshirilgan</span><strong style="font-size:clamp(15px,1.6vw,22px)">02.04.2026</strong></div>
-      <div class="kpi"><span>A'zolik</span><strong style="font-size:clamp(14px,1.6vw,20px);color:var(--neutral-400)">Kutilmoqda</strong></div>
+  <aside class="ds-sidebar">
+    <div>
+      <a class="ds-logo" href="cabinet-dashboard.html">A'zo<span>Kabinet</span></a>
+      <nav class="ds-nav">
+        <a href="cabinet-dashboard.html" class="active"><span class="ds-nav-icon">◻</span>Bosh sahifa</a>
+        <a href="cabinet-applications.html"><span class="ds-nav-icon">◎</span>A'zolik arizasi</a>
+        <a href="cabinet-documents.html"><span class="ds-nav-icon">▣</span>Hujjatlar</a>
+        <a href="cabinet-support.html"><span class="ds-nav-icon">✉</span>Murojaat</a>
+      </nav>
+    </div>
+    <div class="ds-sidebar-bottom">
+      <nav class="ds-nav">
+        <a href="cabinet-settings.html"><span class="ds-nav-icon">⚙</span>Sozlamalar</a>
+        <a href="cabinet-login.html"><span class="ds-nav-icon">→</span>Chiqish</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="ds-main">
+
+    <div class="ds-header">
+      <div>
+        <h1>Bosh sahifa</h1>
+        <p class="ds-header-sub">A'zolik shartnomasi bo'yicha joriy holat</p>
+      </div>
+      <div class="ds-header-right">
+        <div class="ds-user">
+          <div class="ds-avatar">K</div>
+          <div><p class="ds-user-name">Kamolov Sanjar</p><p class="ds-user-role">Yangi Nafas NNT</p></div>
+        </div>
+      </div>
     </div>
 
-    <article class="card">
-      <h3>Ariza bosqichlari</h3>
-      <div class="step-track">
-        <div class="step-item done"><div class="step-dot">✓</div><span class="step-lbl">Ariza<br>topshirildi</span></div>
-        <div class="step-item curr"><div class="step-dot">2</div><span class="step-lbl">Hujjatlar<br>tekshiruvi</span></div>
-        <div class="step-item"><div class="step-dot">3</div><span class="step-lbl">Shartnoma<br>imzosi</span></div>
-        <div class="step-item"><div class="step-dot">4</div><span class="step-lbl">A'zolik<br>tasdiqlandi</span></div>
+    <!-- Warning banner -->
+    <div style="background:#fef9c3;border:1px solid #fde68a;border-radius:12px;padding:12px 18px;margin-bottom:16px;font-size:14px;color:#92400e;display:flex;align-items:center;gap:10px;">
+      <span>⚠</span>
+      <span><strong>Muddatli hujjat:</strong> Ustav yangi tahrir 10.04.2026 gacha taqdim etilishi kerak.</span>
+    </div>
+
+    <!-- KPI cards -->
+    <div class="ds-stats">
+      <article class="ds-kpi" style="background:#ffc697;">
+        <div class="ds-kpi-body">
+          <div class="ds-kpi-row"><span class="ds-kpi-label">Ariza holati</span></div>
+          <div class="ds-kpi-value" style="font-size:18px;color:#d97706;">Ko'rib chiqilmoqda</div>
+        </div>
+        <div class="ds-kpi-foot">ARZ-2026-0418</div>
+      </article>
+      <article class="ds-kpi" style="background:#c9e8f9;">
+        <div class="ds-kpi-body">
+          <div class="ds-kpi-row"><span class="ds-kpi-label">Bosqich</span></div>
+          <div class="ds-kpi-value">2 / 4</div>
+        </div>
+        <div class="ds-kpi-foot">Hujjatlar tekshiruvi</div>
+      </article>
+      <article class="ds-kpi" style="background:#caeccc;">
+        <div class="ds-kpi-body">
+          <div class="ds-kpi-row"><span class="ds-kpi-label">Topshirilgan</span></div>
+          <div class="ds-kpi-value" style="font-size:22px;">02.04.2026</div>
+        </div>
+        <div class="ds-kpi-foot">Sana</div>
+      </article>
+      <article class="ds-kpi" style="background:#f1f5f9;">
+        <div class="ds-kpi-body">
+          <div class="ds-kpi-row"><span class="ds-kpi-label">A'zolik</span></div>
+          <div class="ds-kpi-value" style="font-size:18px;color:#a1a1a1;">Kutilmoqda</div>
+        </div>
+        <div class="ds-kpi-foot">Hali tasdiqlanmagan</div>
+      </article>
+    </div>
+
+    <!-- Step tracker -->
+    <article class="ds-card ds-mt-16">
+      <div class="ds-sec-head">
+        <h2 class="ds-sec-title">Ariza bosqichlari</h2>
+      </div>
+      <div class="ds-steps">
+        <div class="ds-step done">
+          <div class="ds-step-dot">✓</div>
+          <div class="ds-step-label">Ariza topshirildi</div>
+        </div>
+        <div class="ds-step curr">
+          <div class="ds-step-dot">2</div>
+          <div class="ds-step-label">Hujjatlar tekshiruvi</div>
+        </div>
+        <div class="ds-step">
+          <div class="ds-step-dot">3</div>
+          <div class="ds-step-label">Shartnoma imzosi</div>
+        </div>
+        <div class="ds-step">
+          <div class="ds-step-dot">4</div>
+          <div class="ds-step-label">A'zolik tasdiqlandi</div>
+        </div>
       </div>
     </article>
 
-    <div class="lower-grid">
+    <!-- Main content row -->
+    <div class="ds-grid-2-3 ds-mt-16">
 
-      <article class="card">
-        <h3>So'nggi harakatlar</h3>
-        <div class="cab-stream">
-          <div class="cab-stream-item">
-            <div class="cab-stream-icon">📋</div>
-            <div class="cab-stream-body">
-              <p class="cab-stream-title">Ariza muvaffaqiyatli yuborildi</p>
-              <span class="cab-stream-date">02.04.2026 · ARZ-2026-0418</span>
-            </div>
-          </div>
-          <div class="cab-stream-item">
-            <div class="cab-stream-icon">🔍</div>
-            <div class="cab-stream-body">
-              <p class="cab-stream-title">Hujjatlar tekshiruv bosqichiga o'tdi</p>
-              <span class="cab-stream-date">03.04.2026 · Admin tomonidan</span>
-            </div>
-          </div>
-          <div class="cab-stream-item">
-            <div class="cab-stream-icon">📎</div>
-            <div class="cab-stream-body">
-              <p class="cab-stream-title">Qo'shimcha hujjat so'raldi: Ustav yangi tahrir</p>
-              <span class="cab-stream-date">04.04.2026 · Ijro muddati: 10.04.2026</span>
-            </div>
-          </div>
-          <div class="cab-stream-item">
-            <div class="cab-stream-icon">📄</div>
-            <div class="cab-stream-body">
-              <p class="cab-stream-title">Shartnoma loyihasi tayyorlandi — ko'rib chiqish mumkin</p>
-              <span class="cab-stream-date">05.04.2026</span>
-            </div>
+      <!-- Activity feed -->
+      <article class="ds-card">
+        <div class="ds-sec-head">
+          <h2 class="ds-sec-title">So'nggi harakatlar</h2>
+        </div>
+
+        <div class="ds-stream-item">
+          <div class="ds-stream-icon">📋</div>
+          <div class="ds-stream-body">
+            <div class="ds-stream-title">Ariza muvaffaqiyatli yuborildi</div>
+            <div class="ds-stream-meta">02.04.2026 · ARZ-2026-0418</div>
           </div>
         </div>
+
+        <div class="ds-stream-item">
+          <div class="ds-stream-icon">🔍</div>
+          <div class="ds-stream-body">
+            <div class="ds-stream-title">Hujjatlar tekshiruv bosqichiga o'tdi</div>
+            <div class="ds-stream-meta">03.04.2026 · Admin</div>
+          </div>
+        </div>
+
+        <div class="ds-stream-item" style="background:#fff9f0;border-radius:10px;">
+          <div class="ds-stream-icon">📎</div>
+          <div class="ds-stream-body">
+            <div class="ds-stream-title">Qo'shimcha hujjat so'raldi: Ustav yangi tahrir</div>
+            <div class="ds-stream-meta">04.04.2026 · Muddati: 10.04.2026</div>
+          </div>
+        </div>
+
+        <div class="ds-stream-item">
+          <div class="ds-stream-icon">📄</div>
+          <div class="ds-stream-body">
+            <div class="ds-stream-title">Shartnoma loyihasi tayyorlandi</div>
+            <div class="ds-stream-meta">05.04.2026</div>
+          </div>
+        </div>
+
       </article>
 
-      <div class="right-col">
+      <!-- Right column: docs + news -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
 
-        <article class="card">
-          <h3>Ariza to'liqligi</h3>
-          <div style="display:flex;align-items:center;gap:16px;margin-bottom:14px;">
-            <svg width="90" height="90" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="60" cy="60" r="45" fill="none" stroke="#e2e8f0" stroke-width="10"/>
-              <circle cx="60" cy="60" r="45" fill="none" stroke="#007a94" stroke-width="10"
-                stroke-dasharray="170 113" stroke-linecap="round"
-                transform="rotate(-90 60 60)"/>
-              <text x="60" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">60%</text>
-              <text x="60" y="72" text-anchor="middle" font-size="10" fill="#64748b">to'liq</text>
-            </svg>
-            <div style="font-size:12.5px;color:var(--neutral-500);line-height:1.7;">
-              <div><strong style="color:#0f172a;">3 / 5</strong> hujjat topshirilgan</div>
-              <div style="color:var(--warn);font-weight:600;">2 ta hujjat kutilmoqda</div>
-              <a href="cabinet-documents.html" style="font-size:12px;font-weight:700;color:var(--accent-strong);">Hujjatlar bo'limi →</a>
+        <article class="ds-card">
+          <div class="ds-sec-head">
+            <h2 class="ds-sec-title">Hujjatlar holati</h2>
+          </div>
+
+          <div class="ds-doc-item">
+            <div class="ds-doc-icon">✅</div>
+            <div style="flex:1;">
+              <div class="ds-doc-name">NGO Ustavi</div>
+              <div class="ds-doc-sub">Tasdiqlangan</div>
             </div>
+            <span class="ds-badge-ok">OK</span>
           </div>
+
+          <div class="ds-doc-item">
+            <div class="ds-doc-icon">✅</div>
+            <div style="flex:1;">
+              <div class="ds-doc-name">Guvohnoma</div>
+              <div class="ds-doc-sub">Tasdiqlangan</div>
+            </div>
+            <span class="ds-badge-ok">OK</span>
+          </div>
+
+          <div class="ds-doc-item">
+            <div class="ds-doc-icon">⚠</div>
+            <div style="flex:1;">
+              <div class="ds-doc-name">Ustav yangi tahrir</div>
+              <div class="ds-doc-sub">Muddati: 10.04.2026</div>
+            </div>
+            <span class="ds-badge-warn">Kutilmoqda</span>
+          </div>
+
+          <div class="ds-doc-item">
+            <div class="ds-doc-icon">🕐</div>
+            <div style="flex:1;">
+              <div class="ds-doc-name">Soliq ma'lumotnoma</div>
+              <div class="ds-doc-sub">Hali yuklanmagan</div>
+            </div>
+            <span class="ds-badge-dim">Yo'q</span>
+          </div>
+
+          <a href="cabinet-documents.html" style="display:block;margin-top:12px;font-size:13px;color:#383bfe;text-decoration:none;">Barcha hujjatlar →</a>
         </article>
 
-        <article class="card">
-          <h3>Hujjatlar holati</h3>
-          <div class="doc-req-item">
-            <span class="doc-req-icon">✅</span>
-            <span class="doc-req-name">NGO Ustavi<span class="doc-req-sub">Majburiy</span></span>
-            <span class="doc-req-status ok">Tasdiqlangan</span>
+        <article class="ds-card">
+          <div class="ds-sec-head">
+            <h2 class="ds-sec-title">Yangiliklar</h2>
           </div>
-          <div class="doc-req-item">
-            <span class="doc-req-icon">✅</span>
-            <span class="doc-req-name">Davlat ro'yxati guvohnomasi<span class="doc-req-sub">Majburiy</span></span>
-            <span class="doc-req-status ok">Tasdiqlangan</span>
-          </div>
-          <div class="doc-req-item">
-            <span class="doc-req-icon">⚠️</span>
-            <span class="doc-req-name">Ustav yangi tahrir<span class="doc-req-sub">So'raldi · 10.04.2026 muddati</span></span>
-            <span class="doc-req-status warn">Kutilmoqda</span>
-          </div>
-          <div class="doc-req-item">
-            <span class="doc-req-icon">🕐</span>
-            <span class="doc-req-name">Soliq organidan ma'lumotnoma<span class="doc-req-sub">Majburiy</span></span>
-            <span class="doc-req-status dim">Taqdim etilmagan</span>
-          </div>
-          <a href="cabinet-documents.html" style="display:block;margin-top:10px;font-size:12.5px;font-weight:700;color:var(--accent-strong);">Barcha hujjatlar →</a>
-        </article>
 
-        <article class="card">
-          <h3>Yangiliklar</h3>
-          <div class="news-item">
-            <span class="news-tag">YANGILIK</span>
-            <span class="news-title">O'zNNTMA 2026-yil a'zolik shartlari yangilandi</span>
-            <span class="news-meta">01.04.2026</span>
+          <div class="ds-news-item">
+            <span class="ds-news-tag">YANGILIK</span>
+            <div class="ds-news-title">O'zNNTMA 2026-yil a'zolik shartlari e'lon qilindi</div>
+            <div class="ds-news-meta">05.04.2026</div>
           </div>
-          <div class="news-item">
-            <span class="news-tag">TADBIR</span>
-            <span class="news-title">Seminar: NGO faoliyat standartlari · 15.04.2026</span>
-            <span class="news-meta">Toshkent, O'zNNTMA markazi</span>
+
+          <div class="ds-news-item">
+            <span class="ds-news-tag">TADBIR</span>
+            <div class="ds-news-title">NNT vakillari uchun seminar: 15.04.2026</div>
+            <div class="ds-news-meta">03.04.2026</div>
           </div>
-          <div class="news-item">
-            <span class="news-tag">MUHIM</span>
-            <span class="news-title">Yangi a'zolik bo'limiga murojaat tartibi haqida</span>
-            <span class="news-meta">20.03.2026</span>
+
+          <div class="ds-news-item">
+            <span class="ds-news-tag" style="background:#fef9c3;color:#92400e;">MUHIM</span>
+            <div class="ds-news-title">Yangi a'zolik tartibi va hujjatlar ro'yxati</div>
+            <div class="ds-news-meta">01.04.2026</div>
           </div>
+
         </article>
 
       </div>
+
     </div>
 
   </main>
 </div>
-<script src="js/cabinet-app.js"></script>
 </body>
 </html>

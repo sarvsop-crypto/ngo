@@ -1,44 +1,201 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="uz">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NNTlar Reyestri - Soddalashtirilgan</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Ro'yxat - O'zNNTMA Admin</title>
+  <link rel="stylesheet" href="css/ds.css" />
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="index.html"><span class="brand-dot">NGO</span>ngo.uz</a>
-    <span class="admin-panel-label">Admin Panel</span>
-    <div class="admin-header-right">
-      <a class="admin-site-link" href="index.html">Asosiy sayt</a>
-      <a class="contact-btn" href="cabinet/cabinet-login.html">Chiqish</a>
-    </div>
-  </div>
-</header>
+<div class="ds-frame">
 
-<section class="grid-bg"><div class="container hero center"><h1>NNTlar reyestri</h1><p class="sub">Bu bo'lim soddalashtirish doirasida asosiy jarayondan chiqarildi.</p></div></section>
-
-<section class="section admin-section">
-  <div class="container admin-shell">
-    <aside class="admin-nav-panel card">
-      <h3>Boshqaruv bo'limlari</h3>
-      <nav class="admin-menu">
-        <a href="admin-dashboard.html">Boshqaruv</a>
-        <a class="active" href="admin-membership-requests.html">A'zolik shartnomalari</a>
-        <a href="admin-settings.html">Sozlamalar</a>
+  <aside class="ds-sidebar">
+    <div>
+      <a class="ds-logo" href="admin-dashboard.html">O'z<span>NNTMA</span></a>
+      <nav class="ds-nav">
+        <a href="admin-dashboard.html"><span class="ds-nav-icon">◻</span>Boshqaruv</a>
+        <a href="admin-membership-requests.html"><span class="ds-nav-icon">◎</span>A'zolik shartnomalari</a>
+        <a href="admin-registry.html" class="active"><span class="ds-nav-icon">◫</span>Ro'yxat</a>
+        <a href="admin-reports.html"><span class="ds-nav-icon">◈</span>Hisobotlar</a>
+        <a href="admin-users.html"><span class="ds-nav-icon">◉</span>Foydalanuvchilar</a>
       </nav>
-    </aside>
-    <div class="admin-card">
-      <h3>Faol qolgan jarayon</h3>
-      <p>Hozirda faqat a'zolik arizasi va shartnoma tasdiqlash jarayoni ishlatiladi.</p>
-      <div class="flow-wrap mt-12">
-        <a class="btn" href="admin-membership-requests.html">A'zolik shartnomalariga o'tish</a>
-        <a class="btn btn-secondary" href="admin-dashboard.html">Boshqaruvga qaytish</a>
+    </div>
+    <div class="ds-sidebar-bottom">
+      <nav class="ds-nav">
+        <a href="admin-settings.html"><span class="ds-nav-icon">⚙</span>Sozlamalar</a>
+        <a href="#"><span class="ds-nav-icon">?</span>Yordam</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="ds-main">
+
+    <div class="ds-header">
+      <div>
+        <h1>Ro'yxat</h1>
+        <p class="ds-header-sub">Tasdiqlangan NNT a'zolik ro'yxati</p>
+      </div>
+      <div class="ds-header-right">
+        <div class="ds-search">🔍 <input placeholder="Qidirish..." /></div>
+        <div class="ds-user">
+          <div class="ds-avatar">A</div>
+          <div><p class="ds-user-name">Admin</p><p class="ds-user-role">Bosh admin</p></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+
+    <article class="ds-card">
+
+      <div class="ds-chips">
+        <button class="ds-chip active">Barchasi <span class="ds-chip-n">94</span></button>
+        <button class="ds-chip">Faol <span class="ds-chip-n">81</span></button>
+        <button class="ds-chip">Muddati tugayapti <span class="ds-chip-n">9</span></button>
+        <button class="ds-chip">Muddati o'tgan <span class="ds-chip-n">4</span></button>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:10px;margin:16px 0 12px;">
+        <div class="ds-search" style="flex:1;">🔍 <input placeholder="STIR yoki NNT nomi..." /></div>
+        <select class="ds-select" style="width:180px;">
+          <option value="">Barcha viloyatlar</option>
+          <option>Toshkent shahri</option>
+          <option>Toshkent viloyati</option>
+          <option>Samarqand viloyati</option>
+          <option>Farg'ona viloyati</option>
+          <option>Andijon viloyati</option>
+          <option>Namangan viloyati</option>
+          <option>Buxoro viloyati</option>
+          <option>Xorazm viloyati</option>
+          <option>Qashqadaryo viloyati</option>
+          <option>Surxondaryo viloyati</option>
+          <option>Navoiy viloyati</option>
+          <option>Qoraqalpog'iston</option>
+        </select>
+        <button class="ds-btn ds-btn-primary" style="white-space:nowrap;">↓ Export</button>
+      </div>
+
+      <div class="ds-table-wrap">
+        <table class="ds-table">
+          <thead>
+            <tr>
+              <th style="width:36px;"><input type="checkbox" /></th>
+              <th>STIR</th>
+              <th>NNT nomi</th>
+              <th>Viloyat</th>
+              <th>Yo'nalish</th>
+              <th>A'zolik boshlanishi</th>
+              <th>Muddati</th>
+              <th>Holat</th>
+              <th>Amal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td style="font-family:monospace;font-size:13px;">302841567</td>
+              <td><strong>Yangi Nafas NNT</strong></td>
+              <td>Toshkent shahri</td>
+              <td>Ijtimoiy yordam</td>
+              <td>15.03.2024</td>
+              <td>15.03.2026</td>
+              <td><span class="ds-badge-ok">Faol</span></td>
+              <td><a href="#" class="ds-btn" style="font-size:12px;padding:4px 10px;">Ko'rish</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td style="font-family:monospace;font-size:13px;">206530812</td>
+              <td><strong>Saxovat Plus Jamg'armasi</strong></td>
+              <td>Samarqand viloyati</td>
+              <td>Xayriya</td>
+              <td>01.06.2023</td>
+              <td>01.06.2025</td>
+              <td><span class="ds-badge-bad">Muddati o'tgan</span></td>
+              <td><a href="#" class="ds-btn" style="font-size:12px;padding:4px 10px;">Ko'rish</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td style="font-family:monospace;font-size:13px;">405712340</td>
+              <td><strong>Yoshlar Istiqboli</strong></td>
+              <td>Farg'ona viloyati</td>
+              <td>Yoshlar</td>
+              <td>20.09.2024</td>
+              <td>20.04.2026</td>
+              <td><span class="ds-badge-warn">Muddati tugayapti</span></td>
+              <td><a href="#" class="ds-btn" style="font-size:12px;padding:4px 10px;">Ko'rish</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td style="font-family:monospace;font-size:13px;">301985476</td>
+              <td><strong>Ekologik Faol</strong></td>
+              <td>Toshkent viloyati</td>
+              <td>Ekologiya</td>
+              <td>10.11.2023</td>
+              <td>10.11.2025</td>
+              <td><span class="ds-badge-bad">Muddati o'tgan</span></td>
+              <td><a href="#" class="ds-btn" style="font-size:12px;padding:4px 10px;">Ko'rish</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td style="font-family:monospace;font-size:13px;">507421893</td>
+              <td><strong>Nur Yo'l Jamiyati</strong></td>
+              <td>Andijon viloyati</td>
+              <td>Ta'lim</td>
+              <td>05.02.2025</td>
+              <td>05.02.2027</td>
+              <td><span class="ds-badge-ok">Faol</span></td>
+              <td><a href="#" class="ds-btn" style="font-size:12px;padding:4px 10px;">Ko'rish</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td style="font-family:monospace;font-size:13px;">604238175</td>
+              <td><strong>Sog'lom Avlod Markazi</strong></td>
+              <td>Namangan viloyati</td>
+              <td>Sog'liqni saqlash</td>
+              <td>22.07.2024</td>
+              <td>22.07.2026</td>
+              <td><span class="ds-badge-ok">Faol</span></td>
+              <td><a href="#" class="ds-btn" style="font-size:12px;padding:4px 10px;">Ko'rish</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td style="font-family:monospace;font-size:13px;">803641257</td>
+              <td><strong>Hayot Manbai Fondi</strong></td>
+              <td>Buxoro viloyati</td>
+              <td>Insonparvarlik</td>
+              <td>14.01.2025</td>
+              <td>14.05.2026</td>
+              <td><span class="ds-badge-warn">Muddati tugayapti</span></td>
+              <td><a href="#" class="ds-btn" style="font-size:12px;padding:4px 10px;">Ko'rish</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td style="font-family:monospace;font-size:13px;">109874523</td>
+              <td><strong>Ziyo Jam'iyati</strong></td>
+              <td>Qashqadaryo viloyati</td>
+              <td>Madaniyat</td>
+              <td>08.08.2023</td>
+              <td>08.08.2025</td>
+              <td><span class="ds-badge-bad">Muddati o'tgan</span></td>
+              <td><a href="#" class="ds-btn" style="font-size:12px;padding:4px 10px;">Ko'rish</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ds-pagination">
+        <span class="ds-records">1–8 / 94 ta yozuv</span>
+        <div class="ds-pages">
+          <button class="ds-page active">1</button>
+          <button class="ds-page">2</button>
+          <button class="ds-page">3</button>
+          <span style="padding:0 4px;color:#a1a1a1;">…</span>
+          <button class="ds-page">12</button>
+          <button class="ds-page" style="padding:0 12px;">›</button>
+        </div>
+      </div>
+
+    </article>
+
+  </main>
+</div>
 </body>
 </html>

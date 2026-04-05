@@ -1,44 +1,135 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="uz">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xabarnomalar - Soddalashtirilgan</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Xabarnomalar - O'zNNTMA Admin</title>
+  <link rel="stylesheet" href="css/ds.css" />
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="index.html"><span class="brand-dot">NGO</span>ngo.uz</a>
-    <span class="admin-panel-label">Admin Panel</span>
-    <div class="admin-header-right">
-      <a class="admin-site-link" href="index.html">Asosiy sayt</a>
-      <a class="contact-btn" href="cabinet/cabinet-login.html">Chiqish</a>
-    </div>
-  </div>
-</header>
+<div class="ds-frame">
 
-<section class="grid-bg"><div class="container hero center"><h1>Xabarnomalar</h1><p class="sub">Bu bo'lim soddalashtirish doirasida asosiy oqimdan chiqarildi.</p></div></section>
-
-<section class="section admin-section">
-  <div class="container admin-shell">
-    <aside class="admin-nav-panel card">
-      <h3>Boshqaruv bo'limlari</h3>
-      <nav class="admin-menu">
-        <a href="admin-dashboard.html">Boshqaruv</a>
-        <a class="active" href="admin-membership-requests.html">A'zolik shartnomalari</a>
-        <a href="admin-settings.html">Sozlamalar</a>
+  <aside class="ds-sidebar">
+    <div>
+      <a class="ds-logo" href="admin-dashboard.html">O'z<span>NNTMA</span></a>
+      <nav class="ds-nav">
+        <a href="admin-dashboard.html" class="active"><span class="ds-nav-icon">◻</span>Boshqaruv</a>
+        <a href="admin-membership-requests.html"><span class="ds-nav-icon">◎</span>A'zolik shartnomalari</a>
+        <a href="admin-registry.html"><span class="ds-nav-icon">◫</span>Ro'yxat</a>
+        <a href="admin-reports.html"><span class="ds-nav-icon">◈</span>Hisobotlar</a>
+        <a href="admin-users.html"><span class="ds-nav-icon">◉</span>Foydalanuvchilar</a>
       </nav>
-    </aside>
-    <div class="admin-card">
-      <h3>Faol qolgan jarayon</h3>
-      <p>Hozirda asosiy ish: a'zolik murojaati va shartnoma tasdiqlash.</p>
-      <div class="flow-wrap mt-12">
-        <a class="btn" href="admin-membership-requests.html">A'zolik shartnomalariga o'tish</a>
-        <a class="btn btn-secondary" href="admin-dashboard.html">Boshqaruvga qaytish</a>
+    </div>
+    <div class="ds-sidebar-bottom">
+      <nav class="ds-nav">
+        <a href="admin-settings.html"><span class="ds-nav-icon">⚙</span>Sozlamalar</a>
+        <a href="#"><span class="ds-nav-icon">?</span>Yordam</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="ds-main">
+
+    <div class="ds-header">
+      <div>
+        <h1>Xabarnomalar</h1>
+        <p class="ds-header-sub">Tizim xabarnomalar va ogohlantirishlar</p>
+      </div>
+      <div class="ds-header-right">
+        <div class="ds-search">🔍 <input placeholder="Qidirish..." /></div>
+        <div class="ds-user">
+          <div class="ds-avatar">A</div>
+          <div><p class="ds-user-name">Admin</p><p class="ds-user-role">Bosh admin</p></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+
+    <article class="ds-card">
+
+      <div class="ds-chips">
+        <button class="ds-chip active">Barchasi <span class="ds-chip-n">12</span></button>
+        <button class="ds-chip">O'qilmagan <span class="ds-chip-n">4</span></button>
+        <button class="ds-chip">Muhim <span class="ds-chip-n">3</span></button>
+        <button class="ds-chip">Ariza <span class="ds-chip-n">5</span></button>
+        <button class="ds-chip">Tizim <span class="ds-chip-n">4</span></button>
+      </div>
+
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:0;">
+
+        <div class="ds-stream-item" style="background:#f0f5ff;border-radius:10px;margin-bottom:4px;">
+          <div class="ds-stream-icon">📎</div>
+          <div class="ds-stream-body">
+            <div class="ds-stream-title">ARZ-2026-0418: Ustav yangi tahrir yuklandi</div>
+            <div class="ds-stream-meta">05.04.2026 · <span class="ds-badge-info">O'qilmagan</span></div>
+          </div>
+        </div>
+
+        <div class="ds-stream-item">
+          <div class="ds-stream-icon">✅</div>
+          <div class="ds-stream-body">
+            <div class="ds-stream-title">ARZ-2026-0415 tasdiqlash tasdiqlandi</div>
+            <div class="ds-stream-meta">01.04.2026 · <span class="ds-badge-dim">O'qilgan</span></div>
+          </div>
+        </div>
+
+        <div class="ds-stream-item" style="background:#fff9f0;border-radius:10px;margin-bottom:4px;">
+          <div class="ds-stream-icon">⚠</div>
+          <div class="ds-stream-body">
+            <div class="ds-stream-title">ARZ-2026-0412 hujjatda xatolik aniqlandi</div>
+            <div class="ds-stream-meta">31.03.2026 · <span class="ds-badge-warn">Muhim</span></div>
+          </div>
+        </div>
+
+        <div class="ds-stream-item" style="background:#f0f5ff;border-radius:10px;margin-bottom:4px;">
+          <div class="ds-stream-icon">🔔</div>
+          <div class="ds-stream-body">
+            <div class="ds-stream-title">Yangi ariza: ARZ-2026-0417 — Mehr va Oqibat NNT</div>
+            <div class="ds-stream-meta">02.04.2026 · <span class="ds-badge-info">O'qilmagan</span></div>
+          </div>
+        </div>
+
+        <div class="ds-stream-item">
+          <div class="ds-stream-icon">✅</div>
+          <div class="ds-stream-body">
+            <div class="ds-stream-title">ARZ-2026-0408 tasdiqlandi — Sog'lom Avlod Markazi</div>
+            <div class="ds-stream-meta">29.03.2026 · <span class="ds-badge-dim">O'qilgan</span></div>
+          </div>
+        </div>
+
+        <div class="ds-stream-item" style="background:#fff9f0;border-radius:10px;margin-bottom:4px;">
+          <div class="ds-stream-icon">⚠</div>
+          <div class="ds-stream-body">
+            <div class="ds-stream-title">A'zolik muddati tugayapti: Yoshlar Istiqboli (20.04.2026)</div>
+            <div class="ds-stream-meta">28.03.2026 · <span class="ds-badge-warn">Muhim</span></div>
+          </div>
+        </div>
+
+        <div class="ds-stream-item">
+          <div class="ds-stream-icon">📄</div>
+          <div class="ds-stream-body">
+            <div class="ds-stream-title">Shartnoma imzolandi: Saxovat Plus Jamg'armasi</div>
+            <div class="ds-stream-meta">27.03.2026 · <span class="ds-badge-dim">O'qilgan</span></div>
+          </div>
+        </div>
+
+        <div class="ds-stream-item" style="background:#f0f5ff;border-radius:10px;">
+          <div class="ds-stream-icon">🔔</div>
+          <div class="ds-stream-body">
+            <div class="ds-stream-title">Yangi ariza: ARZ-2026-0405 — Ziyo Jam'iyati</div>
+            <div class="ds-stream-meta">26.03.2026 · <span class="ds-badge-info">O'qilmagan</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:20px;display:flex;gap:10px;">
+        <button class="ds-btn">Barchasini o'qilgan deb belgilash</button>
+        <button class="ds-btn">O'qilganlarni tozalash</button>
+      </div>
+
+    </article>
+
+  </main>
+</div>
 </body>
 </html>

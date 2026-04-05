@@ -3,62 +3,159 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sozlamalar - O'zNNTMA A'zo kabineti</title>
-  <link rel="stylesheet" href="css/cabinet-app.css" />
+  <title>Sozlamalar - A'zo Kabinet</title>
+  <link rel="stylesheet" href="../css/ds.css" />
 </head>
 <body>
-<div class="app">
-  <main class="main">
-    <div class="page-heading"><h1>Sozlamalar</h1></div>
-    <p class="page-sub">Mas'ul shaxs ma'lumotlari, xabarnomalar va tashkilot profili.</p>
+<div class="ds-frame">
 
-    <div class="grid-2">
-      <article class="card">
-        <h3>Mas'ul shaxs</h3>
-        <div class="filters filters-single">
-          <input class="input" placeholder="F.I.Sh." value="Kamolov Sanjar Ibrohimovich" />
-          <input class="input" placeholder="Telefon" value="+998 90 123 45 67" />
-          <input class="input" placeholder="Email" value="s.kamolov@yanginafas.uz" />
-          <button class="btn" type="button">Saqlash</button>
+  <aside class="ds-sidebar">
+    <div>
+      <a class="ds-logo" href="cabinet-dashboard.html">A'zo<span>Kabinet</span></a>
+      <nav class="ds-nav">
+        <a href="cabinet-dashboard.html"><span class="ds-nav-icon">◻</span>Bosh sahifa</a>
+        <a href="cabinet-applications.html"><span class="ds-nav-icon">◎</span>A'zolik arizasi</a>
+        <a href="cabinet-documents.html"><span class="ds-nav-icon">▣</span>Hujjatlar</a>
+        <a href="cabinet-support.html"><span class="ds-nav-icon">✉</span>Murojaat</a>
+      </nav>
+    </div>
+    <div class="ds-sidebar-bottom">
+      <nav class="ds-nav">
+        <a href="cabinet-settings.html" class="active"><span class="ds-nav-icon">⚙</span>Sozlamalar</a>
+        <a href="cabinet-login.html"><span class="ds-nav-icon">→</span>Chiqish</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="ds-main">
+
+    <div class="ds-header">
+      <div>
+        <h1>Sozlamalar</h1>
+        <p class="ds-header-sub">Mas'ul shaxs ma'lumotlari, xabarnomalar va tashkilot profili</p>
+      </div>
+      <div class="ds-header-right">
+        <div class="ds-user">
+          <div class="ds-avatar">K</div>
+          <div><p class="ds-user-name">Kamolov Sanjar</p><p class="ds-user-role">Yangi Nafas NNT</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top row -->
+    <div class="ds-grid-2">
+
+      <article class="ds-card">
+        <div class="ds-sec-head">
+          <h2 class="ds-sec-title">Mas'ul shaxs</h2>
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">F.I.Sh.</label>
+          <input class="ds-input" type="text" value="Kamolov Sanjar Ibrohimovich" />
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">Telefon</label>
+          <input class="ds-input" type="tel" value="+998 90 123 45 67" />
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">Email</label>
+          <input class="ds-input" type="email" value="s.kamolov@yanginafas.uz" />
+        </div>
+        <div style="margin-top:8px;">
+          <button class="ds-btn ds-btn-primary">Saqlash</button>
         </div>
       </article>
 
-      <article class="card">
-        <h3>Xabarnoma sozlamalari</h3>
-        <div class="filters filters-single">
-          <label style="display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer;"><input type="checkbox" checked /> Email orqali xabar olish</label>
-          <label style="display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer;"><input type="checkbox" checked /> Ariza holati o'zgarsa xabar berish</label>
-          <label style="display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer;"><input type="checkbox" /> SMS orqali xabar olish</label>
-          <label style="display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer;"><input type="checkbox" checked /> Hujjat so'ralsa xabar berish</label>
-          <button class="btn" type="button">Saqlash</button>
+      <article class="ds-card">
+        <div class="ds-sec-head">
+          <h2 class="ds-sec-title">Xabarnoma sozlamalari</h2>
+        </div>
+        <label class="ds-check-row">
+          <input type="checkbox" checked /> Email orqali xabar olish
+        </label>
+        <label class="ds-check-row">
+          <input type="checkbox" checked /> Ariza holati o'zgarsa
+        </label>
+        <label class="ds-check-row">
+          <input type="checkbox" /> SMS orqali xabarnoma
+        </label>
+        <label class="ds-check-row">
+          <input type="checkbox" checked /> Hujjat so'ralsa
+        </label>
+        <div style="margin-top:16px;">
+          <button class="ds-btn ds-btn-primary">Saqlash</button>
         </div>
       </article>
+
     </div>
 
-    <div class="grid-2 mt-12">
-      <article class="card">
-        <h3>Tashkilot profili</h3>
-        <div class="info-row"><span class="info-label">NGO nomi</span><span class="info-val">Yangi Nafas NNT</span></div>
-        <div class="info-row"><span class="info-label">STIR</span><span class="info-val">302 841 567</span></div>
-        <div class="info-row"><span class="info-label">Viloyat / shahar</span><span class="info-val">Toshkent shahri</span></div>
-        <div class="info-row"><span class="info-label">Manzil</span><span class="info-val">Yunusobod t., Amir Temur ko'ch. 15</span></div>
-        <div class="info-row"><span class="info-label">Davlat ro'yxatidan o'tgan</span><span class="info-val">15.03.2021</span></div>
-        <div class="info-row"><span class="info-label">Faoliyat yo'nalishi</span><span class="info-val">Ijtimoiy yordam</span></div>
-        <a href="#" style="display:block;margin-top:10px;font-size:12.5px;font-weight:700;color:var(--accent-strong);">Ma'lumotlarni yangilash →</a>
+    <!-- Bottom row -->
+    <div class="ds-grid-2 ds-mt-16">
+
+      <article class="ds-card">
+        <div class="ds-sec-head">
+          <h2 class="ds-sec-title">Tashkilot profili</h2>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">NGO nomi</span>
+          <span class="ds-info-val">Yangi Nafas NNT</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">STIR</span>
+          <span class="ds-info-val" style="font-family:monospace;">302 841 567</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Viloyat</span>
+          <span class="ds-info-val">Toshkent shahri</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Manzil</span>
+          <span class="ds-info-val">Yunusobod t., Amir Temur 15</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Davlat ro'yxati</span>
+          <span class="ds-info-val">15.03.2021</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Faoliyat yo'nalishi</span>
+          <span class="ds-info-val">Ijtimoiy yordam</span>
+        </div>
+        <a href="#" style="display:inline-block;margin-top:14px;font-size:13px;color:#383bfe;text-decoration:none;">Ma'lumotlarni yangilash →</a>
       </article>
 
-      <article class="card">
-        <h3>Hisob faoliyati</h3>
-        <div class="info-row"><span class="info-label">Oxirgi kirish</span><span class="info-val">05.04.2026 · 09:14</span></div>
-        <div class="info-row"><span class="info-label">Joriy ariza</span><span class="info-val">ARZ-2026-0418</span></div>
-        <div class="info-row"><span class="info-label">Ariza topshirilgan sana</span><span class="info-val">02.04.2026</span></div>
-        <div class="info-row"><span class="info-label">A'zolik holati</span><span class="info-val warn">Ko'rib chiqilmoqda</span></div>
-        <div class="info-row"><span class="info-label">Yuklangan hujjatlar</span><span class="info-val">3 / 5 ta</span></div>
-        <div class="info-row"><span class="info-label">Ochiq murojaatlar</span><span class="info-val">1 ta</span></div>
+      <article class="ds-card">
+        <div class="ds-sec-head">
+          <h2 class="ds-sec-title">Hisob faoliyati</h2>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Oxirgi kirish</span>
+          <span class="ds-info-val">05.04.2026 09:14</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Joriy ariza</span>
+          <span class="ds-info-val" style="font-family:monospace;">ARZ-2026-0418</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Topshirilgan</span>
+          <span class="ds-info-val">02.04.2026</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">A'zolik holati</span>
+          <span class="ds-info-val"><span class="ds-badge-warn">Ko'rib chiqilmoqda</span></span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Hujjatlar</span>
+          <span class="ds-info-val">3 / 5 tasdiq</span>
+        </div>
+        <div class="ds-info-row">
+          <span class="ds-info-label">Murojaatlar</span>
+          <span class="ds-info-val">1 ta faol</span>
+        </div>
       </article>
+
     </div>
+
   </main>
 </div>
-<script src="js/cabinet-app.js"></script>
 </body>
 </html>

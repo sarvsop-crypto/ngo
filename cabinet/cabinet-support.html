@@ -3,90 +3,150 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Murojaat - O'zNNTMA A'zo kabineti</title>
-  <link rel="stylesheet" href="css/cabinet-app.css" />
+  <title>Murojaat - A'zo Kabinet</title>
+  <link rel="stylesheet" href="../css/ds.css" />
 </head>
 <body>
-<div class="app">
-  <main class="main">
-    <div class="page-heading"><h1>Murojaat</h1></div>
-    <p class="page-sub">Savol yoki muammo bo'lsa — murojaat yuboring. Ko'p so'raladigan savollarga ham qarang.</p>
+<div class="ds-frame">
 
-    <div class="grid-2">
-      <article class="card">
-        <h3>Yangi murojaat</h3>
-        <div class="filters filters-single">
-          <select class="select">
-            <option>Murojaat turini tanlang</option>
-            <option>Hujjatlar bo'yicha savol</option>
-            <option>Ariza holati bo'yicha</option>
-            <option>Shartnoma bo'yicha</option>
+  <aside class="ds-sidebar">
+    <div>
+      <a class="ds-logo" href="cabinet-dashboard.html">A'zo<span>Kabinet</span></a>
+      <nav class="ds-nav">
+        <a href="cabinet-dashboard.html"><span class="ds-nav-icon">◻</span>Bosh sahifa</a>
+        <a href="cabinet-applications.html"><span class="ds-nav-icon">◎</span>A'zolik arizasi</a>
+        <a href="cabinet-documents.html"><span class="ds-nav-icon">▣</span>Hujjatlar</a>
+        <a href="cabinet-support.html" class="active"><span class="ds-nav-icon">✉</span>Murojaat</a>
+      </nav>
+    </div>
+    <div class="ds-sidebar-bottom">
+      <nav class="ds-nav">
+        <a href="cabinet-settings.html"><span class="ds-nav-icon">⚙</span>Sozlamalar</a>
+        <a href="cabinet-login.html"><span class="ds-nav-icon">→</span>Chiqish</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="ds-main">
+
+    <div class="ds-header">
+      <div>
+        <h1>Murojaat</h1>
+        <p class="ds-header-sub">Savol yoki muammo bo'lsa — murojaat yuboring</p>
+      </div>
+      <div class="ds-header-right">
+        <div class="ds-user">
+          <div class="ds-avatar">K</div>
+          <div><p class="ds-user-name">Kamolov Sanjar</p><p class="ds-user-role">Yangi Nafas NNT</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New ticket + My tickets -->
+    <div class="ds-grid-2">
+
+      <article class="ds-card">
+        <div class="ds-sec-head">
+          <h2 class="ds-sec-title">Yangi murojaat</h2>
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">Murojaat turi</label>
+          <select class="ds-select">
+            <option value="">Turni tanlang</option>
+            <option>Hujjatlar</option>
+            <option>Ariza holati</option>
+            <option>Shartnoma</option>
             <option>Texnik muammo</option>
             <option>Boshqa</option>
           </select>
-          <input class="input" placeholder="Mavzu" />
-          <textarea class="input" rows="4" placeholder="Muammo yoki savolingizni batafsil yozing..." style="resize:vertical;"></textarea>
-          <button class="btn" type="button">Murojaat yuborish</button>
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">Mavzu</label>
+          <input class="ds-input" type="text" placeholder="Murojaat mavzusini kiriting" />
+        </div>
+        <div class="ds-field">
+          <label class="ds-label">Tavsif</label>
+          <textarea class="ds-textarea" rows="5" placeholder="Muammo batafsil yozing..."></textarea>
+        </div>
+        <div style="margin-top:8px;">
+          <button class="ds-btn ds-btn-primary">✉ Murojaat yuborish</button>
         </div>
       </article>
 
-      <article class="card">
-        <h3>Mening murojaatlarim</h3>
-        <div class="table-wrap">
-          <table class="table">
-            <thead><tr><th>ID</th><th>Mavzu</th><th>Sana</th><th>Holat</th></tr></thead>
+      <article class="ds-card">
+        <div class="ds-sec-head">
+          <h2 class="ds-sec-title">Mening murojaatlarim</h2>
+        </div>
+        <div class="ds-table-wrap">
+          <table class="ds-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Mavzu</th>
+                <th>Sana</th>
+                <th>Holat</th>
+              </tr>
+            </thead>
             <tbody>
               <tr>
-                <td><strong>MUR-2026-0112</strong></td>
-                <td>Ustav yangi tahrir yuklashda xatolik</td>
-                <td>02.04.2026</td>
-                <td><span class="badge warn">Jarayonda</span></td>
+                <td style="font-family:monospace;font-size:12px;">MUR-2026-0112</td>
+                <td>Ustav yuklashda xatolik</td>
+                <td style="font-size:13px;color:#5a5a5a;">02.04.2026</td>
+                <td><span class="ds-badge-warn">Jarayonda</span></td>
               </tr>
               <tr>
-                <td><strong>MUR-2026-0099</strong></td>
+                <td style="font-family:monospace;font-size:12px;">MUR-2026-0099</td>
                 <td>Ariza holati ko'rinmayapti</td>
-                <td>29.03.2026</td>
-                <td><span class="badge ok">Yakunlandi</span></td>
+                <td style="font-size:13px;color:#5a5a5a;">29.03.2026</td>
+                <td><span class="ds-badge-ok">Yakunlandi</span></td>
               </tr>
               <tr>
-                <td><strong>MUR-2026-0087</strong></td>
-                <td>Shartnoma matni qayerdan topiladi?</td>
-                <td>21.03.2026</td>
-                <td><span class="badge ok">Yakunlandi</span></td>
+                <td style="font-family:monospace;font-size:12px;">MUR-2026-0087</td>
+                <td>Shartnoma qayerdan topiladi</td>
+                <td style="font-size:13px;color:#5a5a5a;">21.03.2026</td>
+                <td><span class="ds-badge-ok">Yakunlandi</span></td>
               </tr>
             </tbody>
           </table>
         </div>
       </article>
+
     </div>
 
-    <article class="card mt-12">
-      <h3>Ko'p so'raladigan savollar</h3>
-      <div class="faq-list">
-        <div class="faq-list-item">
-          <p class="faq-list-q">A'zolik uchun qanday hujjatlar talab qilinadi?</p>
-          <p class="faq-list-a">NGO ustavi, davlat ro'yxatidan o'tish guvohnomasi, rahbar haqida ma'lumotnoma va soliq organidan ma'lumotnoma talab qilinadi. To'liq ro'yxat "Hujjatlar" bo'limida ko'rsatilgan.</p>
-        </div>
-        <div class="faq-list-item">
-          <p class="faq-list-q">Hujjatlarni qanday formatda yuklash kerak?</p>
-          <p class="faq-list-a">PDF, DOC yoki DOCX formatlarida yuklash mumkin. Har bir faylning hajmi 10 MB dan oshmasligi kerak.</p>
-        </div>
-        <div class="faq-list-item">
-          <p class="faq-list-q">Ariza ko'rib chiqish qancha vaqt oladi?</p>
-          <p class="faq-list-a">Odatda 3–7 ish kuni davomida ko'rib chiqiladi. Hujjatlar to'liq bo'lsa jarayon tezroq yakunlanadi. Holat o'zgarishi haqida email orqali xabar beriladi.</p>
-        </div>
-        <div class="faq-list-item">
-          <p class="faq-list-q">Ariza qaytarilsa nima qilish kerak?</p>
-          <p class="faq-list-a">Admin izohidagi kamchiliklarni bartaraf eting, kerakli hujjatlarni yuklab, qayta topshirish tugmasini bosing. Murojaat orqali savol berishingiz ham mumkin.</p>
-        </div>
-        <div class="faq-list-item">
-          <p class="faq-list-q">Shartnomani qayerdan ko'rish mumkin?</p>
-          <p class="faq-list-a">"Hujjatlar" bo'limida "A'zolik shartnomasi" qatoridagi "Ko'rish" tugmasini bosing. Shartnoma 3-bosqichda imzolash uchun taqdim etiladi.</p>
-        </div>
+    <!-- FAQ -->
+    <article class="ds-card ds-mt-16">
+      <div class="ds-sec-head">
+        <h2 class="ds-sec-title">Ko'p so'raladigan savollar</h2>
       </div>
+
+      <div class="ds-faq-item">
+        <div class="ds-faq-q">A'zolik uchun qanday hujjatlar talab qilinadi?</div>
+        <div class="ds-faq-a">NGO ustavi, davlat ro'yxatidan o'tish guvohnomasi, rahbar haqida ma'lumotnoma va soliq organidan ma'lumotnoma talab qilinadi. Barcha hujjatlar asl yoki notarial tasdiqlangan nusxada taqdim etilishi kerak.</div>
+      </div>
+
+      <div class="ds-faq-item">
+        <div class="ds-faq-q">Hujjatlarni qanday formatda yuklash kerak?</div>
+        <div class="ds-faq-a">PDF, DOC yoki DOCX formatlarida yuklash mumkin. Har bir faylning hajmi 10 MB dan oshmasligi kerak. Sifatli skanerlangan yoki rasmiy muhrli nusxalar qabul qilinadi.</div>
+      </div>
+
+      <div class="ds-faq-item">
+        <div class="ds-faq-q">Ariza ko'rib chiqish qancha vaqt oladi?</div>
+        <div class="ds-faq-a">Odatda 3–7 ish kuni davomida ko'rib chiqiladi. Agar barcha hujjatlar to'liq va to'g'ri taqdim etilgan bo'lsa, jarayon tezroq yakunlanishi mumkin.</div>
+      </div>
+
+      <div class="ds-faq-item">
+        <div class="ds-faq-q">Ariza qaytarilsa nima qilish kerak?</div>
+        <div class="ds-faq-a">Admin izohidagi kamchiliklarni bartaraf eting, kerakli hujjatlarni yuklab, qayta topshirish tugmasini bosing. Muammo bo'lsa, murojaat bo'limidan yordam so'rang.</div>
+      </div>
+
+      <div class="ds-faq-item">
+        <div class="ds-faq-q">Shartnomani qayerdan ko'rish mumkin?</div>
+        <div class="ds-faq-a">"Hujjatlar" bo'limida "A'zolik shartnomasi" qatoridagi "Ko'rish" tugmasini bosing. Shartnoma imzolash uchun ham shu sahifadan o'tish mumkin.</div>
+      </div>
+
     </article>
+
   </main>
 </div>
-<script src="js/cabinet-app.js"></script>
 </body>
 </html>

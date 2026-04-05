@@ -3,124 +3,174 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shartnoma hujjatlari - O'zNNTMA A'zo kabineti</title>
-  <link rel="stylesheet" href="css/cabinet-app.css" />
+  <title>Hujjatlar - A'zo Kabinet</title>
+  <link rel="stylesheet" href="../css/ds.css" />
 </head>
 <body>
-<div class="app">
-  <main class="main">
-    <div class="page-heading"><h1>Shartnoma hujjatlari</h1></div>
-    <p class="page-sub">A'zolik uchun talab qilinadigan hujjatlar ro'yxati va yuklash holati.</p>
+<div class="ds-frame">
 
-    <article class="card" style="margin-bottom:14px;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;">
-      <div style="display:flex;align-items:center;gap:20px;flex-shrink:0;">
-        <svg width="100" height="100" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="60" cy="60" r="45" fill="none" stroke="#e2e8f0" stroke-width="10"/>
-          <circle cx="60" cy="60" r="45" fill="none" stroke="#007a94" stroke-width="10"
-            stroke-dasharray="122 161" stroke-linecap="round"
-            transform="rotate(-90 60 60)"/>
-          <text x="60" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">43%</text>
-          <text x="60" y="72" text-anchor="middle" font-size="10" fill="#64748b">to'liq</text>
-        </svg>
-        <div style="font-size:13px;line-height:1.8;">
-          <div style="font-weight:700;font-size:15px;color:#0f172a;margin-bottom:4px;">Hujjatlar paketi</div>
-          <div style="color:var(--neutral-500);"><strong style="color:#0f172a;">3 / 7</strong> hujjat qabul qilindi</div>
-          <div style="color:var(--warn);font-weight:600;">1 ta muddatli · 3 ta kutilmoqda</div>
+  <aside class="ds-sidebar">
+    <div>
+      <a class="ds-logo" href="cabinet-dashboard.html">A'zo<span>Kabinet</span></a>
+      <nav class="ds-nav">
+        <a href="cabinet-dashboard.html"><span class="ds-nav-icon">◻</span>Bosh sahifa</a>
+        <a href="cabinet-applications.html"><span class="ds-nav-icon">◎</span>A'zolik arizasi</a>
+        <a href="cabinet-documents.html" class="active"><span class="ds-nav-icon">▣</span>Hujjatlar</a>
+        <a href="cabinet-support.html"><span class="ds-nav-icon">✉</span>Murojaat</a>
+      </nav>
+    </div>
+    <div class="ds-sidebar-bottom">
+      <nav class="ds-nav">
+        <a href="cabinet-settings.html"><span class="ds-nav-icon">⚙</span>Sozlamalar</a>
+        <a href="cabinet-login.html"><span class="ds-nav-icon">→</span>Chiqish</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="ds-main">
+
+    <div class="ds-header">
+      <div>
+        <h1>Hujjatlar</h1>
+        <p class="ds-header-sub">A'zolik uchun talab qilinadigan hujjatlar</p>
+      </div>
+      <div class="ds-header-right">
+        <div class="ds-user">
+          <div class="ds-avatar">K</div>
+          <div><p class="ds-user-name">Kamolov Sanjar</p><p class="ds-user-role">Yangi Nafas NNT</p></div>
         </div>
       </div>
+    </div>
 
-      <div style="flex:1;min-width:260px;">
-      <h3 style="margin-top:0;">Kerakli hujjatlar to'plami</h3>
-
-      <div class="doc-req-item">
-        <span class="doc-req-icon">✅</span>
-        <div style="flex:1;">
-          <span class="doc-req-name">NGO Ustavi</span>
-          <span class="doc-req-sub">Majburiy · Yuklangan: 01.04.2026 · Ustav.pdf</span>
+    <!-- Progress ring card -->
+    <article class="ds-card" style="margin-bottom:16px;">
+      <div style="display:flex;align-items:center;gap:28px;">
+        <div class="ds-ring-wrap">
+          <svg width="100" height="100" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="45" fill="none" stroke="#dfdfdf" stroke-width="10"/>
+            <circle cx="60" cy="60" r="45" fill="none" stroke="#383bfe" stroke-width="10" stroke-dasharray="122 161" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+            <text x="60" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#060c13">43%</text>
+            <text x="60" y="72" text-anchor="middle" font-size="10" fill="#a1a1a1">to'liq</text>
+          </svg>
         </div>
-        <span class="doc-req-status ok">Tasdiqlangan</span>
-        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Ko'rish</a>
-      </div>
-
-      <div class="doc-req-item">
-        <span class="doc-req-icon">✅</span>
-        <div style="flex:1;">
-          <span class="doc-req-name">Davlat ro'yxatidan o'tish guvohnomasi</span>
-          <span class="doc-req-sub">Majburiy · Yuklangan: 01.04.2026 · Guvohnoma.pdf</span>
+        <div>
+          <div style="font-size:22px;font-weight:700;color:#060c13;margin-bottom:4px;">3 / 7 hujjat qabul qilindi</div>
+          <div style="font-size:14px;color:#5a5a5a;margin-bottom:6px;">1 ta muddatli · 3 ta kutilmoqda</div>
+          <div style="display:flex;gap:12px;font-size:13px;">
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;background:#28b061;border-radius:50%;display:inline-block;"></span>Tasdiqlangan: 3</span>
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;background:#d97706;border-radius:50%;display:inline-block;"></span>Muddatli: 1</span>
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;background:#a1a1a1;border-radius:50%;display:inline-block;"></span>Kutilmoqda: 3</span>
+          </div>
         </div>
-        <span class="doc-req-status ok">Tasdiqlangan</span>
-        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Ko'rish</a>
-      </div>
-
-      <div class="doc-req-item">
-        <span class="doc-req-icon">✅</span>
-        <div style="flex:1;">
-          <span class="doc-req-name">Rahbar haqida ma'lumotnoma</span>
-          <span class="doc-req-sub">Majburiy · Yuklangan: 01.04.2026 · Rahbar_malumot.pdf</span>
-        </div>
-        <span class="doc-req-status ok">Tasdiqlangan</span>
-        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Ko'rish</a>
-      </div>
-
-      <div class="doc-req-item">
-        <span class="doc-req-icon">⚠️</span>
-        <div style="flex:1;">
-          <span class="doc-req-name">Ustav yangi tahrir (2026-yil)</span>
-          <span class="doc-req-sub">Majburiy · Admin tomonidan so'raldi · Muddati: 10.04.2026</span>
-        </div>
-        <span class="doc-req-status warn">Kutilmoqda</span>
-        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Yuklash</a>
-      </div>
-
-      <div class="doc-req-item">
-        <span class="doc-req-icon">🕐</span>
-        <div style="flex:1;">
-          <span class="doc-req-name">Soliq organidan ma'lumotnoma</span>
-          <span class="doc-req-sub">Majburiy · Hali yuklanmagan</span>
-        </div>
-        <span class="doc-req-status dim">Taqdim etilmagan</span>
-        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Yuklash</a>
-      </div>
-
-      <div class="doc-req-item">
-        <span class="doc-req-icon">📄</span>
-        <div style="flex:1;">
-          <span class="doc-req-name">A'zolik shartnomasi</span>
-          <span class="doc-req-sub">Majburiy · Tayyorlangan — imzo kutilmoqda</span>
-        </div>
-        <span class="doc-req-status warn">Imzo kutilmoqda</span>
-        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Ko'rish</a>
-      </div>
-
-      <div class="doc-req-item">
-        <span class="doc-req-icon">🕐</span>
-        <div style="flex:1;">
-          <span class="doc-req-name">Tashkilot nizomi</span>
-          <span class="doc-req-sub">Ixtiyoriy · Hali yuklanmagan</span>
-        </div>
-        <span class="doc-req-status dim">Ixtiyoriy</span>
-        <a href="#" style="font-size:12px;color:var(--accent-strong);font-weight:700;margin-left:12px;flex-shrink:0;">Yuklash</a>
-      </div>
       </div>
     </article>
 
-    <article class="card">
-      <h3>Yangi hujjat yuklash</h3>
-      <p style="font-size:13px;color:var(--neutral-500);margin:0 0 12px;">PDF, DOC yoki DOCX formatidagi fayllarni yuklang. Maksimal hajm: 10 MB.</p>
-      <div class="filters filters-single" style="max-width:480px;">
-        <select class="select">
-          <option>Hujjat turini tanlang</option>
+    <!-- Documents list -->
+    <article class="ds-card" style="margin-bottom:16px;">
+      <div class="ds-sec-head">
+        <h2 class="ds-sec-title">Hujjatlar to'plami</h2>
+      </div>
+
+      <div class="ds-doc-item">
+        <div class="ds-doc-icon" style="font-size:20px;">✅</div>
+        <div style="flex:1;">
+          <div class="ds-doc-name">NGO Ustavi</div>
+          <div class="ds-doc-sub">Majburiy · 01.04.2026 · Ustav.pdf</div>
+        </div>
+        <span class="ds-badge-ok">Tasdiqlangan</span>
+        <a href="#" class="ds-doc-action ds-btn" style="font-size:12px;padding:4px 12px;margin-left:8px;">Ko'rish</a>
+      </div>
+
+      <div class="ds-doc-item">
+        <div class="ds-doc-icon" style="font-size:20px;">✅</div>
+        <div style="flex:1;">
+          <div class="ds-doc-name">Davlat ro'yxatidan o'tish guvohnomasi</div>
+          <div class="ds-doc-sub">Majburiy · 01.04.2026</div>
+        </div>
+        <span class="ds-badge-ok">Tasdiqlangan</span>
+        <a href="#" class="ds-doc-action ds-btn" style="font-size:12px;padding:4px 12px;margin-left:8px;">Ko'rish</a>
+      </div>
+
+      <div class="ds-doc-item">
+        <div class="ds-doc-icon" style="font-size:20px;">✅</div>
+        <div style="flex:1;">
+          <div class="ds-doc-name">Rahbar haqida ma'lumotnoma</div>
+          <div class="ds-doc-sub">Majburiy · 01.04.2026</div>
+        </div>
+        <span class="ds-badge-ok">Tasdiqlangan</span>
+        <a href="#" class="ds-doc-action ds-btn" style="font-size:12px;padding:4px 12px;margin-left:8px;">Ko'rish</a>
+      </div>
+
+      <div class="ds-doc-item" style="background:#fff9f0;border-radius:10px;padding:10px;">
+        <div class="ds-doc-icon" style="font-size:20px;">⚠</div>
+        <div style="flex:1;">
+          <div class="ds-doc-name">Ustav yangi tahrir (2026-yil)</div>
+          <div class="ds-doc-sub">Majburiy · Admin so'raldi · <strong style="color:#d97706;">Muddati: 10.04.2026</strong></div>
+        </div>
+        <span class="ds-badge-warn">Kutilmoqda</span>
+        <button class="ds-btn ds-btn-primary" style="font-size:12px;padding:4px 12px;margin-left:8px;">Yuklash</button>
+      </div>
+
+      <div class="ds-doc-item">
+        <div class="ds-doc-icon" style="font-size:20px;">🕐</div>
+        <div style="flex:1;">
+          <div class="ds-doc-name">Soliq organidan ma'lumotnoma</div>
+          <div class="ds-doc-sub">Majburiy · Hali yuklanmagan</div>
+        </div>
+        <span class="ds-badge-dim">Taqdim etilmagan</span>
+        <button class="ds-btn" style="font-size:12px;padding:4px 12px;margin-left:8px;">Yuklash</button>
+      </div>
+
+      <div class="ds-doc-item">
+        <div class="ds-doc-icon" style="font-size:20px;">📄</div>
+        <div style="flex:1;">
+          <div class="ds-doc-name">A'zolik shartnomasi</div>
+          <div class="ds-doc-sub">Majburiy · Imzo kutilmoqda</div>
+        </div>
+        <span class="ds-badge-warn">Imzo kutilmoqda</span>
+        <a href="#" class="ds-doc-action ds-btn" style="font-size:12px;padding:4px 12px;margin-left:8px;">Ko'rish</a>
+      </div>
+
+      <div class="ds-doc-item">
+        <div class="ds-doc-icon" style="font-size:20px;">🕐</div>
+        <div style="flex:1;">
+          <div class="ds-doc-name">Tashkilot nizomi</div>
+          <div class="ds-doc-sub">Ixtiyoriy · Hali yuklanmagan</div>
+        </div>
+        <span class="ds-badge-dim">Ixtiyoriy</span>
+        <button class="ds-btn" style="font-size:12px;padding:4px 12px;margin-left:8px;">Yuklash</button>
+      </div>
+
+    </article>
+
+    <!-- Upload card -->
+    <article class="ds-card">
+      <div class="ds-sec-head">
+        <h2 class="ds-sec-title">Yangi hujjat yuklash</h2>
+      </div>
+      <div class="ds-field">
+        <label class="ds-label">Hujjat turi</label>
+        <select class="ds-select">
+          <option value="">Hujjat turini tanlang</option>
+          <option>NGO Ustavi</option>
+          <option>Davlat ro'yxatidan o'tish guvohnomasi</option>
+          <option>Rahbar haqida ma'lumotnoma</option>
           <option>Ustav yangi tahrir (2026-yil)</option>
           <option>Soliq organidan ma'lumotnoma</option>
           <option>Tashkilot nizomi</option>
           <option>Boshqa hujjat</option>
         </select>
-        <input class="input" type="file" accept=".pdf,.doc,.docx" />
-        <button class="btn" type="button">Yuklash</button>
+      </div>
+      <div class="ds-field">
+        <label class="ds-label">Fayl (PDF, DOC, DOCX — maks. 10 MB)</label>
+        <input class="ds-input" type="file" accept=".pdf,.doc,.docx" />
+      </div>
+      <div style="margin-top:8px;">
+        <button class="ds-btn ds-btn-primary">↑ Yuklash</button>
       </div>
     </article>
+
   </main>
 </div>
-<script src="js/cabinet-app.js"></script>
 </body>
 </html>
