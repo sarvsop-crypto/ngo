@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="css/pacta-tokens.css">
   <link rel="stylesheet" href="css/pacta-dashboard.page.css">
   <link rel="stylesheet" href="css/pacta-sidebar.css">
@@ -26,21 +27,21 @@
         <button type="button" class="sidebar__collapse" id="sidebarToggle" aria-label="Collapse sidebar" aria-expanded="true">&lsaquo;</button>
       </div>
       <div class="sidebar__search" id="sidebarSearchTrigger">
-        <span class="sidebar__nav-icon" aria-hidden="true">&#128269;</span>
+        <span class="sidebar__nav-icon" aria-hidden="true"><i class="ph ph-magnifying-glass"></i></span>
         <input type="text" placeholder="Qidirish" aria-label="Qidirish" />
       </div>
       <nav class="sidebar__nav">
         <div class="sidebar__nav-section">
           <div class="sidebar__nav-label">ASOSIY MENYU</div>
-          <a href="admin-dashboard.html" class="sidebar__nav-link is-active" title="Boshqaruv paneli"><span class="sidebar__nav-icon">&#9635;</span><span class="sidebar__nav-link-text">Boshqaruv paneli</span></a>
-          <a href="admin-membership-requests.html" class="sidebar__nav-link" title="A‘zolik arizalari"><span class="sidebar__nav-icon">&#9675;</span><span class="sidebar__nav-link-text">A‘zolik arizalari</span></a>
-          <a href="admin-registry.html" class="sidebar__nav-link" title="NNT Ro‘yxati"><span class="sidebar__nav-icon">&#9672;</span><span class="sidebar__nav-link-text">NNT Ro‘yxati</span></a>
-          <a href="admin-users.html" class="sidebar__nav-link" title="Foydalanuvchilar"><span class="sidebar__nav-icon">&#128101;</span><span class="sidebar__nav-link-text">Foydalanuvchilar</span></a>
-          <a href="admin-reports.html" class="sidebar__nav-link" title="Hisobotlar"><span class="sidebar__nav-icon">&#9636;</span><span class="sidebar__nav-link-text">Hisobotlar</span></a>
-          <a href="admin-settings.html" class="sidebar__nav-link" title="Sozlamalar"><span class="sidebar__nav-icon">&#9881;</span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
+          <a href="admin-dashboard.html" class="sidebar__nav-link is-active" title="Boshqaruv paneli"><span class="sidebar__nav-icon"><i class="ph ph-squares-four"></i></span><span class="sidebar__nav-link-text">Boshqaruv paneli</span></a>
+          <a href="admin-membership-requests.html" class="sidebar__nav-link" title="A‘zolik arizalari"><span class="sidebar__nav-icon"><i class="ph ph-file-text"></i></span><span class="sidebar__nav-link-text">A‘zolik arizalari</span></a>
+          <a href="admin-registry.html" class="sidebar__nav-link" title="NNT Ro‘yxati"><span class="sidebar__nav-icon"><i class="ph ph-list-bullets"></i></span><span class="sidebar__nav-link-text">NNT Ro‘yxati</span></a>
+          <a href="admin-users.html" class="sidebar__nav-link" title="Foydalanuvchilar"><span class="sidebar__nav-icon"><i class="ph ph-users"></i></span><span class="sidebar__nav-link-text">Foydalanuvchilar</span></a>
+          <a href="admin-reports.html" class="sidebar__nav-link" title="Hisobotlar"><span class="sidebar__nav-icon"><i class="ph ph-chart-bar"></i></span><span class="sidebar__nav-link-text">Hisobotlar</span></a>
+          <a href="admin-settings.html" class="sidebar__nav-link" title="Sozlamalar"><span class="sidebar__nav-icon"><i class="ph ph-gear"></i></span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
         </div>
         <div class="sidebar__nav-section u-mt-auto">
-          <a href="#" class="sidebar__nav-link logout" id="logoutTrigger" title="Chiqish"><span class="sidebar__nav-icon">&#9099;</span><span class="sidebar__nav-link-text">Chiqish</span></a>
+          <a href="#" class="sidebar__nav-link logout" id="logoutTrigger" title="Chiqish"><span class="sidebar__nav-icon"><i class="ph ph-sign-out"></i></span><span class="sidebar__nav-link-text">Chiqish</span></a>
         </div>
       </nav>
     </aside>
@@ -51,7 +52,7 @@
         </div>
         <div class="topbar-right">
           <div class="topbar-notifications">
-            <button type="button" class="topbar-notifications-btn" id="notificationsBtn" aria-label="Bildirishnomalar" aria-expanded="false" aria-haspopup="true">&#128276;</button>
+            <button type="button" class="topbar-notifications-btn" id="notificationsBtn" aria-label="Bildirishnomalar" aria-expanded="false" aria-haspopup="true"><i class="ph ph-bell"></i></button>
             <span class="topbar-notifications-badge" aria-hidden="true"></span>
           </div>
           <div class="topbar-divider" aria-hidden="true"></div>
@@ -68,27 +69,27 @@
       <div class="main__header">
         <h1 class="main__title">Boshqaruv paneli</h1>
         <div class="main__btns">
-          <button type="button" class="btn btn--secondary" data-action="export" data-export-title="Hisobot eksport">&#8595; Eksport</button>
-          <a href="admin-membership-requests.html" class="btn btn--primary">+ Yangi ariza</a>
+          <button type="button" class="btn btn--secondary" data-action="export" data-export-title="Hisobot eksport"><i class="ph ph-download-simple"></i> Eksport</button>
+          <a href="admin-membership-requests.html" class="btn btn--primary"><i class="ph ph-plus"></i> Yangi ariza</a>
         </div>
       </div>
 
       <div class="cards">
         <div class="card">
-          <div class="card__head"><div class="card__icon">&#127968;</div><span class="card__info" title="Info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Jami NNTlar</p><p class="card__value">247</p></div><span class="card__trend">&#8593; 12.4%</span></div>
+          <div class="card__head"><div class="card__icon"><i class="ph ph-buildings"></i></div><span class="card__info" title="Info"><i class="ph ph-info"></i></span></div>
+          <div class="card__body"><div><p class="card__label">Jami NNTlar</p><p class="card__value">247</p></div><span class="card__trend"><i class="ph ph-arrow-up-right"></i> 12.4%</span></div>
         </div>
         <div class="card">
-          <div class="card__head"><div class="card__icon card__icon--success">&#10003;</div><span class="card__info" title="Info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Tasdiqlangan</p><p class="card__value">94</p></div><span class="card__trend">&#8593; 8.1%</span></div>
+          <div class="card__head"><div class="card__icon card__icon--success"><i class="ph ph-check-circle"></i></div><span class="card__info" title="Info"><i class="ph ph-info"></i></span></div>
+          <div class="card__body"><div><p class="card__label">Tasdiqlangan</p><p class="card__value">94</p></div><span class="card__trend"><i class="ph ph-arrow-up-right"></i> 8.1%</span></div>
         </div>
         <div class="card">
-          <div class="card__head"><div class="card__icon card__icon--warning">&#9203;</div><span class="card__info" title="Info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Ko&rsquo;rib chiqilmoqda</p><p class="card__value">61</p></div><span class="card__trend">&#8595; 3.2%</span></div>
+          <div class="card__head"><div class="card__icon card__icon--warning"><i class="ph ph-clock"></i></div><span class="card__info" title="Info"><i class="ph ph-info"></i></span></div>
+          <div class="card__body"><div><p class="card__label">Ko&rsquo;rib chiqilmoqda</p><p class="card__value">61</p></div><span class="card__trend"><i class="ph ph-arrow-down-right"></i> 3.2%</span></div>
         </div>
         <div class="card">
-          <div class="card__head"><div class="card__icon card__icon--error">&#9888;</div><span class="card__info" title="Info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Qaytarilgan</p><p class="card__value">18</p></div><span class="card__trend">&#8595; 5.0%</span></div>
+          <div class="card__head"><div class="card__icon card__icon--error"><i class="ph ph-warning"></i></div><span class="card__info" title="Info"><i class="ph ph-info"></i></span></div>
+          <div class="card__body"><div><p class="card__label">Qaytarilgan</p><p class="card__value">18</p></div><span class="card__trend"><i class="ph ph-arrow-down-right"></i> 5.0%</span></div>
         </div>
       </div>
 
@@ -97,13 +98,13 @@
           <div class="chart-card__head">
             <h2 class="chart-card__title">A&rsquo;zolik dinamikasi (2025&ndash;2026)</h2>
             <div class="chart-card__controls">
-              <button type="button" class="btn btn--secondary u-btn-period">Oylik &#9660;</button>
+              <button type="button" class="btn btn--secondary u-btn-period">Oylik <i class="ph ph-caret-down"></i></button>
             </div>
           </div>
           <div class="chart-card__body">
             <div class="chart-card__stats">
               <span class="chart-card__amount">247 NNT</span>
-              <span class="card__trend">&#8593; 12.4%</span>
+              <span class="card__trend"><i class="ph ph-arrow-up-right"></i> 12.4%</span>
               <span class="u-text-subtle">yanvar &mdash; dekabr davomida</span>
             </div>
             <div class="chart-card__legend">
@@ -189,9 +190,7 @@
           <div class="u-overflow-x-auto">
             <table class="table">
               <thead>
-                <tr>
-                  <th>Ariza #</th><th>Tashkilot</th><th>Viloyat</th><th>Bosqich</th><th>Holat</th><th>Sana</th>
-                </tr>
+                <tr><th>Ariza #</th><th>Tashkilot</th><th>Viloyat</th><th>Bosqich</th><th>Holat</th><th>Sana</th></tr>
               </thead>
               <tbody>
                 <tr>
@@ -257,7 +256,7 @@
     </div>
     <div class="notifications-panel__list">
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#128203;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-clipboard-text"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Yangi ariza kelib tushdi <span class="notifications-panel__dot"></span></p>
           <p class="notifications-panel__item-body">Yangi Nafas NNT &mdash; ARZ-2026-0418 ko&rsquo;rib chiqilishi kerak.</p>
@@ -265,7 +264,7 @@
         </div>
       </div>
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#128206;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-paperclip"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Hujjat yuklandi <span class="notifications-panel__dot"></span></p>
           <p class="notifications-panel__item-body">Umid Istiqbol NNT yangi hujjat yukladi.</p>
@@ -273,7 +272,7 @@
         </div>
       </div>
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#10003;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-check-circle"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Ariza tasdiqlandi</p>
           <p class="notifications-panel__item-body">Mehr-Shafqat NNT arizasi tasdiqlandi.</p>

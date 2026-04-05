@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="../css/pacta-tokens.css">
   <link rel="stylesheet" href="../css/pacta-help-support.page.css">
   <link rel="stylesheet" href="../css/pacta-sidebar.css">
@@ -26,20 +27,20 @@
         <button type="button" class="sidebar__collapse" id="sidebarToggle" aria-label="Collapse sidebar" aria-expanded="true">&lsaquo;</button>
       </div>
       <div class="sidebar__search" id="sidebarSearchTrigger">
-        <span class="sidebar__nav-icon" aria-hidden="true">&#128269;</span>
+        <span class="sidebar__nav-icon" aria-hidden="true"><i class="ph ph-magnifying-glass"></i></span>
         <input type="text" placeholder="Qidirish" aria-label="Qidirish" />
       </div>
       <nav class="sidebar__nav">
         <div class="sidebar__nav-section">
           <div class="sidebar__nav-label">ASOSIY</div>
-          <a href="cabinet-dashboard.html" class="sidebar__nav-link" title="Bosh sahifa"><span class="sidebar__nav-icon">&#9635;</span><span class="sidebar__nav-link-text">Bosh sahifa</span></a>
-          <a href="cabinet-applications.html" class="sidebar__nav-link" title="Ariza holati"><span class="sidebar__nav-icon">&#9675;</span><span class="sidebar__nav-link-text">Ariza holati</span></a>
-          <a href="cabinet-documents.html" class="sidebar__nav-link" title="Hujjatlar"><span class="sidebar__nav-icon">&#9643;</span><span class="sidebar__nav-link-text">Hujjatlar</span></a>
-          <a href="cabinet-support.html" class="sidebar__nav-link is-active" title="Murojaat"><span class="sidebar__nav-icon">&#9993;</span><span class="sidebar__nav-link-text">Murojaat</span></a>
-          <a href="cabinet-settings.html" class="sidebar__nav-link" title="Sozlamalar"><span class="sidebar__nav-icon">&#9881;</span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
+          <a href="cabinet-dashboard.html" class="sidebar__nav-link" title="Bosh sahifa"><span class="sidebar__nav-icon"><i class="ph ph-squares-four"></i></span><span class="sidebar__nav-link-text">Bosh sahifa</span></a>
+          <a href="cabinet-applications.html" class="sidebar__nav-link" title="Ariza holati"><span class="sidebar__nav-icon"><i class="ph ph-clipboard-text"></i></span><span class="sidebar__nav-link-text">Ariza holati</span></a>
+          <a href="cabinet-documents.html" class="sidebar__nav-link" title="Hujjatlar"><span class="sidebar__nav-icon"><i class="ph ph-files"></i></span><span class="sidebar__nav-link-text">Hujjatlar</span></a>
+          <a href="cabinet-support.html" class="sidebar__nav-link is-active" title="Murojaat"><span class="sidebar__nav-icon"><i class="ph ph-chat-circle-text"></i></span><span class="sidebar__nav-link-text">Murojaat</span></a>
+          <a href="cabinet-settings.html" class="sidebar__nav-link" title="Sozlamalar"><span class="sidebar__nav-icon"><i class="ph ph-gear"></i></span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
         </div>
         <div class="sidebar__nav-section u-mt-auto">
-          <a href="cabinet-login.html" class="sidebar__nav-link logout" title="Chiqish"><span class="sidebar__nav-icon">&#9099;</span><span class="sidebar__nav-link-text">Chiqish</span></a>
+          <a href="cabinet-login.html" class="sidebar__nav-link logout" title="Chiqish"><span class="sidebar__nav-icon"><i class="ph ph-sign-out"></i></span><span class="sidebar__nav-link-text">Chiqish</span></a>
         </div>
       </nav>
     </aside>
@@ -50,7 +51,7 @@
         </div>
         <div class="topbar-right">
           <div class="topbar-notifications">
-            <button type="button" class="topbar-notifications-btn" id="notificationsBtn" aria-label="Bildirishnomalar" aria-expanded="false" aria-haspopup="true">&#128276;</button>
+            <button type="button" class="topbar-notifications-btn" id="notificationsBtn" aria-label="Bildirishnomalar" aria-expanded="false" aria-haspopup="true"><i class="ph ph-bell"></i></button>
             <span class="topbar-notifications-badge" aria-hidden="true"></span>
           </div>
           <div class="topbar-divider" aria-hidden="true"></div>
@@ -66,100 +67,55 @@
 
       <div class="help-header">
         <h1 class="help-header__title">Murojaat &amp; Yordam</h1>
-        <button type="button" class="btn btn--primary">+ Yangi murojaat</button>
+        <button type="button" class="btn btn--primary"><i class="ph ph-plus"></i> Yangi murojaat</button>
       </div>
 
       <div class="cards">
-        <div class="card">
-          <div class="card__head"><div class="card__icon">&#128222;</div><span class="card__info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Telefon</p><p class="card__value" style="font-size:16px;">(+998 55) 503-05-12</p></div></div>
-        </div>
-        <div class="card">
-          <div class="card__head"><div class="card__icon">&#9993;</div><span class="card__info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Email</p><p class="card__value" style="font-size:16px;">info@uznntma.uz</p></div></div>
-        </div>
-        <div class="card">
-          <div class="card__head"><div class="card__icon">&#128205;</div><span class="card__info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Manzil</p><p class="card__value" style="font-size:14px;">1A, Furqat ko&rsquo;chasi, Toshkent</p></div></div>
-        </div>
+        <div class="card"><div class="card__head"><div class="card__icon"><i class="ph ph-phone"></i></div><span class="card__info"><i class="ph ph-info"></i></span></div><div class="card__body"><div><p class="card__label">Telefon</p><p class="card__value" style="font-size:16px;">(+998 55) 503-05-12</p></div></div></div>
+        <div class="card"><div class="card__head"><div class="card__icon"><i class="ph ph-envelope"></i></div><span class="card__info"><i class="ph ph-info"></i></span></div><div class="card__body"><div><p class="card__label">Email</p><p class="card__value" style="font-size:16px;">info@uznntma.uz</p></div></div></div>
+        <div class="card"><div class="card__head"><div class="card__icon"><i class="ph ph-map-pin"></i></div><span class="card__info"><i class="ph ph-info"></i></span></div><div class="card__body"><div><p class="card__label">Manzil</p><p class="card__value" style="font-size:14px;">1A, Furqat ko&rsquo;chasi, Toshkent</p></div></div></div>
       </div>
 
       <div class="faq-grid">
         <div class="faq-row">
           <article class="faq-card" id="faq-1">
-            <button type="button" class="faq-card__head" aria-expanded="true" aria-controls="faq-1-body">
-              <span class="faq-card__title">A&rsquo;zolik arizasi qancha vaqt ko&rsquo;rib chiqiladi?</span>
-              <span class="faq-card__chevron" aria-hidden="true">&#8964;</span>
-            </button>
-            <p class="faq-card__body" id="faq-1-body">Ariza odatda 10&ndash;15 ish kuni ichida ko&rsquo;rib chiqiladi. Hujjatlar to&rsquo;liq va to&rsquo;g&rsquo;ri topshirilganda jarayon tezroq kechadi. Holat bo&rsquo;yicha &ldquo;Ariza holati&rdquo; bo&rsquo;limida kuzatib borishingiz mumkin.</p>
+            <button type="button" class="faq-card__head" aria-expanded="true" aria-controls="faq-1-body"><span class="faq-card__title">A&rsquo;zolik arizasi qancha vaqt ko&rsquo;rib chiqiladi?</span><span class="faq-card__chevron" aria-hidden="true"><i class="ph ph-caret-down"></i></span></button>
+            <p class="faq-card__body" id="faq-1-body">Ariza odatda 10&ndash;15 ish kuni ichida ko&rsquo;rib chiqiladi. Hujjatlar to&rsquo;liq va to&rsquo;g&rsquo;ri topshirilganda jarayon tezroq kechadi.</p>
           </article>
           <article class="faq-card" id="faq-2">
-            <button type="button" class="faq-card__head" aria-expanded="false" aria-controls="faq-2-body">
-              <span class="faq-card__title">Qanday hujjatlar talab qilinadi?</span>
-              <span class="faq-card__chevron" aria-hidden="true">&#8964;</span>
-            </button>
-            <p class="faq-card__body" id="faq-2-body" hidden>NGO Ustavi, Davlat ro&rsquo;yxatidan o&rsquo;tish guvohnomasi, Rahbar haqida ma&rsquo;lumotnoma, Soliq organidan ma&rsquo;lumotnoma majburiy hujjatlar hisoblanadi. Ixtiyoriy ravishda tashkilot nizomini ham topshirishingiz mumkin.</p>
+            <button type="button" class="faq-card__head" aria-expanded="false" aria-controls="faq-2-body"><span class="faq-card__title">Qanday hujjatlar talab qilinadi?</span><span class="faq-card__chevron" aria-hidden="true"><i class="ph ph-caret-down"></i></span></button>
+            <p class="faq-card__body" id="faq-2-body" hidden>NGO Ustavi, Davlat ro&rsquo;yxatidan o&rsquo;tish guvohnomasi, Rahbar haqida ma&rsquo;lumotnoma, Soliq organidan ma&rsquo;lumotnoma majburiy hisoblanadi.</p>
           </article>
           <article class="faq-card" id="faq-3">
-            <button type="button" class="faq-card__head" aria-expanded="false" aria-controls="faq-3-body">
-              <span class="faq-card__title">Hujjat qaytarilsa nima qilish kerak?</span>
-              <span class="faq-card__chevron" aria-hidden="true">&#8964;</span>
-            </button>
-            <p class="faq-card__body" id="faq-3-body" hidden>Admin qaytarish sababini ko&rsquo;rsatadi. Tuzatishlar kiritib, hujjatni qayta yuklashingiz mumkin. &ldquo;Hujjatlar&rdquo; bo&rsquo;limida &ldquo;Yuklash&rdquo; tugmasini bosing.</p>
+            <button type="button" class="faq-card__head" aria-expanded="false" aria-controls="faq-3-body"><span class="faq-card__title">Hujjat qaytarilsa nima qilish kerak?</span><span class="faq-card__chevron" aria-hidden="true"><i class="ph ph-caret-down"></i></span></button>
+            <p class="faq-card__body" id="faq-3-body" hidden>Admin qaytarish sababini ko&rsquo;rsatadi. Tuzatishlar kiritib, hujjatni qayta yuklashingiz mumkin.</p>
           </article>
         </div>
         <div class="faq-row">
           <article class="faq-card" id="faq-4">
-            <button type="button" class="faq-card__head" aria-expanded="false" aria-controls="faq-4-body">
-              <span class="faq-card__title">Shartnoma qanday imzolanadi?</span>
-              <span class="faq-card__chevron" aria-hidden="true">&#8964;</span>
-            </button>
-            <p class="faq-card__body" id="faq-4-body" hidden>Shartnoma loyihasi tayyorlanganida siz elektron pochta orqali xabardor qilinasiz. &ldquo;Ariza holati&rdquo; bo&rsquo;limida shartnomani ko&rsquo;rib, imzolashingiz mumkin.</p>
+            <button type="button" class="faq-card__head" aria-expanded="false" aria-controls="faq-4-body"><span class="faq-card__title">Shartnoma qanday imzolanadi?</span><span class="faq-card__chevron" aria-hidden="true"><i class="ph ph-caret-down"></i></span></button>
+            <p class="faq-card__body" id="faq-4-body" hidden>Shartnoma loyihasi tayyorlanganida siz elektron pochta orqali xabardor qilinasiz.</p>
           </article>
           <article class="faq-card" id="faq-5">
-            <button type="button" class="faq-card__head" aria-expanded="false" aria-controls="faq-5-body">
-              <span class="faq-card__title">A&rsquo;zolik badali qancha?</span>
-              <span class="faq-card__chevron" aria-hidden="true">&#8964;</span>
-            </button>
-            <p class="faq-card__body" id="faq-5-body" hidden>A&rsquo;zolik badali tashkilot turi va hajmiga qarab belgilanadi. Batafsil ma&rsquo;lumot uchun aloqa ma&rsquo;lumotlari orqali murojaat qiling.</p>
+            <button type="button" class="faq-card__head" aria-expanded="false" aria-controls="faq-5-body"><span class="faq-card__title">A&rsquo;zolik badali qancha?</span><span class="faq-card__chevron" aria-hidden="true"><i class="ph ph-caret-down"></i></span></button>
+            <p class="faq-card__body" id="faq-5-body" hidden>A&rsquo;zolik badali tashkilot turi va hajmiga qarab belgilanadi. Batafsil ma&rsquo;lumot uchun aloqa orqali murojaat qiling.</p>
           </article>
           <article class="faq-card" id="faq-6">
-            <button type="button" class="faq-card__head" aria-expanded="false" aria-controls="faq-6-body">
-              <span class="faq-card__title">Parolni unutsam nima qilaman?</span>
-              <span class="faq-card__chevron" aria-hidden="true">&#8964;</span>
-            </button>
+            <button type="button" class="faq-card__head" aria-expanded="false" aria-controls="faq-6-body"><span class="faq-card__title">Parolni unutsam nima qilaman?</span><span class="faq-card__chevron" aria-hidden="true"><i class="ph ph-caret-down"></i></span></button>
             <p class="faq-card__body" id="faq-6-body" hidden>Kirish sahifasida &ldquo;Parolni unutdim&rdquo; havolasini bosing. Email manzilingizga yangilash havolasi yuboriladi.</p>
           </article>
         </div>
       </div>
 
       <div style="background:var(--grey-0);border:1px solid var(--grey-100);border-radius:12px;padding:24px;margin-top:8px;">
-        <h2 style="font-size:16px;font-weight:600;margin:0 0 4px;">Murojaat yuborish</h2>
+        <h2 style="font-size:16px;font-weight:600;margin:0 0 4px;"><i class="ph ph-chat-circle-text"></i> Murojaat yuborish</h2>
         <p style="font-size:14px;color:var(--grey-400);margin:0 0 16px;">Savolingiz javobini topa olmadingizmi? Bizga yozing.</p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
-          <div>
-            <label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Mavzu</label>
-            <select style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;background:var(--grey-0);">
-              <option>Hujjatlar bo&rsquo;yicha</option>
-              <option>Ariza holati</option>
-              <option>Texnik muammo</option>
-              <option>Boshqa</option>
-            </select>
-          </div>
-          <div>
-            <label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Muhimlik darajasi</label>
-            <select style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;background:var(--grey-0);">
-              <option>Oddiy</option>
-              <option>O&rsquo;rta</option>
-              <option>Shoshilinch</option>
-            </select>
-          </div>
+          <div><label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Mavzu</label><select style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;background:var(--grey-0);box-sizing:border-box;"><option>Hujjatlar bo&rsquo;yicha</option><option>Ariza holati</option><option>Texnik muammo</option><option>Boshqa</option></select></div>
+          <div><label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Muhimlik darajasi</label><select style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;background:var(--grey-0);box-sizing:border-box;"><option>Oddiy</option><option>O&rsquo;rta</option><option>Shoshilinch</option></select></div>
         </div>
-        <div style="margin-bottom:16px;">
-          <label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Xabar</label>
-          <textarea rows="4" placeholder="Muammoingizni batafsil yozing..." style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;resize:vertical;box-sizing:border-box;"></textarea>
-        </div>
-        <button type="button" class="btn btn--primary">Yuborish</button>
+        <div style="margin-bottom:16px;"><label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Xabar</label><textarea rows="4" placeholder="Muammoingizni batafsil yozing..." style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;resize:vertical;box-sizing:border-box;"></textarea></div>
+        <button type="button" class="btn btn--primary"><i class="ph ph-paper-plane-tilt"></i> Yuborish</button>
       </div>
     </main>
   </div>
@@ -170,7 +126,7 @@
     </div>
     <div class="notifications-panel__list">
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#128203;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-clipboard-text"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Yangi ariza kelib tushdi <span class="notifications-panel__dot"></span></p>
           <p class="notifications-panel__item-body">Yangi Nafas NNT &mdash; ARZ-2026-0418 ko&rsquo;rib chiqilishi kerak.</p>
@@ -178,7 +134,7 @@
         </div>
       </div>
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#128206;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-paperclip"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Hujjat yuklandi <span class="notifications-panel__dot"></span></p>
           <p class="notifications-panel__item-body">Umid Istiqbol NNT yangi hujjat yukladi.</p>
@@ -186,7 +142,7 @@
         </div>
       </div>
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#10003;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-check-circle"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Ariza tasdiqlandi</p>
           <p class="notifications-panel__item-body">Mehr-Shafqat NNT arizasi tasdiqlandi.</p>

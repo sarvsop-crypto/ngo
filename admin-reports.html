@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="css/pacta-tokens.css">
   <link rel="stylesheet" href="css/pacta-report.page.css">
   <link rel="stylesheet" href="css/pacta-sidebar.css">
@@ -26,21 +27,21 @@
         <button type="button" class="sidebar__collapse" id="sidebarToggle" aria-label="Collapse sidebar" aria-expanded="true">&lsaquo;</button>
       </div>
       <div class="sidebar__search" id="sidebarSearchTrigger">
-        <span class="sidebar__nav-icon" aria-hidden="true">&#128269;</span>
+        <span class="sidebar__nav-icon" aria-hidden="true"><i class="ph ph-magnifying-glass"></i></span>
         <input type="text" placeholder="Qidirish" aria-label="Qidirish" />
       </div>
       <nav class="sidebar__nav">
         <div class="sidebar__nav-section">
           <div class="sidebar__nav-label">ASOSIY MENYU</div>
-          <a href="admin-dashboard.html" class="sidebar__nav-link" title="Boshqaruv paneli"><span class="sidebar__nav-icon">&#9635;</span><span class="sidebar__nav-link-text">Boshqaruv paneli</span></a>
-          <a href="admin-membership-requests.html" class="sidebar__nav-link" title="A‘zolik arizalari"><span class="sidebar__nav-icon">&#9675;</span><span class="sidebar__nav-link-text">A‘zolik arizalari</span></a>
-          <a href="admin-registry.html" class="sidebar__nav-link" title="NNT Ro‘yxati"><span class="sidebar__nav-icon">&#9672;</span><span class="sidebar__nav-link-text">NNT Ro‘yxati</span></a>
-          <a href="admin-users.html" class="sidebar__nav-link" title="Foydalanuvchilar"><span class="sidebar__nav-icon">&#128101;</span><span class="sidebar__nav-link-text">Foydalanuvchilar</span></a>
-          <a href="admin-reports.html" class="sidebar__nav-link is-active" title="Hisobotlar"><span class="sidebar__nav-icon">&#9636;</span><span class="sidebar__nav-link-text">Hisobotlar</span></a>
-          <a href="admin-settings.html" class="sidebar__nav-link" title="Sozlamalar"><span class="sidebar__nav-icon">&#9881;</span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
+          <a href="admin-dashboard.html" class="sidebar__nav-link" title="Boshqaruv paneli"><span class="sidebar__nav-icon"><i class="ph ph-squares-four"></i></span><span class="sidebar__nav-link-text">Boshqaruv paneli</span></a>
+          <a href="admin-membership-requests.html" class="sidebar__nav-link" title="A‘zolik arizalari"><span class="sidebar__nav-icon"><i class="ph ph-file-text"></i></span><span class="sidebar__nav-link-text">A‘zolik arizalari</span></a>
+          <a href="admin-registry.html" class="sidebar__nav-link" title="NNT Ro‘yxati"><span class="sidebar__nav-icon"><i class="ph ph-list-bullets"></i></span><span class="sidebar__nav-link-text">NNT Ro‘yxati</span></a>
+          <a href="admin-users.html" class="sidebar__nav-link" title="Foydalanuvchilar"><span class="sidebar__nav-icon"><i class="ph ph-users"></i></span><span class="sidebar__nav-link-text">Foydalanuvchilar</span></a>
+          <a href="admin-reports.html" class="sidebar__nav-link is-active" title="Hisobotlar"><span class="sidebar__nav-icon"><i class="ph ph-chart-bar"></i></span><span class="sidebar__nav-link-text">Hisobotlar</span></a>
+          <a href="admin-settings.html" class="sidebar__nav-link" title="Sozlamalar"><span class="sidebar__nav-icon"><i class="ph ph-gear"></i></span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
         </div>
         <div class="sidebar__nav-section u-mt-auto">
-          <a href="#" class="sidebar__nav-link logout" id="logoutTrigger" title="Chiqish"><span class="sidebar__nav-icon">&#9099;</span><span class="sidebar__nav-link-text">Chiqish</span></a>
+          <a href="#" class="sidebar__nav-link logout" id="logoutTrigger" title="Chiqish"><span class="sidebar__nav-icon"><i class="ph ph-sign-out"></i></span><span class="sidebar__nav-link-text">Chiqish</span></a>
         </div>
       </nav>
     </aside>
@@ -51,7 +52,7 @@
         </div>
         <div class="topbar-right">
           <div class="topbar-notifications">
-            <button type="button" class="topbar-notifications-btn" id="notificationsBtn" aria-label="Bildirishnomalar" aria-expanded="false" aria-haspopup="true">&#128276;</button>
+            <button type="button" class="topbar-notifications-btn" id="notificationsBtn" aria-label="Bildirishnomalar" aria-expanded="false" aria-haspopup="true"><i class="ph ph-bell"></i></button>
             <span class="topbar-notifications-badge" aria-hidden="true"></span>
           </div>
           <div class="topbar-divider" aria-hidden="true"></div>
@@ -68,8 +69,8 @@
       <div class="report-header">
         <h1 class="report-header__title">Hisobotlar</h1>
         <div class="report-header__btns">
-          <button type="button" class="btn btn--secondary">+ Yangi hisobot</button>
-          <button type="button" class="btn btn--primary" data-action="export" data-export-title="Hisobot eksport">Eksport</button>
+          <button type="button" class="btn btn--secondary"><i class="ph ph-plus"></i> Yangi hisobot</button>
+          <button type="button" class="btn btn--primary" data-action="export" data-export-title="Hisobot eksport"><i class="ph ph-export"></i> Eksport</button>
         </div>
       </div>
 
@@ -78,14 +79,14 @@
           <div class="chart-card__head">
             <h2 class="chart-card__title">A&rsquo;zolik dinamikasi</h2>
             <div class="chart-card__controls">
-              <button type="button" class="chart-card__dropdown">Oylik &#9660;</button>
+              <button type="button" class="chart-card__dropdown">Oylik <i class="ph ph-caret-down"></i></button>
             </div>
           </div>
           <div class="chart-card__body">
             <div class="chart-line__stats">
               <div class="u-inline-stack-wrap">
                 <span class="chart-line__amount">247 NNT</span>
-                <span class="chart-line__trend">&#8593; 12.4%</span>
+                <span class="chart-line__trend"><i class="ph ph-arrow-up-right"></i> 12.4%</span>
                 <span class="chart-line__period">yanvar &mdash; dekabr</span>
               </div>
               <div class="chart-line__legend">
@@ -141,45 +142,13 @@
         </div>
         <table class="table">
           <thead>
-            <tr>
-              <th><input type="checkbox" /></th>
-              <th>Hisobot nomi</th>
-              <th>Turi</th>
-              <th>Davr</th>
-              <th>Yaratildi</th>
-              <th>Holat</th>
-              <th></th>
-            </tr>
+            <tr><th><input type="checkbox" /></th><th>Hisobot nomi</th><th>Turi</th><th>Davr</th><th>Yaratildi</th><th>Holat</th><th></th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td><a href="#" class="doc-link">2026 Q1 A&rsquo;zolik hisoboti</a></td>
-              <td>Choraklik</td><td>Yan &mdash; Mar 2026</td><td>01.04.2026</td>
-              <td><span class="badge badge--success"><span class="badge__dot"></span>Tayyor</span></td>
-              <td><button type="button" data-action="row-menu">&#8942;</button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td><a href="#" class="doc-link">2025 Yillik hisobot</a></td>
-              <td>Yillik</td><td>Yan &mdash; Dek 2025</td><td>15.01.2026</td>
-              <td><span class="badge badge--success"><span class="badge__dot"></span>Tayyor</span></td>
-              <td><button type="button" data-action="row-menu">&#8942;</button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td><a href="#" class="doc-link">Hududiy taqsimot 2026</a></td>
-              <td>Analitik</td><td>2026-yil</td><td>05.04.2026</td>
-              <td><span class="badge badge--pending"><span class="badge__dot"></span>Tayyorlanmoqda</span></td>
-              <td><button type="button" data-action="row-menu">&#8942;</button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td><a href="#" class="doc-link">A&rsquo;zolik faolligi monitoring</a></td>
-              <td>Monitoring</td><td>Mar 2026</td><td>31.03.2026</td>
-              <td><span class="badge badge--success"><span class="badge__dot"></span>Tayyor</span></td>
-              <td><button type="button" data-action="row-menu">&#8942;</button></td>
-            </tr>
+            <tr><td><input type="checkbox" /></td><td><a href="#" class="doc-link">2026 Q1 A&rsquo;zolik hisoboti</a></td><td>Choraklik</td><td>Yan &mdash; Mar 2026</td><td>01.04.2026</td><td><span class="badge badge--success"><span class="badge__dot"></span>Tayyor</span></td><td><button type="button" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
+            <tr><td><input type="checkbox" /></td><td><a href="#" class="doc-link">2025 Yillik hisobot</a></td><td>Yillik</td><td>Yan &mdash; Dek 2025</td><td>15.01.2026</td><td><span class="badge badge--success"><span class="badge__dot"></span>Tayyor</span></td><td><button type="button" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
+            <tr><td><input type="checkbox" /></td><td><a href="#" class="doc-link">Hududiy taqsimot 2026</a></td><td>Analitik</td><td>2026-yil</td><td>05.04.2026</td><td><span class="badge badge--pending"><span class="badge__dot"></span>Tayyorlanmoqda</span></td><td><button type="button" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
+            <tr><td><input type="checkbox" /></td><td><a href="#" class="doc-link">A&rsquo;zolik faolligi monitoring</a></td><td>Monitoring</td><td>Mar 2026</td><td>31.03.2026</td><td><span class="badge badge--success"><span class="badge__dot"></span>Tayyor</span></td><td><button type="button" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
           </tbody>
         </table>
       </section>
@@ -192,7 +161,7 @@
     </div>
     <div class="notifications-panel__list">
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#128203;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-clipboard-text"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Yangi ariza kelib tushdi <span class="notifications-panel__dot"></span></p>
           <p class="notifications-panel__item-body">Yangi Nafas NNT &mdash; ARZ-2026-0418 ko&rsquo;rib chiqilishi kerak.</p>
@@ -200,7 +169,7 @@
         </div>
       </div>
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#128206;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-paperclip"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Hujjat yuklandi <span class="notifications-panel__dot"></span></p>
           <p class="notifications-panel__item-body">Umid Istiqbol NNT yangi hujjat yukladi.</p>
@@ -208,7 +177,7 @@
         </div>
       </div>
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#10003;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-check-circle"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Ariza tasdiqlandi</p>
           <p class="notifications-panel__item-body">Mehr-Shafqat NNT arizasi tasdiqlandi.</p>

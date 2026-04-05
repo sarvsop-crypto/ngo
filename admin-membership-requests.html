@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="css/pacta-tokens.css">
   <link rel="stylesheet" href="css/pacta-contracts.page.css">
   <link rel="stylesheet" href="css/pacta-sidebar.css">
@@ -26,21 +27,21 @@
         <button type="button" class="sidebar__collapse" id="sidebarToggle" aria-label="Collapse sidebar" aria-expanded="true">&lsaquo;</button>
       </div>
       <div class="sidebar__search" id="sidebarSearchTrigger">
-        <span class="sidebar__nav-icon" aria-hidden="true">&#128269;</span>
+        <span class="sidebar__nav-icon" aria-hidden="true"><i class="ph ph-magnifying-glass"></i></span>
         <input type="text" placeholder="Qidirish" aria-label="Qidirish" />
       </div>
       <nav class="sidebar__nav">
         <div class="sidebar__nav-section">
           <div class="sidebar__nav-label">ASOSIY MENYU</div>
-          <a href="admin-dashboard.html" class="sidebar__nav-link" title="Boshqaruv paneli"><span class="sidebar__nav-icon">&#9635;</span><span class="sidebar__nav-link-text">Boshqaruv paneli</span></a>
-          <a href="admin-membership-requests.html" class="sidebar__nav-link is-active" title="A‘zolik arizalari"><span class="sidebar__nav-icon">&#9675;</span><span class="sidebar__nav-link-text">A‘zolik arizalari</span></a>
-          <a href="admin-registry.html" class="sidebar__nav-link" title="NNT Ro‘yxati"><span class="sidebar__nav-icon">&#9672;</span><span class="sidebar__nav-link-text">NNT Ro‘yxati</span></a>
-          <a href="admin-users.html" class="sidebar__nav-link" title="Foydalanuvchilar"><span class="sidebar__nav-icon">&#128101;</span><span class="sidebar__nav-link-text">Foydalanuvchilar</span></a>
-          <a href="admin-reports.html" class="sidebar__nav-link" title="Hisobotlar"><span class="sidebar__nav-icon">&#9636;</span><span class="sidebar__nav-link-text">Hisobotlar</span></a>
-          <a href="admin-settings.html" class="sidebar__nav-link" title="Sozlamalar"><span class="sidebar__nav-icon">&#9881;</span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
+          <a href="admin-dashboard.html" class="sidebar__nav-link" title="Boshqaruv paneli"><span class="sidebar__nav-icon"><i class="ph ph-squares-four"></i></span><span class="sidebar__nav-link-text">Boshqaruv paneli</span></a>
+          <a href="admin-membership-requests.html" class="sidebar__nav-link is-active" title="A‘zolik arizalari"><span class="sidebar__nav-icon"><i class="ph ph-file-text"></i></span><span class="sidebar__nav-link-text">A‘zolik arizalari</span></a>
+          <a href="admin-registry.html" class="sidebar__nav-link" title="NNT Ro‘yxati"><span class="sidebar__nav-icon"><i class="ph ph-list-bullets"></i></span><span class="sidebar__nav-link-text">NNT Ro‘yxati</span></a>
+          <a href="admin-users.html" class="sidebar__nav-link" title="Foydalanuvchilar"><span class="sidebar__nav-icon"><i class="ph ph-users"></i></span><span class="sidebar__nav-link-text">Foydalanuvchilar</span></a>
+          <a href="admin-reports.html" class="sidebar__nav-link" title="Hisobotlar"><span class="sidebar__nav-icon"><i class="ph ph-chart-bar"></i></span><span class="sidebar__nav-link-text">Hisobotlar</span></a>
+          <a href="admin-settings.html" class="sidebar__nav-link" title="Sozlamalar"><span class="sidebar__nav-icon"><i class="ph ph-gear"></i></span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
         </div>
         <div class="sidebar__nav-section u-mt-auto">
-          <a href="#" class="sidebar__nav-link logout" id="logoutTrigger" title="Chiqish"><span class="sidebar__nav-icon">&#9099;</span><span class="sidebar__nav-link-text">Chiqish</span></a>
+          <a href="#" class="sidebar__nav-link logout" id="logoutTrigger" title="Chiqish"><span class="sidebar__nav-icon"><i class="ph ph-sign-out"></i></span><span class="sidebar__nav-link-text">Chiqish</span></a>
         </div>
       </nav>
     </aside>
@@ -51,7 +52,7 @@
         </div>
         <div class="topbar-right">
           <div class="topbar-notifications">
-            <button type="button" class="topbar-notifications-btn" id="notificationsBtn" aria-label="Bildirishnomalar" aria-expanded="false" aria-haspopup="true">&#128276;</button>
+            <button type="button" class="topbar-notifications-btn" id="notificationsBtn" aria-label="Bildirishnomalar" aria-expanded="false" aria-haspopup="true"><i class="ph ph-bell"></i></button>
             <span class="topbar-notifications-badge" aria-hidden="true"></span>
           </div>
           <div class="topbar-divider" aria-hidden="true"></div>
@@ -68,26 +69,26 @@
       <div class="main__header">
         <h1 class="main__title">A&rsquo;zolik arizalari</h1>
         <div class="main__btns">
-          <button type="button" class="btn btn--secondary" data-action="export" data-export-title="Arizalar eksport">&#8595; Eksport (CSV)</button>
+          <button type="button" class="btn btn--secondary" data-action="export" data-export-title="Arizalar eksport"><i class="ph ph-download-simple"></i> Eksport (CSV)</button>
         </div>
       </div>
 
       <div class="cards">
         <div class="card">
-          <div class="card__head"><div class="card__icon">&#128196;</div><span class="card__info" title="Info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Jami arizalar</p><p class="card__value">247</p></div><span class="card__trend">&#8593; 12%</span></div>
+          <div class="card__head"><div class="card__icon"><i class="ph ph-file-text"></i></div><span class="card__info" title="Info"><i class="ph ph-info"></i></span></div>
+          <div class="card__body"><div><p class="card__label">Jami arizalar</p><p class="card__value">247</p></div><span class="card__trend"><i class="ph ph-arrow-up-right"></i> 12%</span></div>
         </div>
         <div class="card">
-          <div class="card__head"><div class="card__icon card__icon--warning">&#9203;</div><span class="card__info" title="Info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Ko&rsquo;rib chiqilmoqda</p><p class="card__value">61</p></div><span class="card__trend">&#8595; 3.2%</span></div>
+          <div class="card__head"><div class="card__icon card__icon--warning"><i class="ph ph-clock"></i></div><span class="card__info" title="Info"><i class="ph ph-info"></i></span></div>
+          <div class="card__body"><div><p class="card__label">Ko&rsquo;rib chiqilmoqda</p><p class="card__value">61</p></div><span class="card__trend"><i class="ph ph-arrow-down-right"></i> 3.2%</span></div>
         </div>
         <div class="card">
-          <div class="card__head"><div class="card__icon card__icon--success">&#10003;</div><span class="card__info" title="Info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Tasdiqlangan</p><p class="card__value">94</p></div><span class="card__trend">&#8593; 8.1%</span></div>
+          <div class="card__head"><div class="card__icon card__icon--success"><i class="ph ph-check-circle"></i></div><span class="card__info" title="Info"><i class="ph ph-info"></i></span></div>
+          <div class="card__body"><div><p class="card__label">Tasdiqlangan</p><p class="card__value">94</p></div><span class="card__trend"><i class="ph ph-arrow-up-right"></i> 8.1%</span></div>
         </div>
         <div class="card">
-          <div class="card__head"><div class="card__icon card__icon--error">&#10007;</div><span class="card__info" title="Info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Qaytarilgan</p><p class="card__value">18</p></div><span class="card__trend">&#8595; 5%</span></div>
+          <div class="card__head"><div class="card__icon card__icon--error"><i class="ph ph-x-circle"></i></div><span class="card__info" title="Info"><i class="ph ph-info"></i></span></div>
+          <div class="card__body"><div><p class="card__label">Qaytarilgan</p><p class="card__value">18</p></div><span class="card__trend"><i class="ph ph-arrow-down-right"></i> 5%</span></div>
         </div>
       </div>
 
@@ -95,7 +96,7 @@
         <div class="table-section__head">
           <h2 class="table-section__title">Arizalar va holati</h2>
           <div class="table-section__tools">
-            <button type="button" class="btn btn--secondary">&#8595; Eksport (CSV)</button>
+            <button type="button" class="btn btn--secondary"><i class="ph ph-download-simple"></i> Eksport (CSV)</button>
           </div>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;padding:12px 0;">
@@ -106,109 +107,30 @@
           <button type="button" class="filter-chip" data-filter="returned">Qaytarilgan <span class="filter-chip__count">18</span></button>
           <select class="table-section__search" aria-label="Viloyat" style="width:160px;">
             <option value="">Barcha viloyatlar</option>
-            <option>Toshkent shahri</option>
-            <option>Toshkent viloyati</option>
-            <option>Samarqand</option>
-            <option>Farg&rsquo;ona</option>
-            <option>Buxoro</option>
-            <option>Namangan</option>
-            <option>Andijon</option>
-            <option>Qashqadaryo</option>
-            <option>Surxondaryo</option>
-            <option>Xorazm</option>
-            <option>Jizzax</option>
-            <option>Sirdaryo</option>
-            <option>Navoiy</option>
-            <option>Qoraqalpog&rsquo;iston</option>
+            <option>Toshkent shahri</option><option>Toshkent viloyati</option><option>Samarqand</option>
+            <option>Farg&rsquo;ona</option><option>Buxoro</option><option>Namangan</option>
+            <option>Andijon</option><option>Qashqadaryo</option><option>Surxondaryo</option>
+            <option>Xorazm</option><option>Jizzax</option><option>Sirdaryo</option>
+            <option>Navoiy</option><option>Qoraqalpog&rsquo;iston</option>
           </select>
         </div>
         <table class="table">
           <thead>
             <tr>
               <th><input type="checkbox" aria-label="Barchasini tanlash" /></th>
-              <th>Ariza #</th>
-              <th>Tashkilot nomi</th>
-              <th>Viloyat</th>
-              <th>Topshirilgan sana</th>
-              <th>Bosqich</th>
-              <th>Holat</th>
-              <th>Mas&rsquo;ul</th>
-              <th></th>
+              <th>Ariza #</th><th>Tashkilot nomi</th><th>Viloyat</th>
+              <th>Topshirilgan sana</th><th>Bosqich</th><th>Holat</th><th>Mas&rsquo;ul</th><th></th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td><a href="#" class="row-link">ARZ-2026-0418</a></td>
-              <td><div class="table__counterparty"><span class="table__avatar">YN</span><span class="table__company">Yangi Nafas NNT</span></div></td>
-              <td>Toshkent</td><td>02.04.2026</td><td>2 / 4</td>
-              <td><span class="badge badge--warning"><span class="badge__dot"></span>Ko&rsquo;rib chiqilmoqda</span></td>
-              <td>Azizova N.</td>
-              <td><button type="button" aria-label="Menyu" data-action="row-menu">&#8942;</button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td><a href="#" class="row-link">ARZ-2026-0415</a></td>
-              <td><div class="table__counterparty"><span class="table__avatar">MS</span><span class="table__company">Mehr-Shafqat NNT</span></div></td>
-              <td>Samarqand</td><td>01.04.2026</td><td>3 / 4</td>
-              <td><span class="badge badge--warning"><span class="badge__dot"></span>Imzo kutilmoqda</span></td>
-              <td>Toshmatov A.</td>
-              <td><button type="button" aria-label="Menyu" data-action="row-menu">&#8942;</button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td><a href="#" class="row-link">ARZ-2026-0411</a></td>
-              <td><div class="table__counterparty"><span class="table__avatar">UI</span><span class="table__company">Umid Istiqbol NNT</span></div></td>
-              <td>Farg&rsquo;ona</td><td>29.03.2026</td><td>4 / 4</td>
-              <td><span class="badge badge--success"><span class="badge__dot"></span>Tasdiqlangan</span></td>
-              <td>Xolmatova G.</td>
-              <td><button type="button" aria-label="Menyu" data-action="row-menu">&#8942;</button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td><a href="#" class="row-link">ARZ-2026-0408</a></td>
-              <td><div class="table__counterparty"><span class="table__avatar">YI</span><span class="table__company">Yoshlar Ittifoqi</span></div></td>
-              <td>Buxoro</td><td>28.03.2026</td><td>1 / 4</td>
-              <td><span class="badge badge--pending"><span class="badge__dot"></span>Qabul qilindi</span></td>
-              <td>Rahimov B.</td>
-              <td><button type="button" aria-label="Menyu" data-action="row-menu">&#8942;</button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td><a href="#" class="row-link">ARZ-2026-0403</a></td>
-              <td><div class="table__counterparty"><span class="table__avatar">EM</span><span class="table__company">Ekologiya Markazi</span></div></td>
-              <td>Namangan</td><td>27.03.2026</td><td>2 / 4</td>
-              <td><span class="badge badge--warning"><span class="badge__dot"></span>Ko&rsquo;rib chiqilmoqda</span></td>
-              <td>Azizova N.</td>
-              <td><button type="button" aria-label="Menyu" data-action="row-menu">&#8942;</button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td><a href="#" class="row-link">ARZ-2026-0397</a></td>
-              <td><div class="table__counterparty"><span class="table__avatar">HM</span><span class="table__company">Hayot va Madaniyat</span></div></td>
-              <td>Andijon</td><td>25.03.2026</td><td>4 / 4</td>
-              <td><span class="badge badge--success"><span class="badge__dot"></span>Tasdiqlangan</span></td>
-              <td>Toshmatov A.</td>
-              <td><button type="button" aria-label="Menyu" data-action="row-menu">&#8942;</button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td><a href="#" class="row-link">ARZ-2026-0391</a></td>
-              <td><div class="table__counterparty"><span class="table__avatar">SP</span><span class="table__company">Sport va Rivojlanish</span></div></td>
-              <td>Qashqadaryo</td><td>22.03.2026</td><td>2 / 4</td>
-              <td><span class="badge badge--danger"><span class="badge__dot"></span>Qaytarilgan</span></td>
-              <td>Xolmatova G.</td>
-              <td><button type="button" aria-label="Menyu" data-action="row-menu">&#8942;</button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td><a href="#" class="row-link">ARZ-2026-0385</a></td>
-              <td><div class="table__counterparty"><span class="table__avatar">BF</span><span class="table__company">Baxtli Oila Fondi</span></div></td>
-              <td>Xorazm</td><td>20.03.2026</td><td>3 / 4</td>
-              <td><span class="badge badge--warning"><span class="badge__dot"></span>Ko&rsquo;rib chiqilmoqda</span></td>
-              <td>Rahimov B.</td>
-              <td><button type="button" aria-label="Menyu" data-action="row-menu">&#8942;</button></td>
-            </tr>
+            <tr><td><input type="checkbox" /></td><td><a href="#" class="row-link">ARZ-2026-0418</a></td><td><div class="table__counterparty"><span class="table__avatar">YN</span><span class="table__company">Yangi Nafas NNT</span></div></td><td>Toshkent</td><td>02.04.2026</td><td>2 / 4</td><td><span class="badge badge--warning"><span class="badge__dot"></span>Ko&rsquo;rib chiqilmoqda</span></td><td>Azizova N.</td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
+            <tr><td><input type="checkbox" /></td><td><a href="#" class="row-link">ARZ-2026-0415</a></td><td><div class="table__counterparty"><span class="table__avatar">MS</span><span class="table__company">Mehr-Shafqat NNT</span></div></td><td>Samarqand</td><td>01.04.2026</td><td>3 / 4</td><td><span class="badge badge--warning"><span class="badge__dot"></span>Imzo kutilmoqda</span></td><td>Toshmatov A.</td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
+            <tr><td><input type="checkbox" /></td><td><a href="#" class="row-link">ARZ-2026-0411</a></td><td><div class="table__counterparty"><span class="table__avatar">UI</span><span class="table__company">Umid Istiqbol NNT</span></div></td><td>Farg&rsquo;ona</td><td>29.03.2026</td><td>4 / 4</td><td><span class="badge badge--success"><span class="badge__dot"></span>Tasdiqlangan</span></td><td>Xolmatova G.</td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
+            <tr><td><input type="checkbox" /></td><td><a href="#" class="row-link">ARZ-2026-0408</a></td><td><div class="table__counterparty"><span class="table__avatar">YI</span><span class="table__company">Yoshlar Ittifoqi</span></div></td><td>Buxoro</td><td>28.03.2026</td><td>1 / 4</td><td><span class="badge badge--pending"><span class="badge__dot"></span>Qabul qilindi</span></td><td>Rahimov B.</td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
+            <tr><td><input type="checkbox" /></td><td><a href="#" class="row-link">ARZ-2026-0403</a></td><td><div class="table__counterparty"><span class="table__avatar">EM</span><span class="table__company">Ekologiya Markazi</span></div></td><td>Namangan</td><td>27.03.2026</td><td>2 / 4</td><td><span class="badge badge--warning"><span class="badge__dot"></span>Ko&rsquo;rib chiqilmoqda</span></td><td>Azizova N.</td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
+            <tr><td><input type="checkbox" /></td><td><a href="#" class="row-link">ARZ-2026-0397</a></td><td><div class="table__counterparty"><span class="table__avatar">HM</span><span class="table__company">Hayot va Madaniyat</span></div></td><td>Andijon</td><td>25.03.2026</td><td>4 / 4</td><td><span class="badge badge--success"><span class="badge__dot"></span>Tasdiqlangan</span></td><td>Toshmatov A.</td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
+            <tr><td><input type="checkbox" /></td><td><a href="#" class="row-link">ARZ-2026-0391</a></td><td><div class="table__counterparty"><span class="table__avatar">SP</span><span class="table__company">Sport va Rivojlanish</span></div></td><td>Qashqadaryo</td><td>22.03.2026</td><td>2 / 4</td><td><span class="badge badge--danger"><span class="badge__dot"></span>Qaytarilgan</span></td><td>Xolmatova G.</td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
+            <tr><td><input type="checkbox" /></td><td><a href="#" class="row-link">ARZ-2026-0385</a></td><td><div class="table__counterparty"><span class="table__avatar">BF</span><span class="table__company">Baxtli Oila Fondi</span></div></td><td>Xorazm</td><td>20.03.2026</td><td>3 / 4</td><td><span class="badge badge--warning"><span class="badge__dot"></span>Ko&rsquo;rib chiqilmoqda</span></td><td>Rahimov B.</td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
           </tbody>
         </table>
       </section>
@@ -221,7 +143,7 @@
     </div>
     <div class="notifications-panel__list">
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#128203;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-clipboard-text"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Yangi ariza kelib tushdi <span class="notifications-panel__dot"></span></p>
           <p class="notifications-panel__item-body">Yangi Nafas NNT &mdash; ARZ-2026-0418 ko&rsquo;rib chiqilishi kerak.</p>
@@ -229,7 +151,7 @@
         </div>
       </div>
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#128206;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-paperclip"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Hujjat yuklandi <span class="notifications-panel__dot"></span></p>
           <p class="notifications-panel__item-body">Umid Istiqbol NNT yangi hujjat yukladi.</p>
@@ -237,7 +159,7 @@
         </div>
       </div>
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#10003;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-check-circle"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Ariza tasdiqlandi</p>
           <p class="notifications-panel__item-body">Mehr-Shafqat NNT arizasi tasdiqlandi.</p>

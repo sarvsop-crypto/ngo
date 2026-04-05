@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="../css/pacta-tokens.css">
   <link rel="stylesheet" href="../css/pacta-settings-account.page.css">
   <link rel="stylesheet" href="../css/pacta-sidebar.css">
@@ -26,20 +27,20 @@
         <button type="button" class="sidebar__collapse" id="sidebarToggle" aria-label="Collapse sidebar" aria-expanded="true">&lsaquo;</button>
       </div>
       <div class="sidebar__search" id="sidebarSearchTrigger">
-        <span class="sidebar__nav-icon" aria-hidden="true">&#128269;</span>
+        <span class="sidebar__nav-icon" aria-hidden="true"><i class="ph ph-magnifying-glass"></i></span>
         <input type="text" placeholder="Qidirish" aria-label="Qidirish" />
       </div>
       <nav class="sidebar__nav">
         <div class="sidebar__nav-section">
           <div class="sidebar__nav-label">ASOSIY</div>
-          <a href="cabinet-dashboard.html" class="sidebar__nav-link" title="Bosh sahifa"><span class="sidebar__nav-icon">&#9635;</span><span class="sidebar__nav-link-text">Bosh sahifa</span></a>
-          <a href="cabinet-applications.html" class="sidebar__nav-link" title="Ariza holati"><span class="sidebar__nav-icon">&#9675;</span><span class="sidebar__nav-link-text">Ariza holati</span></a>
-          <a href="cabinet-documents.html" class="sidebar__nav-link" title="Hujjatlar"><span class="sidebar__nav-icon">&#9643;</span><span class="sidebar__nav-link-text">Hujjatlar</span></a>
-          <a href="cabinet-support.html" class="sidebar__nav-link" title="Murojaat"><span class="sidebar__nav-icon">&#9993;</span><span class="sidebar__nav-link-text">Murojaat</span></a>
-          <a href="cabinet-settings.html" class="sidebar__nav-link is-active" title="Sozlamalar"><span class="sidebar__nav-icon">&#9881;</span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
+          <a href="cabinet-dashboard.html" class="sidebar__nav-link" title="Bosh sahifa"><span class="sidebar__nav-icon"><i class="ph ph-squares-four"></i></span><span class="sidebar__nav-link-text">Bosh sahifa</span></a>
+          <a href="cabinet-applications.html" class="sidebar__nav-link" title="Ariza holati"><span class="sidebar__nav-icon"><i class="ph ph-clipboard-text"></i></span><span class="sidebar__nav-link-text">Ariza holati</span></a>
+          <a href="cabinet-documents.html" class="sidebar__nav-link" title="Hujjatlar"><span class="sidebar__nav-icon"><i class="ph ph-files"></i></span><span class="sidebar__nav-link-text">Hujjatlar</span></a>
+          <a href="cabinet-support.html" class="sidebar__nav-link" title="Murojaat"><span class="sidebar__nav-icon"><i class="ph ph-chat-circle-text"></i></span><span class="sidebar__nav-link-text">Murojaat</span></a>
+          <a href="cabinet-settings.html" class="sidebar__nav-link is-active" title="Sozlamalar"><span class="sidebar__nav-icon"><i class="ph ph-gear"></i></span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
         </div>
         <div class="sidebar__nav-section u-mt-auto">
-          <a href="cabinet-login.html" class="sidebar__nav-link logout" title="Chiqish"><span class="sidebar__nav-icon">&#9099;</span><span class="sidebar__nav-link-text">Chiqish</span></a>
+          <a href="cabinet-login.html" class="sidebar__nav-link logout" title="Chiqish"><span class="sidebar__nav-icon"><i class="ph ph-sign-out"></i></span><span class="sidebar__nav-link-text">Chiqish</span></a>
         </div>
       </nav>
     </aside>
@@ -50,7 +51,7 @@
         </div>
         <div class="topbar-right">
           <div class="topbar-notifications">
-            <button type="button" class="topbar-notifications-btn" id="notificationsBtn" aria-label="Bildirishnomalar" aria-expanded="false" aria-haspopup="true">&#128276;</button>
+            <button type="button" class="topbar-notifications-btn" id="notificationsBtn" aria-label="Bildirishnomalar" aria-expanded="false" aria-haspopup="true"><i class="ph ph-bell"></i></button>
             <span class="topbar-notifications-badge" aria-hidden="true"></span>
           </div>
           <div class="topbar-divider" aria-hidden="true"></div>
@@ -70,10 +71,10 @@
 
       <div class="settings-layout" style="display:grid;grid-template-columns:220px 1fr;gap:24px;">
         <nav style="display:flex;flex-direction:column;gap:4px;">
-          <a href="#profile" style="padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--grey-900);font-size:14px;background:var(--primary-50);font-weight:600;">Profil</a>
-          <a href="#org" style="padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--grey-400);font-size:14px;">Tashkilot</a>
-          <a href="#security" style="padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--grey-400);font-size:14px;">Xavfsizlik</a>
-          <a href="#notifications" style="padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--grey-400);font-size:14px;">Bildirishnomalar</a>
+          <a href="#profile" style="padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--grey-900);font-size:14px;background:var(--primary-50);font-weight:600;display:flex;align-items:center;gap:8px;"><i class="ph ph-user"></i> Profil</a>
+          <a href="#org" style="padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--grey-400);font-size:14px;display:flex;align-items:center;gap:8px;"><i class="ph ph-buildings"></i> Tashkilot</a>
+          <a href="#security" style="padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--grey-400);font-size:14px;display:flex;align-items:center;gap:8px;"><i class="ph ph-shield-check"></i> Xavfsizlik</a>
+          <a href="#notifications" style="padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--grey-400);font-size:14px;display:flex;align-items:center;gap:8px;"><i class="ph ph-bell"></i> Bildirishnomalar</a>
         </nav>
         <div>
           <div style="background:var(--grey-0);border:1px solid var(--grey-100);border-radius:12px;padding:24px;margin-bottom:16px;">
@@ -85,39 +86,27 @@
               <div><label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Lavozim</label><input type="text" value="Tashkilot rahbari" style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;box-sizing:border-box;" /></div>
             </div>
             <div style="margin-top:20px;display:flex;gap:12px;">
-              <button type="button" class="btn btn--primary">Saqlash</button>
+              <button type="button" class="btn btn--primary"><i class="ph ph-floppy-disk"></i> Saqlash</button>
               <button type="button" class="btn btn--secondary">Bekor qilish</button>
             </div>
           </div>
-
           <div style="background:var(--grey-0);border:1px solid var(--grey-100);border-radius:12px;padding:24px;margin-bottom:16px;">
             <h2 style="font-size:16px;font-weight:600;margin:0 0 16px;">Tashkilot ma&rsquo;lumotlari</h2>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
               <div><label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Tashkilot nomi</label><input type="text" value="Yangi Nafas NNT" style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;box-sizing:border-box;" /></div>
               <div><label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">INN</label><input type="text" value="302 456 789" style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;box-sizing:border-box;" /></div>
-              <div><label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Viloyat</label>
-                <select style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;background:var(--grey-0);">
-                  <option selected>Toshkent shahri</option>
-                  <option>Toshkent viloyati</option>
-                  <option>Samarqand</option>
-                </select>
-              </div>
+              <div><label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Viloyat</label><select style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;background:var(--grey-0);box-sizing:border-box;"><option selected>Toshkent shahri</option><option>Toshkent viloyati</option><option>Samarqand</option></select></div>
               <div><label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Manzil</label><input type="text" value="Yunusobod, 7-mavze" style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;box-sizing:border-box;" /></div>
             </div>
-            <div style="margin-top:20px;display:flex;gap:12px;">
-              <button type="button" class="btn btn--primary">Saqlash</button>
-            </div>
+            <div style="margin-top:20px;"><button type="button" class="btn btn--primary"><i class="ph ph-floppy-disk"></i> Saqlash</button></div>
           </div>
-
           <div style="background:var(--grey-0);border:1px solid var(--grey-100);border-radius:12px;padding:24px;">
             <h2 style="font-size:16px;font-weight:600;margin:0 0 16px;">Parolni o&rsquo;zgartirish</h2>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
               <div><label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Joriy parol</label><input type="password" placeholder="Joriy parol" style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;box-sizing:border-box;" /></div>
               <div><label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Yangi parol</label><input type="password" placeholder="Yangi parol" style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;box-sizing:border-box;" /></div>
             </div>
-            <div style="margin-top:20px;">
-              <button type="button" class="btn btn--primary">Yangilash</button>
-            </div>
+            <div style="margin-top:20px;"><button type="button" class="btn btn--primary"><i class="ph ph-lock-key"></i> Yangilash</button></div>
           </div>
         </div>
       </div>
@@ -130,7 +119,7 @@
     </div>
     <div class="notifications-panel__list">
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#128203;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-clipboard-text"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Yangi ariza kelib tushdi <span class="notifications-panel__dot"></span></p>
           <p class="notifications-panel__item-body">Yangi Nafas NNT &mdash; ARZ-2026-0418 ko&rsquo;rib chiqilishi kerak.</p>
@@ -138,7 +127,7 @@
         </div>
       </div>
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#128206;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-paperclip"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Hujjat yuklandi <span class="notifications-panel__dot"></span></p>
           <p class="notifications-panel__item-body">Umid Istiqbol NNT yangi hujjat yukladi.</p>
@@ -146,7 +135,7 @@
         </div>
       </div>
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#10003;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-check-circle"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Ariza tasdiqlandi</p>
           <p class="notifications-panel__item-body">Mehr-Shafqat NNT arizasi tasdiqlandi.</p>

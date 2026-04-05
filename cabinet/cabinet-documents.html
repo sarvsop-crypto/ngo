@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="../css/pacta-tokens.css">
   <link rel="stylesheet" href="../css/pacta-documents.page.css">
   <link rel="stylesheet" href="../css/pacta-sidebar.css">
@@ -26,20 +27,20 @@
         <button type="button" class="sidebar__collapse" id="sidebarToggle" aria-label="Collapse sidebar" aria-expanded="true">&lsaquo;</button>
       </div>
       <div class="sidebar__search" id="sidebarSearchTrigger">
-        <span class="sidebar__nav-icon" aria-hidden="true">&#128269;</span>
+        <span class="sidebar__nav-icon" aria-hidden="true"><i class="ph ph-magnifying-glass"></i></span>
         <input type="text" placeholder="Qidirish" aria-label="Qidirish" />
       </div>
       <nav class="sidebar__nav">
         <div class="sidebar__nav-section">
           <div class="sidebar__nav-label">ASOSIY</div>
-          <a href="cabinet-dashboard.html" class="sidebar__nav-link" title="Bosh sahifa"><span class="sidebar__nav-icon">&#9635;</span><span class="sidebar__nav-link-text">Bosh sahifa</span></a>
-          <a href="cabinet-applications.html" class="sidebar__nav-link" title="Ariza holati"><span class="sidebar__nav-icon">&#9675;</span><span class="sidebar__nav-link-text">Ariza holati</span></a>
-          <a href="cabinet-documents.html" class="sidebar__nav-link is-active" title="Hujjatlar"><span class="sidebar__nav-icon">&#9643;</span><span class="sidebar__nav-link-text">Hujjatlar</span></a>
-          <a href="cabinet-support.html" class="sidebar__nav-link" title="Murojaat"><span class="sidebar__nav-icon">&#9993;</span><span class="sidebar__nav-link-text">Murojaat</span></a>
-          <a href="cabinet-settings.html" class="sidebar__nav-link" title="Sozlamalar"><span class="sidebar__nav-icon">&#9881;</span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
+          <a href="cabinet-dashboard.html" class="sidebar__nav-link" title="Bosh sahifa"><span class="sidebar__nav-icon"><i class="ph ph-squares-four"></i></span><span class="sidebar__nav-link-text">Bosh sahifa</span></a>
+          <a href="cabinet-applications.html" class="sidebar__nav-link" title="Ariza holati"><span class="sidebar__nav-icon"><i class="ph ph-clipboard-text"></i></span><span class="sidebar__nav-link-text">Ariza holati</span></a>
+          <a href="cabinet-documents.html" class="sidebar__nav-link is-active" title="Hujjatlar"><span class="sidebar__nav-icon"><i class="ph ph-files"></i></span><span class="sidebar__nav-link-text">Hujjatlar</span></a>
+          <a href="cabinet-support.html" class="sidebar__nav-link" title="Murojaat"><span class="sidebar__nav-icon"><i class="ph ph-chat-circle-text"></i></span><span class="sidebar__nav-link-text">Murojaat</span></a>
+          <a href="cabinet-settings.html" class="sidebar__nav-link" title="Sozlamalar"><span class="sidebar__nav-icon"><i class="ph ph-gear"></i></span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
         </div>
         <div class="sidebar__nav-section u-mt-auto">
-          <a href="cabinet-login.html" class="sidebar__nav-link logout" title="Chiqish"><span class="sidebar__nav-icon">&#9099;</span><span class="sidebar__nav-link-text">Chiqish</span></a>
+          <a href="cabinet-login.html" class="sidebar__nav-link logout" title="Chiqish"><span class="sidebar__nav-icon"><i class="ph ph-sign-out"></i></span><span class="sidebar__nav-link-text">Chiqish</span></a>
         </div>
       </nav>
     </aside>
@@ -50,7 +51,7 @@
         </div>
         <div class="topbar-right">
           <div class="topbar-notifications">
-            <button type="button" class="topbar-notifications-btn" id="notificationsBtn" aria-label="Bildirishnomalar" aria-expanded="false" aria-haspopup="true">&#128276;</button>
+            <button type="button" class="topbar-notifications-btn" id="notificationsBtn" aria-label="Bildirishnomalar" aria-expanded="false" aria-haspopup="true"><i class="ph ph-bell"></i></button>
             <span class="topbar-notifications-badge" aria-hidden="true"></span>
           </div>
           <div class="topbar-divider" aria-hidden="true"></div>
@@ -67,27 +68,15 @@
       <div class="main__header">
         <h1 class="main__title">Hujjatlar</h1>
         <div class="main__btns">
-          <button type="button" class="btn btn--primary" data-action="upload-doc">&#8593; Hujjat yuklash</button>
+          <button type="button" class="btn btn--primary" data-action="upload-doc"><i class="ph ph-upload-simple"></i> Hujjat yuklash</button>
         </div>
       </div>
 
       <div class="cards">
-        <div class="card">
-          <div class="card__head"><div class="card__icon card__icon--success">&#10003;</div><span class="card__info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Tasdiqlangan</p><p class="card__value">3</p></div></div>
-        </div>
-        <div class="card">
-          <div class="card__head"><div class="card__icon card__icon--warning">&#9888;</div><span class="card__info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Muddatli</p><p class="card__value">1</p></div></div>
-        </div>
-        <div class="card">
-          <div class="card__head"><div class="card__icon">&#9203;</div><span class="card__info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Kutilmoqda</p><p class="card__value">3</p></div></div>
-        </div>
-        <div class="card">
-          <div class="card__head"><div class="card__icon">&#128196;</div><span class="card__info">&#9432;</span></div>
-          <div class="card__body"><div><p class="card__label">Jami</p><p class="card__value">7</p></div></div>
-        </div>
+        <div class="card"><div class="card__head"><div class="card__icon card__icon--success"><i class="ph ph-check-circle"></i></div><span class="card__info"><i class="ph ph-info"></i></span></div><div class="card__body"><div><p class="card__label">Tasdiqlangan</p><p class="card__value">3</p></div></div></div>
+        <div class="card"><div class="card__head"><div class="card__icon card__icon--warning"><i class="ph ph-warning"></i></div><span class="card__info"><i class="ph ph-info"></i></span></div><div class="card__body"><div><p class="card__label">Muddatli</p><p class="card__value">1</p></div></div></div>
+        <div class="card"><div class="card__head"><div class="card__icon"><i class="ph ph-clock"></i></div><span class="card__info"><i class="ph ph-info"></i></span></div><div class="card__body"><div><p class="card__label">Kutilmoqda</p><p class="card__value">3</p></div></div></div>
+        <div class="card"><div class="card__head"><div class="card__icon"><i class="ph ph-files"></i></div><span class="card__info"><i class="ph ph-info"></i></span></div><div class="card__body"><div><p class="card__label">Jami</p><p class="card__value">7</p></div></div></div>
       </div>
 
       <div style="background:var(--grey-0);border:1px solid var(--grey-100);border-radius:12px;padding:24px;margin-bottom:16px;">
@@ -120,68 +109,25 @@
           </div>
         </div>
         <table class="table">
-          <thead>
-            <tr>
-              <th>Hujjat nomi</th>
-              <th>Turi</th>
-              <th>Muddat</th>
-              <th>Holat</th>
-              <th>Amal</th>
-            </tr>
-          </thead>
+          <thead><tr><th>Hujjat nomi</th><th>Turi</th><th>Muddat</th><th>Holat</th><th>Amal</th></tr></thead>
           <tbody>
-            <tr>
-              <td><a href="#" class="doc-link">NGO Ustavi</a></td>
-              <td>Majburiy</td><td>01.04.2026</td>
-              <td><span class="badge badge--success"><span class="badge__dot"></span>Tasdiqlangan</span></td>
-              <td><button type="button" class="btn btn--sm btn--secondary">Ko&rsquo;rish</button></td>
-            </tr>
-            <tr>
-              <td><a href="#" class="doc-link">Davlat ro&rsquo;yxatidan o&rsquo;tish guvohnomasi</a></td>
-              <td>Majburiy</td><td>01.04.2026</td>
-              <td><span class="badge badge--success"><span class="badge__dot"></span>Tasdiqlangan</span></td>
-              <td><button type="button" class="btn btn--sm btn--secondary">Ko&rsquo;rish</button></td>
-            </tr>
-            <tr>
-              <td><a href="#" class="doc-link">Rahbar haqida ma&rsquo;lumotnoma</a></td>
-              <td>Majburiy</td><td>01.04.2026</td>
-              <td><span class="badge badge--success"><span class="badge__dot"></span>Tasdiqlangan</span></td>
-              <td><button type="button" class="btn btn--sm btn--secondary">Ko&rsquo;rish</button></td>
-            </tr>
-            <tr style="background:var(--warning-0);">
-              <td><span style="color:var(--grey-900);">Ustav yangi tahrir (2026-yil)</span></td>
-              <td>Majburiy</td><td><strong style="color:var(--warning-700);">10.04.2026</strong></td>
-              <td><span class="badge badge--warning"><span class="badge__dot"></span>Muddatli</span></td>
-              <td><button type="button" class="btn btn--sm btn--primary">Yuklash</button></td>
-            </tr>
-            <tr>
-              <td><span>Soliq organidan ma&rsquo;lumotnoma</span></td>
-              <td>Majburiy</td><td>&mdash;</td>
-              <td><span class="badge badge--pending"><span class="badge__dot"></span>Yuklanmagan</span></td>
-              <td><button type="button" class="btn btn--sm btn--secondary">Yuklash</button></td>
-            </tr>
-            <tr>
-              <td><a href="#" class="doc-link">A&rsquo;zolik shartnomasi</a></td>
-              <td>Majburiy</td><td>&mdash;</td>
-              <td><span class="badge badge--warning"><span class="badge__dot"></span>Imzo kutilmoqda</span></td>
-              <td><button type="button" class="btn btn--sm btn--secondary">Ko&rsquo;rish</button></td>
-            </tr>
-            <tr>
-              <td><span>Tashkilot nizomi</span></td>
-              <td>Ixtiyoriy</td><td>&mdash;</td>
-              <td><span class="badge badge--pending"><span class="badge__dot"></span>Yuklanmagan</span></td>
-              <td><button type="button" class="btn btn--sm btn--secondary">Yuklash</button></td>
-            </tr>
+            <tr><td><a href="#" class="doc-link"><i class="ph ph-file-pdf"></i> NGO Ustavi</a></td><td>Majburiy</td><td>01.04.2026</td><td><span class="badge badge--success"><span class="badge__dot"></span>Tasdiqlangan</span></td><td><button type="button" class="btn btn--sm btn--secondary"><i class="ph ph-eye"></i> Ko&rsquo;rish</button></td></tr>
+            <tr><td><a href="#" class="doc-link"><i class="ph ph-file-pdf"></i> Davlat ro&rsquo;yxatidan o&rsquo;tish guvohnomasi</a></td><td>Majburiy</td><td>01.04.2026</td><td><span class="badge badge--success"><span class="badge__dot"></span>Tasdiqlangan</span></td><td><button type="button" class="btn btn--sm btn--secondary"><i class="ph ph-eye"></i> Ko&rsquo;rish</button></td></tr>
+            <tr><td><a href="#" class="doc-link"><i class="ph ph-file-pdf"></i> Rahbar haqida ma&rsquo;lumotnoma</a></td><td>Majburiy</td><td>01.04.2026</td><td><span class="badge badge--success"><span class="badge__dot"></span>Tasdiqlangan</span></td><td><button type="button" class="btn btn--sm btn--secondary"><i class="ph ph-eye"></i> Ko&rsquo;rish</button></td></tr>
+            <tr style="background:var(--warning-0);"><td><i class="ph ph-warning"></i> Ustav yangi tahrir (2026-yil)</td><td>Majburiy</td><td><strong style="color:var(--warning-700);">10.04.2026</strong></td><td><span class="badge badge--warning"><span class="badge__dot"></span>Muddatli</span></td><td><button type="button" class="btn btn--sm btn--primary"><i class="ph ph-upload-simple"></i> Yuklash</button></td></tr>
+            <tr><td><i class="ph ph-clock"></i> Soliq organidan ma&rsquo;lumotnoma</td><td>Majburiy</td><td>&mdash;</td><td><span class="badge badge--pending"><span class="badge__dot"></span>Yuklanmagan</span></td><td><button type="button" class="btn btn--sm btn--secondary"><i class="ph ph-upload-simple"></i> Yuklash</button></td></tr>
+            <tr><td><a href="#" class="doc-link"><i class="ph ph-file-text"></i> A&rsquo;zolik shartnomasi</a></td><td>Majburiy</td><td>&mdash;</td><td><span class="badge badge--warning"><span class="badge__dot"></span>Imzo kutilmoqda</span></td><td><button type="button" class="btn btn--sm btn--secondary"><i class="ph ph-eye"></i> Ko&rsquo;rish</button></td></tr>
+            <tr><td><i class="ph ph-clock"></i> Tashkilot nizomi</td><td>Ixtiyoriy</td><td>&mdash;</td><td><span class="badge badge--pending"><span class="badge__dot"></span>Yuklanmagan</span></td><td><button type="button" class="btn btn--sm btn--secondary"><i class="ph ph-upload-simple"></i> Yuklash</button></td></tr>
           </tbody>
         </table>
       </section>
 
       <div style="background:var(--grey-0);border:1px solid var(--grey-100);border-radius:12px;padding:24px;margin-top:16px;">
-        <h2 style="font-size:16px;font-weight:600;margin:0 0 16px;">Yangi hujjat yuklash</h2>
+        <h2 style="font-size:16px;font-weight:600;margin:0 0 16px;"><i class="ph ph-upload-simple"></i> Yangi hujjat yuklash</h2>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:end;">
           <div>
             <label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Hujjat turi</label>
-            <select style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;background:var(--grey-0);">
+            <select style="width:100%;padding:10px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;background:var(--grey-0);box-sizing:border-box;">
               <option value="">Hujjat turini tanlang</option>
               <option>Ustav yangi tahrir (2026-yil)</option>
               <option>Soliq organidan ma&rsquo;lumotnoma</option>
@@ -191,11 +137,11 @@
           </div>
           <div>
             <label style="font-size:13px;color:var(--grey-400);display:block;margin-bottom:6px;">Fayl (PDF, DOC &mdash; maks. 10 MB)</label>
-            <input type="file" accept=".pdf,.doc,.docx" style="width:100%;padding:9px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;" />
+            <input type="file" accept=".pdf,.doc,.docx" style="width:100%;padding:9px 12px;border:1px solid var(--grey-100);border-radius:8px;font-size:14px;font-family:inherit;box-sizing:border-box;" />
           </div>
         </div>
         <div style="margin-top:16px;">
-          <button type="button" class="btn btn--primary">&#8593; Yuklash</button>
+          <button type="button" class="btn btn--primary"><i class="ph ph-upload-simple"></i> Yuklash</button>
         </div>
       </div>
     </main>
@@ -207,7 +153,7 @@
     </div>
     <div class="notifications-panel__list">
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#128203;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-clipboard-text"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Yangi ariza kelib tushdi <span class="notifications-panel__dot"></span></p>
           <p class="notifications-panel__item-body">Yangi Nafas NNT &mdash; ARZ-2026-0418 ko&rsquo;rib chiqilishi kerak.</p>
@@ -215,7 +161,7 @@
         </div>
       </div>
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#128206;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-paperclip"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Hujjat yuklandi <span class="notifications-panel__dot"></span></p>
           <p class="notifications-panel__item-body">Umid Istiqbol NNT yangi hujjat yukladi.</p>
@@ -223,7 +169,7 @@
         </div>
       </div>
       <div class="notifications-panel__item">
-        <div class="notifications-panel__icon">&#10003;</div>
+        <div class="notifications-panel__icon"><i class="ph ph-check-circle"></i></div>
         <div class="notifications-panel__content">
           <p class="notifications-panel__item-title">Ariza tasdiqlandi</p>
           <p class="notifications-panel__item-body">Mehr-Shafqat NNT arizasi tasdiqlandi.</p>
