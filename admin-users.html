@@ -21,7 +21,7 @@
   </div>
 </header>
 
-<section class="grid-bg"><div class="container hero center"><h1>Foydalanuvchilar</h1><p class="sub">Admin, moderator va operatorlar uchun rollar, ruxsatlar hamda kirish nazorati oynasi.</p></div></section>
+<section class="grid-bg"><div class="container hero center"><h1>Xodimlar</h1><p class="sub">Tizim xodimlarini ko'rish, qo'shish va boshqarish.</p></div></section>
 
 <section class="section admin-section">
   <div class="container admin-shell">
@@ -40,43 +40,35 @@
 
     <div>
       <div class="admin-stats">
-        <article class="admin-stat"><span>Jami foydalanuvchi</span><strong>128</strong></article>
-        <article class="admin-stat"><span>Faol sessiyalar</span><strong>34</strong></article>
-        <article class="admin-stat"><span>Adminlar</span><strong>12</strong></article>
+        <article class="admin-stat"><span>Jami xodimlar</span><strong>12</strong></article>
+        <article class="admin-stat"><span>Faol</span><strong>9</strong></article>
         <article class="admin-stat"><span>Bloklangan</span><strong>3</strong></article>
       </div>
 
       <div class="admin-toolbar">
-        <h2>Foydalanuvchi boshqaruvi</h2>
-        <a class="btn" href="#">Yangi foydalanuvchi qo'shish</a>
+        <h2>Xodimlar</h2>
+        <a class="btn" href="#">Yangi xodim qo'shish</a>
       </div>
 
       <div class="admin-filters">
-        <input class="admin-input" placeholder="F.I.Sh. yoki email bo'yicha qidirish" />
-        <select class="admin-select"><option>Barcha rollar</option><option>Super Admin</option><option>Moderator</option><option>Operator</option><option>Kuzatuvchi</option></select>
-        <select class="admin-select"><option>Barcha holatlar</option><option>Faol</option><option>Vaqtincha bloklangan</option><option>Taklif yuborilgan</option></select>
-        <select class="admin-select"><option>Oxirgi kirish</option><option>Bugun</option><option>So'nggi 7 kun</option><option>30 kundan oshgan</option></select>
+        <input class="admin-input" placeholder="Ism yoki email bo'yicha qidirish" />
+        <select class="admin-select"><option>Barcha holatlar</option><option>Faol</option><option>Bloklangan</option></select>
       </div>
 
       <div class="admin-table-wrap">
         <table class="admin-table">
           <thead>
-            <tr><th>Foydalanuvchi</th><th>Rol</th><th>Bo'lim</th><th>Oxirgi kirish</th><th>Holat</th><th>Amal</th></tr>
+            <tr><th>Xodim</th><th>Oxirgi kirish</th><th>Holat</th><th>Amal</th></tr>
           </thead>
           <tbody>
-            <tr><td><strong>Akmal Xasanov</strong><small>akmal.x@ngo.uz</small></td><td>Super Admin</td><td>Markaziy apparat</td><td>02.04.2026 11:02</td><td><span class="admin-badge ok">Faol</span></td><td><a href="#">Tahrirlash</a></td></tr>
-            <tr><td><strong>Dilnoza Karimova</strong><small>d.karimova@ngo.uz</small></td><td>Moderator</td><td>A'zolik bo'limi</td><td>02.04.2026 10:41</td><td><span class="admin-badge ok">Faol</span></td><td><a href="#">Tahrirlash</a></td></tr>
-            <tr><td><strong>Otabek Usmonov</strong><small>otabek.u@ngo.uz</small></td><td>Operator</td><td>Hisobotlar</td><td>01.04.2026 17:16</td><td><span class="admin-badge warn">Cheklangan</span></td><td><a href="#">Ruxsat</a></td></tr>
-            <tr><td><strong>Shohida Jo'rayeva</strong><small>s.jurayeva@ngo.uz</small></td><td>Kuzatuvchi</td><td>Tahliliy markaz</td><td>25.03.2026 09:08</td><td><span class="admin-badge bad">Bloklangan</span></td><td><a href="#">Tiklash</a></td></tr>
+            <tr><td><strong>Akmal Xasanov</strong><small>akmal.x@ngo.uz</small></td><td>02.04.2026 11:02</td><td><span class="admin-badge ok">Faol</span></td><td><a href="#">Tahrirlash</a></td></tr>
+            <tr><td><strong>Dilnoza Karimova</strong><small>d.karimova@ngo.uz</small></td><td>02.04.2026 10:41</td><td><span class="admin-badge ok">Faol</span></td><td><a href="#">Tahrirlash</a></td></tr>
+            <tr><td><strong>Otabek Usmonov</strong><small>otabek.u@ngo.uz</small></td><td>01.04.2026 17:16</td><td><span class="admin-badge warn">Cheklangan</span></td><td><a href="#">Tahrirlash</a></td></tr>
+            <tr><td><strong>Shohida Jo'rayeva</strong><small>s.jurayeva@ngo.uz</small></td><td>25.03.2026 09:08</td><td><span class="admin-badge bad">Bloklangan</span></td><td><a href="#">Tiklash</a></td></tr>
           </tbody>
         </table>
       </div>
 
-      <div class="admin-bottom admin-bottom--spaced">
-        <article class="admin-card"><h3>Ruxsat guruhlari</h3><ul class="admin-list"><li><span>Super Admin</span><span>To'liq kirish</span></li><li><span>Moderator</span><span>Tasdiqlash / qaytarish</span></li><li><span>Operator</span><span>Ko'rish / kiritish</span></li></ul></article>
-        <article class="admin-card"><h3>Xavfsizlik</h3><ul class="admin-list"><li><span>2FA yoqilgan</span><span>9 / 12 admin</span></li><li><span>Parol yangilanishi talab</span><span>4 ta akkaunt</span></li><li><span>Shubhali kirishlar</span><span>2 ta</span></li></ul></article>
-        <article class="admin-card"><h3>Audit jurnali</h3><ul class="admin-list"><li><span>Yangi moderator qo'shildi</span><span>10:11</span></li><li><span>Operator roli yangilandi</span><span>09:32</span></li><li><span>Bloklash amali bajarildi</span><span>Kecha</span></li></ul></article>
-      </div>
     </div>
   </div>
 </section>

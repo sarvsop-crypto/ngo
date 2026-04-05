@@ -100,36 +100,32 @@
     {
       label: 'Asosiy',
       items: [
-        { href: 'cabinet-dashboard.html', label: 'Dashboard' },
-        { href: 'cabinet-organization.html', label: 'Hududiy kabinet' },
+        { href: 'cabinet-dashboard.html', label: 'Bosh sahifa' },
+        { href: 'cabinet-organization.html', label: 'Mening tashkilotim' },
         { href: 'cabinet-applications.html', label: 'Arizalar' },
         { href: 'cabinet-approvals.html', label: 'Tasdiqlashlar' }
       ]
     },
     {
-      label: 'Reyestr',
+      label: 'Hujjatlar',
       items: [
-        { href: 'cabinet-nnt-data.html', label: "NNT ma'lumotlari" },
         { href: 'cabinet-documents.html', label: 'Hujjatlar' },
         { href: 'cabinet-reports.html', label: 'Hisobotlar' },
-        { href: 'cabinet-audit.html', label: 'Audit jurnali' }
+        { href: 'cabinet-esignature.html', label: 'Elektron imzo' }
       ]
     },
     {
-      label: 'Kontent',
+      label: 'Muloqot',
       items: [
-        { href: 'cabinet-news.html', label: 'Yangiliklar' },
-        { href: 'cabinet-events.html', label: 'Tadbirlar' },
-        { href: 'cabinet-grants.html', label: 'Grantlar' },
-        { href: 'cabinet-notifications.html', label: 'Bildirishnomalar' }
+        { href: 'cabinet-notifications.html', label: 'Bildirishnomalar' },
+        { href: 'cabinet-support.html', label: 'Murojaatlar' }
       ]
     },
     {
       label: 'Tizim',
       items: [
         { href: 'cabinet-calendar.html', label: 'Kalendar' },
-        { href: 'cabinet-support.html', label: 'Murojaatlar' },
-        { href: 'cabinet-api.html', label: 'API va integratsiya' },
+        { href: 'cabinet-knowledge.html', label: 'Yordam markazi' },
         { href: 'cabinet-settings.html', label: 'Sozlamalar' }
       ]
     }
