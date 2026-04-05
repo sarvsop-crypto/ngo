@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="uz">
 <head>
   <meta charset="utf-8" />
@@ -13,140 +13,54 @@
       <h1>Bosh sahifa</h1>
       <div class="date-chip" id="js-date"></div>
     </div>
-    <p class="page-sub">A'zolik shartnomasi bo'yicha joriy holat va faoliyat.</p>
+    <p class="page-sub">A'zolik shartnomasi bo'yicha joriy holat va tahliliy ko'rinish.</p>
 
-    <!-- KPI row -->
     <div class="kpis">
-      <div class="kpi">
-        <span>Holat</span>
-        <strong style="font-size:clamp(14px,1.6vw,20px);color:var(--warn)">Ko'rib chiqilmoqda</strong>
-      </div>
-      <div class="kpi">
-        <span>Bosqich</span>
-        <strong>2 / 4</strong>
-      </div>
-      <div class="kpi">
-        <span>Topshirilgan</span>
-        <strong style="font-size:clamp(15px,1.6vw,22px)">02.04.2026</strong>
-      </div>
-      <div class="kpi">
-        <span>A'zolik</span>
-        <strong style="font-size:clamp(14px,1.6vw,20px);color:var(--neutral-400)">Kutilmoqda</strong>
-      </div>
+      <div class="kpi"><span>Holat</span><strong style="font-size:clamp(14px,1.6vw,20px);color:var(--warn)">Ko'rib chiqilmoqda</strong></div>
+      <div class="kpi"><span>Bosqich</span><strong>2 / 4</strong></div>
+      <div class="kpi"><span>Topshirilgan</span><strong style="font-size:clamp(15px,1.6vw,22px)">02.04.2026</strong></div>
+      <div class="kpi"><span>A'zolik</span><strong style="font-size:clamp(14px,1.6vw,20px);color:var(--neutral-400)">Kutilmoqda</strong></div>
     </div>
 
-    <!-- Step tracker -->
-    <article class="card">
-      <h3>Ariza bosqichlari</h3>
-      <div class="step-track">
-        <div class="step-item done">
-          <div class="step-dot">✓</div>
-          <span class="step-lbl">Ariza<br>topshirildi</span>
+    <div class="cab-chart-grid">
+      <article class="cab-chart-card">
+        <h3 class="cab-chart-title">Jarayon dinamikasi</h3>
+        <p class="cab-chart-sub">Oxirgi 7 kun ichida bosqichlar o'tishi</p>
+        <div class="cab-line-wrap">
+          <svg viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#d5e5ef" stroke-width="1">
+              <line x1="20" y1="20" x2="500" y2="20"/><line x1="20" y1="55" x2="500" y2="55"/><line x1="20" y1="90" x2="500" y2="90"/><line x1="20" y1="125" x2="500" y2="125"/><line x1="20" y1="160" x2="500" y2="160"/>
+            </g>
+            <polyline fill="none" stroke="#007a94" stroke-width="3" points="20,148 98,142 176,128 254,116 332,108 410,90 500,74"/>
+          </svg>
         </div>
-        <div class="step-item curr">
-          <div class="step-dot">2</div>
-          <span class="step-lbl">Hujjatlar<br>tekshiruvi</span>
-        </div>
-        <div class="step-item">
-          <div class="step-dot">3</div>
-          <span class="step-lbl">Shartnoma<br>imzosi</span>
-        </div>
-        <div class="step-item">
-          <div class="step-dot">4</div>
-          <span class="step-lbl">A'zolik<br>tasdiqlandi</span>
-        </div>
-      </div>
-    </article>
+        <div class="cab-axis-labels"><span>Dush</span><span>Sesh</span><span>Chor</span><span>Pay</span><span>Jum</span><span>Shan</span><span>Yak</span></div>
+      </article>
 
-    <!-- Lower grid: activity + sidebar -->
-    <div class="lower-grid">
-
-      <!-- Activity stream -->
-      <article class="card">
-        <h3>So'nggi harakatlar</h3>
-        <div class="cab-stream">
-          <div class="cab-stream-item">
-            <div class="cab-stream-icon">📋</div>
-            <div class="cab-stream-body">
-              <p class="cab-stream-title">Ariza muvaffaqiyatli yuborildi</p>
-              <span class="cab-stream-date">02.04.2026 · ARZ-2026-0418</span>
-            </div>
+      <article class="cab-chart-card">
+        <h3 class="cab-chart-title">Hujjat to'liqligi</h3>
+        <p class="cab-chart-sub">Shartnoma paketi</p>
+        <div class="cab-donut-box">
+          <div class="cab-donut" style="background:conic-gradient(#24733a 0 78%, #d97706 78% 100%);">
+            <div class="cab-donut-hole"><strong>78%</strong><span>Tayyor</span></div>
           </div>
-          <div class="cab-stream-item">
-            <div class="cab-stream-icon">🔍</div>
-            <div class="cab-stream-body">
-              <p class="cab-stream-title">Hujjatlar tekshiruv bosqichiga o'tdi</p>
-              <span class="cab-stream-date">03.04.2026 · Admin tomonidan</span>
-            </div>
-          </div>
-          <div class="cab-stream-item">
-            <div class="cab-stream-icon">📎</div>
-            <div class="cab-stream-body">
-              <p class="cab-stream-title">Qo'shimcha hujjat so'raldi: Ustav yangi tahrir</p>
-              <span class="cab-stream-date">04.04.2026 · Ijro muddati: 10.04.2026</span>
-            </div>
-          </div>
-          <div class="cab-stream-item">
-            <div class="cab-stream-icon">📄</div>
-            <div class="cab-stream-body">
-              <p class="cab-stream-title">Shartnoma loyihasi tayyorlandi — ko'rib chiqish mumkin</p>
-              <span class="cab-stream-date">05.04.2026</span>
-            </div>
+          <div class="cab-legend">
+            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#24733a"></span><span>Yuklangan: 7</span></div>
+            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#d97706"></span><span>Kutilmoqda: 2</span></div>
           </div>
         </div>
       </article>
-
-      <!-- Right column -->
-      <div class="right-col">
-
-        <!-- Quick actions -->
-        <article class="card">
-          <h3>Tezkor amallar</h3>
-          <div class="actions-grid" style="padding:0;margin-top:10px">
-            <a class="action-btn" href="cabinet-documents.html">
-              <div class="action-icon">📄</div>
-              <span class="action-label">Hujjat yuklash</span>
-            </a>
-            <a class="action-btn" href="cabinet-support.html">
-              <div class="action-icon">✉</div>
-              <span class="action-label">Murojaat yuborish</span>
-            </a>
-            <a class="action-btn" href="cabinet-applications.html">
-              <div class="action-icon">📊</div>
-              <span class="action-label">Ariza holati</span>
-            </a>
-            <a class="action-btn" href="cabinet-documents.html">
-              <div class="action-icon">✍</div>
-              <span class="action-label">Shartnomani ko'rish</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- News -->
-        <article class="card">
-          <h3>Yangiliklar</h3>
-          <div>
-            <div class="news-item">
-              <span class="news-tag">YANGILIK</span>
-              <span class="news-title">O'zNNTMA 2026-yil a'zolik shartlari yangilandi</span>
-              <span class="news-meta">01.04.2026</span>
-            </div>
-            <div class="news-item">
-              <span class="news-tag">TADBIR</span>
-              <span class="news-title">Seminar: NGO faoliyat standartlari · 15.04.2026</span>
-              <span class="news-meta">Toshkent, O'zNNTMA markazi</span>
-            </div>
-            <div class="news-item">
-              <span class="news-tag">YANGILIK</span>
-              <span class="news-title">Yangi a'zolik bo'limiga murojaat tartibi haqida</span>
-              <span class="news-meta">20.03.2026</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
     </div>
 
+    <article class="card">
+      <h3>Ariza bosqichlari</h3>
+      <div class="step-track">
+        <div class="step-item done"><div class="step-dot">OK</div><span class="step-lbl">Ariza topshirildi</span></div>
+        <div class="step-item curr"><div class="step-dot">2</div><span class="step-lbl">Hujjatlar tekshiruvi</span></div>
+        <div class="step-item"><div class="step-dot">3</div><span class="step-lbl">Shartnoma imzosi</span></div>
+        <div class="step-item"><div class="step-dot">4</div><span class="step-lbl">A'zolik tasdiqlandi</span></div>
+      </div>
+    </article>
   </main>
 </div>
 <script src="js/cabinet-app.js"></script>

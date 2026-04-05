@@ -531,3 +531,22 @@ button {
 .cab-stream-body { flex:1; min-width:0; }
 .cab-stream-title { font-size:13px; font-weight:600; color:var(--neutral-900); margin:0 0 2px; line-height:1.4; }
 .cab-stream-date { font-size:11px; color:var(--neutral-400); }
+/* Chart widgets for cabinet screens */
+.cab-chart-grid { display:grid; grid-template-columns: 1fr 300px; gap:14px; }
+.cab-chart-card { border:1px solid var(--neutral-200); background:var(--card-bg); box-shadow:var(--card-shadow); padding:16px; }
+.cab-chart-title { margin:0 0 4px; font-size:17px; font-weight:700; color:var(--neutral-900); }
+.cab-chart-sub { margin:0 0 10px; font-size:13px; color:var(--neutral-500); }
+.cab-line-wrap { height:172px; border:1px solid var(--neutral-200); background:linear-gradient(180deg,#f8fcff,#eef6fb); padding:8px; }
+.cab-line-wrap svg { width:100%; height:100%; display:block; }
+.cab-axis-labels { display:flex; justify-content:space-between; margin-top:6px; font-size:11px; color:var(--neutral-500); }
+.cab-donut-box { display:flex; align-items:center; justify-content:center; gap:12px; }
+.cab-donut { width:140px; height:140px; border-radius:50%; display:grid; place-items:center; }
+.cab-donut-hole { width:84px; height:84px; border-radius:50%; background:#fff; border:1px solid var(--neutral-200); display:grid; place-items:center; text-align:center; }
+.cab-donut-hole strong { display:block; font-size:22px; line-height:1; color:var(--neutral-900); }
+.cab-donut-hole span { font-size:12px; color:var(--neutral-500); }
+.cab-legend { display:grid; gap:8px; min-width:130px; }
+.cab-legend-row { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--neutral-700); }
+.cab-legend-dot { width:10px; height:10px; border-radius:50%; }
+@media (max-width: 1060px) {
+  .cab-chart-grid { grid-template-columns: 1fr; }
+}

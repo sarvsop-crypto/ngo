@@ -10,7 +10,7 @@
 <div class="app">
   <main class="main">
     <div class="page-heading"><h1>Sozlamalar</h1></div>
-    <p class="page-sub">Mas'ul shaxs aloqa ma'lumotlari va xabarnoma sozlamalari.</p>
+    <p class="page-sub">Profil va xabarnoma sozlamalari bo'yicha ko'rsatkichlar.</p>
 
     <div class="grid-2">
       <article class="card">
@@ -29,6 +29,35 @@
           <label><input type="checkbox" checked /> Email orqali xabar olish</label>
           <label><input type="checkbox" checked /> Ariza holati o'zgarsa xabar berish</label>
           <button class="btn" type="button">Saqlash</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="cab-chart-grid" style="margin-top:12px;">
+      <article class="cab-chart-card">
+        <h3 class="cab-chart-title">Xabar ochilish dinamikasi</h3>
+        <p class="cab-chart-sub">Haftalik ko'rish foizi</p>
+        <div class="cab-line-wrap">
+          <svg viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#d5e5ef" stroke-width="1"><line x1="20" y1="20" x2="500" y2="20"/><line x1="20" y1="55" x2="500" y2="55"/><line x1="20" y1="90" x2="500" y2="90"/><line x1="20" y1="125" x2="500" y2="125"/><line x1="20" y1="160" x2="500" y2="160"/></g>
+            <polyline fill="none" stroke="#24733a" stroke-width="3" points="20,120 98,112 176,96 254,84 332,78 410,72 500,64"/>
+          </svg>
+        </div>
+        <div class="cab-axis-labels"><span>1-hafta</span><span>2-hafta</span><span>3-hafta</span><span>4-hafta</span><span>5-hafta</span><span>6-hafta</span><span>7-hafta</span></div>
+      </article>
+
+      <article class="cab-chart-card">
+        <h3 class="cab-chart-title">Kanal taqsimoti</h3>
+        <p class="cab-chart-sub">Faol xabarnoma kanallari</p>
+        <div class="cab-donut-box">
+          <div class="cab-donut" style="background:conic-gradient(#007a94 0 61%, #00b4d8 61% 86%, #94a3b8 86% 100%);">
+            <div class="cab-donut-hole"><strong>61%</strong><span>Email</span></div>
+          </div>
+          <div class="cab-legend">
+            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#007a94"></span><span>Email</span></div>
+            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#00b4d8"></span><span>SMS</span></div>
+            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#94a3b8"></span><span>Ilova ichida</span></div>
+          </div>
         </div>
       </article>
     </div>

@@ -21,7 +21,7 @@
   </div>
 </header>
 
-<section class="grid-bg"><div class="container hero center"><h1>A'zolik shartnomalari</h1><p class="sub">Foydalanuvchi yuborgan ariza va shartnoma bo'yicha yagona ishchi ekran.</p></div></section>
+<section class="grid-bg"><div class="container hero center"><h1>A'zolik shartnomalari</h1><p class="sub">Ariza va shartnoma bo'yicha ishchi ekran.</p></div></section>
 
 <section class="section admin-section">
   <div class="container admin-shell">
@@ -43,16 +43,49 @@
 
       <div class="admin-table-wrap">
         <table class="admin-table">
-          <thead>
-            <tr><th>Ariza</th><th>Tashkilot</th><th>Sana</th><th>Holat</th><th>Amal</th></tr>
-          </thead>
+          <thead><tr><th>Ariza</th><th>Tashkilot</th><th>Sana</th><th>Holat</th><th>Amal</th></tr></thead>
           <tbody>
-            <tr><td><strong>ARZ-2026-0418</strong></td><td>"Yangi Nafas" NNT</td><td>02.04.2026</td><td><span class="admin-badge warn">Ko'rib chiqilmoqda</span></td><td><a href="#">Ochish</a></td></tr>
-            <tr><td><strong>ARZ-2026-0417</strong></td><td>"Mehr" jamg'armasi</td><td>02.04.2026</td><td><span class="admin-badge warn">Yangi</span></td><td><a href="#">Ochish</a></td></tr>
-            <tr><td><strong>ARZ-2026-0415</strong></td><td>"Saxovat Plus" NNT</td><td>01.04.2026</td><td><span class="admin-badge ok">Tasdiqlangan</span></td><td><a href="#">Ko'rish</a></td></tr>
-            <tr><td><strong>ARZ-2026-0412</strong></td><td>"Kelajak Sari" NNT</td><td>31.03.2026</td><td><span class="admin-badge bad">Qaytarilgan</span></td><td><a href="#">Izoh</a></td></tr>
+            <tr><td><strong>ARZ-2026-0418</strong></td><td>Yangi Nafas NNT</td><td>02.04.2026</td><td><span class="admin-badge warn">Ko'rib chiqilmoqda</span></td><td><a href="#">Ochish</a></td></tr>
+            <tr><td><strong>ARZ-2026-0417</strong></td><td>Mehr jamg'armasi</td><td>02.04.2026</td><td><span class="admin-badge warn">Yangi</span></td><td><a href="#">Ochish</a></td></tr>
+            <tr><td><strong>ARZ-2026-0415</strong></td><td>Saxovat Plus NNT</td><td>01.04.2026</td><td><span class="admin-badge ok">Tasdiqlangan</span></td><td><a href="#">Ko'rish</a></td></tr>
+            <tr><td><strong>ARZ-2026-0412</strong></td><td>Kelajak Sari NNT</td><td>31.03.2026</td><td><span class="admin-badge bad">Qaytarilgan</span></td><td><a href="#">Izoh</a></td></tr>
           </tbody>
         </table>
+      </div>
+
+      <div class="adm-chart-grid">
+        <article class="adm-chart-card">
+          <h3 class="adm-chart-title">Ko'rib chiqish tezligi</h3>
+          <p class="adm-chart-sub">Kunlik o'rtacha yakunlangan arizalar</p>
+          <div class="adm-line-wrap">
+            <svg viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="#d5e5ef" stroke-width="1">
+                <line x1="20" y1="20" x2="500" y2="20"/>
+                <line x1="20" y1="55" x2="500" y2="55"/>
+                <line x1="20" y1="90" x2="500" y2="90"/>
+                <line x1="20" y1="125" x2="500" y2="125"/>
+                <line x1="20" y1="160" x2="500" y2="160"/>
+              </g>
+              <polyline fill="none" stroke="#00b4d8" stroke-width="3" points="20,144 98,132 176,116 254,104 332,95 410,88 500,72"/>
+            </svg>
+          </div>
+          <div class="adm-axis-labels"><span>Dush</span><span>Sesh</span><span>Chor</span><span>Pay</span><span>Jum</span><span>Shan</span><span>Yak</span></div>
+        </article>
+
+        <article class="adm-chart-card">
+          <h3 class="adm-chart-title">Hozirgi navbat</h3>
+          <p class="adm-chart-sub">Bugungi ulush</p>
+          <div class="adm-donut-box">
+            <div class="adm-donut-v2" style="background:conic-gradient(#d97706 0 63%, #24733a 63% 84%, #dc2626 84% 100%);">
+              <div class="adm-donut-v2-hole"><strong>24</strong><span>Ariza</span></div>
+            </div>
+            <div class="adm-legend-v2">
+              <div class="row"><span class="dot" style="background:#d97706"></span><span>Jarayonda: 15</span></div>
+              <div class="row"><span class="dot" style="background:#24733a"></span><span>Tasdiq: 5</span></div>
+              <div class="row"><span class="dot" style="background:#dc2626"></span><span>Qaytarish: 4</span></div>
+            </div>
+          </div>
+        </article>
       </div>
 
       <div class="admin-bottom admin-bottom--spaced">

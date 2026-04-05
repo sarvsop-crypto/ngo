@@ -989,3 +989,22 @@ body.a11y-grayscale { filter: grayscale(1); }
   .uzb-map-wrap { grid-template-columns:1fr; }
   .admin-bottom-2 { grid-template-columns:1fr; }
 }
+/* Chart widgets for admin screens */
+.adm-chart-grid { display:grid; grid-template-columns: 1fr 300px; gap:12px; margin-bottom:12px; }
+.adm-chart-card { border:1px solid var(--neutral-200); background:#fff; padding:14px; }
+.adm-chart-title { margin:0 0 4px; font-size:16px; font-weight:700; color:var(--neutral-900); }
+.adm-chart-sub { margin:0 0 10px; font-size:13px; color:var(--neutral-500); }
+.adm-line-wrap { height:170px; border:1px solid var(--neutral-200); background:linear-gradient(180deg,#f8fcff,#eef6fb); padding:8px; }
+.adm-line-wrap svg { width:100%; height:100%; display:block; }
+.adm-axis-labels { display:flex; justify-content:space-between; margin-top:6px; font-size:11px; color:var(--neutral-500); }
+.adm-donut-box { display:flex; align-items:center; justify-content:center; gap:14px; }
+.adm-donut-v2 { width:148px; height:148px; border-radius:50%; display:grid; place-items:center; }
+.adm-donut-v2-hole { width:88px; height:88px; border-radius:50%; background:#fff; display:grid; place-items:center; text-align:center; border:1px solid var(--neutral-200); }
+.adm-donut-v2-hole strong { display:block; font-size:24px; line-height:1; color:var(--neutral-900); }
+.adm-donut-v2-hole span { font-size:12px; color:var(--neutral-500); }
+.adm-legend-v2 { display:grid; gap:8px; min-width:130px; }
+.adm-legend-v2 .row { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--neutral-700); }
+.adm-legend-v2 .dot { width:10px; height:10px; border-radius:50%; }
+@media (max-width:1100px) {
+  .adm-chart-grid { grid-template-columns: 1fr; }
+}

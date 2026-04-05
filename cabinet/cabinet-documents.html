@@ -10,7 +10,7 @@
 <div class="app">
   <main class="main">
     <div class="page-heading"><h1>Shartnoma hujjatlari</h1></div>
-    <p class="page-sub">A'zolik shartnomasi uchun kerakli hujjatlar va imzo holati.</p>
+    <p class="page-sub">Hujjatlar holati va yuklash statistikasi.</p>
 
     <div class="grid-2">
       <article class="card">
@@ -28,6 +28,34 @@
           <li class="event-item"><h4>Guvohnoma.pdf</h4><p>Tasdiqlangan</p></li>
           <li class="event-item"><h4>Shartnoma.pdf</h4><p>Imzo kutilmoqda</p></li>
         </ul>
+      </article>
+    </div>
+
+    <div class="cab-chart-grid" style="margin-top:12px;">
+      <article class="cab-chart-card">
+        <h3 class="cab-chart-title">Yuklashlar dinamikasi</h3>
+        <p class="cab-chart-sub">Oxirgi 6 kun</p>
+        <div class="cab-line-wrap">
+          <svg viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#d5e5ef" stroke-width="1"><line x1="20" y1="20" x2="500" y2="20"/><line x1="20" y1="55" x2="500" y2="55"/><line x1="20" y1="90" x2="500" y2="90"/><line x1="20" y1="125" x2="500" y2="125"/><line x1="20" y1="160" x2="500" y2="160"/></g>
+            <polyline fill="none" stroke="#24733a" stroke-width="3" points="20,145 116,126 212,136 308,96 404,88 500,66"/>
+          </svg>
+        </div>
+        <div class="cab-axis-labels"><span>Dush</span><span>Sesh</span><span>Chor</span><span>Pay</span><span>Jum</span><span>Shan</span></div>
+      </article>
+
+      <article class="cab-chart-card">
+        <h3 class="cab-chart-title">Paket to'liqligi</h3>
+        <p class="cab-chart-sub">Kerakli fayllar bo'yicha</p>
+        <div class="cab-donut-box">
+          <div class="cab-donut" style="background:conic-gradient(#24733a 0 80%, #d97706 80% 100%);">
+            <div class="cab-donut-hole"><strong>80%</strong><span>Tayyor</span></div>
+          </div>
+          <div class="cab-legend">
+            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#24733a"></span><span>Mavjud: 8</span></div>
+            <div class="cab-legend-row"><span class="cab-legend-dot" style="background:#d97706"></span><span>Kutilmoqda: 2</span></div>
+          </div>
+        </div>
       </article>
     </div>
   </main>
