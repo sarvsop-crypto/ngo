@@ -296,7 +296,7 @@
 
     var applyState = function () {
       state.fontScale = Math.min(1.35, Math.max(0.9, state.fontScale));
-      root.style.setProperty("--base-font-size", (16 * state.fontScale) + "px");
+      root.style.setProperty("--base-font-size", (17 * state.fontScale) + "px");
       body.classList.toggle("a11y-contrast", !!state.contrast);
       body.classList.toggle("a11y-grayscale", !!state.grayscale);
       if (contrastBtn) {
