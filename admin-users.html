@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foydalanuvchilar — O‘zNNTMA Admin</title>
+  <title>Foydalanuvchilar — O'zNNTMA Admin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet" />
@@ -22,7 +22,7 @@
       <div class="sidebar__header">
         <div class="u-inline-stack">
           <div class="sidebar__logo" style="background:var(--primary-500);color:#fff;border-radius:8px;width:32px;height:32px;display:grid;place-items:center;font-weight:700;font-size:14px;">N</div>
-          <span class="sidebar__title">O‘zNNTMA Admin</span>
+          <span class="sidebar__title">O'zNNTMA Admin</span>
         </div>
         <button type="button" class="sidebar__collapse" id="sidebarToggle" aria-label="Collapse sidebar" aria-expanded="true">&lsaquo;</button>
       </div>
@@ -34,8 +34,8 @@
         <div class="sidebar__nav-section">
           <div class="sidebar__nav-label">ASOSIY MENYU</div>
           <a href="admin-dashboard.html" class="sidebar__nav-link" title="Boshqaruv paneli"><span class="sidebar__nav-icon"><i class="ph ph-squares-four"></i></span><span class="sidebar__nav-link-text">Boshqaruv paneli</span></a>
-          <a href="admin-membership-requests.html" class="sidebar__nav-link" title="A‘zolik arizalari"><span class="sidebar__nav-icon"><i class="ph ph-file-text"></i></span><span class="sidebar__nav-link-text">A‘zolik arizalari</span></a>
-          <a href="admin-registry.html" class="sidebar__nav-link" title="NNT Ro‘yxati"><span class="sidebar__nav-icon"><i class="ph ph-list-bullets"></i></span><span class="sidebar__nav-link-text">NNT Ro‘yxati</span></a>
+          <a href="admin-membership-requests.html" class="sidebar__nav-link" title="A'zolik arizalari"><span class="sidebar__nav-icon"><i class="ph ph-file-text"></i></span><span class="sidebar__nav-link-text">A'zolik arizalari</span></a>
+          <a href="admin-registry.html" class="sidebar__nav-link" title="NNT Ro'yxati"><span class="sidebar__nav-icon"><i class="ph ph-list-bullets"></i></span><span class="sidebar__nav-link-text">NNT Ro'yxati</span></a>
           <a href="admin-users.html" class="sidebar__nav-link is-active" title="Foydalanuvchilar"><span class="sidebar__nav-icon"><i class="ph ph-users"></i></span><span class="sidebar__nav-link-text">Foydalanuvchilar</span></a>
           <a href="admin-reports.html" class="sidebar__nav-link" title="Hisobotlar"><span class="sidebar__nav-icon"><i class="ph ph-chart-bar"></i></span><span class="sidebar__nav-link-text">Hisobotlar</span></a>
           <a href="admin-settings.html" class="sidebar__nav-link" title="Sozlamalar"><span class="sidebar__nav-icon"><i class="ph ph-gear"></i></span><span class="sidebar__nav-link-text">Sozlamalar</span></a>
@@ -45,6 +45,7 @@
         </div>
       </nav>
     </aside>
+
     <main class="main">
       <header class="topbar">
         <div class="topbar-left">
@@ -66,48 +67,151 @@
         </div>
       </header>
 
-      <div class="main__header">
-        <h1 class="main__title">Foydalanuvchilar</h1>
-        <div class="main__btns">
-          <button type="button" class="btn btn--secondary"><i class="ph ph-download-simple"></i> Eksport</button>
-          <button type="button" class="btn btn--primary"><i class="ph ph-plus"></i> Foydalanuvchi qo&rsquo;shish</button>
+      <div class="page-header-wrap">
+        <div class="page-header">
+          <h1 class="page-header__title">Foydalanuvchilar va rollar</h1>
+          <p class="page-header__desc">Tizim foydalanuvchilarini boshqaring va ruxsatlar tizimini sozlang.</p>
+        </div>
+        <button type="button" class="btn btn--primary">
+          <i class="ph ph-plus"></i>
+          Foydalanuvchi qo&rsquo;shish
+        </button>
+      </div>
+
+      <div class="invite-section">
+        <h4>Yangi a'zo taklif qilish</h4>
+        <div class="invite-row">
+          <input type="email" placeholder="Email manzilini kiriting..." aria-label="Email" />
+          <select class="select-field u-w-160" aria-label="Rol">
+            <option>Ko&rsquo;ruvchi</option>
+            <option>Moderator</option>
+            <option>Admin</option>
+          </select>
+          <button type="button" class="btn btn--primary">Taklif yuborish</button>
         </div>
       </div>
 
-      <div class="cards">
-        <div class="card">
-          <div class="card__head"><div class="card__icon"><i class="ph ph-users"></i></div><span class="card__info"><i class="ph ph-info"></i></span></div>
-          <div class="card__body"><div><p class="card__label">Jami foydalanuvchilar</p><p class="card__value">12</p></div></div>
-        </div>
-        <div class="card">
-          <div class="card__head"><div class="card__icon card__icon--success"><i class="ph ph-user-check"></i></div><span class="card__info"><i class="ph ph-info"></i></span></div>
-          <div class="card__body"><div><p class="card__label">Faol</p><p class="card__value">10</p></div></div>
-        </div>
-        <div class="card">
-          <div class="card__head"><div class="card__icon"><i class="ph ph-lock"></i></div><span class="card__info"><i class="ph ph-info"></i></span></div>
-          <div class="card__body"><div><p class="card__label">Admin</p><p class="card__value">3</p></div></div>
-        </div>
-      </div>
+      <div class="team-grid">
+        <div class="card u-p-0">
+          <div class="card-header">
+            <h3>Jamoa a&rsquo;zolari <span class="muted">(4)</span></h3>
+            <select class="select-field u-select-sm" aria-label="Rol bo'yicha filter">
+              <option>Barcha rollar</option>
+              <option>Admin</option>
+              <option>Moderator</option>
+              <option>Ko&rsquo;ruvchi</option>
+            </select>
+          </div>
 
-      <section class="table-section">
-        <div class="table-section__head">
-          <h2 class="table-section__title">Foydalanuvchilar jadvali</h2>
-          <div class="table-section__tools">
-            <input type="search" class="table-section__search" placeholder="Qidirish..." aria-label="Qidirish" />
+          <div class="member-card">
+            <div class="member-avatar u-bg-primary-600">AN</div>
+            <div class="member-info">
+              <div class="member-name">Azizova Nodira</div>
+              <div class="member-email">azizova@uznntma.uz</div>
+              <div class="member-meta">
+                <span class="role-badge admin">Admin</span>
+                <span class="member-status"><span class="online-dot active"></span> Online</span>
+              </div>
+            </div>
+            <div class="member-actions">
+              <button type="button" class="btn btn-ghost btn-sm">Tahrirlash</button>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <div class="member-avatar u-bg-purple-500">TA</div>
+            <div class="member-info">
+              <div class="member-name">Toshmatov Akbar</div>
+              <div class="member-email">toshmatov@uznntma.uz</div>
+              <div class="member-meta">
+                <span class="role-badge legal">Moderator</span>
+                <span class="member-status"><span class="online-dot active"></span> Online</span>
+              </div>
+            </div>
+            <div class="member-actions">
+              <button type="button" class="btn btn-ghost btn-sm">Tahrirlash</button>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <div class="member-avatar u-bg-green-600">XG</div>
+            <div class="member-info">
+              <div class="member-name">Xolmatova Gulnora</div>
+              <div class="member-email">xolmatova@uznntma.uz</div>
+              <div class="member-meta">
+                <span class="role-badge legal">Moderator</span>
+                <span class="member-status"><span class="online-dot offline"></span> So&rsquo;nggi: 03.04</span>
+              </div>
+            </div>
+            <div class="member-actions">
+              <button type="button" class="btn btn-ghost btn-sm">Tahrirlash</button>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <div class="member-avatar u-bg-orange-600">RB</div>
+            <div class="member-info">
+              <div class="member-name">Rahimov Bobur</div>
+              <div class="member-email">rahimov@uznntma.uz</div>
+              <div class="member-meta">
+                <span class="role-badge viewer">Ko&rsquo;ruvchi</span>
+                <span class="member-status"><span class="online-dot offline"></span> So&rsquo;nggi: 01.04</span>
+              </div>
+            </div>
+            <div class="member-actions">
+              <button type="button" class="btn btn-ghost btn-sm">Tahrirlash</button>
+            </div>
           </div>
         </div>
-        <table class="table">
-          <thead>
-            <tr><th><input type="checkbox" /></th><th>Ism-familiya</th><th>Email</th><th>Rol</th><th>Oxirgi kirish</th><th>Holat</th><th></th></tr>
-          </thead>
-          <tbody>
-            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">AN</span><span class="table__company">Azizova Nodira</span></div></td><td>azizova@uznntma.uz</td><td>Admin</td><td>05.04.2026</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><button type="button" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
-            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">TA</span><span class="table__company">Toshmatov Akbar</span></div></td><td>toshmatov@uznntma.uz</td><td>Moderator</td><td>04.04.2026</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><button type="button" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
-            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">XG</span><span class="table__company">Xolmatova Gulnora</span></div></td><td>xolmatova@uznntma.uz</td><td>Moderator</td><td>03.04.2026</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><button type="button" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
-            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">RB</span><span class="table__company">Rahimov Bobur</span></div></td><td>rahimov@uznntma.uz</td><td>Ko&rsquo;ruvchi</td><td>01.04.2026</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><button type="button" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
-          </tbody>
-        </table>
-      </section>
+
+        <div>
+          <div class="card roles-card u-p-20">
+            <h3 class="card-title">Rollar va ruxsatlar</h3>
+
+            <div class="role-card">
+              <div class="role-card-header">
+                <span class="role-card-title u-text-primary-600">Admin</span>
+                <span class="role-card-count">1 foydalanuvchi</span>
+              </div>
+              <ul class="permissions-list">
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-check"><path d="M3 7l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Arizalarni ko&rsquo;rish va tahrirlash</li>
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-check"><path d="M3 7l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Hujjatlarni boshqarish</li>
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-check"><path d="M3 7l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Foydalanuvchilarni boshqarish</li>
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-check"><path d="M3 7l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Sozlamalarni o&rsquo;zgartirish</li>
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-check"><path d="M3 7l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Ma&rsquo;lumotlarni o&rsquo;chirish</li>
+              </ul>
+            </div>
+
+            <div class="role-card">
+              <div class="role-card-header">
+                <span class="role-card-title u-text-purple-500">Moderator</span>
+                <span class="role-card-count">2 foydalanuvchi</span>
+              </div>
+              <ul class="permissions-list">
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-check"><path d="M3 7l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Arizalarni ko&rsquo;rish va tahrirlash</li>
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-check"><path d="M3 7l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Hujjatlarni boshqarish</li>
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-check"><path d="M3 7l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Izohlar qo&rsquo;shish</li>
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-cross"><path d="M4 4l6 6M10 4l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Foydalanuvchilarni boshqarish</li>
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-cross"><path d="M4 4l6 6M10 4l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Ma&rsquo;lumotlarni o&rsquo;chirish</li>
+              </ul>
+            </div>
+
+            <div class="role-card">
+              <div class="role-card-header">
+                <span class="role-card-title u-text-grey-500">Ko&rsquo;ruvchi</span>
+                <span class="role-card-count">1 foydalanuvchi</span>
+              </div>
+              <ul class="permissions-list">
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-check"><path d="M3 7l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Arizalarni ko&rsquo;rish</li>
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-check"><path d="M3 7l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Hisobotlarni yuklab olish</li>
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-cross"><path d="M4 4l6 6M10 4l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Arizalarni tahrirlash</li>
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-cross"><path d="M4 4l6 6M10 4l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Foydalanuvchilarni boshqarish</li>
+                <li><svg viewBox="0 0 14 14" fill="none" class="perm-cross"><path d="M4 4l6 6M10 4l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Sozlamalarni o&rsquo;zgartirish</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 
