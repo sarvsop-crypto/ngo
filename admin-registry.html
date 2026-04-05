@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/pacta-notifications.css">
   <link rel="stylesheet" href="css/pacta-app.css">
   <link rel="stylesheet" href="css/pacta-foundation.css">
+  <link rel="stylesheet" href="css/pacta-modal.css">
 </head>
 <body>
   <div class="layout">
@@ -70,7 +71,7 @@
         <h1 class="main__title">NNT Ro&rsquo;yxati</h1>
         <div class="main__btns">
           <button type="button" class="btn btn--secondary"><i class="ph ph-download-simple"></i> Eksport</button>
-          <button type="button" class="btn btn--primary"><i class="ph ph-plus"></i> NNT qo&rsquo;shish</button>
+          <button type="button" class="btn btn--primary" data-modal-open="addNntModal"><i class="ph ph-plus"></i> NNT qo&rsquo;shish</button>
         </div>
       </div>
 
@@ -105,14 +106,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">YN</span><span class="table__company">Yangi Nafas NNT</span></div></td><td>Ijtimoiy</td><td>Toshkent</td><td>2024</td><td>3/7</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
-            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">MS</span><span class="table__company">Mehr-Shafqat NNT</span></div></td><td>Xayriya</td><td>Samarqand</td><td>2023</td><td>7/7</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
-            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">UI</span><span class="table__company">Umid Istiqbol NNT</span></div></td><td>Ta&rsquo;lim</td><td>Farg&rsquo;ona</td><td>2022</td><td>7/7</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
-            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">HM</span><span class="table__company">Hayot va Madaniyat</span></div></td><td>Madaniy</td><td>Andijon</td><td>2021</td><td>7/7</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
-            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">EM</span><span class="table__company">Ekologiya Markazi</span></div></td><td>Ekologiya</td><td>Namangan</td><td>2023</td><td>5/7</td><td><span class="badge badge--warning"><span class="badge__dot"></span>Muallaq</span></td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
-            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">YI</span><span class="table__company">Yoshlar Ittifoqi</span></div></td><td>Yoshlar</td><td>Buxoro</td><td>2024</td><td>2/7</td><td><span class="badge badge--pending"><span class="badge__dot"></span>Yangi</span></td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
-            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">BF</span><span class="table__company">Baxtli Oila Fondi</span></div></td><td>Oila</td><td>Xorazm</td><td>2022</td><td>6/7</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
-            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">SP</span><span class="table__company">Sport va Rivojlanish</span></div></td><td>Sport</td><td>Qashqadaryo</td><td>2020</td><td>4/7</td><td><span class="badge badge--danger"><span class="badge__dot"></span>Noaktiv</span></td><td><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button></td></tr>
+            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">YN</span><span class="table__company">Yangi Nafas NNT</span></div></td><td>Ijtimoiy</td><td>Toshkent</td><td>2024</td><td>3/7</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><div class="row-menu-wrap"><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button><div class="row-menu"><button type="button" class="row-menu__item"><i class="ph ph-eye"></i> Ko&rsquo;rish</button><button type="button" class="row-menu__item"><i class="ph ph-pencil-simple"></i> Tahrirlash</button><button type="button" class="row-menu__item"><i class="ph ph-file-text"></i> Hujjatlar</button><div class="row-menu__sep"></div><button type="button" class="row-menu__item row-menu__item--danger"><i class="ph ph-trash"></i> O&rsquo;chirish</button></div></div></td></tr>
+            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">MS</span><span class="table__company">Mehr-Shafqat NNT</span></div></td><td>Xayriya</td><td>Samarqand</td><td>2023</td><td>7/7</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><div class="row-menu-wrap"><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button><div class="row-menu"><button type="button" class="row-menu__item"><i class="ph ph-eye"></i> Ko&rsquo;rish</button><button type="button" class="row-menu__item"><i class="ph ph-pencil-simple"></i> Tahrirlash</button><button type="button" class="row-menu__item"><i class="ph ph-file-text"></i> Hujjatlar</button><div class="row-menu__sep"></div><button type="button" class="row-menu__item row-menu__item--danger"><i class="ph ph-trash"></i> O&rsquo;chirish</button></div></div></td></tr>
+            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">UI</span><span class="table__company">Umid Istiqbol NNT</span></div></td><td>Ta&rsquo;lim</td><td>Farg&rsquo;ona</td><td>2022</td><td>7/7</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><div class="row-menu-wrap"><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button><div class="row-menu"><button type="button" class="row-menu__item"><i class="ph ph-eye"></i> Ko&rsquo;rish</button><button type="button" class="row-menu__item"><i class="ph ph-pencil-simple"></i> Tahrirlash</button><button type="button" class="row-menu__item"><i class="ph ph-file-text"></i> Hujjatlar</button><div class="row-menu__sep"></div><button type="button" class="row-menu__item row-menu__item--danger"><i class="ph ph-trash"></i> O&rsquo;chirish</button></div></div></td></tr>
+            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">HM</span><span class="table__company">Hayot va Madaniyat</span></div></td><td>Madaniy</td><td>Andijon</td><td>2021</td><td>7/7</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><div class="row-menu-wrap"><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button><div class="row-menu"><button type="button" class="row-menu__item"><i class="ph ph-eye"></i> Ko&rsquo;rish</button><button type="button" class="row-menu__item"><i class="ph ph-pencil-simple"></i> Tahrirlash</button><button type="button" class="row-menu__item"><i class="ph ph-file-text"></i> Hujjatlar</button><div class="row-menu__sep"></div><button type="button" class="row-menu__item row-menu__item--danger"><i class="ph ph-trash"></i> O&rsquo;chirish</button></div></div></td></tr>
+            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">EM</span><span class="table__company">Ekologiya Markazi</span></div></td><td>Ekologiya</td><td>Namangan</td><td>2023</td><td>5/7</td><td><span class="badge badge--warning"><span class="badge__dot"></span>Muallaq</span></td><td><div class="row-menu-wrap"><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button><div class="row-menu"><button type="button" class="row-menu__item"><i class="ph ph-eye"></i> Ko&rsquo;rish</button><button type="button" class="row-menu__item"><i class="ph ph-pencil-simple"></i> Tahrirlash</button><button type="button" class="row-menu__item"><i class="ph ph-file-text"></i> Hujjatlar</button><div class="row-menu__sep"></div><button type="button" class="row-menu__item row-menu__item--danger"><i class="ph ph-trash"></i> O&rsquo;chirish</button></div></div></td></tr>
+            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">YI</span><span class="table__company">Yoshlar Ittifoqi</span></div></td><td>Yoshlar</td><td>Buxoro</td><td>2024</td><td>2/7</td><td><span class="badge badge--pending"><span class="badge__dot"></span>Yangi</span></td><td><div class="row-menu-wrap"><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button><div class="row-menu"><button type="button" class="row-menu__item"><i class="ph ph-eye"></i> Ko&rsquo;rish</button><button type="button" class="row-menu__item"><i class="ph ph-pencil-simple"></i> Tahrirlash</button><button type="button" class="row-menu__item"><i class="ph ph-file-text"></i> Hujjatlar</button><div class="row-menu__sep"></div><button type="button" class="row-menu__item row-menu__item--danger"><i class="ph ph-trash"></i> O&rsquo;chirish</button></div></div></td></tr>
+            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">BF</span><span class="table__company">Baxtli Oila Fondi</span></div></td><td>Oila</td><td>Xorazm</td><td>2022</td><td>6/7</td><td><span class="badge badge--active"><span class="badge__dot"></span>Faol</span></td><td><div class="row-menu-wrap"><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button><div class="row-menu"><button type="button" class="row-menu__item"><i class="ph ph-eye"></i> Ko&rsquo;rish</button><button type="button" class="row-menu__item"><i class="ph ph-pencil-simple"></i> Tahrirlash</button><button type="button" class="row-menu__item"><i class="ph ph-file-text"></i> Hujjatlar</button><div class="row-menu__sep"></div><button type="button" class="row-menu__item row-menu__item--danger"><i class="ph ph-trash"></i> O&rsquo;chirish</button></div></div></td></tr>
+            <tr><td><input type="checkbox" /></td><td><div class="table__counterparty"><span class="table__avatar">SP</span><span class="table__company">Sport va Rivojlanish</span></div></td><td>Sport</td><td>Qashqadaryo</td><td>2020</td><td>4/7</td><td><span class="badge badge--danger"><span class="badge__dot"></span>Noaktiv</span></td><td><div class="row-menu-wrap"><button type="button" aria-label="Menyu" data-action="row-menu"><i class="ph ph-dots-three-vertical"></i></button><div class="row-menu"><button type="button" class="row-menu__item"><i class="ph ph-eye"></i> Ko&rsquo;rish</button><button type="button" class="row-menu__item"><i class="ph ph-pencil-simple"></i> Tahrirlash</button><button type="button" class="row-menu__item"><i class="ph ph-file-text"></i> Hujjatlar</button><div class="row-menu__sep"></div><button type="button" class="row-menu__item row-menu__item--danger"><i class="ph ph-trash"></i> O&rsquo;chirish</button></div></div></td></tr>
           </tbody>
         </table>
       </section>
@@ -154,6 +155,80 @@
       <button type="button" class="btn btn--primary">Barcha bildirishnomalar</button>
     </div>
   </div>
+  <!-- Add NNT Modal -->
+  <div class="modal-overlay" id="addNntModal" role="dialog" aria-modal="true" aria-labelledby="addNntModalTitle">
+    <div class="modal" style="max-width:560px;">
+      <div class="modal__head">
+        <h2 class="modal__title" id="addNntModalTitle">NNT qo&rsquo;shish</h2>
+        <button type="button" class="modal__close" data-modal-close aria-label="Yopish"><i class="ph ph-x"></i></button>
+      </div>
+      <div class="modal__body">
+        <div class="modal__field">
+          <label class="modal__label" for="nnt-name">Tashkilot nomi <span style="color:#dc2626">*</span></label>
+          <input type="text" id="nnt-name" class="modal__input" placeholder="NNT to'liq nomini kiriting" />
+        </div>
+        <div class="modal__row">
+          <div class="modal__field">
+            <label class="modal__label" for="nnt-type">Turi <span style="color:#dc2626">*</span></label>
+            <select id="nnt-type" class="modal__select">
+              <option value="">Turini tanlang</option>
+              <option>Ijtimoiy</option>
+              <option>Xayriya</option>
+              <option>Ta&rsquo;lim</option>
+              <option>Ekologiya</option>
+              <option>Yoshlar</option>
+              <option>Madaniy</option>
+              <option>Oila</option>
+              <option>Sport</option>
+            </select>
+          </div>
+          <div class="modal__field">
+            <label class="modal__label" for="nnt-region">Viloyat <span style="color:#dc2626">*</span></label>
+            <select id="nnt-region" class="modal__select">
+              <option value="">Viloyatni tanlang</option>
+              <option>Toshkent shahri</option>
+              <option>Toshkent viloyati</option>
+              <option>Samarqand</option>
+              <option>Farg&rsquo;ona</option>
+              <option>Buxoro</option>
+              <option>Namangan</option>
+              <option>Andijon</option>
+              <option>Qashqadaryo</option>
+              <option>Surxondaryo</option>
+              <option>Xorazm</option>
+              <option>Jizzax</option>
+              <option>Sirdaryo</option>
+              <option>Navoiy</option>
+              <option>Qoraqalpog&rsquo;iston</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal__row">
+          <div class="modal__field">
+            <label class="modal__label" for="nnt-year">A&rsquo;zolik yili <span style="color:#dc2626">*</span></label>
+            <input type="number" id="nnt-year" class="modal__input" placeholder="2024" min="2000" max="2030" />
+          </div>
+          <div class="modal__field">
+            <label class="modal__label" for="nnt-status">Holat</label>
+            <select id="nnt-status" class="modal__select">
+              <option value="active">Faol</option>
+              <option value="pending">Yangi</option>
+              <option value="inactive">Noaktiv</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal__field">
+          <label class="modal__label" for="nnt-contact">Aloqa ma&rsquo;lumotlari</label>
+          <input type="text" id="nnt-contact" class="modal__input" placeholder="Telefon yoki email" />
+        </div>
+      </div>
+      <div class="modal__foot">
+        <button type="button" class="btn btn--secondary" data-modal-close>Bekor qilish</button>
+        <button type="button" class="btn btn--primary"><i class="ph ph-plus"></i> Qo&rsquo;shish</button>
+      </div>
+    </div>
+  </div>
+
   <script src="js/pacta-foundation.js" defer></script>
   <script src="js/pacta-notifications.js"></script>
   <script src="js/pacta-app.js"></script>

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/pacta-notifications.css">
   <link rel="stylesheet" href="css/pacta-app.css">
   <link rel="stylesheet" href="css/pacta-foundation.css">
+  <link rel="stylesheet" href="css/pacta-modal.css">
 </head>
 <body>
   <div class="layout">
@@ -72,7 +73,7 @@
           <h1 class="page-header__title">Foydalanuvchilar va rollar</h1>
           <p class="page-header__desc">Tizim foydalanuvchilarini boshqaring va ruxsatlar tizimini sozlang.</p>
         </div>
-        <button type="button" class="btn btn--primary">
+        <button type="button" class="btn btn--primary" data-modal-open="addUserModal">
           <i class="ph ph-plus"></i>
           Foydalanuvchi qo&rsquo;shish
         </button>
@@ -114,7 +115,15 @@
               </div>
             </div>
             <div class="member-actions">
-              <button type="button" class="btn btn-ghost btn-sm">Tahrirlash</button>
+              <div class="row-menu-wrap">
+                <button type="button" class="btn btn-ghost btn-sm" data-action="row-menu" aria-label="Menyu"><i class="ph ph-dots-three-vertical"></i></button>
+                <div class="row-menu">
+                  <button type="button" class="row-menu__item" data-modal-open="editUserModal"><i class="ph ph-pencil-simple"></i> Tahrirlash</button>
+                  <button type="button" class="row-menu__item"><i class="ph ph-lock-key"></i> Parolni tiklash</button>
+                  <div class="row-menu__sep"></div>
+                  <button type="button" class="row-menu__item row-menu__item--danger"><i class="ph ph-trash"></i> O&rsquo;chirish</button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -129,7 +138,15 @@
               </div>
             </div>
             <div class="member-actions">
-              <button type="button" class="btn btn-ghost btn-sm">Tahrirlash</button>
+              <div class="row-menu-wrap">
+                <button type="button" class="btn btn-ghost btn-sm" data-action="row-menu" aria-label="Menyu"><i class="ph ph-dots-three-vertical"></i></button>
+                <div class="row-menu">
+                  <button type="button" class="row-menu__item" data-modal-open="editUserModal"><i class="ph ph-pencil-simple"></i> Tahrirlash</button>
+                  <button type="button" class="row-menu__item"><i class="ph ph-lock-key"></i> Parolni tiklash</button>
+                  <div class="row-menu__sep"></div>
+                  <button type="button" class="row-menu__item row-menu__item--danger"><i class="ph ph-trash"></i> O&rsquo;chirish</button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -144,7 +161,15 @@
               </div>
             </div>
             <div class="member-actions">
-              <button type="button" class="btn btn-ghost btn-sm">Tahrirlash</button>
+              <div class="row-menu-wrap">
+                <button type="button" class="btn btn-ghost btn-sm" data-action="row-menu" aria-label="Menyu"><i class="ph ph-dots-three-vertical"></i></button>
+                <div class="row-menu">
+                  <button type="button" class="row-menu__item" data-modal-open="editUserModal"><i class="ph ph-pencil-simple"></i> Tahrirlash</button>
+                  <button type="button" class="row-menu__item"><i class="ph ph-lock-key"></i> Parolni tiklash</button>
+                  <div class="row-menu__sep"></div>
+                  <button type="button" class="row-menu__item row-menu__item--danger"><i class="ph ph-trash"></i> O&rsquo;chirish</button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -159,7 +184,15 @@
               </div>
             </div>
             <div class="member-actions">
-              <button type="button" class="btn btn-ghost btn-sm">Tahrirlash</button>
+              <div class="row-menu-wrap">
+                <button type="button" class="btn btn-ghost btn-sm" data-action="row-menu" aria-label="Menyu"><i class="ph ph-dots-three-vertical"></i></button>
+                <div class="row-menu">
+                  <button type="button" class="row-menu__item" data-modal-open="editUserModal"><i class="ph ph-pencil-simple"></i> Tahrirlash</button>
+                  <button type="button" class="row-menu__item"><i class="ph ph-lock-key"></i> Parolni tiklash</button>
+                  <div class="row-menu__sep"></div>
+                  <button type="button" class="row-menu__item row-menu__item--danger"><i class="ph ph-trash"></i> O&rsquo;chirish</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -250,6 +283,87 @@
       <button type="button" class="btn btn--primary">Barcha bildirishnomalar</button>
     </div>
   </div>
+  <!-- Add User Modal -->
+  <div class="modal-overlay" id="addUserModal" role="dialog" aria-modal="true" aria-labelledby="addUserModalTitle">
+    <div class="modal">
+      <div class="modal__head">
+        <h2 class="modal__title" id="addUserModalTitle">Foydalanuvchi qo&rsquo;shish</h2>
+        <button type="button" class="modal__close" data-modal-close aria-label="Yopish"><i class="ph ph-x"></i></button>
+      </div>
+      <div class="modal__body">
+        <div class="modal__row">
+          <div class="modal__field">
+            <label class="modal__label" for="mu-firstname">Ism <span style="color:#dc2626">*</span></label>
+            <input type="text" id="mu-firstname" class="modal__input" placeholder="Ism" />
+          </div>
+          <div class="modal__field">
+            <label class="modal__label" for="mu-lastname">Familiya <span style="color:#dc2626">*</span></label>
+            <input type="text" id="mu-lastname" class="modal__input" placeholder="Familiya" />
+          </div>
+        </div>
+        <div class="modal__field">
+          <label class="modal__label" for="mu-email">Email manzil <span style="color:#dc2626">*</span></label>
+          <input type="email" id="mu-email" class="modal__input" placeholder="email@uznntma.uz" />
+        </div>
+        <div class="modal__field">
+          <label class="modal__label" for="mu-role">Rol <span style="color:#dc2626">*</span></label>
+          <select id="mu-role" class="modal__select">
+            <option value="">Rolni tanlang</option>
+            <option value="admin">Admin</option>
+            <option value="moderator">Moderator</option>
+            <option value="viewer">Ko&rsquo;ruvchi</option>
+          </select>
+        </div>
+        <div class="modal__field">
+          <label class="modal__label" for="mu-password">Vaqtinchalik parol <span style="color:#dc2626">*</span></label>
+          <input type="password" id="mu-password" class="modal__input" placeholder="Kamida 8 ta belgi" minlength="8" />
+        </div>
+      </div>
+      <div class="modal__foot">
+        <button type="button" class="btn btn--secondary" data-modal-close>Bekor qilish</button>
+        <button type="button" class="btn btn--primary"><i class="ph ph-plus"></i> Qo&rsquo;shish</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit User Modal -->
+  <div class="modal-overlay" id="editUserModal" role="dialog" aria-modal="true" aria-labelledby="editUserModalTitle">
+    <div class="modal">
+      <div class="modal__head">
+        <h2 class="modal__title" id="editUserModalTitle">Foydalanuvchini tahrirlash</h2>
+        <button type="button" class="modal__close" data-modal-close aria-label="Yopish"><i class="ph ph-x"></i></button>
+      </div>
+      <div class="modal__body">
+        <div class="modal__row">
+          <div class="modal__field">
+            <label class="modal__label" for="eu-firstname">Ism</label>
+            <input type="text" id="eu-firstname" class="modal__input" placeholder="Ism" />
+          </div>
+          <div class="modal__field">
+            <label class="modal__label" for="eu-lastname">Familiya</label>
+            <input type="text" id="eu-lastname" class="modal__input" placeholder="Familiya" />
+          </div>
+        </div>
+        <div class="modal__field">
+          <label class="modal__label" for="eu-email">Email manzil</label>
+          <input type="email" id="eu-email" class="modal__input" placeholder="email@uznntma.uz" />
+        </div>
+        <div class="modal__field">
+          <label class="modal__label" for="eu-role">Rol</label>
+          <select id="eu-role" class="modal__select">
+            <option value="admin">Admin</option>
+            <option value="moderator">Moderator</option>
+            <option value="viewer">Ko&rsquo;ruvchi</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal__foot">
+        <button type="button" class="btn btn--secondary" data-modal-close>Bekor qilish</button>
+        <button type="button" class="btn btn--primary"><i class="ph ph-floppy-disk"></i> Saqlash</button>
+      </div>
+    </div>
+  </div>
+
   <script src="js/pacta-foundation.js" defer></script>
   <script src="js/pacta-notifications.js"></script>
   <script src="js/pacta-app.js"></script>

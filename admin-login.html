@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kirish — O'zNNTMA Kabinet</title>
+  <title>Kirish — O'zNNTMA Admin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="../css/pacta-tokens.css">
-  <link rel="stylesheet" href="../css/pacta-auth.page.css">
+  <link rel="stylesheet" href="css/pacta-tokens.css">
+  <link rel="stylesheet" href="css/pacta-auth.page.css">
 </head>
 <body>
   <div class="page">
     <header class="header">
       <div class="header__logo">N</div>
-      <h1 class="header__title">O&rsquo;zNNTMA</h1>
+      <h1 class="header__title">O&rsquo;zNNTMA Admin</h1>
     </header>
 
     <main class="main">
@@ -27,10 +27,10 @@
             </div>
           </div>
           <h2 class="form-header__title">Xush kelibsiz</h2>
-          <p class="form-header__subtitle">Shaxsiy kabinetga kirish uchun ma&rsquo;lumotlaringizni kiriting.</p>
+          <p class="form-header__subtitle">Admin paneliga kirish uchun ma&rsquo;lumotlaringizni kiriting.</p>
         </div>
 
-        <form class="form-fields" action="cabinet-dashboard.html" method="get">
+        <form class="form-fields" action="admin-dashboard.html" method="get">
           <div class="field">
             <label class="field__label" for="email">Email manzil <span>*</span></label>
             <div class="field__input-wrap">
@@ -53,15 +53,13 @@
               <input type="checkbox" name="remember" />
               <span>Tizimda qolish</span>
             </label>
-            <a href="cabinet-forgot-password-request.html" class="form-options__forgot">Parolni unutdingizmi?</a>
+            <a href="admin-forgot-password-request.html" class="form-options__forgot">Parolni unutdingizmi?</a>
           </div>
 
           <button type="submit" class="btn-auth">
             <i class="ph ph-sign-in"></i> Kirish
           </button>
         </form>
-
-        <p class="form-alt">Hisobingiz yo&rsquo;qmi? <a href="cabinet-register.html">Ro&rsquo;yxatdan o&rsquo;tish</a></p>
       </div>
     </main>
 

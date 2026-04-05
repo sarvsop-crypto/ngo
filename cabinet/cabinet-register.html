@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kirish — O'zNNTMA Kabinet</title>
+  <title>Ro'yxatdan o'tish — O'zNNTMA Kabinet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -23,14 +23,28 @@
         <div class="form-header">
           <div class="form-header__icon-wrap">
             <div class="form-header__icon-inner">
-              <i class="ph ph-lock-open" style="font-size:24px;color:var(--primary-500);"></i>
+              <i class="ph ph-user-plus" style="font-size:24px;color:var(--primary-500);"></i>
             </div>
           </div>
-          <h2 class="form-header__title">Xush kelibsiz</h2>
-          <p class="form-header__subtitle">Shaxsiy kabinetga kirish uchun ma&rsquo;lumotlaringizni kiriting.</p>
+          <h2 class="form-header__title">Hisob yaratish</h2>
+          <p class="form-header__subtitle">A&rsquo;zolik uchun ariza topshirish va kabinetga kirish uchun ro&rsquo;yxatdan o&rsquo;ting.</p>
         </div>
 
         <form class="form-fields" action="cabinet-dashboard.html" method="get">
+          <div class="field">
+            <label class="field__label" for="fullname">To&rsquo;liq ism <span>*</span></label>
+            <div class="field__input-wrap">
+              <input type="text" id="fullname" class="field__input" name="fullname" placeholder="Ism va familiyangizni kiriting" required autocomplete="name" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="org">Tashkilot nomi <span>*</span></label>
+            <div class="field__input-wrap">
+              <input type="text" id="org" class="field__input" name="org" placeholder="Tashkilotingiz nomini kiriting" required />
+            </div>
+          </div>
+
           <div class="field">
             <label class="field__label" for="email">Email manzil <span>*</span></label>
             <div class="field__input-wrap">
@@ -39,29 +53,36 @@
           </div>
 
           <div class="field">
+            <label class="field__label" for="phone">Telefon raqam <span>*</span></label>
+            <div class="field__input-wrap">
+              <input type="tel" id="phone" class="field__input" name="phone" placeholder="+998 __ ___ __ __" required autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="field">
             <label class="field__label" for="password">Parol <span>*</span></label>
             <div class="field__input-wrap">
-              <input type="password" id="password" class="field__input" name="password" placeholder="Parolingizni kiriting" required autocomplete="current-password" />
+              <input type="password" id="password" class="field__input" name="password" placeholder="Parol yarating" required minlength="8" autocomplete="new-password" />
               <button type="button" class="field__toggle" id="togglePassword" aria-label="Parolni ko'rsatish">
                 <i class="ph ph-eye"></i>
               </button>
             </div>
           </div>
 
-          <div class="form-options">
-            <label class="checkbox-wrap">
-              <input type="checkbox" name="remember" />
-              <span>Tizimda qolish</span>
-            </label>
-            <a href="cabinet-forgot-password-request.html" class="form-options__forgot">Parolni unutdingizmi?</a>
-          </div>
+          <label class="checkbox-wrap" style="margin-top:4px;">
+            <input type="checkbox" name="agree" required />
+            <span>
+              <a href="#" style="color:var(--primary-500);text-decoration:none;font-weight:500;">Foydalanish shartlari</a> va
+              <a href="#" style="color:var(--primary-500);text-decoration:none;font-weight:500;">Maxfiylik siyosati</a>ga roziman
+            </span>
+          </label>
 
           <button type="submit" class="btn-auth">
-            <i class="ph ph-sign-in"></i> Kirish
+            <i class="ph ph-user-check"></i> Ro&rsquo;yxatdan o&rsquo;tish
           </button>
         </form>
 
-        <p class="form-alt">Hisobingiz yo&rsquo;qmi? <a href="cabinet-register.html">Ro&rsquo;yxatdan o&rsquo;tish</a></p>
+        <p class="form-alt">Hisobingiz bormi? <a href="cabinet-login.html">Kirish</a></p>
       </div>
     </main>
 
