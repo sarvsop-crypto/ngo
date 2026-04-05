@@ -1,30 +1,27 @@
 /* ds.css — NGO Admin & Cabinet Design System
-   Based on ClientoX Figma UI Kit
-   Font: Open Sans | Primary: #383bfe */
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+   Font: DM Sans (matches main site) | Primary: #00b4d8 teal */
 
 :root {
-  --bg: #f7f7f7;
-  --panel: #ffffff;
-  --text: #060c13;
-  --muted: #a1a1a1;
-  --muted2: #7b7b7b;
-  --line: #dfdfdf;
-  --primary: #383bfe;
-  --primary-50: #ebf2ff;
-  --green: #28b061;
-  --green-50: #e5f7ea;
-  --orange: #d97706;
+  --bg:        #eef5fa;   /* main site --bg-light  */
+  --panel:     #ffffff;
+  --text:      #0e1724;   /* main site --neutral-900 */
+  --muted:     #7a90a0;   /* main site --neutral-400 */
+  --muted2:    #587585;   /* main site --neutral-500 */
+  --line:      #d5e5ef;   /* main site --neutral-200 */
+  --primary:   #00b4d8;   /* main site --green-500   */
+  --primary-d: #007a94;   /* main site --green-800 (hover / dark) */
+  --primary-50:#e0f2f9;   /* light teal tint */
+  --green:     #28a745;
+  --green-50:  #e6f9ee;
+  --orange:    #d97706;
   --orange-50: #fff8e1;
-  --red: #ef4444;
-  --red-50: #ffe8e8;
+  --red:       #dc3545;
+  --red-50:    #ffe8eb;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 
-/* body styles are inherited from main site's style.css;
-   Open Sans only applies inside the ds-frame */
+/* DM Sans matches main site — no separate font import needed (style.css loads it) */
 
 a { color: inherit; text-decoration: none; }
 
@@ -33,7 +30,7 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   min-height: calc(100vh - 110px);
   background: var(--bg);
-  font-family: "Open Sans", sans-serif;
+  font-family: "DM Sans", system-ui, -apple-system, sans-serif;
   color: var(--text);
   padding: 24px;
   display: grid;
@@ -44,8 +41,10 @@ a { color: inherit; text-decoration: none; }
 
 /* ───── Sidebar ───── */
 .ds-sidebar {
-  background: var(--panel);
-  border-radius: 32px;
+  background: linear-gradient(160deg, #fff 60%, rgba(238,245,250,.55));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,100,160,.05);
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -116,8 +115,10 @@ a { color: inherit; text-decoration: none; }
 
 /* ───── Header ───── */
 .ds-header {
-  background: var(--panel);
-  border-radius: 24px;
+  background: linear-gradient(160deg, #fff 60%, rgba(238,245,250,.55));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,100,160,.05);
   padding: 20px 24px;
   display: flex;
   align-items: center;
@@ -163,7 +164,7 @@ a { color: inherit; text-decoration: none; }
   border: none;
   outline: none;
   background: transparent;
-  font: 400 13.5px "Open Sans", sans-serif;
+  font: 400 13.5px "DM Sans", system-ui, -apple-system, sans-serif;
   color: var(--text);
   width: 100%;
 }
@@ -174,7 +175,7 @@ a { color: inherit; text-decoration: none; }
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #383bfe, #a78bfa);
+  background: linear-gradient(135deg, #007a94, #00b4d8);
   display: grid;
   place-items: center;
   color: #fff;
@@ -188,9 +189,11 @@ a { color: inherit; text-decoration: none; }
 
 /* ───── Cards ───── */
 .ds-card {
-  background: var(--panel);
-  border-radius: 32px;
+  background: linear-gradient(160deg, #fff 60%, rgba(238,245,250,.55));
+  border: 1px solid var(--line);
+  border-radius: 16px;
   padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,100,160,.05);
 }
 
 .ds-card-title {
@@ -274,7 +277,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--line);
   border-radius: 12px;
   background: #fff;
-  font: 400 13.5px "Open Sans", sans-serif;
+  font: 400 13.5px "DM Sans", system-ui, -apple-system, sans-serif;
   color: var(--text);
   cursor: pointer;
   white-space: nowrap;
@@ -289,7 +292,7 @@ a { color: inherit; text-decoration: none; }
   color: #fff;
 }
 
-.ds-btn-primary:hover { background: #2527db; }
+.ds-btn-primary:hover { background: var(--primary-d); border-color: var(--primary-d); }
 
 .ds-btn-danger {
   background: var(--red-50);
@@ -320,7 +323,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: 999px;
   border: 1px solid var(--line);
   background: #fff;
-  font: 400 13px "Open Sans", sans-serif;
+  font: 400 13px "DM Sans", system-ui, -apple-system, sans-serif;
   color: var(--muted2);
   cursor: pointer;
   transition: all .12s;
@@ -383,11 +386,11 @@ a { color: inherit; text-decoration: none; }
   white-space: nowrap;
 }
 
-.ds-badge-ok { background: var(--green-50); color: var(--green); }
+.ds-badge-ok   { background: #e6f9ee; color: #1a7a3e; }
 .ds-badge-warn { background: var(--orange-50); color: var(--orange); }
-.ds-badge-bad { background: var(--red-50); color: var(--red); }
-.ds-badge-info { background: var(--primary-50); color: var(--primary); }
-.ds-badge-dim { background: #f1f5f9; color: var(--muted2); }
+.ds-badge-bad  { background: var(--red-50); color: var(--red); }
+.ds-badge-info { background: var(--primary-50); color: var(--primary-d); }
+.ds-badge-dim  { background: #eef5fa; color: var(--muted2); }
 
 /* ───── Action icons ───── */
 .ds-acts { display: flex; gap: 6px; }
@@ -457,7 +460,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 0 16px;
-  font: 400 14px "Open Sans", sans-serif;
+  font: 400 14px "DM Sans", system-ui, -apple-system, sans-serif;
   color: var(--text);
   background: #fff;
   transition: border-color .12s;
@@ -471,7 +474,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 0 16px;
-  font: 400 14px "Open Sans", sans-serif;
+  font: 400 14px "DM Sans", system-ui, -apple-system, sans-serif;
   color: var(--text);
   background: #fff;
   appearance: none;
@@ -485,7 +488,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 12px 16px;
-  font: 400 14px "Open Sans", sans-serif;
+  font: 400 14px "DM Sans", system-ui, -apple-system, sans-serif;
   color: var(--text);
   background: #fff;
   resize: vertical;
@@ -499,7 +502,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 0 12px;
-  font: 400 13.5px "Open Sans", sans-serif;
+  font: 400 13.5px "DM Sans", system-ui, -apple-system, sans-serif;
   color: var(--text);
   background: #fff;
 }
@@ -772,7 +775,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .uzlabel {
-  font-family: "Open Sans", sans-serif;
+  font-family: "DM Sans", system-ui, -apple-system, sans-serif;
   font-size: 11px;
   font-weight: 700;
   fill: #fff;
