@@ -436,3 +436,18 @@ button {
     transition: none !important;
   }
 }
+
+.settings-stack {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--neutral-500);
+}
