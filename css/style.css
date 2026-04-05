@@ -663,6 +663,9 @@ body.a11y-grayscale { filter: grayscale(1); }
   padding: 10px;
   font-size: 14px;
   background: #f2f7fb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .admin-list {
