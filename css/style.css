@@ -960,6 +960,9 @@ body.a11y-grayscale { filter: grayscale(1); }
 .uzb-map-svg svg { width:100%; height:auto; display:block; }
 .uzb-region { stroke:#fff; stroke-width:1; cursor:default; transition:opacity .15s; }
 .uzb-region:hover { opacity:.82; }
+.uzb-dot { cursor:pointer; }
+.uzb-dot circle { transition:opacity .15s; }
+.uzb-dot:hover circle { opacity:.75; }
 .uzb-region-text { font-family:'DM Sans',sans-serif; font-size:8px; fill:#fff; font-weight:700; pointer-events:none; text-anchor:middle; dominant-baseline:central; }
 .uzb-region-text.dark { fill:var(--neutral-900); }
 .uzb-reg-list { display:grid; gap:5px; }
