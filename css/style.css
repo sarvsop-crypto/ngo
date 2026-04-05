@@ -557,6 +557,7 @@ body.a11y-grayscale { filter: grayscale(1); }
   grid-template-columns: repeat(4,1fr);
   gap: 12px;
   margin-bottom: 12px;
+  align-items: start;
 }
 
 .admin-stat,
