@@ -835,6 +835,19 @@ th {
     padding-bottom: 8px !important;
     margin-bottom: 4px;
   }
+
+  /* cabinet-support.html: stack FAQ and right-side cards; stretch full width */
+  .main [style*="grid-template-columns:minmax(0,1.6fr)"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 16px !important;
+  }
+
+  .main [style*="grid-template-columns:minmax(0,1.6fr)"] > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
 
 /* ── Phone (≤640px): collapse all inline 2-col grids ── */
@@ -850,6 +863,7 @@ th {
   .main [style*="grid-template-columns:minmax(0,1.6fr)"] {
     display: flex !important;
     flex-direction: column !important;
+    align-items: stretch !important;
   }
 }
 
@@ -858,7 +872,6 @@ th {
   .topbar-right { gap: 8px; }
   .breadcrumbs { max-width: 36vw; }
 }
-
 
 
 
