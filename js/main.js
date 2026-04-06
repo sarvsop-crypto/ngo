@@ -60,6 +60,7 @@
     { title: "Bosh sahifa", url: "index.html", summary: "O'zbekiston nodavlat notijorat tashkilotlari milliy assotsiatsiyasi rasmiy sayti.", keywords: "nntma uznntma ngo.uz bosh sahifa" },
     { title: "Biz haqimizda", url: "about.html", summary: "O'zNNTMA 2005 yilda 150 ta fuqarolik institutlari tashabbusi bilan tashkil topgan.", keywords: "about biz haqimizda tarixi 2005 150" },
     { title: "Rahbariyat", url: "leadership.html", summary: "Ishanxodjayev Kamoliddin — Kengash raisi. Jo'raboyev Ibroximjon — birinchi o'rinbosar. Ismoilov Samandar — o'rinbosar.", keywords: "rahbariyat kengash raisi ishanxodjayev joraboyev ismoilov" },
+    { title: "Bizning jamoa", url: "our-team.html", summary: "O'zNNTMA ijro etuvchi devoni va hududiy bo'linmalar xodimlari ro'yxati.", keywords: "bizning jamoa our team xodimlar staff hududiy bolinma" },
     { title: "NNTlar maktabi", url: "nnt-school.html", summary: "NNT rahbarlari va xodimlari uchun o'quv kurslari va treninglar.", keywords: "nntlar maktabi school kurslar trening" },
     { title: "Yangiliklar", url: "news.html", summary: "O'zNNTMA va NNT sektori bo'yicha so'nggi yangiliklar va tahliliy maqolalar.", keywords: "yangiliklar news xabar tahlil" },
     { title: "Tadbirlarimiz", url: "events.html", summary: "Seminarlar, treninglar, malaka oshirish kurslari va anjumanlar.", keywords: "tadbirlar events seminar trening kurs anjuman" },
@@ -161,6 +162,7 @@
     "mission.html": "about.html",
     "board-of-experts.html": "about.html",
     "leadership.html": "about.html",
+    "our-team.html": "about.html",
     "nnt-school.html": "about.html",
     "online-library.html": "about.html",
     "multimedia-room.html": "about.html",
@@ -190,6 +192,22 @@
       a.classList.add("active");
     }
   });
+
+  // Ensure "Bizning jamoa" exists in About dropdown on legacy pages
+  var aboutDropdown = document.querySelector('.menu .nav-item.has-dropdown .dropdown');
+  if (aboutDropdown && !aboutDropdown.querySelector('a[href="our-team.html"]')) {
+    var teamLink = document.createElement('a');
+    teamLink.href = 'our-team.html';
+    teamLink.textContent = 'Bizning jamoa';
+    var leadershipLink = aboutDropdown.querySelector('a[href="leadership.html"]');
+    if (leadershipLink && leadershipLink.nextSibling) {
+      aboutDropdown.insertBefore(teamLink, leadershipLink.nextSibling);
+    } else if (leadershipLink) {
+      leadershipLink.parentNode.appendChild(teamLink);
+    } else {
+      aboutDropdown.insertBefore(teamLink, aboutDropdown.firstChild);
+    }
+  }
 
   var reg = document.getElementById("reg-ok");
   var submit = document.getElementById("submit-membership");
@@ -350,6 +368,7 @@
       '<div class="mobile-nav-sub">' +
         '<a href="who-we-are.html">Tashkilot haqida</a>' +
         '<a href="leadership.html">Rahbariyat</a>' +
+        '<a href="our-team.html">Bizning jamoa</a>' +
         '<a href="nnt-school.html">NNTlar maktabi</a>' +
         '<a href="online-library.html">Onlayn kutubxona</a>' +
       '</div>' +
