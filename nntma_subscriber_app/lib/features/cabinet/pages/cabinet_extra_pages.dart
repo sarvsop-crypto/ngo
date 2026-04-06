@@ -109,14 +109,29 @@ class CabinetEventsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const _SimpleListPage(
+    return CabinetPageScaffold(
       eyebrow: 'Yopiq tadbirlar',
       title: 'Azo NNTlar uchun maxsus tadbirlar',
-      section: 'Tadbirlar taqvimi',
-      items: [
-        'Strategik rejalash seminari - 2026-04-20',
-        'Grant yozish workshop - 2026-04-28',
-        'Monitoring va baholash treningi - 2026-05-06',
+      children: [
+        AdaptiveGrid(
+          minCardWidth: 200,
+          maxColumns: 4,
+          children: const [
+            _StatCard('Jami tadbirlar', '8'),
+            _StatCard('Yaqinlashayotgan', '3'),
+            _StatCard('Royxatdan otilgan', '5'),
+            _StatCard('Yakunlangan', '2'),
+          ],
+        ),
+        const SizedBox(height: AppSpace.lg),
+        const _SimpleListPageInline(
+          title: 'Tadbirlar taqvimi',
+          items: [
+            'Strategik rejalash seminari - 2026-04-20',
+            'Grant yozish workshop - 2026-04-28',
+            'Monitoring va baholash treningi - 2026-05-06',
+          ],
+        ),
       ],
     );
   }
@@ -240,13 +255,27 @@ class CabinetApprovalsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const _SimpleListPage(
+    return CabinetPageScaffold(
       eyebrow: 'Tasdiqlar',
       title: 'Rahbar tasdigini talab qiladigan amallar',
-      section: 'Kutilayotgan tasdiqlar',
-      items: [
-        'Hisobot 2026-Q1 - imzo kutilmoqda',
-        'Hujjat yangilash - rahbar tasdigi',
+      children: [
+        AdaptiveGrid(
+          minCardWidth: 220,
+          maxColumns: 3,
+          children: const [
+            _StatCard('Kutilayotgan', '2'),
+            _StatCard('Bugun muddati', '1'),
+            _StatCard('Bajarilgan', '12'),
+          ],
+        ),
+        const SizedBox(height: AppSpace.lg),
+        const _SimpleListPageInline(
+          title: 'Kutilayotgan tasdiqlar',
+          items: [
+            'Hisobot 2026-Q1 - imzo kutilmoqda',
+            'Hujjat yangilash - rahbar tasdigi',
+          ],
+        ),
       ],
     );
   }
@@ -273,7 +302,47 @@ class CabinetStatisticsPage extends StatelessWidget {
             _StatCard('Yangi xabarlar', '9'),
           ],
         ),
+        const SizedBox(height: AppSpace.lg),
+        const _SimpleListPageInline(
+          title: 'Oxirgi trendlar',
+          items: [
+            'Ariza topshirish surati +12% (oylik)',
+            'Hujjat rad etish darajasi -4% (oylik)',
+            'Murojaatlarga javob tezligi +18%',
+          ],
+        ),
       ],
+    );
+  }
+}
+
+class _SimpleListPageInline extends StatelessWidget {
+  final String title;
+  final List<String> items;
+
+  const _SimpleListPageInline({required this.title, required this.items});
+
+  @override
+  Widget build(BuildContext context) {
+    return CabinetCard(
+      padding: EdgeInsets.zero,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(AppSpace.lg, AppSpace.lg, AppSpace.lg, AppSpace.md),
+            child: Text(title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
+          ),
+          for (var i = 0; i < items.length; i++) ...[
+            ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: AppSpace.lg, vertical: AppSpace.xs),
+              title: Text(items[i]),
+              trailing: const Icon(Icons.chevron_right),
+            ),
+            if (i != items.length - 1) const Divider(height: 1),
+          ],
+        ],
+      ),
     );
   }
 }
