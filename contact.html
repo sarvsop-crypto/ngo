@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+<a class="skip-link" href="#main-content">Asosiy kontentga o'tish</a>
 <header class="site-header">
   <div class="utility-bar">
     <div class="container utility-row">
@@ -27,7 +28,7 @@
   </div>
   <div class="container nav">
     <a class="brand" href="index.html"><span class="brand-dot">NGO</span>ngo.uz</a>
-    <nav class="menu">
+    <nav class="menu" aria-label="Asosiy menyu">
   <div class="nav-item has-dropdown">
     <a data-page="about.html" href="about.html">Biz haqimizda <ph-caret-down weight="bold" aria-hidden="true"></ph-caret-down></a>
     <div class="dropdown">
@@ -75,6 +76,7 @@
 <a class="contact-btn" href="membership.html">A'zo bo'lish</a>
   </div>
 </header>
+<main id="main-content">
 <section class="grid-bg">
   <div class="container hero center">
     <h1>Interaktiv xizmatlar</h1>
@@ -82,7 +84,7 @@
   </div>
 </section>
 
-<section class="section" style="padding-bottom:0">
+<section class="section section-no-bottom">
   <div class="container">
     <h2 class="section-title">Interaktiv xizmatlar bo'limlari</h2>
     <p class="section-sub">Asosiy xizmatlarga to'g'ridan-to'g'ri o'tish.</p>
@@ -108,7 +110,7 @@
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section section-no-top">
   <div class="container">
     <h2 class="section-title">Majlislar va e’lonlar</h2>
     <div class="list">
@@ -119,7 +121,7 @@
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section section-no-top">
   <div class="container">
     <h2 class="section-title">Foto galereya</h2>
     <div class="cards">
@@ -130,7 +132,7 @@
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section section-no-top">
   <div class="container">
     <h2 class="section-title">Video materiallar</h2>
     <div class="cards">
@@ -141,11 +143,11 @@
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section section-no-top">
   <div class="container">
-    <div class="card" style="display:flex; align-items:center; justify-content:space-between; gap:16px;">
+    <div class="card card-split-action">
       <div>
-        <h3 style="margin:0 0 8px">Axborot xizmati bilan bog‘lanish</h3>
+        <h3>Axborot xizmati bilan bog‘lanish</h3>
         <p>Matbuot uchun so‘rovlar, intervyu va media materiallar bo‘yicha murojaat yuborish.</p>
       </div>
       <a class="btn" href="service-request.html">Media so'rov yuborish</a>
@@ -158,6 +160,7 @@
     <a class="btn" href="contact.html">Bog'lanish</a>
   </div>
 </section>
+</main>
 <footer class="site-footer">
   <div class="container footer-top">
     <div class="footer-info">
@@ -182,7 +185,7 @@
   </div>
   <div class="container footer-bottom">
     <span>© COPYRIGHT 2019-2026 O'zNNTMA</span>
-    <a href="https://yandex.com/maps/?text=41.312565,69.240568&si=grwyen5zr7arv86fckt25k4vmw" target="_blank" rel="noopener noreferrer" style="color:var(--neutral-300)">Manzil: 1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170</a>
+    <a href="https://yandex.com/maps/?text=41.312565,69.240568&si=grwyen5zr7arv86fckt25k4vmw" target="_blank" rel="noopener noreferrer" class="footer-link-muted">Manzil: 1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170</a>
   </div>
 </footer>
 <script src="js/main.js"></script>

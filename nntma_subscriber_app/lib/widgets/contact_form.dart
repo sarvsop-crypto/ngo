@@ -50,6 +50,8 @@ class _ContactFormState extends State<ContactForm> {
   final _email = TextEditingController();
   final _subject = TextEditingController();
   final _message = TextEditingController();
+  bool _isSubmitting = false;
+  String? _statusMessage;
 
   @override
   void dispose() {
@@ -60,11 +62,23 @@ class _ContactFormState extends State<ContactForm> {
     super.dispose();
   }
 
-  void _submit() {
+  Future<void> _submit() async {
     if (!_formKey.currentState!.validate()) return;
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Murojaat yuborildi')),
-    );
+    setState(() {
+      _isSubmitting = true;
+      _statusMessage = null;
+    });
+    await Future<void>.delayed(const Duration(milliseconds: 600));
+    if (!mounted) return;
+    setState(() {
+      _isSubmitting = false;
+      _statusMessage = 'Murojaat yuborildi';
+    });
+    _formKey.currentState!.reset();
+    _name.clear();
+    _email.clear();
+    _subject.clear();
+    _message.clear();
   }
 
   @override
@@ -78,17 +92,43 @@ class _ContactFormState extends State<ContactForm> {
       ),
       child: Form(
         key: _formKey,
+        autovalidateMode: AutovalidateMode.onUserInteraction,
         child: Column(
           children: [
+            if (_statusMessage != null) ...[
+              Container(
+                width: double.infinity,
+                margin: const EdgeInsets.only(bottom: AppSpace.md),
+                padding: const EdgeInsets.symmetric(horizontal: AppSpace.md, vertical: AppSpace.sm),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFE8F8EE),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: const Color(0xFFA9DEC0)),
+                ),
+                child: Text(
+                  _statusMessage!,
+                  style: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF24733A),
+                  ),
+                ),
+              ),
+            ],
             _FormField(
               label: 'Ism va familiya',
               controller: _name,
+              autofillHints: const [AutofillHints.name],
+              textInputAction: TextInputAction.next,
               validator: (v) => (v == null || v.trim().isEmpty) ? 'Ismni kiriting' : null,
             ),
             const SizedBox(height: AppSpace.md),
             _FormField(
               label: 'Email',
               controller: _email,
+              keyboardType: TextInputType.emailAddress,
+              autofillHints: const [AutofillHints.email],
+              textInputAction: TextInputAction.next,
               validator: (v) {
                 final value = (v ?? '').trim();
                 if (value.isEmpty) return 'Emailni kiriting';
@@ -100,6 +140,7 @@ class _ContactFormState extends State<ContactForm> {
             _FormField(
               label: 'Mavzu',
               controller: _subject,
+              textInputAction: TextInputAction.next,
               validator: (v) => (v == null || v.trim().isEmpty) ? 'Mavzuni kiriting' : null,
             ),
             const SizedBox(height: AppSpace.md),
@@ -107,6 +148,7 @@ class _ContactFormState extends State<ContactForm> {
               label: 'Xabar',
               controller: _message,
               maxLines: 4,
+              textInputAction: TextInputAction.newline,
               validator: (v) => (v == null || v.trim().length < 10) ? 'Kamida 10 ta belgi kiriting' : null,
             ),
             const SizedBox(height: AppSpace.lg),
@@ -122,8 +164,8 @@ class _ContactFormState extends State<ContactForm> {
                     padding: const EdgeInsets.symmetric(vertical: 13),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                   ),
-                  onPressed: _submit,
-                  child: const Text('Yuborish'),
+                  onPressed: _isSubmitting ? null : _submit,
+                  child: Text(_isSubmitting ? 'Yuborilmoqda...' : 'Yuborish'),
                 ),
               ),
             ),
@@ -139,12 +181,18 @@ class _FormField extends StatelessWidget {
   final TextEditingController controller;
   final String? Function(String?)? validator;
   final int maxLines;
+  final TextInputType? keyboardType;
+  final TextInputAction? textInputAction;
+  final List<String>? autofillHints;
 
   const _FormField({
     required this.label,
     required this.controller,
     this.validator,
     this.maxLines = 1,
+    this.keyboardType,
+    this.textInputAction,
+    this.autofillHints,
   });
 
   @override
@@ -153,6 +201,9 @@ class _FormField extends StatelessWidget {
       controller: controller,
       validator: validator,
       maxLines: maxLines,
+      keyboardType: keyboardType,
+      textInputAction: textInputAction,
+      autofillHints: autofillHints,
       decoration: InputDecoration(
         labelText: label,
         filled: true,
