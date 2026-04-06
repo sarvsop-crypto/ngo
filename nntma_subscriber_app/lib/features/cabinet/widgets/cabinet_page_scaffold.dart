@@ -53,12 +53,15 @@ class CabinetPageScaffold extends StatelessWidget {
         ),
         const SliverFillRemaining(
           hasScrollBody: false,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              DarkCta(),
-              AppFooter(),
-            ],
+          child: ColoredBox(
+            color: AppTokens.bg,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                DarkCta(),
+                AppFooter(),
+              ],
+            ),
           ),
         ),
       ],
