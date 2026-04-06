@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 import '../../core/app_breakpoints.dart';
 import '../../core/app_routes.dart';
 import '../../core/app_tokens.dart';
+import '../cabinet/pages/cabinet_applications_page.dart';
+import '../cabinet/pages/cabinet_dashboard_page.dart';
+import '../cabinet/pages/cabinet_documents_page.dart';
+import '../cabinet/pages/cabinet_grants_page.dart';
+import '../cabinet/pages/cabinet_settings_page.dart';
+import '../cabinet/pages/cabinet_support_page.dart';
 import '../pages/about_page.dart';
 import '../pages/contact_page.dart';
 import '../pages/events_page.dart';
@@ -65,6 +71,48 @@ class _MainShellState extends State<MainShell> {
       icon: Icons.call_outlined,
       page: ContactPage(),
     ),
+    AppNavItem(
+      route: AppRoutes.cabinetDashboard,
+      title: 'Kabinet boshqaruvi',
+      shortTitle: 'Kabinet',
+      icon: Icons.dashboard_customize_outlined,
+      page: CabinetDashboardPage(),
+    ),
+    AppNavItem(
+      route: AppRoutes.cabinetApplications,
+      title: 'Murojaatlarim',
+      shortTitle: 'Ariza',
+      icon: Icons.assignment_outlined,
+      page: CabinetApplicationsPage(),
+    ),
+    AppNavItem(
+      route: AppRoutes.cabinetDocuments,
+      title: 'Hujjatlar',
+      shortTitle: 'Hujjat',
+      icon: Icons.folder_open_outlined,
+      page: CabinetDocumentsPage(),
+    ),
+    AppNavItem(
+      route: AppRoutes.cabinetGrants,
+      title: 'Grantlar',
+      shortTitle: 'Grant',
+      icon: Icons.volunteer_activism_outlined,
+      page: CabinetGrantsPage(),
+    ),
+    AppNavItem(
+      route: AppRoutes.cabinetSupport,
+      title: 'Boglanish va murojaat',
+      shortTitle: 'Yordam',
+      icon: Icons.support_agent_outlined,
+      page: CabinetSupportPage(),
+    ),
+    AppNavItem(
+      route: AppRoutes.cabinetSettings,
+      title: 'Profil sozlamalari',
+      shortTitle: 'Profil',
+      icon: Icons.settings_outlined,
+      page: CabinetSettingsPage(),
+    ),
   ];
 
   late int _index;
@@ -106,14 +154,6 @@ class _MainShellState extends State<MainShell> {
             Text('ngo.uz', style: TextStyle(fontWeight: FontWeight.w700)),
           ],
         ),
-        actions: [
-          TextButton.icon(
-            onPressed: () => Navigator.of(context).pushReplacementNamed(AppRoutes.cabinetDashboard),
-            icon: const Icon(Icons.dashboard_customize_outlined, color: Colors.white),
-            label: const Text('Kabinet', style: TextStyle(color: Colors.white)),
-          ),
-          const SizedBox(width: AppSpace.sm),
-        ],
       ),
       drawer: phone
           ? AppDrawer(
@@ -129,37 +169,56 @@ class _MainShellState extends State<MainShell> {
           ? pages[_index].page
           : Row(
               children: [
-                NavigationRail(
-                  selectedIndex: _index,
-                  extended: desktop,
-                  minExtendedWidth: 220,
-                  onDestinationSelected: _selectIndex,
-                  labelType: desktop ? null : NavigationRailLabelType.selected,
-                  destinations: [
-                    for (final p in pages)
-                      NavigationRailDestination(
-                        icon: Icon(p.icon),
-                        label: Text(p.title),
-                      ),
-                  ],
+                SizedBox(
+                  width: desktop ? 288 : 256,
+                  child: Material(
+                    color: Colors.white,
+                    child: ListView(
+                      padding: const EdgeInsets.symmetric(vertical: AppSpace.md),
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: AppSpace.lg),
+                          child: Text(
+                            'Sayt bolimlari',
+                            style: TextStyle(fontSize: 12, color: AppTokens.textMuted, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                        const SizedBox(height: AppSpace.sm),
+                        for (var i = 0; i < pages.length; i++)
+                          if (!pages[i].route.startsWith('/cabinet'))
+                            ListTile(
+                              leading: Icon(pages[i].icon),
+                              title: Text(pages[i].title),
+                              selected: i == _index,
+                              selectedTileColor: const Color(0xFFE7F7FB),
+                              onTap: () => _selectIndex(i),
+                            ),
+                        const Divider(height: AppSpace.xl),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: AppSpace.lg),
+                          child: Text(
+                            "Azolar kabineti",
+                            style: TextStyle(fontSize: 12, color: AppTokens.textMuted, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                        const SizedBox(height: AppSpace.sm),
+                        for (var i = 0; i < pages.length; i++)
+                          if (pages[i].route.startsWith('/cabinet'))
+                            ListTile(
+                              leading: Icon(pages[i].icon),
+                              title: Text(pages[i].title),
+                              selected: i == _index,
+                              selectedTileColor: const Color(0xFFE7F7FB),
+                              onTap: () => _selectIndex(i),
+                            ),
+                      ],
+                    ),
+                  ),
                 ),
                 const VerticalDivider(width: 1),
                 Expanded(child: pages[_index].page),
               ],
             ),
-      bottomNavigationBar: phone
-          ? NavigationBar(
-              selectedIndex: _index,
-              onDestinationSelected: _selectIndex,
-              destinations: [
-                for (final p in pages)
-                  NavigationDestination(
-                    icon: Icon(p.icon),
-                    label: p.shortTitle,
-                  ),
-              ],
-            )
-          : null,
     );
   }
 }
