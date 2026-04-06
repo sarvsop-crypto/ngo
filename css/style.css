@@ -1058,3 +1058,30 @@ body.a11y-grayscale { filter: grayscale(1); }
 .adm-mini-bar.ok { background:#24733a; }
 .adm-mini-bar.warn { background:#d97706; }
 .adm-mini-label { font-size:11px; font-weight:700; color:var(--neutral-500); white-space:nowrap; }
+
+/* ============================================================
+   Small-screen adjustments (≤640px phones)
+   ============================================================ */
+@media (max-width: 640px) {
+  .section { padding: 46px 0; }
+  .hero { padding: 54px 0 42px; }
+  .entry-hero { padding: 46px 0 34px; }
+  .dark-cta .row { padding: 40px 0; gap: 16px; }
+  .dark-cta h2 { font-size: 30px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .not-found .code { font-size: 84px; }
+  .not-found { padding: 80px 0; }
+  .kpi-grid { grid-template-columns: 1fr; }
+  .open-data-grid { grid-template-columns: 1fr; }
+  .hero-strip-grid { grid-template-columns: 1fr; }
+  .hero-strip-grid a {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.14);
+  }
+  .hero-strip-grid a:last-child { border-bottom: 0; }
+  .hero-cinematic-panel { padding: 14px; }
+  .hero-mini-kpis strong { font-size: 26px; }
+  .hero p.sub,
+  .entry-hero .lead,
+  .section-sub { font-size: 17px; }
+}

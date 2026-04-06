@@ -193,3 +193,11 @@ body {
   font-size: 13px; color: var(--grey-500, #666d80); text-decoration: none;
 }
 .footer__link:hover { color: var(--primary-500, #12987b); }
+
+@media (max-width: 480px) {
+  .header { padding: 20px; height: auto; min-height: 72px; }
+  .footer { padding: 16px 20px; height: auto; flex-wrap: wrap; gap: 10px; }
+  .footer__links { flex-wrap: wrap; gap: 12px; }
+  .otp-inputs { gap: 6px; }
+  .otp-inputs input { width: 44px; height: 48px; font-size: 18px; }
+}

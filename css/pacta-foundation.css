@@ -781,6 +781,56 @@ th {
   }
 }
 
+/* ── Topbar full-width fix: undo .main padding so topbar spans edge-to-edge ── */
+/* ── Table sections: horizontal scroll on mobile instead of clipping ── */
+/* ── Tabs: horizontal scroll when items overflow ── */
+/* ── Settings pages: stack nav + form sections vertically ── */
+@media (max-width: 1024px) {
+  /* Topbar: extend to full viewport width by negating .main's padding-inline */
+  .topbar {
+    margin-inline: -12px;
+    width: calc(100% + 24px);
+    /* padding-inline: 12px already set in the existing 1024px block above */
+  }
+
+  .table-section { overflow-x: auto; }
+  .table { min-width: 720px; }
+
+  .tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 1px;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { flex-shrink: 0; }
+
+  /* Settings panel: stack sidebar nav and form vertically */
+  .settings-content { flex-direction: column; overflow-x: hidden; }
+  .settings-nav {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--grey-100, #dfe1e7);
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 12px;
+    gap: 4px;
+  }
+  .settings-form__section { flex-direction: column; gap: 16px; }
+  .settings-form__head { flex: none; }
+  .settings-form__row { flex-direction: column; gap: 12px; }
+  .settings-form__row .field--postal { flex: none; }
+  /* Account settings variant */
+  .account-content { gap: 16px; padding: 16px; }
+  .account-intro { flex: none; width: 100%; }
+}
+
+/* ── Very small phones (≤480px) ── */
+@media (max-width: 480px) {
+  .topbar-right { gap: 8px; }
+  .breadcrumbs { max-width: 36vw; }
+}
+
 
 
 
