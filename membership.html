@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+<a class="skip-link" href="#main-content">Asosiy kontentga o'tish</a>
 <header class="site-header">
   <div class="utility-bar">
     <div class="container utility-row">
@@ -27,7 +28,7 @@
   </div>
   <div class="container nav">
     <a class="brand" href="index.html"><span class="brand-dot">NGO</span>ngo.uz</a>
-    <nav class="menu">
+    <nav class="menu" aria-label="Asosiy menyu">
   <div class="nav-item has-dropdown">
     <a data-page="about.html" href="about.html">Biz haqimizda <ph-caret-down weight="bold" aria-hidden="true"></ph-caret-down></a>
     <div class="dropdown">
@@ -76,6 +77,7 @@
   </div>
 </header>
 
+<main id="main-content">
 <section class="grid-bg">
   <div class="container hero center">
     <h1>A'zo bo'lish</h1>
@@ -87,39 +89,39 @@
   <div class="container">
     <h2 class="section-title">Azolik hujjatlari</h2>
     <div class="cards">
-      <article class="card"><h3>Qabul qilish tartibi</h3><p>Azolik uchun talab etiladigan hujjatlar ro'yxati.</p><div style="margin-top:12px"><a class="btn" href="official-docs.html">Yuklab olish</a></div></article>
-      <article class="card"><h3>Nizom va ichki qoidalar</h3><p>Azolikning huquq va majburiyatlarini belgilovchi hujjat.</p><div style="margin-top:12px"><a class="btn" href="official-docs.html">Yuklab olish</a></div></article>
-      <article class="card"><h3>Imkoniyatlar reglamenti</h3><p>Azo bo'lgach beriladigan imkoniyatlar va tartiblar.</p><div style="margin-top:12px"><a class="btn" href="official-docs.html">Yuklab olish</a></div></article>
+      <article class="card"><h3>Qabul qilish tartibi</h3><p>Azolik uchun talab etiladigan hujjatlar ro'yxati.</p><div class="card-action"><a class="btn" href="official-docs.html">Yuklab olish</a></div></article>
+      <article class="card"><h3>Nizom va ichki qoidalar</h3><p>Azolikning huquq va majburiyatlarini belgilovchi hujjat.</p><div class="card-action"><a class="btn" href="official-docs.html">Yuklab olish</a></div></article>
+      <article class="card"><h3>Imkoniyatlar reglamenti</h3><p>Azo bo'lgach beriladigan imkoniyatlar va tartiblar.</p><div class="card-action"><a class="btn" href="official-docs.html">Yuklab olish</a></div></article>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
-  <div class="container" style="max-width:860px">
+<section class="section section-no-top">
+  <div class="container-narrow">
     <div class="card">
-      <h3 style="margin:0 0 8px">Reglament bilan tanishish</h3>
-      <p style="margin:0 0 14px;color:var(--neutral-500)">Formani yuborishdan oldin reglament bilan tanishganingizni tasdiqlang.</p>
-      <label style="display:flex;gap:10px;align-items:flex-start"><input id="reg-ok" type="checkbox" style="margin-top:3px"><span>Reglament bilan toliq tanishdim va shartlariga roziman.</span></label>
+      <h3 class="card-title-tight">Reglament bilan tanishish</h3>
+      <p class="card-subtle">Formani yuborishdan oldin reglament bilan tanishganingizni tasdiqlang.</p>
+      <label class="check-line-consent"><input id="reg-ok" type="checkbox"><span>Reglament bilan toliq tanishdim va shartlariga roziman.</span></label>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
-  <div class="container" style="max-width:860px">
+<section class="section section-no-top">
+  <div class="container-narrow">
     <h2 class="section-title">Tashkilot ma’lumotlari</h2>
     <div class="card">
       <form action="membership-status.html" method="get">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-          <input required name="tashkilot_nomi" placeholder="Tashkilot nomi" style="padding:13px 16px;border:1px solid var(--neutral-200)">
-          <input required name="faoliyat_sohasi" placeholder="Faoliyat sohasi" style="padding:13px 16px;border:1px solid var(--neutral-200)">
-          <input required name="tashkiliy_shakl" placeholder="Tashkiliy-huquqiy shakli" style="padding:13px 16px;border:1px solid var(--neutral-200)">
-          <input required name="rahbar_fio" placeholder="Tashkilot rahbari F.I.Sh." style="padding:13px 16px;border:1px solid var(--neutral-200)">
-          <input required name="telefon" placeholder="Tashkilot telefon raqami" style="padding:13px 16px;border:1px solid var(--neutral-200)">
-          <input required type="email" name="email" placeholder="Elektron manzil" style="padding:13px 16px;border:1px solid var(--neutral-200)">
-          <input required name="telegram_raqam" placeholder="Telegramga bog'langan raqam" style="padding:13px 16px;border:1px solid var(--neutral-200)">
-          <input required name="hudud" placeholder="Faoliyat yuritish hududi" style="padding:13px 16px;border:1px solid var(--neutral-200)">
+        <div class="form-grid">
+          <div class="form-field"><label class="form-label" for="mem-org-name">Tashkilot nomi</label><input id="mem-org-name" required name="tashkilot_nomi"></div>
+          <div class="form-field"><label class="form-label" for="mem-activity">Faoliyat sohasi</label><input id="mem-activity" required name="faoliyat_sohasi"></div>
+          <div class="form-field"><label class="form-label" for="mem-legal-type">Tashkiliy-huquqiy shakli</label><input id="mem-legal-type" required name="tashkiliy_shakl"></div>
+          <div class="form-field"><label class="form-label" for="mem-head">Tashkilot rahbari F.I.Sh.</label><input id="mem-head" required name="rahbar_fio"></div>
+          <div class="form-field"><label class="form-label" for="mem-phone">Tashkilot telefon raqami</label><input id="mem-phone" required name="telefon" autocomplete="tel" inputmode="tel"></div>
+          <div class="form-field"><label class="form-label" for="mem-email">Elektron manzil</label><input id="mem-email" required type="email" name="email" autocomplete="email"></div>
+          <div class="form-field"><label class="form-label" for="mem-telegram">Telegramga bog'langan raqam</label><input id="mem-telegram" required name="telegram_raqam"></div>
+          <div class="form-field"><label class="form-label" for="mem-region">Faoliyat yuritish hududi</label><input id="mem-region" required name="hudud"></div>
         </div>
-        <div style="margin-top:14px">
+        <div class="form-actions">
           <button id="submit-membership" class="btn" type="submit" disabled>Ariza yuborish</button>
         </div>
       </form>
@@ -133,6 +135,7 @@
     <a class="btn" href="contact.html">Bog'lanish</a>
   </div>
 </section>
+</main>
 <footer class="site-footer">
   <div class="container footer-top">
     <div class="footer-info">
@@ -157,7 +160,7 @@
   </div>
   <div class="container footer-bottom">
     <span>© COPYRIGHT 2019-2026 O'zNNTMA</span>
-    <a href="https://yandex.com/maps/?text=41.312565,69.240568&si=grwyen5zr7arv86fckt25k4vmw" target="_blank" rel="noopener noreferrer" style="color:var(--neutral-300)">Manzil: 1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170</a>
+    <a href="https://yandex.com/maps/?text=41.312565,69.240568&si=grwyen5zr7arv86fckt25k4vmw" target="_blank" rel="noopener noreferrer" class="footer-link-muted">Manzil: 1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170</a>
   </div>
 </footer>
 <script src="js/main.js"></script>

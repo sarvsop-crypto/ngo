@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+<a class="skip-link" href="#main-content">Asosiy kontentga o'tish</a>
 <header class="site-header">
   <div class="utility-bar">
     <div class="container utility-row">
@@ -27,7 +28,7 @@
   </div>
   <div class="container nav">
     <a class="brand" href="index.html"><span class="brand-dot">NGO</span>ngo.uz</a>
-    <nav class="menu">
+    <nav class="menu" aria-label="Asosiy menyu">
   <div class="nav-item has-dropdown">
     <a data-page="about.html" href="about.html">Biz haqimizda <ph-caret-down weight="bold" aria-hidden="true"></ph-caret-down></a>
     <div class="dropdown">
@@ -75,9 +76,11 @@
 <a class="contact-btn" href="membership.html">A'zo bo'lish</a>
   </div>
 </header>
+<main id="main-content">
 <section class="grid-bg"><div class="container hero center"><h1>Savol-javob</h1><p class="sub">Interaktiv xizmatlar bo'yicha tez-tez beriladigan savollar va javoblar.</p></div></section>
-<section class="section"><div class="container"><div class="card"><label for="faq-search" style="display:block;font-weight:700;margin-bottom:8px">Savol qidirish</label><input id="faq-search" placeholder="Masalan: hisobot, a'zo bo'lish, huquqiy maslahat" /></div><div class="faq" style="margin-top:16px"><div class="q" data-faq-item><button class="faq-toggle" type="button">NNTMAga a'zo bo'lish uchun qanday hujjatlar kerak?</button><p>Tashkilot guvohnomasi, rahbar ma'lumotlari, ariza va nizomni qabul qilish tasdigi talab etiladi.</p></div><div class="q" data-faq-item><button class="faq-toggle" type="button">Hisobotlarni qayerdan topshiraman?</button><p>Hisobot shakllarini "NNT hisobot shakllari" bo'limidan yuklab olib, onlayn shakl orqali yuborasiz.</p></div><div class="q" data-faq-item><button class="faq-toggle" type="button">Huquqiy maslahatni qanday olaman?</button><p>Rasmiy murojaat shakli orqali savol yuborasiz. Mutaxassislar tomonidan javob yuboriladi.</p></div><div class="q" data-faq-item><button class="faq-toggle" type="button">A'zo arizam holatini qayerda koraman?</button><p>A'zo bo'lish sahifasida yuborilgandan so'ng avtomatik ochiladigan holat sahifasida kuzatasiz.</p></div></div></div></section>
+<section class="section"><div class="container"><div class="card"><label class="faq-search-label" for="faq-search">Savol qidirish</label><input id="faq-search" placeholder="Masalan: hisobot, a'zo bo'lish, huquqiy maslahat" aria-label="Savol qidirish" /></div><div class="faq faq-list-spaced"><div class="q" data-faq-item><button class="faq-toggle" type="button">NNTMAga a'zo bo'lish uchun qanday hujjatlar kerak?</button><p>Tashkilot guvohnomasi, rahbar ma'lumotlari, ariza va nizomni qabul qilish tasdigi talab etiladi.</p></div><div class="q" data-faq-item><button class="faq-toggle" type="button">Hisobotlarni qayerdan topshiraman?</button><p>Hisobot shakllarini "NNT hisobot shakllari" bo'limidan yuklab olib, onlayn shakl orqali yuborasiz.</p></div><div class="q" data-faq-item><button class="faq-toggle" type="button">Huquqiy maslahatni qanday olaman?</button><p>Rasmiy murojaat shakli orqali savol yuborasiz. Mutaxassislar tomonidan javob yuboriladi.</p></div><div class="q" data-faq-item><button class="faq-toggle" type="button">A'zo arizam holatini qayerda koraman?</button><p>A'zo bo'lish sahifasida yuborilgandan so'ng avtomatik ochiladigan holat sahifasida kuzatasiz.</p></div></div></div></section>
 <section class="dark-cta"><div class="container row"><h2>Rasmiy murojaat, hamkorlik va ma'lumot olish uchun biz bilan bog'laning.</h2><a class="btn" href="contact.html">Bog'lanish</a></div></section>
+</main>
 <footer class="site-footer">
   <div class="container footer-top">
     <div class="footer-info">
@@ -102,7 +105,7 @@
   </div>
   <div class="container footer-bottom">
     <span>© COPYRIGHT 2019-2026 O'zNNTMA</span>
-    <a href="https://yandex.com/maps/?text=41.312565,69.240568&si=grwyen5zr7arv86fckt25k4vmw" target="_blank" rel="noopener noreferrer" style="color:var(--neutral-300)">Manzil: 1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170</a>
+    <a href="https://yandex.com/maps/?text=41.312565,69.240568&si=grwyen5zr7arv86fckt25k4vmw" target="_blank" rel="noopener noreferrer" class="footer-link-muted">Manzil: 1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170</a>
   </div>
 </footer>
 <script src="js/main.js"></script>
