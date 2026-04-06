@@ -1084,4 +1084,21 @@ body.a11y-grayscale { filter: grayscale(1); }
   .hero p.sub,
   .entry-hero .lead,
   .section-sub { font-size: 17px; }
+  /* Reduce large section titles on phones */
+  .section-title { font-size: 26px; }
+  .content-shell h1 { font-size: 28px; }
+  /* Fix membership.html inline 2-col form grid */
+  .card [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* CTA cards with inline flex+space-between → stack text above button */
+  .card[style*="justify-content:space-between"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* ── Very narrow phones: hide nav CTA (accessible via hamburger) ── */
+@media (max-width: 480px) {
+  .contact-btn { display: none; }
 }

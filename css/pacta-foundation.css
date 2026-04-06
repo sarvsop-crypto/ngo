@@ -823,6 +823,34 @@ th {
   /* Account settings variant */
   .account-content { gap: 16px; padding: 16px; }
   .account-intro { flex: none; width: 100%; }
+
+  /* Inline-style settings layout (admin-settings, cabinet-settings) */
+  .settings-layout {
+    grid-template-columns: 1fr !important;
+  }
+  .settings-layout > nav {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    border-bottom: 1px solid var(--grey-100, #dfe1e7);
+    padding-bottom: 8px !important;
+    margin-bottom: 4px;
+  }
+}
+
+/* ── Phone (≤640px): collapse all inline 2-col grids ── */
+@media (max-width: 640px) {
+  /* Inline grid-template-columns:1fr 1fr inside main content or modals */
+  .main [style*="grid-template-columns:1fr 1fr"],
+  .modal__body [style*="grid-template-columns:1fr 1fr"],
+  .settings-layout [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* cabinet-support.html: FAQ + contact form side by side */
+  .main [style*="grid-template-columns:minmax(0,1.6fr)"] {
+    display: flex !important;
+    flex-direction: column !important;
+  }
 }
 
 /* ── Very small phones (≤480px) ── */
