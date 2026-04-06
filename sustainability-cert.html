@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>"Barqaror NNT" sertifikati reyestri — O'zNNTMA | ngo.uz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <style>
+    /* ── Stat chips ── */
+    .stat-chips {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 16px; margin: 32px 0;
+    }
+    .stat-chip {
+      background: #f0f7f4; border: 1px solid #c5ddd2;
+      border-radius: 12px; padding: 20px 24px;
+      font-size: 13px; color: var(--grey-700, #374151);
+      text-align: center;
+    }
+    .stat-chip strong {
+      color: var(--green-500, #2e7d52); font-size: 30px;
+      font-weight: 700; display: block; margin-bottom: 6px;
+    }
+
+    /* ── Certificate level cards ── */
+    .cert-levels {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 20px; margin: 40px 0;
+    }
+    .cert-level-card {
+      border-radius: 14px; padding: 28px 24px;
+      position: relative; overflow: hidden;
+    }
+    .cert-level-card--bronze {
+      background: linear-gradient(135deg, #fdf6ef 0%, #fdecd8 100%);
+      border: 1.5px solid #d97706;
+    }
+    .cert-level-card--silver {
+      background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+      border: 1.5px solid #6b7280;
+    }
+    .cert-level-card--gold {
+      background: linear-gradient(135deg, #fefce8 0%, #fef08a 100%);
+      border: 1.5px solid #b45309;
+    }
+    .cert-level-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 14px; font-weight: 700;
+      padding: 6px 14px; border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .cert-level-badge--bronze { background: #d97706; color: #fff; }
+    .cert-level-badge--silver { background: #6b7280; color: #fff; }
+    .cert-level-badge--gold   { background: #b45309; color: #fff; }
+    .cert-level-card h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 0 0 10px; color: var(--neutral-800, #1e2229);
+    }
+    .cert-level-card p {
+      font-size: 13px; line-height: 1.65;
+      color: var(--neutral-600, #4b5563); margin: 0 0 14px;
+    }
+    .cert-requirement {
+      font-size: 12px; font-weight: 600;
+      color: var(--neutral-500, #587585);
+    }
+    .cert-score-range {
+      font-size: 22px; font-weight: 700;
+      display: block; margin-bottom: 2px;
+    }
+    .cert-score-range--bronze { color: #d97706; }
+    .cert-score-range--silver { color: #6b7280; }
+    .cert-score-range--gold   { color: #b45309; }
+
+    /* ── Registry table ── */
+    .reg-table-wrap { overflow-x: auto; margin-top: 8px; }
+    .reg-table {
+      width: 100%; border-collapse: collapse; font-size: 13px;
+    }
+    .reg-table thead th {
+      background: var(--green-500, #2e7d52); color: #fff;
+      padding: 11px 14px; text-align: left;
+      font-size: 12px; font-weight: 600; white-space: nowrap;
+      border: 1px solid var(--green-600, #255f40);
+    }
+    .reg-table tbody tr:nth-child(odd)  { background: #f8fbf9; }
+    .reg-table tbody tr:nth-child(even) { background: #fff; }
+    .reg-table tbody tr:hover { background: #eef6f1; }
+    .reg-table td {
+      padding: 10px 14px; border: 1px solid #dde8e2;
+      vertical-align: middle;
+    }
+
+    .cert-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 11px; font-weight: 700;
+      padding: 3px 10px; border-radius: 20px;
+    }
+    .cert-badge--gold   { background: #fef08a; color: #78350f; border: 1px solid #d97706; }
+    .cert-badge--silver { background: #e5e7eb; color: #374151; border: 1px solid #9ca3af; }
+    .cert-badge--bronze { background: #fde8c8; color: #7c2d12; border: 1px solid #d97706; }
+
+    .section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--green-600, #255f40);
+      margin-bottom: 8px;
+    }
+
+    /* ── Filter pills ── */
+    .filter-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+    .filter-pill {
+      padding: 7px 16px; font-size: 13px; font-weight: 500;
+      border: 1px solid var(--neutral-200, #dde0e7); border-radius: 20px;
+      color: var(--neutral-500, #587585); background: #fff; cursor: pointer;
+      text-decoration: none; transition: background .15s, color .15s;
+    }
+    .filter-pill:hover, .filter-pill.is-active {
+      background: var(--green-500, #2e7d52); color: #fff; border-color: var(--green-500, #2e7d52);
+    }
+
+    /* ── How to apply ── */
+    .apply-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 16px; margin: 32px 0;
+      counter-reset: step;
+    }
+    .apply-step {
+      background: #f8fbf9; border: 1px solid #d4e8dd;
+      border-radius: 12px; padding: 20px 18px;
+      counter-increment: step;
+      position: relative;
+    }
+    .apply-step::before {
+      content: counter(step);
+      display: block; width: 28px; height: 28px;
+      border-radius: 50%; background: var(--green-500, #2e7d52);
+      color: #fff; font-size: 13px; font-weight: 700;
+      line-height: 28px; text-align: center;
+      margin-bottom: 10px;
+    }
+    .apply-step h4 { font-size: 14px; font-weight: 600; margin: 0 0 6px; }
+    .apply-step p  { font-size: 13px; color: var(--neutral-500,#587585); margin: 0; line-height: 1.55; }
+
+    @media (max-width: 780px) {
+      .cert-levels { grid-template-columns: 1fr; }
+      .apply-steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 540px) {
+      .stat-chips { grid-template-columns: repeat(2, 1fr); }
+      .apply-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="utility-bar">
+    <div class="container utility-row">
+      <div class="utility-left">
+        <span>Toshkent sh., Shayxontohur t., Furqat ko'chasi, 1A</span>
+        <a href="tel:+998555030512">(+998 55) 503-05-12</a>
+      </div>
+      <div class="utility-right">
+        <a href="#">O'zbekcha</a>
+        <a href="#">Русский</a>
+        <a href="#">English</a>
+        <button type="button" class="vis-btn">Ko'z ojizlar uchun</button>
+      </div>
+    </div>
+  </div>
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-dot">NGO</span>ngo.uz</a>
+    <nav class="menu">
+  <div class="nav-item has-dropdown">
+    <a data-page="about.html" href="about.html">Biz haqimizda <ph-caret-down weight="bold" aria-hidden="true"></ph-caret-down></a>
+    <div class="dropdown">
+      <a href="who-we-are.html">Tashkilot haqida</a>
+      <a href="leadership.html">Rahbariyat</a>
+      <a href="structure.html">Tuzilma</a>
+      <a href="nnt-school.html">NNTlar maktabi</a>
+      <a href="online-library.html">Onlayn kutubxona</a>
+    </div>
+  </div>
+  <a data-page="news.html" href="news.html">Yangiliklar</a>
+  <a data-page="events.html" href="events.html">Tadbirlar</a>
+  <div class="nav-item has-dropdown">
+    <a data-page="services.html" href="services.html">Xizmatlar <ph-caret-down weight="bold" aria-hidden="true"></ph-caret-down></a>
+    <div class="dropdown">
+      <a href="official-docs.html">Rasmiy hujjatlar</a>
+      <a href="social-orders.html">Davlat ijtimoiy buyurtmalari</a>
+      <a href="grants.html">E'lon qilingan grantlar</a>
+      <a href="sustainability-index.html">Barqarorlik indeksi</a>
+      <a href="sustainability-cert.html">Barqaror NNT reyestri</a>
+      <a href="reporting-forms.html">Hisobot shakllari</a>
+      <a href="faq.html">Savol-javob</a>
+      <a href="service-request.html">Murojaat yuborish</a>
+    </div>
+  </div>
+  <a data-page="awards.html" href="awards.html">Hamkorlar</a>
+</nav>
+<button class="hamburger" id="hamburgerBtn" type="button" aria-label="Menyu">
+  <span></span><span></span><span></span>
+</button>
+<a class="contact-btn" href="membership.html">A'zo bo'lish</a>
+  </div>
+</header>
+
+<section class="grid-bg">
+  <div class="container hero center">
+    <h1>&ldquo;Barqaror NNT&rdquo; sertifikati reyestri</h1>
+    <p class="sub">Barqarorlik indeksi bo&rsquo;yicha sertifikat olgan nodavlat notijorat tashkilotlarning ochiq ro&rsquo;yxati</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <p style="max-width:780px;font-size:16px;line-height:1.8;color:var(--neutral-700,#374151);margin:0 auto 8px;">
+      &ldquo;Barqaror NNT&rdquo; sertifikati &mdash; barqarorlik indeksida yuqori ball to&rsquo;plagan tashkilotlarga beriladigan rasmiy tan olish belgisi. Sertifikat uch darajada beriladi: Bronza, Kumush va Oltin. U tashkilotning ishonchliligini tasdiqlaydi hamda grantlar va davlat hamkorligida afzallik beradi.
+    </p>
+
+    <div class="stat-chips">
+      <div class="stat-chip"><strong>48</strong>Jami sertifikatlangan</div>
+      <div class="stat-chip"><strong>12</strong><i class="ph ph-medal" aria-hidden="true" style="color:#b45309;font-size:14px;vertical-align:middle;"></i> Oltin darajali</div>
+      <div class="stat-chip"><strong>21</strong><i class="ph ph-medal" aria-hidden="true" style="color:#6b7280;font-size:14px;vertical-align:middle;"></i> Kumush darajali</div>
+      <div class="stat-chip"><strong>15</strong><i class="ph ph-medal" aria-hidden="true" style="color:#d97706;font-size:14px;vertical-align:middle;"></i> Bronza darajali</div>
+    </div>
+
+    <!-- Certificate levels -->
+    <p class="section-label">Sertifikat darajalari</p>
+    <div class="cert-levels">
+      <div class="cert-level-card cert-level-card--bronze">
+        <div><span class="cert-badge cert-badge--bronze"><i class="ph ph-medal" aria-hidden="true"></i> Bronza</span></div>
+        <h3>Bronza sertifikat</h3>
+        <p>Asosiy barqarorlik talablarini bajargan tashkilotlar uchun. Boshqaruv va moliyaviy shaffoflik tizimi mavjud.</p>
+        <div class="cert-requirement">
+          <span class="cert-score-range cert-score-range--bronze">60&ndash;79 ball</span>
+          Barqarorlik indeksi bo'yicha
+        </div>
+      </div>
+      <div class="cert-level-card cert-level-card--silver">
+        <div><span class="cert-badge cert-badge--silver"><i class="ph ph-medal" aria-hidden="true"></i> Kumush</span></div>
+        <h3>Kumush sertifikat</h3>
+        <p>Kuchli boshqaruv, moliyaviy barqarorlik va samarali dasturlar orqali barqarorlikni isbotlagan tashkilotlar.</p>
+        <div class="cert-requirement">
+          <span class="cert-score-range cert-score-range--silver">80&ndash;89 ball</span>
+          Barqarorlik indeksi bo'yicha
+        </div>
+      </div>
+      <div class="cert-level-card cert-level-card--gold">
+        <div><span class="cert-badge cert-badge--gold"><i class="ph ph-medal" aria-hidden="true"></i> Oltin</span></div>
+        <h3>Oltin sertifikat</h3>
+        <p>Barcha mezonlar bo'yicha yuqori natija ko'rsatgan, soha lideri hisoblangan NNTlar uchun eng yuqori tan olish.</p>
+        <div class="cert-requirement">
+          <span class="cert-score-range cert-score-range--gold">90&ndash;100 ball</span>
+          Barqarorlik indeksi bo'yicha
+        </div>
+      </div>
+    </div>
+
+    <!-- Registry -->
+    <p class="section-label">Sertifikatlangan tashkilotlar</p>
+    <h2 style="margin:0 0 16px;font-size:22px;">Reyestr &mdash; 2024 yil</h2>
+
+    <div class="filter-row">
+      <a class="filter-pill is-active" href="#">Barchasi <strong style="margin-left:4px;">48</strong></a>
+      <a class="filter-pill" href="#"><i class="ph ph-medal" aria-hidden="true" style="color:#b45309;"></i> Oltin <strong style="margin-left:4px;">12</strong></a>
+      <a class="filter-pill" href="#"><i class="ph ph-medal" aria-hidden="true" style="color:#6b7280;"></i> Kumush <strong style="margin-left:4px;">21</strong></a>
+      <a class="filter-pill" href="#"><i class="ph ph-medal" aria-hidden="true" style="color:#d97706;"></i> Bronza <strong style="margin-left:4px;">15</strong></a>
+    </div>
+
+    <div class="reg-table-wrap">
+      <table class="reg-table">
+        <thead>
+          <tr>
+            <th style="width:32px;">#</th>
+            <th>Tashkilot nomi</th>
+            <th>Viloyat / Shahar</th>
+            <th>Ball</th>
+            <th>Daraja</th>
+            <th>Berilgan sana</th>
+            <th>Amal qilish muddati</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td style="font-weight:500;">Mehr va Oqibat jamoat fondi</td>
+            <td>Toshkent sh.</td>
+            <td style="font-weight:700;color:#16a34a;">91</td>
+            <td><span class="cert-badge cert-badge--gold"><i class="ph ph-medal" aria-hidden="true"></i> Oltin</span></td>
+            <td>15.03.2024</td>
+            <td>15.03.2026</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td style="font-weight:500;">Fuqarolik nazorati platformasi</td>
+            <td>Toshkent sh.</td>
+            <td style="font-weight:700;color:#16a34a;">87</td>
+            <td><span class="cert-badge cert-badge--silver"><i class="ph ph-medal" aria-hidden="true"></i> Kumush</span></td>
+            <td>15.03.2024</td>
+            <td>15.03.2026</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td style="font-weight:500;">Sog'lom Avlod markazi</td>
+            <td>Samarqand</td>
+            <td style="font-weight:700;color:#16a34a;">84</td>
+            <td><span class="cert-badge cert-badge--silver"><i class="ph ph-medal" aria-hidden="true"></i> Kumush</span></td>
+            <td>15.03.2024</td>
+            <td>15.03.2026</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td style="font-weight:500;">Yoshlar istiqboli NNT</td>
+            <td>Toshkent sh.</td>
+            <td style="font-weight:700;color:#16a34a;">82</td>
+            <td><span class="cert-badge cert-badge--silver"><i class="ph ph-medal" aria-hidden="true"></i> Kumush</span></td>
+            <td>15.03.2024</td>
+            <td>15.03.2026</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td style="font-weight:500;">Ekologik tashabbuslar jamiyati</td>
+            <td>Farg'ona</td>
+            <td style="font-weight:700;color:#ca8a04;">73</td>
+            <td><span class="cert-badge cert-badge--bronze"><i class="ph ph-medal" aria-hidden="true"></i> Bronza</span></td>
+            <td>15.03.2024</td>
+            <td>15.03.2026</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td style="font-weight:500;">Saxovat Plus jamg'armasi</td>
+            <td>Andijon</td>
+            <td style="font-weight:700;color:#ca8a04;">69</td>
+            <td><span class="cert-badge cert-badge--bronze"><i class="ph ph-medal" aria-hidden="true"></i> Bronza</span></td>
+            <td>15.03.2024</td>
+            <td>15.03.2026</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td style="font-weight:500;">Biznes va huquq markazi</td>
+            <td>Toshkent v.</td>
+            <td style="font-weight:700;color:#ca8a04;">76</td>
+            <td><span class="cert-badge cert-badge--bronze"><i class="ph ph-medal" aria-hidden="true"></i> Bronza</span></td>
+            <td>20.04.2024</td>
+            <td>20.04.2026</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td style="font-weight:500;">Madaniy meros va san'at jamiyati</td>
+            <td>Buxoro</td>
+            <td style="font-weight:700;color:#ca8a04;">64</td>
+            <td><span class="cert-badge cert-badge--bronze"><i class="ph ph-medal" aria-hidden="true"></i> Bronza</span></td>
+            <td>20.04.2024</td>
+            <td>20.04.2026</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td style="font-weight:500;">Ziyo Jam'iyati</td>
+            <td>Namangan</td>
+            <td style="font-weight:700;color:#16a34a;">90</td>
+            <td><span class="cert-badge cert-badge--gold"><i class="ph ph-medal" aria-hidden="true"></i> Oltin</span></td>
+            <td>01.06.2024</td>
+            <td>01.06.2026</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td style="font-weight:500;">Qishloq taraqqiyoti fondi</td>
+            <td>Surxondaryo</td>
+            <td style="font-weight:700;color:#ca8a04;">62</td>
+            <td><span class="cert-badge cert-badge--bronze"><i class="ph ph-medal" aria-hidden="true"></i> Bronza</span></td>
+            <td>01.06.2024</td>
+            <td>01.06.2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:var(--neutral-400,#9ca3af);margin-top:12px;">
+      * 48 ta sertifikatlangan tashkilotdan 10 tasi ko'rsatilmoqda. To'liq reyestr uchun murojaat yuborishingiz mumkin.
+    </p>
+
+    <!-- How to apply -->
+    <div style="margin-top:56px;">
+      <p class="section-label">Sertifikat olish tartibi</p>
+      <h2 style="margin:0 0 4px;font-size:22px;">4 qadam</h2>
+      <p style="font-size:14px;color:var(--neutral-500,#587585);margin:0 0 4px;">Sertifikat olish uchun quyidagi tartibga amal qiling.</p>
+      <div class="apply-steps">
+        <div class="apply-step">
+          <h4>Ariza topshirish</h4>
+          <p>A'zo kabineti orqali baholash arizasini to'ldiring va talab etilgan hujjatlarni yuklang.</p>
+        </div>
+        <div class="apply-step">
+          <h4>Hujjatlarni tekshirish</h4>
+          <p>O'zNNTMA mutaxassislari barcha materiallarni ko'rib chiqadi va qo'shimcha ma'lumot so'rashi mumkin.</p>
+        </div>
+        <div class="apply-step">
+          <h4>Sahadagi baholash</h4>
+          <p>Talab qilinsa, tashkilot faoliyati o'rinma-o'rin kuzatiladi va ball qo'yiladi.</p>
+        </div>
+        <div class="apply-step">
+          <h4>Sertifikat berish</h4>
+          <p>60 ball va undan yuqori natijada tegishli daraja sertifikati rasman topshiriladi.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="dark-cta">
+  <div class="container row">
+    <h2>Tashkilotingizni sertifikatga taqdim etmoqchimisiz?</h2>
+    <a class="btn" href="service-request.html">Ariza yuborish</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-info">
+      <h4>Tezkor havolalar</h4>
+      <a href="about.html">Biz haqimizda</a>
+      <a href="news.html">Yangiliklar</a>
+      <a href="events.html">Tadbirlarimiz</a>
+      <a href="membership.html">A'zo bo'lish</a>
+      <a href="grants.html">E'lon qilingan grantlar</a>
+      <h4>Bog'lanish</h4>
+      <p>Tel: (+998 55) 503-05-12</p>
+      <p>Email: <a href="mailto:info@ngo.uz" style="color:inherit;">info@ngo.uz</a></p>
+      <p>1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170</p>
+      <h4>Ijtimoiy tarmoqlar</h4>
+      <a href="https://facebook.com/uznntma1" target="_blank" rel="noopener noreferrer">Facebook — @uznntma1</a>
+      <a href="https://instagram.com/uznntma" target="_blank" rel="noopener noreferrer">Instagram — @uznntma</a>
+      <a href="https://t.me/UzNNTMA1" target="_blank" rel="noopener noreferrer">Telegram — @UzNNTMA1</a>
+      <a href="https://youtube.com/@uznntma" target="_blank" rel="noopener noreferrer">YouTube — @uznntma</a>
+    </div>
+    <div class="footer-map-col">
+      <iframe src="https://yandex.uz/map-widget/v1/?ll=69.240568%2C41.312565&z=17&pt=69.240568%2C41.312565%2Cpm2rdm" frameborder="0" allowfullscreen loading="lazy" title="Manzil xaritasi"></iframe>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© COPYRIGHT 2019-2026 O'zNNTMA</span>
+    <a href="mailto:info@ngo.uz" style="color:var(--neutral-300)">info@ngo.uz</a>
+    <a href="https://yandex.com/maps/?text=41.312565,69.240568" target="_blank" rel="noopener noreferrer" style="color:var(--neutral-300)">Manzil: 1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170</a>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/content.js"></script>
+</body>
+</html>
