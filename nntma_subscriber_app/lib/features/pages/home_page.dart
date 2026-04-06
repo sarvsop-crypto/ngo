@@ -73,9 +73,10 @@ class _KpiGrid extends StatelessWidget {
           onRetry: controller.load,
           readyChild: AdaptiveGrid(
             minCardWidth: 150,
-            maxColumns: 6,
+            maxColumns: 4,
             maxCardWidth: 220,
             stretchChildren: false,
+            alignment: WrapAlignment.center,
             spacing: 10,
             children: [
               for (final item in controller.items)

@@ -17,6 +17,21 @@
 }
 * { box-sizing: border-box; }
 html, body { margin:0; padding:0; font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif; color:var(--neutral-900); font-size:var(--base-font-size,17px); background:var(--bg-light); }
+.skip-link {
+  position: absolute;
+  left: 10px;
+  top: -44px;
+  z-index: 200;
+  background: #04101f;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 180, 216, .45);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.skip-link:focus { top: 10px; }
 a { color: inherit; text-decoration: none; }
 .container { width:min(1200px, calc(100% - 32px)); margin:0 auto; }
 .grid-bg {

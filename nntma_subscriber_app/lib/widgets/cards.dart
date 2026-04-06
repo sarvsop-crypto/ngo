@@ -45,8 +45,9 @@ class KpiCard extends StatelessWidget {
             SizedBox(height: compact ? 2 : 4),
             Text(
               label,
-              maxLines: compact ? 1 : 2,
-              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
+              overflow: TextOverflow.fade,
+              softWrap: true,
               style: TextStyle(
                 fontSize: compact ? 12.5 : 13,
                 color: AppTokens.textMuted,

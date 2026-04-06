@@ -7,6 +7,7 @@ class AdaptiveGrid extends StatelessWidget {
   final int maxColumns;
   final double? maxCardWidth;
   final bool stretchChildren;
+  final WrapAlignment alignment;
 
   const AdaptiveGrid({
     super.key,
@@ -16,6 +17,7 @@ class AdaptiveGrid extends StatelessWidget {
     this.maxColumns = 4,
     this.maxCardWidth,
     this.stretchChildren = true,
+    this.alignment = WrapAlignment.start,
   });
 
   @override
@@ -28,6 +30,7 @@ class AdaptiveGrid extends StatelessWidget {
             ? computedWidth
             : (computedWidth.clamp(0.0, maxCardWidth!) as num).toDouble();
         return Wrap(
+          alignment: alignment,
           spacing: spacing,
           runSpacing: spacing,
           children: [
