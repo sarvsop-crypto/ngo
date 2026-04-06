@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E'lon qilingan grantlar — O'zNNTMA | ngo.uz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .grant-status {
+      display: inline-block;
+      font-size: 12px; font-weight: 600;
+      padding: 4px 11px; border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .grant-status--active  { background: #e6f4ec; color: #1a7a3c; }
+    .grant-status--soon    { background: #fff3e0; color: #b45309; }
+    .grant-status--closed  { background: #f3f4f6; color: #6b7280; }
+
+    .grant-meta {
+      display: flex; flex-direction: column; gap: 5px;
+      margin: 12px 0 16px; font-size: 13px; color: var(--neutral-500, #587585);
+    }
+    .grant-meta-row { display: flex; align-items: baseline; gap: 6px; }
+    .grant-meta-label { flex-shrink: 0; }
+    .grant-amount  { color: var(--green-600, #255f40); font-weight: 700; font-size: 15px; }
+    .grant-deadline       { color: #b45309; font-weight: 600; }
+    .grant-deadline--closed { color: #9ca3af; font-weight: 600; }
+
+    .cards { align-items: stretch; }
+    .card { display: flex; flex-direction: column; }
+    .card p { flex: 1; }
+    .card .btn { margin-top: auto; align-self: flex-start; }
+
+    .filter-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+    .filter-pill {
+      padding: 8px 16px; font-size: 13px; font-weight: 500;
+      border: 1px solid var(--neutral-200, #dde0e7); border-radius: 20px;
+      color: var(--neutral-500, #587585); background: #fff; cursor: pointer;
+      text-decoration: none; transition: background .15s, color .15s;
+    }
+    .filter-pill:hover, .filter-pill.is-active {
+      background: var(--green-500, #2e7d52); color: #fff; border-color: var(--green-500, #2e7d52);
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="utility-bar">
+    <div class="container utility-row">
+      <div class="utility-left">
+        <span>Toshkent sh., Shayxontohur t., Furqat ko'chasi, 1A</span>
+        <a href="tel:+998555030512">(+998 55) 503-05-12</a>
+      </div>
+      <div class="utility-right">
+        <a href="#">O'zbekcha</a>
+        <a href="#">Русский</a>
+        <a href="#">English</a>
+        <button type="button" class="vis-btn">Ko'z ojizlar uchun</button>
+      </div>
+    </div>
+  </div>
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-dot">NGO</span>ngo.uz</a>
+    <nav class="menu">
+  <div class="nav-item has-dropdown">
+    <a data-page="about.html" href="about.html">Biz haqimizda <ph-caret-down weight="bold" aria-hidden="true"></ph-caret-down></a>
+    <div class="dropdown">
+      <a href="who-we-are.html">Tashkilot haqida</a>
+      <a href="leadership.html">Rahbariyat</a>
+      <a href="structure.html">Tuzilma</a>
+      <a href="nnt-school.html">NNTlar maktabi</a>
+      <a href="online-library.html">Onlayn kutubxona</a>
+    </div>
+  </div>
+  <a data-page="news.html" href="news.html">Yangiliklar</a>
+  <a data-page="events.html" href="events.html">Tadbirlar</a>
+  <div class="nav-item has-dropdown">
+    <a data-page="services.html" href="services.html">Xizmatlar <ph-caret-down weight="bold" aria-hidden="true"></ph-caret-down></a>
+    <div class="dropdown">
+      <a href="official-docs.html">Rasmiy hujjatlar</a>
+      <a href="social-orders.html">Davlat ijtimoiy buyurtmalari</a>
+      <a href="grants.html">E'lon qilingan grantlar</a>
+      <a href="reporting-forms.html">Hisobot shakllari</a>
+      <a href="faq.html">Savol-javob</a>
+      <a href="service-request.html">Murojaat yuborish</a>
+    </div>
+  </div>
+  <a data-page="awards.html" href="awards.html">Hamkorlar</a>
+</nav>
+<button class="hamburger" id="hamburgerBtn" type="button" aria-label="Menyu">
+  <span></span><span></span><span></span>
+</button>
+<a class="contact-btn" href="membership.html">A'zo bo'lish</a>
+  </div>
+</header>
+
+<section class="grid-bg">
+  <div class="container hero center">
+    <h1>E'lon qilingan grantlar</h1>
+    <p class="sub">NNTlar va fuqarolik jamiyati tashkilotlari uchun ochiq grant va moliyalashtirish imkoniyatlari.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="filter-row">
+      <a class="filter-pill is-active" href="#">Barchasi <strong style="margin-left:4px;">5</strong></a>
+      <a class="filter-pill" href="#">Faol <strong style="margin-left:4px;">3</strong></a>
+      <a class="filter-pill" href="#">Yaqinda yakunlanadi <strong style="margin-left:4px;">1</strong></a>
+      <a class="filter-pill" href="#">Yakunlangan <strong style="margin-left:4px;">1</strong></a>
+    </div>
+
+    <div class="cards">
+
+      <!-- Grant 1 -->
+      <article class="card">
+        <span class="grant-status grant-status--active">● Ariza qabul qilinmoqda</span>
+        <span class="tag">Fuqarolik jamiyati</span>
+        <h3>Fuqarolik jamiyatini mustahkamlash granti</h3>
+        <div class="grant-meta">
+          <div class="grant-meta-row"><span class="grant-meta-label">Donor:</span> USAID Uzbekistan</div>
+          <div class="grant-meta-row"><span class="grant-meta-label">Summa:</span> <span class="grant-amount">$5,000 – $25,000</span></div>
+          <div class="grant-meta-row"><span class="grant-meta-label">Muddat:</span> <span class="grant-deadline">30 may 2026</span></div>
+        </div>
+        <p>Fuqarolik nazorati, shaffoflik va jamoat faolligini oshirishga qaratilgan loyihalar uchun. O'zbekistonda ro'yxatdan o'tgan NNTlar ariza topshira oladi.</p>
+        <a class="btn" href="cabinet/cabinet-grants.html">Ariza topshirish</a>
+      </article>
+
+      <!-- Grant 2 -->
+      <article class="card">
+        <span class="grant-status grant-status--active">● Ariza qabul qilinmoqda</span>
+        <span class="tag">Yoshlar</span>
+        <h3>Yoshlar tashabbuslari granti</h3>
+        <div class="grant-meta">
+          <div class="grant-meta-row"><span class="grant-meta-label">Donor:</span> UNDP O'zbekiston</div>
+          <div class="grant-meta-row"><span class="grant-meta-label">Summa:</span> <span class="grant-amount">$3,000 – $15,000</span></div>
+          <div class="grant-meta-row"><span class="grant-meta-label">Muddat:</span> <span class="grant-deadline">15 iyun 2026</span></div>
+        </div>
+        <p>18–35 yoshli yoshlarning jamiyatga foydali tashabbus va loyihalarini qo'llab-quvvatlash. Yoshlar tashkilotlari va NNTlar uchun.</p>
+        <a class="btn" href="cabinet/cabinet-grants.html">Ariza topshirish</a>
+      </article>
+
+      <!-- Grant 3 -->
+      <article class="card">
+        <span class="grant-status grant-status--active">● Ariza qabul qilinmoqda</span>
+        <span class="tag">Institutsional rivojlanish</span>
+        <h3>NNT salohiyatini rivojlantirish dasturi</h3>
+        <div class="grant-meta">
+          <div class="grant-meta-row"><span class="grant-meta-label">Donor:</span> EU Delegation to Uzbekistan</div>
+          <div class="grant-meta-row"><span class="grant-meta-label">Summa:</span> <span class="grant-amount">€10,000 – €50,000</span></div>
+          <div class="grant-meta-row"><span class="grant-meta-label">Muddat:</span> <span class="grant-deadline">1 iyul 2026</span></div>
+        </div>
+        <p>NNTlarning tashkiliy salohiyatini oshirish, boshqaruv tizimlarini takomillashtirish va xodimlar malakasini rivojlantirish uchun.</p>
+        <a class="btn" href="cabinet/cabinet-grants.html">Ariza topshirish</a>
+      </article>
+
+      <!-- Grant 4 — closing soon -->
+      <article class="card">
+        <span class="grant-status grant-status--soon">⚠ Yaqinda yakunlanadi</span>
+        <span class="tag">Ekologiya</span>
+        <h3>Ekologik tashabbus kichik granti</h3>
+        <div class="grant-meta">
+          <div class="grant-meta-row"><span class="grant-meta-label">Donor:</span> GEF Small Grants Programme</div>
+          <div class="grant-meta-row"><span class="grant-meta-label">Summa:</span> <span class="grant-amount">$2,000 – $10,000</span></div>
+          <div class="grant-meta-row"><span class="grant-meta-label">Muddat:</span> <span class="grant-deadline">20 aprel 2026</span></div>
+        </div>
+        <p>Mahalliy ekologik muammolarni hal qilishga qaratilgan hamjamiyat tashabbuslarini moliyalashtirish. Muddatga 14 kun qoldi.</p>
+        <a class="btn" href="cabinet/cabinet-grants.html">Ariza topshirish</a>
+      </article>
+
+      <!-- Grant 5 — closed -->
+      <article class="card" style="opacity:.75;">
+        <span class="grant-status grant-status--closed">✕ Ariza qabuli yakunlangan</span>
+        <span class="tag">Ijtimoiy innovatsiya</span>
+        <h3>Ijtimoiy innovatsiyalar granti</h3>
+        <div class="grant-meta">
+          <div class="grant-meta-row"><span class="grant-meta-label">Donor:</span> OSCE</div>
+          <div class="grant-meta-row"><span class="grant-meta-label">Summa:</span> <span class="grant-amount">$5,000 – $20,000</span></div>
+          <div class="grant-meta-row"><span class="grant-meta-label">Muddat:</span> <span class="grant-deadline--closed">1 mart 2026 (yakunlandi)</span></div>
+        </div>
+        <p>Ijtimoiy muammolarga innovatsion yechimlar taklif qiluvchi NNT loyihalari uchun. Ariza qabuli yakunlangan.</p>
+        <a class="btn" href="#" style="pointer-events:none;opacity:.5;cursor:default;">Muddati o'tgan</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="dark-cta">
+  <div class="container row">
+    <h2>Ariza topshirish uchun a&rsquo;zo kabinetiga kiring.</h2>
+    <a class="btn" href="cabinet/cabinet-grants.html">Kabinetga o'tish</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-info">
+      <h4>Tezkor havolalar</h4>
+      <a href="about.html">Biz haqimizda</a>
+      <a href="news.html">Yangiliklar</a>
+      <a href="events.html">Tadbirlarimiz</a>
+      <a href="membership.html">A'zo bo'lish</a>
+      <a href="grants.html">E'lon qilingan grantlar</a>
+      <h4>Bog'lanish</h4>
+      <p>Tel: (+998 55) 503-05-12</p>
+      <p>Email: <a href="mailto:info@ngo.uz" style="color:inherit;">info@ngo.uz</a></p>
+      <p>1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170</p>
+      <h4>Ijtimoiy tarmoqlar</h4>
+      <a href="https://facebook.com/uznntma1" target="_blank" rel="noopener noreferrer">Facebook — @uznntma1</a>
+      <a href="https://instagram.com/uznntma" target="_blank" rel="noopener noreferrer">Instagram — @uznntma</a>
+      <a href="https://t.me/UzNNTMA1" target="_blank" rel="noopener noreferrer">Telegram — @UzNNTMA1</a>
+      <a href="https://youtube.com/@uznntma" target="_blank" rel="noopener noreferrer">YouTube — @uznntma</a>
+    </div>
+    <div class="footer-map-col">
+      <iframe src="https://yandex.uz/map-widget/v1/?ll=69.240568%2C41.312565&z=17&pt=69.240568%2C41.312565%2Cpm2rdm" frameborder="0" allowfullscreen loading="lazy" title="Manzil xaritasi"></iframe>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© COPYRIGHT 2019-2026 O'zNNTMA</span>
+    <a href="mailto:info@ngo.uz" style="color:var(--neutral-300)">info@ngo.uz</a>
+    <a href="https://yandex.com/maps/?text=41.312565,69.240568" target="_blank" rel="noopener noreferrer" style="color:var(--neutral-300)">Manzil: 1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170</a>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/content.js"></script>
+</body>
+</html>
