@@ -2,4 +2,12 @@
 Thumbs.db
 *.log
 node_modules/
-nntma_subscriber_app/
+
+# Keep Flutter app source in git, ignore generated/build artifacts
+nntma_subscriber_app/.dart_tool/
+nntma_subscriber_app/.idea/
+nntma_subscriber_app/build/
+nntma_subscriber_app/.flutter-plugins-dependencies
+nntma_subscriber_app/.packages
+nntma_subscriber_app/pubspec.lock
+nntma_subscriber_app/**/.DS_Store
