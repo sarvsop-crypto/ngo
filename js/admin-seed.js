@@ -175,20 +175,22 @@
     });
 
     var donutData = [
-      { label: 'Tasdiqlangan', value: 94, color: 'var(--primary-500)', dot: 'chart-card__legend-dot u-bg-primary-500' },
-      { label: 'Ko`rib chiqilmoqda', value: 61, color: 'var(--secondary-500)', dot: 'chart-card__legend-dot u-bg-secondary-500' },
-      { label: 'Qaytarilgan', value: 18, color: '#dc2626', dot: 'chart-card__legend-dot u-dot-danger' },
+      { label: 'Tasdiqlangan', value: 94, color: 'var(--primary-500)' },
+      { label: 'Ko`rib chiqilmoqda', value: 61, color: 'var(--secondary-500)' },
+      { label: 'Qaytarilgan', value: 18, color: '#dc2626' },
     ];
 
     donutMount.innerHTML =
-      donutSvg(donutData, { size: 160, stroke: 22, gap: 4 }) +
-      '<div class="u-text-center u-mt-8">' +
-        '<div class="u-stat-caption">Jami arizalar</div>' +
-        '<div class="u-stat-value">247</div>' +
+      '<div class="chart-donut__img-wrap">' +
+        donutSvg(donutData, { size: 160, stroke: 22, gap: 4 }) +
+        '<div class="chart-donut__center">' +
+          '<span class="chart-donut__center-label">Jami arizalar</span>' +
+          '<span class="chart-donut__center-value">247</span>' +
+        '</div>' +
       '</div>' +
-      '<div class="chart-card__legend u-mt-0 u-legend-top-12">' +
+      '<div class="chart-donut__legend">' +
         donutData.map(function (part) {
-          return '<span class="chart-card__legend-item"><span class="' + esc(part.dot) + '"></span> ' + esc(part.label) + ': ' + esc(part.value) + '</span>';
+          return '<span class="chart-donut__legend-item"><span class="chart-donut__legend-dot" style="background:' + esc(part.color) + ';"></span> ' + esc(part.label) + ': ' + esc(part.value) + '</span>';
         }).join('') +
       '</div>';
   }
