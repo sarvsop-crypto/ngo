@@ -478,7 +478,9 @@ body.a11y-grayscale { filter: grayscale(1); }
 .check-line-consent { display: flex; gap: 10px; align-items: flex-start; }
 .check-line-consent input { margin-top: 3px; }
 .faq-list-spaced { margin-top: 16px; }
-.faq-search-label { display: block; font-weight: 700; margin-bottom: 8px; }
+.faq-search-label { display: block; font-weight: 700; margin-bottom: 8px; font-size: 15px; }
+#faq-search { display: block; width: 100%; box-sizing: border-box; border: 1px solid var(--neutral-200); border-radius: 6px; padding: 12px 16px; font: inherit; font-size: 15px; color: var(--neutral-900); background: #fff; outline: none; transition: border-color .15s; }
+#faq-search:focus { border-color: var(--green-500); box-shadow: 0 0 0 3px rgba(42,142,158,.12); }
 .check-line { margin-top:14px; display:flex; gap:10px; align-items:flex-start; }
 .doc-table { border:1px solid var(--neutral-200); background:#fff; border-radius:8px; overflow:hidden; }
 .doc-row { display:grid; grid-template-columns:2fr 1fr 1fr auto; gap:10px; padding:12px 14px; border-top:1px solid var(--neutral-200); align-items:center; }
