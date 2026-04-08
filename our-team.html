@@ -10,24 +10,17 @@
   <link rel="stylesheet" href="css/style.css" />
   <style>
     .team-meta-bar { display:flex; flex-wrap:wrap; gap:14px; margin:0 0 24px; }
-    .team-chip { background:#e8f4fa; border:1px solid #c8e2ee; color:#1a5268; padding:9px 12px; font-size:13px; font-weight:600; border-radius:999px; }
+    .team-chip { background:#f0f4f8; border:1px solid var(--neutral-200); color:var(--neutral-900); padding:9px 14px; font-size:13px; font-weight:600; border-radius:999px; }
     .team-controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:22px; }
-    .team-search { flex:1; min-width:220px; border:1px solid #c5dce8; border-radius:10px; padding:10px 12px; font:inherit; font-size:14px; }
-    .team-filter { border:1px solid #b9d6e4; background:#fff; color:#234f64; font:inherit; font-size:13px; font-weight:600; padding:9px 12px; border-radius:999px; cursor:pointer; }
-    .team-filter.active { background:var(--green-500,#00b4d8); border-color:var(--green-500,#00b4d8); color:#fff; }
-    .team-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:16px; align-items:start; }
-    .team-person { background:#fff; border:1px solid #d3e4ee; border-radius:14px; padding:16px; box-shadow:0 5px 18px rgba(0,84,122,.06); display:flex; flex-direction:column; gap:10px; }
-    .team-person__head { display:flex; align-items:center; gap:12px; }
-    .avatar { width:54px; height:54px; border-radius:50%; background:linear-gradient(145deg,#00b4d8,#007a94); color:#fff; font-size:18px; font-weight:700; display:grid; place-items:center; flex-shrink:0; }
-    .avatar.vacancy { background:linear-gradient(145deg,#9fb8c5,#6f8795); }
-    .team-person h3 { margin:0; font-size:17px; line-height:1.25; }
-    .team-role { margin:0; color:#1c5f78; font-size:13px; font-weight:700; }
-    .team-region { margin:0; color:#5a7686; font-size:12px; text-transform:uppercase; letter-spacing:.06em; font-weight:700; }
-    .team-contacts { margin-top:2px; display:grid; gap:6px; font-size:12px; color:#506f80; }
-    .team-contacts a { color:#0f6f8a; text-decoration:underline; text-underline-offset:2px; }
-    .team-empty { display:none; padding:18px; border-radius:10px; background:#f2f8fc; color:#4a6878; font-size:14px; }
-    .footer-link-muted { color:var(--neutral-300); }
-    .footer-link-inherit { color:inherit; }
+    .team-search { flex:1; min-width:220px; border:1px solid var(--neutral-200); border-radius:6px; padding:10px 14px; font:inherit; font-size:14px; outline:none; }
+    .team-search:focus { border-color:var(--green-500); }
+    .team-filter { border:1px solid var(--neutral-200); background:#fff; color:var(--neutral-900); font:inherit; font-size:13px; font-weight:600; padding:9px 14px; border-radius:999px; cursor:pointer; transition:background .15s,color .15s; }
+    .team-filter.active { background:var(--green-500); border-color:var(--green-500); color:#fff; }
+    .team-empty { display:none; padding:24px; border-radius:8px; background:#f5f6f8; color:var(--neutral-500); font-size:15px; }
+    .team-card .team-region { margin:0 0 8px; color:var(--neutral-500); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+    .team-card .team-meta a { color:var(--green-500); text-decoration:none; }
+    .team-card .team-meta a:hover { text-decoration:underline; }
+    .team-card.vacancy .team-photo { background:var(--neutral-200); }
   </style>
 </head>
 <body>
@@ -129,7 +122,7 @@
       <button class="team-filter" data-filter="vacancy" type="button">Vakansiya</button>
     </div>
 
-    <div id="teamGrid" class="team-grid"></div>
+    <div id="teamGrid" class="team-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))"></div>
     <div id="teamEmpty" class="team-empty" role="status" aria-live="polite">Qidiruv bo'yicha natija topilmadi.</div>
   </div>
 </section>
@@ -230,25 +223,19 @@
   const filters = Array.from(document.querySelectorAll('.team-filter'));
   let activeFilter = 'all';
 
-  function initials(name){
-    if (!name || /^vakant$/i.test(name)) return 'V';
-    const parts = name.split(/\s+/).filter(Boolean);
-    return ((parts[0]?.[0] || '') + (parts[1]?.[0] || '')).toUpperCase();
-  }
-
   function makeCard(item){
     const card = document.createElement('article');
-    card.className = 'team-person';
     const isVacancy = item.group === 'vacancy' || /^vakant$/i.test(item.name);
+    card.className = 'team-card' + (isVacancy ? ' vacancy' : '');
     card.innerHTML =
-      '<div class="team-person__head">' +
-      '<div class="avatar' + (isVacancy ? ' vacancy' : '') + '">' + initials(item.name) + '</div>' +
-      '<div><h3>' + item.name + '</h3><p class="team-role">' + item.role + '</p></div>' +
-      '</div>' +
+      '<div class="team-photo"></div>' +
+      '<h3>' + item.name + '</h3>' +
+      '<p class="team-role">' + item.role + '</p>' +
       (item.region ? '<p class="team-region">' + item.region + '</p>' : '') +
-      '<div class="team-contacts">' +
-      (item.phone ? '<span>Tel: <a href="tel:+998' + item.phone.replace(/[^0-9]/g,'') + '">' + item.phone + '</a></span>' : '<span>Tel: -</span>') +
-      (item.email ? '<span>Email: <a href="mailto:' + item.email + '">' + item.email + '</a></span>' : '<span>Email: -</span>') +
+      '<div class="team-meta">' +
+      (item.phone ? '<span>Tel: <a href="tel:+998' + item.phone.replace(/[^0-9]/g,'') + '">' + item.phone + '</a></span>' : '') +
+      (item.email ? '<span>Email: <a href="mailto:' + item.email + '">' + item.email + '</a></span>' : '') +
+      (isVacancy ? '<span style="color:#be123c;font-weight:700">Vakansiya</span>' : '') +
       '</div>';
     return card;
   }
