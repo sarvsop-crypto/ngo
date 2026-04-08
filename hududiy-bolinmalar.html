@@ -1,9 +1,9 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="uz">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bizning jamoa - O'zNNTMA | ngo.uz</title>
+  <title>Hududiy bo'linmalar - O'zNNTMA | ngo.uz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -84,7 +84,7 @@
       <a href="multimedia-room.html">Mediateka</a>
       <a href="reporting-forms.html">Hisobotlar</a>
       <a href="sustainability-index.html">NNTlar barqarorlik indeksi</a>
-      <a href="sustainability-cert.html">“Barqaror NNT” sertifikatiga ega NNTlar</a>
+      <a href="sustainability-cert.html">"Barqaror NNT" sertifikatiga ega NNTlar</a>
     </div>
   </div>
 </nav>
@@ -98,25 +98,26 @@
 <main id="main-content">
 <section class="grid-bg">
   <div class="container hero center">
-    <h1>Markaziy apparat</h1>
-    <p class="sub">O'zNNTMA ijro etuvchi devoni markaziy apparat xodimlari (2026 yil 18 fevral holati).</p>
+    <h1>Hududiy bo'linmalar</h1>
+    <p class="sub">O'zNNTMA hududiy bo'linmalari xodimlari ro'yxati (2026 yil 18 fevral holati).</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="team-meta-bar">
-      <span class="team-chip">Jami: 19 pozitsiya</span>
-      <span class="team-chip">Rahbariyat: 3</span>
-      <span class="team-chip">Xodimlar: 13</span>
+      <span class="team-chip">Jami: 28 xodim</span>
+      <span class="team-chip">Hududiy bo'linmalar: 14</span>
+      <span class="team-chip">Boshlig'lar: 13</span>
+      <span class="team-chip">Mutaxassislar: 14</span>
       <span class="team-chip">Vakansiya: 1</span>
     </div>
 
     <div class="team-controls">
-      <input id="teamSearch" class="team-search" type="search" placeholder="Ism yoki lavozim bo'yicha qidiring" aria-label="Xodim qidiruvi" />
+      <input id="teamSearch" class="team-search" type="search" placeholder="Ism, viloyat yoki lavozim bo'yicha qidiring" aria-label="Xodim qidiruvi" />
       <button class="team-filter active" data-filter="all" type="button">Barchasi</button>
-      <button class="team-filter" data-filter="leadership" type="button">Rahbariyat</button>
-      <button class="team-filter" data-filter="central" type="button">Xodimlar</button>
+      <button class="team-filter" data-filter="head" type="button">Boshlig'lar</button>
+      <button class="team-filter" data-filter="specialist" type="button">Mutaxassislar</button>
       <button class="team-filter" data-filter="vacancy" type="button">Vakansiya</button>
     </div>
 
@@ -127,7 +128,7 @@
 
 <section class="dark-cta">
   <div class="container row">
-    <h2>Jamoaga murojaat yuborish uchun onlayn xizmatdan foydalaning.</h2>
+    <h2>Hududiy bo'linma bilan bog'lanish uchun onlayn xizmatdan foydalaning.</h2>
     <a class="btn" href="service-request.html">Murojaat yuborish</a>
   </div>
 </section>
@@ -165,25 +166,34 @@
 
 <script>
   const teamData = [
-    {name:"Ishanxodjayev Kamolitdin Nuritdinovich", role:"Assotsiatsiya kengashi raisi, Ijro etuvchi devon rahbari", group:"leadership", phone:"90-186-40-90", email:"kamalitdinishanxodjayev@gmail.com"},
-    {name:"Jo'raboyev Ibrohimjon Ilhomjon o'g'li", role:"Assotsiatsiya kengashi raisining birinchi o'rinbosari, Ijro etuvchi devon rahbarining birinchi o'rinbosari", group:"leadership", phone:"94-678-92-91", email:"ibrokhimjuraboev1998@gmail.com"},
-    {name:"Ismoilov Samandar Abdixakim o'g'li", role:"Assotsiatsiya kengashi raisining o'rinbosari, Ijro etuvchi devon rahbarining o'rinbosari", group:"leadership", phone:"97-926-12-13", email:"Lawyer.ismoilov@gmail.com"},
-    {name:"Faxriddinov Farrux Faxriddin o'g'li", role:"Axborot-tahlil va ijro intizomi nazorati bo'limi boshlig'i", group:"central", phone:"90-322-37-52", email:"farruxfaxriddinov258@gmail.com"},
-    {name:"Kamilova Xalima Daniyarovna", role:"Axborot-tahlil va ijro intizomi nazorati bo'limi bosh mutaxassisi", group:"central", phone:"94-615-35-52", email:"limakamilova@gmail.com"},
-    {name:"Mamatkulov Rustam Amriddinovich", role:"Kadrlar va yuridik masalalar bo'yicha bosh mutaxassis", group:"central", phone:"95-168-01-50", email:"vamatkulovrustam1980@gmail.com"},
-    {name:"Asranova Sayyora Kayumjanovna", role:"Rais maslahatchisi - jamoatchilik va OAV bilan ishlash bo'yicha bosh mutaxassis", group:"central", phone:"90-127-27-00", email:"asranovasayyora@gmail.com"},
-    {name:"Mirxodjayev Davron Miafzolovich", role:"Bosh buxgalter (0.5 st.)", group:"central", phone:"90-121-33-38", email:"mirdavron1979@gmail.com"},
-    {name:"Mamanov Sarvar Maman o'g'li", role:"Hududiy bo'linmalar faoliyatini muvofiqlashtirish bo'limi boshlig'i", group:"central", phone:"93-180-40-50", email:"mamanovsr@gmail.com"},
-    {name:"Nurbekov Asqar Muratovich", role:"Hududiy bo'linmalar faoliyatini muvofiqlashtirish bo'limi bosh mutaxassisi", group:"central", phone:"90-174-96-69", email:"nurbekovaskar0601@gmail.com"},
-    {name:"Azimova Nigora Anvarovna", role:"Xalqaro hamkorlikni rivojlantirish va xorijiy donorlarni jalb qilish bo'limi boshlig'i", group:"central", phone:"90-972-38-81", email:"Nigarji@gmail.com"},
-    {name:"Nasriddinov Muxiddin Zoir o'g'li", role:"Xalqaro hamkorlikni rivojlantirish bo'limi bosh mutaxassisi", group:"central", phone:"88-010-09-65", email:"nasriddinovmukhiddin16@gmail.com"},
-    {name:"Shodmonov Normurod Xoshimovich", role:"Nodavlat sektorini huquqiy ta'minlash va salohiyatini rivojlantirish bo'limi boshlig'i", group:"central", phone:"99-811-48-70", email:"normurodshodmonov1@gmail.com"},
-    {name:"Holmatov Alisher Nimatovich", role:"Nodavlat sektorini huquqiy ta'minlash va salohiyatini rivojlantirish bo'limi bosh mutaxassisi", group:"central", phone:"97-445-81-88", email:"alisherholmatov68@gmail.com"},
-    {name:"Djamalova Nigora Xabibullayevna", role:"Ijtimoiy sheriklik va loyiha samaradorligi bo'limi boshlig'i", group:"central", phone:"99-327-30-81", email:"nigoradjamalova445@gmail.com"},
-    {name:"Abduxamidova Xilolaxon Alisherjonovna", role:"Ijtimoiy sheriklik va loyiha samaradorligi bo'limi bosh mutaxassisi", group:"central", phone:"93-867-66-36", email:"abduhamidovahilola150@gmail.com"},
-    {name:"Vakant", role:"Xo'jalik mudiri", group:"vacancy", region:"Markaziy apparat"},
-    {name:"Abdurayimov Xumoyiddin Xujamurod o'g'li", role:"Ish yurituvchi", group:"central", phone:"90-814-98-99", email:"abdurayimovxumoyiddin@gmail.com"},
-    {name:"Yakubov G'ulom O'tkurovich", role:"Haydovchi", group:"central", phone:"94-606-80-12", email:"gulomjon3082@icloud.com"}
+    {name:"Karimxo'jayev Quvatbay Joldasbayevich", role:"Bo'linma boshlig'i", group:"head", region:"Qoraqalpog'iston Respublikasi", phone:"91-371-15-15", email:"karimxodjaevquwat@gmail.com"},
+    {name:"Qudiyarov Rasul Qaypbayevich", role:"Mutaxassis", group:"specialist", region:"Qoraqalpog'iston Respublikasi", phone:"91-306-70-52", email:"rasulkudiyarov@mail.ru"},
+    {name:"Valiyev Sherzod Ikromiddinovich", role:"Bo'linma boshlig'i", group:"head", region:"Andijon viloyati", phone:"95-040-40-34", email:"wsh1983z@gmail.com"},
+    {name:"Nasiridinov Islomiddin Isomiddin o'g'li", role:"Mutaxassis", group:"specialist", region:"Andijon viloyati", phone:"90-623-68-88", email:"nasiridinov94@gmail.com"},
+    {name:"Boltayev Jasurbek G'ulomovich", role:"Bo'linma boshlig'i", group:"head", region:"Buxoro viloyati", phone:"90-511-12-48", email:"jasurbek.boltaev@bk.ru"},
+    {name:"Pardayev Ruslan Salimovich", role:"Mutaxassis", group:"specialist", region:"Buxoro viloyati", phone:"97-488-26-25", email:"pardaevruslan7@gmail.com"},
+    {name:"Kamalova Nazifa Mirzaliyevna", role:"Bo'linma boshlig'i", group:"head", region:"Jizzax viloyati", phone:"91-564-81-81", email:"uznntmajizzax01@gmail.com"},
+    {name:"Xolboyev Maxmud Ikrom o'g'li", role:"Mutaxassis", group:"specialist", region:"Jizzax viloyati", phone:"93-301-07-02", email:"maxmudxolboyev0702@gmail.com"},
+    {name:"Xushnazarov Jasur Bobir o'g'li", role:"Bo'linma boshlig'i", group:"head", region:"Qashqadaryo viloyati", phone:"90-617-66-67", email:"Xushnazaroj@gmail.com"},
+    {name:"Bozorov Jahongir Shavkatovich", role:"Mutaxassis", group:"specialist", region:"Qashqadaryo viloyati", phone:"99-627-21-21", email:"jahongirshavkatovich@gmail.com"},
+    {name:"Vakant", role:"Bo'linma boshlig'i", group:"vacancy", region:"Navoiy viloyati"},
+    {name:"Toshpo'latov Ilhom Tolib o'g'li", role:"Mutaxassis", group:"specialist", region:"Navoiy viloyati", phone:"95-940-01-25", email:"toshpulatovilhom740@gmail.com"},
+    {name:"Karimov Ikromjon Isoqjonovich", role:"Bo'linma boshlig'i", group:"head", region:"Namangan viloyati", phone:"99-324-09-66", email:"ikromjon.060666@gmail.com"},
+    {name:"Maxmudov Rustamjon Ilhomjon o'g'li", role:"Mutaxassis", group:"specialist", region:"Namangan viloyati", phone:"90-278-00-17", email:"rustamjonmahmudovoo773@gmail.com"},
+    {name:"Kenjayev Shoim O'rolovich", role:"Bo'linma boshlig'i", group:"head", region:"Samarqand viloyati", phone:"93-305-03-52", email:"kenjayevshoim1991@gmail.com"},
+    {name:"Axtamov Ulug'bek Ikromjon o'g'li", role:"Mutaxassis", group:"specialist", region:"Samarqand viloyati", phone:"99-599-10-38", email:"uaxtamov604@gmail.com"},
+    {name:"Irismetov Alisher Isamatovich", role:"Bo'linma boshlig'i", group:"head", region:"Sirdaryo viloyati", phone:"91-507-99-22", email:"alisher2990@mail.ru"},
+    {name:"Qo'ldasheva Saida Xaitbayevna", role:"Mutaxassis", group:"specialist", region:"Sirdaryo viloyati", phone:"50-585-88-86", email:"saidaqoldosheva121@gmail.com"},
+    {name:"Abduraxmonov Xurshidjon Xayitqulovich", role:"Bo'linma boshlig'i", group:"head", region:"Surxondaryo viloyati", phone:"94-204-44-44", email:"xurshid.magnat@gmail.com"},
+    {name:"Xaitov Shuxrat O'ktam o'g'li", role:"Mutaxassis", group:"specialist", region:"Surxondaryo viloyati", phone:"99-116-66-67", email:"Shifohayot@gmail.com"},
+    {name:"Xolmatov Ibrohim Isroilovich", role:"Bo'linma boshlig'i", group:"head", region:"Toshkent viloyati", phone:"93-398-63-67", email:"iholmatov07@gmail.com"},
+    {name:"Murodova Dilnoza Ravshanbekovna", role:"Mutaxassis", group:"specialist", region:"Toshkent viloyati", phone:"90-956-17-86", email:"muradovadilnoza589@gmail.com"},
+    {name:"Fozilov Dilmurod Xomidovich", role:"Bo'linma boshlig'i", group:"head", region:"Farg'ona viloyati", phone:"91-665-08-98", email:"fozilovd848@gmail.com"},
+    {name:"Qoraboyev Shuxratjon Rustambekovich", role:"Mutaxassis", group:"specialist", region:"Farg'ona viloyati", phone:"98-575-13-23", email:"shuhratjonqorabayev4@gmail.com"},
+    {name:"Masharipov Ortiqjon Shuxrat o'g'li", role:"Bo'linma boshlig'i", group:"head", region:"Xorazm viloyati", phone:"93-865-48-84", email:"ortiqboymasharipov96@gmail.com"},
+    {name:"Babajonova Mo'tabar Baxtiyor qizi", role:"Mutaxassis", group:"specialist", region:"Xorazm viloyati", phone:"88-742-41-14", email:"motabarxonsultanova@gmail.com"},
+    {name:"Rajabov Farrux Alisherovich", role:"Bo'linma boshlig'i", group:"head", region:"Toshkent shahri", phone:"91-220-77-70", email:"farruh.radjabov@bk.ru"},
+    {name:"Vakant", role:"Mutaxassis", group:"vacancy", region:"Toshkent shahri"}
   ];
 
   const grid = document.getElementById('teamGrid');
@@ -192,9 +202,9 @@
   const filters = Array.from(document.querySelectorAll('.team-filter'));
   let activeFilter = 'all';
 
-  function makeCard(item){
+  function makeCard(item) {
     const card = document.createElement('article');
-    const isVacancy = item.group === 'vacancy' || /^vakant$/i.test(item.name);
+    const isVacancy = item.group === 'vacancy';
     card.className = 'team-card' + (isVacancy ? ' vacancy' : '');
     card.innerHTML =
       '<div class="team-photo"></div>' +
@@ -209,23 +219,23 @@
     return card;
   }
 
-  function render(){
+  function render() {
     const q = (search.value || '').trim().toLowerCase();
-    const rows = teamData.filter(function(item){
+    const rows = teamData.filter(function(item) {
       const byFilter = activeFilter === 'all' ? true : item.group === activeFilter;
       const text = (item.name + ' ' + item.role + ' ' + (item.region || '') + ' ' + (item.email || '')).toLowerCase();
       const bySearch = !q || text.includes(q);
       return byFilter && bySearch;
     });
     grid.innerHTML = '';
-    rows.forEach(function(item){ grid.appendChild(makeCard(item)); });
+    rows.forEach(function(item) { grid.appendChild(makeCard(item)); });
     empty.style.display = rows.length ? 'none' : 'block';
   }
 
-  filters.forEach(function(btn){
-    btn.addEventListener('click', function(){
+  filters.forEach(function(btn) {
+    btn.addEventListener('click', function() {
       activeFilter = btn.getAttribute('data-filter');
-      filters.forEach(function(x){ x.classList.toggle('active', x === btn); });
+      filters.forEach(function(x) { x.classList.toggle('active', x === btn); });
       render();
     });
   });
@@ -233,8 +243,5 @@
   render();
 </script>
 <script src="js/main.js"></script>
-<script src="js/content.js"></script>
 </body>
 </html>
-
-
