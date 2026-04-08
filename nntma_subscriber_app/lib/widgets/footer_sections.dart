@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
+import '../core/app_i18n.dart';
 import '../core/app_tokens.dart';
 import 'content_container.dart';
 
@@ -9,39 +10,43 @@ class DarkCta extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final i18n = context.i18n;
     return Container(
       color: AppTokens.navy,
-      child: const ContentContainer(
-        padding: EdgeInsets.fromLTRB(AppSpace.xl, AppSpace.xl, AppSpace.xl, AppSpace.xl),
+      child: ContentContainer(
+        padding: const EdgeInsets.fromLTRB(AppSpace.xl, AppSpace.xl, AppSpace.xl, AppSpace.xl),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              'Get in touch with us for any support, or official requests.',
+              i18n.pick(
+                uzLatin: "Rasmiy murojaat, hamkorlik va ma'lumot olish uchun biz bilan bog'laning.",
+                uzCyrillic: 'Расмий мурожаат, ҳамкорлик ва маълумот олиш учун биз билан боғланинг.',
+                russian: 'Свяжитесь с нами для официальных обращений, сотрудничества и получения информации.',
+                english: 'Contact us for official requests, partnerships, and information.',
+              ),
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 38, fontWeight: FontWeight.w700, height: 1.2),
+              style: const TextStyle(color: Colors.white, fontSize: 34, fontWeight: FontWeight.w700, height: 1.2),
             ),
-            SizedBox(height: AppSpace.lg),
-            _CtaButton(),
+            const SizedBox(height: AppSpace.lg),
+            FilledButton(
+              style: FilledButton.styleFrom(
+                backgroundColor: AppTokens.primary,
+                foregroundColor: Colors.white,
+              ),
+              onPressed: () {},
+              child: Text(
+                i18n.pick(
+                  uzLatin: "Bog'lanish",
+                  uzCyrillic: 'Боғланиш',
+                  russian: 'Связаться',
+                  english: 'Contact us',
+                ),
+              ),
+            ),
           ],
         ),
       ),
-    );
-  }
-}
-
-class _CtaButton extends StatelessWidget {
-  const _CtaButton();
-
-  @override
-  Widget build(BuildContext context) {
-    return FilledButton(
-      style: FilledButton.styleFrom(
-        backgroundColor: AppTokens.primary,
-        foregroundColor: Colors.white,
-      ),
-      onPressed: () {},
-      child: const Text('Contact us'),
     );
   }
 }
@@ -54,7 +59,7 @@ class AppFooter extends StatelessWidget {
     return Container(
       color: AppTokens.navy,
       child: ContentContainer(
-        padding: EdgeInsets.fromLTRB(AppSpace.xl, 0, AppSpace.xl, AppSpace.xl),
+        padding: const EdgeInsets.fromLTRB(AppSpace.xl, 0, AppSpace.xl, AppSpace.xl),
         child: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -108,32 +113,41 @@ class _FooterInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    final i18n = context.i18n;
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Tezkor havolalar', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
-        SizedBox(height: 8),
-        Text('Biz haqimizda', style: TextStyle(color: AppTokens.textFooter)),
-        SizedBox(height: 6),
-        Text('Yangiliklar', style: TextStyle(color: AppTokens.textFooter)),
-        SizedBox(height: 6),
-        Text('Tadbirlarimiz', style: TextStyle(color: AppTokens.textFooter)),
-        SizedBox(height: 6),
-        Text("A'zo bo'lish", style: TextStyle(color: AppTokens.textFooter)),
-        SizedBox(height: 6),
-        Text('Grant va tanlovlar', style: TextStyle(color: AppTokens.textFooter)),
-        SizedBox(height: 16),
-        Text("Bog'lanish", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
-        SizedBox(height: 8),
-        Text('Tel: (+998 55) 503-05-12', style: TextStyle(color: AppTokens.textFooter)),
-        SizedBox(height: 6),
-        Text('Email: info@ngo.uz', style: TextStyle(color: AppTokens.textFooter)),
-        SizedBox(height: 6),
-        Text("1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170", style: TextStyle(color: AppTokens.textFooter)),
-        SizedBox(height: 16),
-        Text('Ijtimoiy tarmoqlar', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
-        SizedBox(height: 8),
-        _SocialRow(),
+        Text(i18n.t('footer.quick_links'), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
+        const SizedBox(height: 8),
+        Text(i18n.t('footer.link.about'), style: const TextStyle(color: AppTokens.textFooter)),
+        const SizedBox(height: 6),
+        Text(i18n.t('footer.link.news'), style: const TextStyle(color: AppTokens.textFooter)),
+        const SizedBox(height: 6),
+        Text(i18n.t('footer.link.events'), style: const TextStyle(color: AppTokens.textFooter)),
+        const SizedBox(height: 6),
+        Text(i18n.t('footer.link.membership'), style: const TextStyle(color: AppTokens.textFooter)),
+        const SizedBox(height: 6),
+        Text(i18n.t('footer.link.grants'), style: const TextStyle(color: AppTokens.textFooter)),
+        const SizedBox(height: 16),
+        Text(i18n.t('footer.contact'), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
+        const SizedBox(height: 8),
+        const Text('Tel: (+998 55) 503-05-12', style: TextStyle(color: AppTokens.textFooter)),
+        const SizedBox(height: 6),
+        const Text('Email: info@ngo.uz', style: TextStyle(color: AppTokens.textFooter)),
+        const SizedBox(height: 6),
+        Text(
+          i18n.pick(
+            uzLatin: "1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170",
+            uzCyrillic: '1A, Фурқат кўчаси, Шайхонтоҳур т., Тошкент, 100170',
+            russian: 'ул. Фурката, 1A, Шайхантахурский р-н, Ташкент, 100170',
+            english: '1A Furqat street, Shaykhontohur district, Tashkent, 100170',
+          ),
+          style: const TextStyle(color: AppTokens.textFooter),
+        ),
+        const SizedBox(height: 16),
+        Text(i18n.t('footer.social'), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
+        const SizedBox(height: 8),
+        const _SocialRow(),
       ],
     );
   }
@@ -164,9 +178,14 @@ class _FooterMapCard extends StatelessWidget {
               child: Container(
                 color: const Color(0xB3023347),
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                child: const Text(
-                  "1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170",
-                  style: TextStyle(color: Colors.white, fontSize: 12),
+                child: Text(
+                  context.i18n.pick(
+                    uzLatin: "1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170",
+                    uzCyrillic: '1A, Фурқат кўчаси, Шайхонтоҳур т., Тошкент, 100170',
+                    russian: 'ул. Фурката, 1A, Шайхантахурский р-н, Ташкент, 100170',
+                    english: '1A Furqat street, Shaykhontohur district, Tashkent, 100170',
+                  ),
+                  style: const TextStyle(color: Colors.white, fontSize: 12),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -183,22 +202,17 @@ class _FooterBottom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Wrap(
+    final i18n = context.i18n;
+    return Wrap(
       alignment: WrapAlignment.spaceBetween,
       runSpacing: 8,
       spacing: 16,
       children: [
+        Text(i18n.t('footer.copy'), style: const TextStyle(color: AppTokens.textFooter, fontSize: 12)),
+        const Text('info@ngo.uz', style: TextStyle(color: AppTokens.textFooter, fontSize: 12)),
         Text(
-          "© COPYRIGHT 2019-2026 O'zNNTMA",
-          style: TextStyle(color: AppTokens.textFooter, fontSize: 12),
-        ),
-        Text(
-          'info@ngo.uz',
-          style: TextStyle(color: AppTokens.textFooter, fontSize: 12),
-        ),
-        Text(
-          "Manzil: 1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170",
-          style: TextStyle(color: AppTokens.textFooter, fontSize: 12),
+          '${i18n.t('footer.address_label')} ${i18n.pick(uzLatin: "1A, Furqat ko'chasi, Shayxontohur t., Toshkent, 100170", uzCyrillic: '1A, Фурқат кўчаси, Шайхонтоҳур т., Тошкент, 100170', russian: 'ул. Фурката, 1A, Шайхантахурский р-н, Ташкент, 100170', english: '1A Furqat street, Shaykhontohur district, Tashkent, 100170')}',
+          style: const TextStyle(color: AppTokens.textFooter, fontSize: 12),
         ),
       ],
     );
@@ -210,16 +224,16 @@ class _SocialRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.start,
-      children: const [
-        _SocialIcon(PhosphorIconsRegular.xLogo),
+      children: [
+        _SocialIcon(PhosphorIconsRegular.facebookLogo),
         SizedBox(width: 8),
         _SocialIcon(PhosphorIconsRegular.instagramLogo),
         SizedBox(width: 8),
-        _SocialIcon(PhosphorIconsRegular.linkedinLogo),
+        _SocialIcon(PhosphorIconsRegular.telegramLogo),
         SizedBox(width: 8),
-        _SocialIcon(PhosphorIconsRegular.facebookLogo),
+        _SocialIcon(PhosphorIconsRegular.youtubeLogo),
       ],
     );
   }

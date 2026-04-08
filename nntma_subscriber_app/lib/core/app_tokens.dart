@@ -1,16 +1,19 @@
 ﻿import 'package:flutter/material.dart';
 
 class AppTokens {
-  static const Color primary = Color(0xFF2A8E9E);
-  static const Color primaryDark = Color(0xFF1B5C67);
-  static const Color navy = Color(0xFF023347);
-  static const Color bg = Color(0xFFF1F8F8);
+  static const Color primary = Color(0xFF0A2D58);
+  static const Color primaryDark = Color(0xFF041B33);
+  static const Color accent = Color(0xFFFCC63A);
+  static const Color accentSoft = Color(0xFFEAF4FF);
+  static const Color navy = Color(0xFF041B33);
+  static const Color bg = Color(0xFFF5F7FB);
   static const Color surface = Colors.white;
-  static const Color text = Color(0xFF171A1B);
-  static const Color textMuted = Color(0xFF798384);
-  static const Color textSoft = Color(0xFF929C9D);
-  static const Color textFooter = Color(0xFFC8CFD0);
-  static const Color border = Color(0xFFE4E7E7);
+  static const Color text = Color(0xFF071A31);
+  static const Color textMuted = Color(0xFF4A5464);
+  static const Color textSoft = Color(0xFF7A8797);
+  static const Color textFooter = Color(0xFF9CB1CB);
+  static const Color border = Color(0xFFD2DCEB);
+  static const Color govSectionBg = Color(0xFFEFF4FA);
 
   static const double radiusMd = 12;
   static const BoxShadow cardShadow = BoxShadow(

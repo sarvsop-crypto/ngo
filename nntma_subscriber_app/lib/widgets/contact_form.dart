@@ -1,6 +1,7 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 import '../core/app_breakpoints.dart';
+import '../core/app_i18n.dart';
 import '../core/app_tokens.dart';
 
 class ContactCards extends StatelessWidget {
@@ -75,7 +76,12 @@ class _ContactFormState extends State<ContactForm> {
     if (!mounted) return;
     setState(() {
       _isSubmitting = false;
-      _statusMessage = 'Murojaat yuborildi';
+      _statusMessage = context.i18n.pick(
+        uzLatin: 'Murojaat yuborildi',
+        uzCyrillic: 'Мурожаат юборилди',
+        russian: 'Обращение отправлено',
+        english: 'Request sent',
+      );
     });
     formState.reset();
     _name.clear();
@@ -86,6 +92,14 @@ class _ContactFormState extends State<ContactForm> {
 
   @override
   Widget build(BuildContext context) {
+    String l({
+      required String uz,
+      required String cy,
+      required String ru,
+      required String en,
+    }) =>
+        context.i18n.pick(uzLatin: uz, uzCyrillic: cy, russian: ru, english: en);
+
     return Container(
       padding: const EdgeInsets.all(AppSpace.lg),
       decoration: BoxDecoration(
@@ -119,11 +133,11 @@ class _ContactFormState extends State<ContactForm> {
               ),
             ],
             _FormField(
-              label: 'Ism va familiya',
+              label: l(uz: 'Ism va familiya', cy: 'Исм ва фамилия', ru: 'Имя и фамилия', en: 'Full name'),
               controller: _name,
               autofillHints: const [AutofillHints.name],
               textInputAction: TextInputAction.next,
-              validator: (v) => (v == null || v.trim().isEmpty) ? 'Ismni kiriting' : null,
+              validator: (v) => (v == null || v.trim().isEmpty) ? l(uz: 'Ismni kiriting', cy: 'Исмни киритинг', ru: 'Введите имя', en: 'Enter your name') : null,
             ),
             const SizedBox(height: AppSpace.md),
             _FormField(
@@ -134,32 +148,33 @@ class _ContactFormState extends State<ContactForm> {
               textInputAction: TextInputAction.next,
               validator: (v) {
                 final value = (v ?? '').trim();
-                if (value.isEmpty) return 'Emailni kiriting';
-                if (!value.contains('@')) return 'Email notogri formatda';
+                if (value.isEmpty) return l(uz: 'Emailni kiriting', cy: 'Emailni киритинг', ru: 'Введите email', en: 'Enter email');
+                if (!value.contains('@')) return l(uz: "Email noto'g'ri formatda", cy: 'Email нотўғри форматда', ru: 'Неверный формат email', en: 'Invalid email format');
                 return null;
               },
             ),
             const SizedBox(height: AppSpace.md),
             _FormField(
-              label: 'Mavzu',
+              label: l(uz: 'Mavzu', cy: 'Мавзу', ru: 'Тема', en: 'Subject'),
               controller: _subject,
               textInputAction: TextInputAction.next,
-              validator: (v) => (v == null || v.trim().isEmpty) ? 'Mavzuni kiriting' : null,
+              validator: (v) => (v == null || v.trim().isEmpty) ? l(uz: 'Mavzuni kiriting', cy: 'Мавзуни киритинг', ru: 'Введите тему', en: 'Enter subject') : null,
             ),
             const SizedBox(height: AppSpace.md),
             _FormField(
-              label: 'Xabar',
+              label: l(uz: 'Xabar', cy: 'Хабар', ru: 'Сообщение', en: 'Message'),
               controller: _message,
               maxLines: 4,
               textInputAction: TextInputAction.newline,
-              validator: (v) => (v == null || v.trim().length < 10) ? 'Kamida 10 ta belgi kiriting' : null,
+              validator: (v) =>
+                  (v == null || v.trim().length < 10) ? l(uz: 'Kamida 10 ta belgi kiriting', cy: 'Камида 10 та белги киритинг', ru: 'Введите минимум 10 символов', en: 'Enter at least 10 characters') : null,
             ),
             const SizedBox(height: AppSpace.lg),
             SizedBox(
               width: double.infinity,
               child: Semantics(
                 button: true,
-                label: 'Murojaat yuborish tugmasi',
+                label: l(uz: 'Murojaat yuborish tugmasi', cy: 'Мурожаат юбориш тугмаси', ru: 'Кнопка отправки обращения', en: 'Send request button'),
                 child: FilledButton(
                   style: FilledButton.styleFrom(
                     backgroundColor: AppTokens.primary,
@@ -168,7 +183,7 @@ class _ContactFormState extends State<ContactForm> {
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                   ),
                   onPressed: _isSubmitting ? null : _submit,
-                  child: Text(_isSubmitting ? 'Yuborilmoqda...' : 'Yuborish'),
+                  child: Text(_isSubmitting ? l(uz: 'Yuborilmoqda...', cy: 'Юборилмоқда...', ru: 'Отправка...', en: 'Sending...') : l(uz: 'Yuborish', cy: 'Юбориш', ru: 'Отправить', en: 'Send')),
                 ),
               ),
             ),

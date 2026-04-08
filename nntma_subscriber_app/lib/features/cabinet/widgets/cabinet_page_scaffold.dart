@@ -98,7 +98,6 @@ class CabinetCard extends StatelessWidget {
   }
 }
 
-/// Standardised title for use inside a [CabinetCard].
 class CabinetCardTitle extends StatelessWidget {
   final String text;
 

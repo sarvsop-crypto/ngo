@@ -193,22 +193,6 @@
     }
   });
 
-  // Ensure "Bizning jamoa" exists in About dropdown on legacy pages
-  var aboutDropdown = document.querySelector('.menu .nav-item.has-dropdown .dropdown');
-  if (aboutDropdown && !aboutDropdown.querySelector('a[href="our-team.html"]')) {
-    var teamLink = document.createElement('a');
-    teamLink.href = 'our-team.html';
-    teamLink.textContent = 'Bizning jamoa';
-    var leadershipLink = aboutDropdown.querySelector('a[href="leadership.html"]');
-    if (leadershipLink && leadershipLink.nextSibling) {
-      aboutDropdown.insertBefore(teamLink, leadershipLink.nextSibling);
-    } else if (leadershipLink) {
-      leadershipLink.parentNode.appendChild(teamLink);
-    } else {
-      aboutDropdown.insertBefore(teamLink, aboutDropdown.firstChild);
-    }
-  }
-
   var reg = document.getElementById("reg-ok");
   var submit = document.getElementById("submit-membership");
   if (reg && submit) {

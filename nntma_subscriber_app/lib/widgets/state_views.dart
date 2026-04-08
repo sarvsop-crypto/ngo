@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
+import '../core/app_i18n.dart';
 import '../core/app_tokens.dart';
 import '../core/load_state.dart';
 
@@ -39,14 +40,24 @@ class SectionStateView extends StatelessWidget {
       case LoadState.empty:
         return _StatePanel(
           icon: PhosphorIconsRegular.tray,
-          text: 'Hozircha malumot yoq',
+          text: context.i18n.pick(
+            uzLatin: "Hozircha ma'lumot yo'q",
+            uzCyrillic: "Ҳозирча маълумот йўқ",
+            russian: 'Пока данных нет',
+            english: 'No data yet',
+          ),
           onRetry: onRetry,
           compact: isNarrow,
         );
       case LoadState.error:
         return _StatePanel(
           icon: PhosphorIconsRegular.warningCircle,
-          text: 'Yuklashda xatolik yuz berdi',
+          text: context.i18n.pick(
+            uzLatin: "Yuklashda xatolik yuz berdi",
+            uzCyrillic: 'Юклашда хатолик юз берди',
+            russian: 'Произошла ошибка загрузки',
+            english: 'Loading failed',
+          ),
           onRetry: onRetry,
           compact: isNarrow,
         );
@@ -90,7 +101,14 @@ class _StatePanel extends StatelessWidget {
             OutlinedButton.icon(
               onPressed: onRetry,
               icon: const PhosphorIcon(PhosphorIconsRegular.arrowsClockwise),
-              label: const Text('Qayta yuklash'),
+              label: Text(
+                context.i18n.pick(
+                  uzLatin: 'Qayta yuklash',
+                  uzCyrillic: 'Қайта юклаш',
+                  russian: 'Повторить',
+                  english: 'Retry',
+                ),
+              ),
             ),
           ],
         ],
