@@ -92,17 +92,9 @@
 </head>
 <body>
 <header class="site-header">
-    <div class="utility-bar">
-    <div class="topbar-building"><img src="img/logo-oznntma.png" alt="OʼzNNTMA"></div>
-    <div class="topbar-controls">
-      <span class="topbar-clock" id="topbarClock"></span>
-      <a href="#" class="topbar-lang">O‘zbekcha</a>
-      <a href="#" class="topbar-lang">Русский</a>
-      <a href="#" class="topbar-lang">English</a>
-      <button type="button" class="vis-btn" aria-label="Ko‘rish imkoniyati"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
-    </div>
-  </div>
+    
   <div class="container nav">
+    <a href="index.html" class="topbar-building"><img src="img/logo-oznntma.png" alt="OʼZNNTMA"></a>
     <nav class="menu" aria-label="Asosiy menyu">
   <div class="nav-item has-dropdown">
     <a href="about.html">Assotsiatsiya haqida <ph-caret-down weight="bold" aria-hidden="true"></ph-caret-down></a>
@@ -117,7 +109,7 @@
     </div>
   </div>
   <div class="nav-item has-dropdown">
-    <a href="#">NNTlar uchun <ph-caret-down weight="bold" aria-hidden="true"></ph-caret-down></a>
+    <a href="#">NNTlar restori <ph-caret-down weight="bold" aria-hidden="true"></ph-caret-down></a>
     <div class="dropdown">
       <a href="sustainability-index.html">NNTlar barqarorlik indeksi</a>
       <a href="sustainability-cert.html">“Barqaror NNT” sertifikatiga ega NNTlar</a>
@@ -141,10 +133,17 @@
       <a href="multimedia-room.html">Mediateka</a>
       <a href="events.html">Tadbirlar</a>
       <a href="reporting-forms.html">Hisobotlar</a>
+      <a href="vacancies.html">Vakansiyalar</a>
     </div>
   </div>
 </nav>
-<button class="hamburger" id="hamburgerBtn" type="button" aria-label="Menyu">
+<div class="topbar-controls">
+      <a href="#" class="topbar-lang">O'zbekcha</a>
+      <a href="#" class="topbar-lang">Русский</a>
+      <a href="#" class="topbar-lang">English</a>
+      <button type="button" class="vis-btn" aria-label="Ko'rish imkoniyati"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Menyu">
   <span></span><span></span><span></span>
 </button>
   </div>
@@ -189,7 +188,7 @@
       </div>
 
       <p>
-        Assotsiatsiya NNTlar uchun bilim almashish, tajriba ortirish va hamkorlik o&rsquo;rnatish maydoni vazifasini bajaradi. NNTlar maktabi, onlayn kutubxona va hududiy treninglar orqali yuzlab tashkilotlarga metodik va amaliy ko&rsquo;mak ko&rsquo;rsatilmoqda. Shu bilan birga, biznes hamjamiyati, akademik doiralar va xalqaro tashkilotlar vakillari bilan tadqiqotlar, muzokaralar va ochiq munozaralar o&rsquo;tkazib kelinmoqda.
+        Assotsiatsiya NNTlar restori bilim almashish, tajriba ortirish va hamkorlik o&rsquo;rnatish maydoni vazifasini bajaradi. NNTlar maktabi, onlayn kutubxona va hududiy treninglar orqali yuzlab tashkilotlarga metodik va amaliy ko&rsquo;mak ko&rsquo;rsatilmoqda. Shu bilan birga, biznes hamjamiyati, akademik doiralar va xalqaro tashkilotlar vakillari bilan tadqiqotlar, muzokaralar va ochiq munozaralar o&rsquo;tkazib kelinmoqda.
       </p>
 
       <p>
@@ -257,32 +256,42 @@
 </section>
 
 <footer class="site-footer">
-  <div class="container footer-top">
-    <div class="footer-info">
-      <h4>Tezkor havolalar</h4>
+  <div class="container footer-grid">
+    <div class="footer-col footer-col-brand">
+      <a href="index.html" class="footer-logo-link">
+        <img src="img/logo-white.png" alt="OʼZNNTMA" class="footer-logo-img">
+      </a>
+      <p class="footer-tagline">Oʼzbekiston nodavlat notijorat tashkilotlari milliy assotsiatsiyasi</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Tezkor havolalar</h4>
       <a href="about.html">Biz haqimizda</a>
       <a href="news.html">Yangiliklar</a>
-      <a href="events.html">Tadbirlarimiz</a>
+      <a href="events.html">Tadbirlar</a>
       <a href="membership.html">Aʼzo boʼlish</a>
       <a href="projects.html">Grant va tanlovlar</a>
-      <h4>Bogʼlanish</h4>
-      <p>Tel: (+998 55) 503-05-12</p>
-      <p>Email: <a href="mailto:info@ngo.uz" class="footer-link-inherit">info@ngo.uz</a></p>
-      <p>1A, Furqat koʼchasi, Shayxontohur t., Toshkent, 100170</p>
-      <h4>Ijtimoiy tarmoqlar</h4>
-      <a href="https://facebook.com/uznntma" target="_blank" rel="noopener noreferrer">Facebook - @uznntma</a>
-      <a href="https://instagram.com/uznntma" target="_blank" rel="noopener noreferrer">Instagram - @uznntma</a>
-      <a href="https://t.me/UzNNTMA1" target="_blank" rel="noopener noreferrer">Telegram - @UzNNTMA1</a>
-      <a href="https://youtube.com/@uznntma" target="_blank" rel="noopener noreferrer">YouTube - @uznntma</a>
+      <a href="contact.html">Bogʿlanish</a>
     </div>
-    <div class="footer-map-col">
-      <iframe src="https://yandex.uz/map-widget/v1/?ll=69.240568%2C41.312565&z=17&pt=69.240568%2C41.312565%2Cpm2rdm" frameborder="0" allowfullscreen loading="lazy" title="Manzil xaritasi"></iframe>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Aloqa</h4>
+      <p>1A, Furqat koʼchasi, Shayxontohur t., Toshkent, 100170</p>
+      <p>Tel: <a href="tel:+998555030512">(+998 55) 503-05-12</a></p>
+      <p>Email: <a href="mailto:info@ngo.uz">info@ngo.uz</a></p>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Ijtimoiy tarmoqlar</h4>
+      <a href="https://facebook.com/uznntma" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://instagram.com/uznntma" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://t.me/UzNNTMA1" target="_blank" rel="noopener noreferrer">Telegram</a>
+      <a href="https://youtube.com/@uznntma" target="_blank" rel="noopener noreferrer">YouTube</a>
     </div>
   </div>
-  <div class="container footer-bottom">
-    <span>© COPYRIGHT 2019-2026 Oʼz NNTMA</span>
-    <a href="mailto:info@ngo.uz" class="footer-link-muted">info@ngo.uz</a>
-    <a href="https://yandex.com/maps/?text=41.312565,69.240568" target="_blank" rel="noopener noreferrer" class="footer-link-muted">Manzil: 1A, Furqat koʼchasi, Shayxontohur t., Toshkent, 100170</a>
+  <div class="footer-bottom-bar">
+    <div class="container footer-bottom">
+      <span>© COPYRIGHT 2019-2026 Oʼz NNTMA</span>
+      <a href="mailto:info@ngo.uz">info@ngo.uz</a>
+      <span>1A, Furqat koʼchasi, Toshkent</span>
+    </div>
   </div>
 </footer>
 <script src="js/main.js"></script>

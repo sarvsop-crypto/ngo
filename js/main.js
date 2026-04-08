@@ -76,24 +76,6 @@
     { title: "A'zolik yo'riqnomasi", url: "membership-guide.html", summary: "O'zNNTMAga a'zo bo'lish bo'yicha bosqichma-bosqich yo'riqnoma.", keywords: "azoliq yuriqnoma bosqich hujjat" }
   ];
 
-  /* Topbar live clock (GMT+5) */
-  var topbarClock = document.getElementById("topbarClock");
-  if (topbarClock) {
-    function updateClock() {
-      var now = new Date();
-      var utc = now.getTime() + now.getTimezoneOffset() * 60000;
-      var gmt5 = new Date(utc + 5 * 3600000);
-      var hh = String(gmt5.getHours()).padStart(2, "0");
-      var mm = String(gmt5.getMinutes()).padStart(2, "0");
-      var ss = String(gmt5.getSeconds()).padStart(2, "0");
-      var dd = String(gmt5.getDate()).padStart(2, "0");
-      var mo = String(gmt5.getMonth() + 1).padStart(2, "0");
-      var yyyy = gmt5.getFullYear();
-      topbarClock.textContent = hh + ":" + mm + ":" + ss + " (GMT+5) " + dd + "." + mo + "." + yyyy;
-    }
-    updateClock();
-    setInterval(updateClock, 1000);
-  }
 
   var applyLang = function (langCode) {
     var lang = i18nDict[langCode] ? langCode : "uz";
@@ -122,10 +104,13 @@
     if (footerTitles[3]) footerTitles[3].textContent = t.footerServices;
 
     var langLinks = document.querySelectorAll(".topbar-lang[data-lang]");
+    var _langShort = { uz: "O\u02BBzbekcha", ru: "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", en: "English" };
     langLinks.forEach(function (a) {
       var code = a.getAttribute("data-lang");
       a.classList.toggle("active-lang", code === lang);
     });
+    var labelEl = document.getElementById("topbarLangLabel");
+    if (labelEl) labelEl.textContent = _langShort[lang] || lang.toUpperCase();
 
     try { localStorage.setItem(i18nKey, lang); } catch (e) {}
     return lang;
@@ -149,15 +134,46 @@
   languageLinks = document.querySelectorAll(".topbar-lang[data-lang]");
   var currentFile = (location.pathname.split("/").pop() || "index.html").toLowerCase();
   if (currentFile.indexOf(".html") === -1) currentFile = "index.html";
-  languageLinks.forEach(function (a, idx) {
+  languageLinks.forEach(function (a) {
     var code = a.getAttribute("data-lang");
     a.setAttribute("href", "/" + code + "/" + currentFile);
-    a.setAttribute("data-lang", code);
     a.addEventListener("click", function (e) {
       e.preventDefault();
       applyLang(code);
+      langDrop.classList.remove("open");
     });
   });
+
+  // Build language dropdown wrapper
+  var langDrop = document.createElement("div");
+  langDrop.className = "topbar-lang-drop";
+  var langShort = { uz: "O\u02BBzbekcha", ru: "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", en: "English" };
+  var langTrigger = document.createElement("button");
+  langTrigger.type = "button";
+  langTrigger.className = "topbar-lang-trigger";
+  langTrigger.id = "topbarLangTrigger";
+  langTrigger.innerHTML = '<span id="topbarLangLabel">' + (langShort[initialLang] || "O\u02BBzbekcha") + '</span>' +
+    '<svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2,3 5,7 8,3"/></svg>';
+  var langMenu = document.createElement("div");
+  langMenu.className = "topbar-lang-menu";
+  Array.prototype.forEach.call(document.querySelectorAll(".topbar-lang[data-lang]"), function(a) {
+    langMenu.appendChild(a);
+  });
+  langDrop.appendChild(langTrigger);
+  langDrop.appendChild(langMenu);
+  var topbarControls = document.querySelector(".topbar-controls");
+  var visBtn2 = topbarControls && topbarControls.querySelector(".vis-btn");
+  if (visBtn2) topbarControls.insertBefore(langDrop, visBtn2);
+  else if (topbarControls) topbarControls.appendChild(langDrop);
+
+  langTrigger.addEventListener("click", function(e) {
+    e.stopPropagation();
+    langDrop.classList.toggle("open");
+  });
+  document.addEventListener("click", function(e) {
+    if (!langDrop.contains(e.target)) langDrop.classList.remove("open");
+  });
+
   applyLang(initialLang);
 
   var path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
@@ -301,10 +317,12 @@
     };
 
     var applyState = function () {
-      state.fontScale = Math.min(1.35, Math.max(0.9, state.fontScale));
-      root.style.setProperty("--base-font-size", (17 * state.fontScale) + "px");
-      body.classList.toggle("a11y-contrast", !!state.contrast);
-      body.classList.toggle("a11y-grayscale", !!state.grayscale);
+      state.fontScale = Math.min(1.5, Math.max(0.7, state.fontScale));
+      root.style.zoom = state.fontScale;
+      var filters = [];
+      if (state.contrast) filters.push("contrast(2)");
+      if (state.grayscale) filters.push("grayscale(1)");
+      body.style.filter = filters.join(" ");
       if (contrastBtn) {
         contrastBtn.classList.toggle("active", !!state.contrast);
         contrastBtn.textContent = state.contrast ? "O'chirish" : "Yoqish";
@@ -319,8 +337,8 @@
     panel.addEventListener("click", function (e) {
       var action = e.target && e.target.getAttribute("data-a11y");
       if (!action) return;
-      if (action === "inc") state.fontScale += 0.05;
-      if (action === "dec") state.fontScale -= 0.05;
+      if (action === "inc") state.fontScale += 0.15;
+      if (action === "dec") state.fontScale -= 0.15;
       if (action === "contrast") state.contrast = !state.contrast;
       if (action === "gray") state.grayscale = !state.grayscale;
       if (action === "reset") {
