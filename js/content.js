@@ -13,10 +13,23 @@
       .catch(function () { cb([]); });
   }
 
+  var UZ_MONTHS = ['Yan','Feb','Mar','Apr','May','Iyn','Iyl','Avg','Sen','Okt','Noy','Dek'];
+
   function fmtDate(iso) {
     if (!iso) return '';
     var p = iso.split('-');
     return p[2] + '.' + p[1] + '.' + p[0];
+  }
+
+  function dateDay(iso) {
+    if (!iso) return '';
+    return iso.split('-')[2] || '';
+  }
+
+  function dateMonthAbbr(iso) {
+    if (!iso) return '';
+    var m = parseInt(iso.split('-')[1], 10);
+    return UZ_MONTHS[m - 1] || '';
   }
 
   function bodyToHTML(text) {
@@ -54,13 +67,26 @@
 
   function renderNewsPage(items, container) {
     if (!items.length) { container.innerHTML = '<p style="color:rgba(180,220,255,.5)">Yangiliklar topilmadi.</p>'; return; }
-    var html = '<div class="news-grid">';
+    var html = '<div class="gov-news-grid">';
     items.forEach(function (n) {
-      html += '<article class="news-card">'
-        + '<span class="tag">' + n.category + ' · ' + fmtDate(n.date) + '</span>'
-        + '<h3>' + n.title + '</h3>'
-        + '<p>' + n.excerpt + '</p>'
-        + '<a class="btn" href="news-detail.html?id=' + n.id + '" style="margin-top:14px;display:inline-block">Batafsil</a>'
+      var url = 'news-detail.html?id=' + n.id;
+      var cat = n.category || '';
+      html += '<article class="gov-news-card" data-cat="' + cat + '">'
+        + '<a href="' + url + '" class="gov-news-img" tabindex="-1" aria-hidden="true">'
+        + '<div class="gov-news-img-inner"></div>'
+        + '<div class="gov-news-overlay"></div>'
+        + '</a>'
+        + '<div class="gov-news-content">'
+        + '<div class="gov-news-header">'
+        + '<div class="gov-news-date"><b>' + dateDay(n.date) + '</b><span>' + dateMonthAbbr(n.date) + '</span></div>'
+        + '<a href="' + url + '" class="gov-news-title">' + n.title + '</a>'
+        + '</div>'
+        + '<a href="' + url + '" class="gov-news-excerpt">' + n.excerpt + '</a>'
+        + '<div class="gov-news-footer">'
+        + '<span>' + fmtDate(n.date) + '</span>'
+        + '<a href="' + url + '">' + cat + '</a>'
+        + '</div>'
+        + '</div>'
         + '</article>';
     });
     html += '</div>';
