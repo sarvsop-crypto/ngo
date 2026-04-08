@@ -41,7 +41,7 @@
 
   /* ── News ─────────────────────────────────────────────────── */
   function renderNewsHome(items, container) {
-    var latest = items.slice(0, 4);
+    var latest = items.slice(0, 3);
     if (!latest.length) return;
     var html = '<div class="gov-news-grid">';
     latest.forEach(function (n) {
@@ -157,7 +157,7 @@
 
   /* ── Events ───────────────────────────────────────────────── */
   function renderEventsHome(items, container) {
-    var latest = items.slice(0, 4);
+    var latest = items.slice(0, 3);
     if (!latest.length) return;
     var html = '<div class="gov-news-grid">';
     latest.forEach(function (e) {
