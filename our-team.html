@@ -18,7 +18,7 @@
     .team-filter.active { background:var(--green-500); border-color:var(--green-500); color:#fff; }
     .team-empty { display:none; padding:24px; border-radius:8px; background:#f5f6f8; color:var(--neutral-500); font-size:15px; }
     .team-card .team-region { margin:0 0 8px; color:var(--neutral-500); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
-    .team-card .team-meta a { color:var(--green-500); text-decoration:none; }
+    .team-card .team-meta a { color:var(--green-500); text-decoration:none; overflow-wrap:break-word; word-break:break-all; }
     .team-card .team-meta a:hover { text-decoration:underline; }
     .team-card.vacancy .team-photo { background:var(--neutral-200); }
   </style>
@@ -122,7 +122,7 @@
       <button class="team-filter" data-filter="vacancy" type="button">Vakansiya</button>
     </div>
 
-    <div id="teamGrid" class="team-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))"></div>
+    <div id="teamGrid" class="team-grid" style="grid-template-columns:repeat(auto-fit,minmax(360px,1fr))"></div>
     <div id="teamEmpty" class="team-empty" role="status" aria-live="polite">Qidiruv bo'yicha natija topilmadi.</div>
   </div>
 </section>
